@@ -1,0 +1,1753 @@
+<title>电商运营全景图谱</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: value-chain atlas — domain panels in reading order, live relation overlay, detail rail on the right */
+:root{
+  --bg:#f3f4f7; --surface:#ffffff; --sunk:#e9ebf0; --fg:#18202d; --muted:#5a6476; --line:#d8dce4;
+  --ink:#18202d; --focus:#2457d6;
+  --l1:#d9480f; --l2:#e8870f; --l3:#b8a106; --up1:#1d63d6; --up2:#4c8ae8; --up3:#7aa9ee;
+  --dS:#5b4bb7; --dP:#2f7d5b; --dC:#b23a48; --dL:#b5651d; --dF:#1f6fb2; --dM:#a8327f; --dX:#7d6e0c; --dF2:#0f7c86; --dD:#5a6472;
+  --display:"Noto Serif SC","Songti SC","SimSun",serif;
+  --body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f131a; --surface:#171c25; --sunk:#1e2430; --fg:#e5e8ee; --muted:#9aa3b3; --line:#2b3240; --ink:#e5e8ee; --focus:#7aa2ff;
+  --l1:#ff7a45; --l2:#ffab4a; --l3:#e2cf4f; --up1:#6aa1ff; --up2:#8fb7ff; --up3:#b3ceff;
+  --dS:#a99df2; --dP:#6fcfa1; --dC:#f08a96; --dL:#f0a65e; --dF:#6fb3f0; --dM:#ec86c8; --dX:#ddc957; --dF2:#5fd0d9; --dD:#a9b4c2;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f131a; --surface:#171c25; --sunk:#1e2430; --fg:#e5e8ee; --muted:#9aa3b3; --line:#2b3240; --ink:#e5e8ee; --focus:#7aa2ff;
+  --l1:#ff7a45; --l2:#ffab4a; --l3:#e2cf4f; --up1:#6aa1ff; --up2:#8fb7ff; --up3:#b3ceff;
+  --dS:#a99df2; --dP:#6fcfa1; --dC:#f08a96; --dL:#f0a65e; --dF:#6fb3f0; --dM:#ec86c8; --dX:#ddc957; --dF2:#5fd0d9; --dD:#a9b4c2;
+  color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1360px;margin:0 auto}
+header.top{padding-block:28px 8px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:flex-end;justify-content:space-between}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0;letter-spacing:.02em;text-wrap:balance}
+.sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.formula{font-family:var(--mono);font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:var(--surface);max-width:100%;overflow-x:auto;white-space:nowrap}
+.formula b{color:var(--fg);font-weight:500}
+.hright{display:contents}
+header.top{position:relative}
+.langbtn{font-weight:700;position:absolute;top:24px;right:0}
+header.top > div:first-child{padding-right:64px}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:4px;border-bottom:1px solid var(--line);margin-top:18px;overflow-x:auto}
+nav.tabs a{padding:10px 14px;color:var(--muted);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;font-weight:500}
+nav.tabs a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--fg)}
+nav.tabs a:focus-visible,button:focus-visible,.chip:focus-visible,input:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+section.view{padding-top:20px}
+/* toolbar */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:14px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;color:var(--muted);padding:7px 12px;font:inherit;font-size:14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.search{flex:1 1 200px;max-width:280px;position:relative}
+.search input{width:100%;font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+/* map */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:20px;align-items:start}
+@media (max-width:1040px){.layout{grid-template-columns:minmax(0,1fr)}}
+.map{position:relative;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.map svg.overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}
+.domain{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 12px 14px;position:relative}
+.domain h3{margin:0 0 2px;font-family:var(--display);font-weight:600;font-size:16px;display:flex;gap:8px;align-items:baseline}
+.domain h3 .code{font-family:var(--mono);font-size:11px;color:var(--dc);letter-spacing:.08em}
+.domain p.dd{margin:0 0 10px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.domain::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:0 3px 3px 0;background:var(--dc)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{position:relative;z-index:3;font:inherit;font-size:13.5px;line-height:1.3;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--sunk);color:var(--fg);cursor:pointer;text-align:left;transition:opacity .15s,border-color .15s,background .15s}
+.chip:hover{border-color:var(--dc)}
+.chip .ord{font-family:var(--mono);font-size:10.5px;margin-left:6px;color:var(--muted)}
+.map.has-sel .chip.dim{opacity:.32}
+.chip.sel{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.sel .ord{color:var(--bg)}
+.chip.lv1{border-color:var(--c1);box-shadow:inset 0 0 0 1.5px var(--c1)}
+.chip.lv2{border-color:var(--c2);box-shadow:inset 0 0 0 1px var(--c2)}
+.chip.lv3{border-color:var(--c3);border-style:dashed}
+.chip.src::after{content:attr(data-st);font-size:10px;color:var(--muted);margin-left:6px}
+.map[data-mode="down"]{--c1:var(--l1);--c2:var(--l2);--c3:var(--l3)}
+.map[data-mode="up"]{--c1:var(--up1);--c2:var(--up2);--c3:var(--up3)}
+path.e{fill:none;stroke-width:1.6;opacity:.9}
+path.e.l1{stroke:var(--c1);stroke-width:2.2} path.e.l2{stroke:var(--c2)} path.e.l3{stroke:var(--c3);stroke-dasharray:4 4}
+marker path.m1{fill:var(--c1)} marker path.m2{fill:var(--c2)} marker path.m3{fill:var(--c3)}
+/* detail */
+aside.detail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);max-height:calc(100vh - 72px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 22px;min-width:0}
+@media (max-width:1040px){aside.detail{position:static;max-height:none}}
+.empty h2{font-family:var(--display);font-size:20px;margin:0 0 8px}
+.empty ol{padding-left:20px;margin:8px 0;color:var(--muted)}
+.dtag{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--dc);text-transform:uppercase}
+.detail h2{font-family:var(--display);font-weight:900;font-size:24px;margin:2px 0 4px;line-height:1.25}
+.detail h4{font-size:12px;letter-spacing:.12em;color:var(--muted);margin:18px 0 6px;font-weight:700}
+.detail p{margin:0}
+.detail ol,.detail ul{margin:0;padding-left:20px}
+.detail li{margin:2px 0}
+.metrics{display:flex;flex-wrap:wrap;gap:6px}
+.metrics span{font-size:12.5px;padding:2px 8px;border-radius:4px;background:var(--sunk);border:1px solid var(--line)}
+.us{border:1px solid var(--line);border-left:3px solid var(--dC);border-radius:6px;padding:10px 12px;background:var(--sunk);font-size:14px}
+.us .asof{font-family:var(--mono);font-size:11px;color:var(--muted);display:block;margin-bottom:4px}
+.ref{font-family:var(--mono);font-size:11px;color:var(--focus);text-decoration:none;margin-left:2px}
+.datab{font-size:14px;color:var(--fg)}
+.chain .lvl{margin-top:10px}
+.chain .lvl b{font-family:var(--mono);font-size:11.5px;font-weight:500;display:inline-block;padding:1px 7px;border-radius:4px;color:var(--bg)}
+.chain .lvl.k1 b{background:var(--c1)} .chain .lvl.k2 b{background:var(--c2)} .chain .lvl.k3 b{background:var(--c3)}
+.chain ul{list-style:none;padding:0;margin:6px 0 0}
+.chain li{padding:5px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.chain li button{font:inherit;background:none;border:0;padding:0;color:var(--fg);font-weight:700;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.chain li .via{color:var(--muted)}
+.detail[data-mode="down"]{--c1:var(--l1);--c2:var(--l2);--c3:var(--l3)}
+.detail[data-mode="up"]{--c1:var(--up1);--c2:var(--up2);--c3:var(--up3)}
+.btnrow{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.ghost{font:inherit;font-size:13px;border:1px solid var(--line);background:transparent;color:var(--muted);padding:5px 10px;border-radius:6px;cursor:pointer}
+/* prose views */
+.prose{max-width:860px}
+.prose h2{font-family:var(--display);font-weight:900;font-size:26px;margin:4px 0 6px}
+.prose > p.lead{color:var(--muted);margin:0 0 18px;max-width:66ch}
+.phase{display:grid;grid-template-columns:64px minmax(0,1fr);gap:4px 16px;padding:18px 0;border-top:1px solid var(--line)}
+.phase .n{font-family:var(--display);font-weight:900;font-size:34px;line-height:1;color:var(--muted)}
+.phase h3{margin:0;font-size:18px}
+.phase .out{font-size:14px;margin:6px 0 0}
+.phase .warn{font-size:13.5px;color:var(--muted);margin:4px 0 0}
+.phase .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.phase .links .chip{font-size:12.5px;padding:4px 9px}
+@media (max-width:520px){.phase{grid-template-columns:minmax(0,1fr)}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface);margin:12px 0 20px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;background:var(--sunk)}
+tr:last-child td{border-bottom:0}
+.stage{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:12px 0 22px}
+.stage div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px}
+.stage .k{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 4px;font-size:15px}
+.stage p{margin:0;font-size:13.5px;color:var(--muted)}
+.srcs li{margin:8px 0}
+.srcs a{color:var(--focus)}
+.note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:24px}
+.uslist{display:grid;gap:12px}
+.uslist .item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+.uslist .item h3{margin:0 0 4px;font-size:16px}
+.hv{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px 18px;min-height:420px}
+.crumbs{display:flex;flex-wrap:wrap;gap:2px 4px;align-items:center;font-size:14px}
+.crumbs button{font:inherit;background:none;border:0;color:var(--focus);cursor:pointer;padding:2px 4px;border-radius:4px}
+.crumbs .cur{font-weight:700;color:var(--fg);padding:2px 4px}
+.crumbs .sep{color:var(--muted)}
+.crumbs .lv{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto;padding-left:12px}
+.hvsub{font-size:13px;color:var(--muted);margin:2px 4px 8px;max-width:70ch}
+svg.hsvg{display:block;width:100%;height:auto;overflow:visible}
+.hsvg text{font-family:var(--body);fill:var(--fg)}
+.hsvg text.mu{fill:var(--muted)}
+.hsvg text.mono{font-family:var(--mono);fill:var(--muted)}
+.hsvg .box{fill:var(--sunk);stroke:var(--line);stroke-width:1}
+.hsvg .box.port{fill:var(--surface);stroke-dasharray:4 3}
+.hsvg .box.center{fill:var(--ink);stroke:var(--ink)}
+.hsvg text.oncenter{fill:var(--bg)}
+.hsvg g.clk{cursor:pointer}
+.hsvg g.clk:hover .box{stroke:var(--fg)}
+.hsvg g.clk:focus{outline:none}
+.hsvg g.clk:focus-visible .box{stroke:var(--focus);stroke-width:2}
+.hsvg .e{fill:none;stroke-width:1.6;transition:opacity .15s}
+.hsvg .e.ext{stroke-width:1.2;opacity:.55}
+.hsvg .e.bk{stroke-dasharray:5 4}
+.hsvg.v .e.ext{opacity:.2}
+.hsvg.hl .e{opacity:.08}
+.hsvg.hl .e.on{opacity:1;stroke-width:2.2}
+.hsvg.hl g.n{opacity:.35}
+.hsvg.hl g.n.on{opacity:1}
+.hsvg .elab{font-size:11.5px;fill:var(--muted)}
+.hsteps{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:10px 28px;counter-reset:s}
+.hsteps li{position:relative;background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:8px 10px 8px 32px;font-size:13.5px;line-height:1.5;flex:1 1 170px;max-width:250px;counter-increment:s}
+.hsteps li::before{content:counter(s);position:absolute;left:10px;top:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.hsteps li:not(:last-child)::after{content:"→";position:absolute;right:-21px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.hsteps-h{font-size:12px;letter-spacing:.12em;color:var(--muted);font-weight:700;margin:18px 4px 0}
+@media (max-width:640px){.hsteps{flex-direction:column;gap:22px}.hsteps li{max-width:none;flex:none}.hsteps li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px;transform:none}}
+.dlist{list-style:none;padding:0;margin:4px 0 0}
+.dlist li{font-size:13.5px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.dlist li b{font-weight:700}
+.dlist .mu{color:var(--muted)}
+.linkbtn{font:inherit;background:none;border:0;padding:0;color:var(--fg);font-weight:700;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.map3d{position:relative;height:min(68vh,660px);min-height:400px;background:var(--bg);border:1px solid var(--line);border-radius:8px;margin-top:4px;overflow:hidden;touch-action:none}
+.map3d canvas{display:block;width:100%;height:100%;cursor:grab}
+.map3d canvas.drag{cursor:grabbing}
+.map3d canvas.hov{cursor:pointer}
+.m3ctrl{position:absolute;right:10px;top:10px;display:flex;gap:6px}
+.m3ctrl .ghost{background:var(--surface)}
+.m3ctrl .ghost[aria-pressed="true"]{color:var(--fg);border-color:var(--fg)}
+.m3legend{position:absolute;left:12px;top:10px;display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--muted);pointer-events:none;background:color-mix(in srgb,var(--surface) 80%,transparent);padding:6px 8px;border-radius:6px}
+.m3legend span{display:flex;align-items:center;gap:6px}
+.m3legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.m3legend .fb i{width:16px;height:0;border-radius:0;border-top:1.5px dashed var(--muted)}
+.m3hint{position:absolute;left:12px;right:12px;bottom:8px;margin:0;font-size:12px;color:var(--muted);pointer-events:none}
+@media (max-width:640px){.m3legend{display:none}.map3d{height:72vh}.m3hint .flow{display:none}}
+/* advanced menu */
+.toolbar{position:relative}
+details.adv{position:relative}
+details.adv summary{list-style:none;cursor:pointer;font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--muted);user-select:none}
+details.adv summary::-webkit-details-marker{display:none}
+details.adv summary::after{content:" ▾"}
+details.adv[open] summary{color:var(--fg);border-color:var(--fg)}
+.advbody{position:absolute;right:0;top:calc(100% + 6px);z-index:8;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:10px;width:max-content;max-width:min(560px,calc(100vw - 32px));box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.advrow{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.advlab{font-size:12px;color:var(--muted);min-width:32px}
+.advnote{margin:0;font-size:12.5px;color:var(--muted);max-width:52ch}
+@media (max-width:640px){.advbody{position:fixed;left:16px;right:16px;top:auto;width:auto}}
+/* glossary */
+.term{border-bottom:1px dotted currentColor;cursor:help}
+.term:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+#tip{position:fixed;z-index:20;max-width:260px;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.5;padding:8px 10px;border-radius:6px;pointer-events:none;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+#tip b{display:block;font-family:var(--mono);font-size:11.5px;opacity:.8;margin-bottom:2px}
+/* example box */
+.exbox{border:1px solid var(--line);border-radius:8px;background:var(--sunk);padding:10px 12px;font-size:14px}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--dL);border:1px solid var(--dL);border-radius:4px;padding:0 6px;margin-right:6px;vertical-align:1px}
+details.more{margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
+details.more > summary{cursor:pointer;font-size:14px;color:var(--focus);list-style:none}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary::before{content:"＋ "}
+details.more[open] > summary::before{content:"－ "}
+/* tour */
+#v-tour{max-width:820px;margin:0 auto}
+.tnote{font-size:13px;color:var(--muted);margin:0 0 14px}
+.tsteps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tsteps button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:3px 10px;cursor:pointer}
+.tsteps button.done{color:var(--fg)}
+.tsteps button[aria-current="step"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px clamp(18px,4vw,36px) 24px;position:relative;overflow:hidden}
+.tcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--dc)}
+.tnum{font-family:var(--mono);font-size:12px;color:var(--dc);letter-spacing:.08em}
+.tcard h2{font-family:var(--display);font-weight:900;font-size:clamp(26px,4vw,34px);margin:4px 0 10px;line-height:1.2}
+.tone{font-size:clamp(17px,2.2vw,20px);line-height:1.6;margin:0 0 18px;max-width:40ch}
+.tex{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:15px}
+.tex ul{margin:6px 0 0;padding-left:20px}
+.tex li{margin:4px 0}
+.tex p{margin:6px 0}
+.tex .head{font-size:12.5px;color:var(--muted)}
+.tcmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+.tcmp div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:2px}
+.tcmp .k{font-size:12px;color:var(--muted)}
+.tcmp span{font-size:14px}
+em.neg{font-style:normal;font-weight:700;color:var(--dC)}
+em.pos{font-style:normal;font-weight:700;color:var(--dP)}
+.tnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.tnav .primary{font:inherit;font-weight:700;font-size:15px;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:10px 20px;cursor:pointer}
+.tnav .link{font:inherit;font-size:14px;background:none;border:0;color:var(--focus);cursor:pointer;padding:6px 0;margin-right:16px}
+.wf{width:100%;height:auto;display:block;margin:6px 0 4px}
+.wf text{font-family:var(--body);font-size:12.5px;fill:var(--fg)}
+.wf text.v{font-family:var(--mono);font-size:12px}
+.wf .bp{fill:var(--muted)} .wf .bc{fill:var(--l1)} .wf .bn{fill:var(--dP)}
+.tsel{padding-left:22px;margin:6px 0 0}
+.tsel > li{margin:10px 0}
+.tsel ul{padding-left:18px}
+.tscore{overflow-x:auto;margin:8px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.tscore table{min-width:460px;font-size:13.5px}
+.tscore th,.tscore td:first-child{font-size:11.5px;letter-spacing:.02em;white-space:nowrap}
+.tscore td:first-child{font-size:13.5px;letter-spacing:0}
+.tscore td:not(:first-child),.tscore th:not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+.tscore tr.win td{background:color-mix(in srgb,var(--dP) 12%,transparent);font-weight:700}
+.tend h2{font-family:var(--display);font-weight:900;font-size:28px;margin:0 0 10px}
+.tend ol{padding-left:20px} .tend li{margin:6px 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <h1 data-i18n="h1">电商运营全景图谱</h1>
+    <p class="sub" data-i18n="sub"></p>
+  </div>
+  <div class="hright"><button type="button" class="ghost langbtn" id="langbtn"></button><div class="formula" data-i18n="formula"></div></div>
+</header>
+
+<nav class="tabs" aria-label="视图">
+  <a href="#tour" data-v="tour" data-i18n="tab_tour"></a>
+  <a href="#map" data-v="map" data-i18n="tab_map"></a>
+  <a href="#start" data-v="start" data-i18n="tab_start"></a>
+  <a href="#data" data-v="data" data-i18n="tab_data"></a>
+  <a href="#us" data-v="us" data-i18n="tab_us"></a>
+  <a href="#sources" data-v="sources" data-i18n="tab_sources"></a>
+</nav>
+
+<section class="view" id="v-tour" hidden></section>
+
+<section class="view" id="v-map">
+  <div class="toolbar">
+    <div class="search"><input id="q" type="search" data-i18n-ph="q_ph" aria-label="Search" list="nodelist"><datalist id="nodelist"></datalist></div>
+    <button type="button" class="ghost" id="tourbtn" data-i18n="tourbtn"></button>
+    <details class="adv" id="adv">
+      <summary data-i18n="adv"></summary>
+      <div class="advbody">
+        <div class="advrow"><span class="advlab" data-i18n="lab_view"></span><div class="seg" role="group" aria-label="视图">
+          <button type="button" id="vwh" aria-pressed="true" data-i18n="vwh"></button>
+          <button type="button" id="vw3" aria-pressed="false" data-i18n="vw3"></button>
+          <button type="button" id="vw2" aria-pressed="false" data-i18n="vw2"></button></div></div>
+        <div class="advrow"><span class="advlab" data-i18n="lab_dir"></span><div class="seg" role="group" aria-label="查看方向">
+          <button type="button" id="m-down" aria-pressed="true" data-i18n="mdown"></button>
+          <button type="button" id="m-up" aria-pressed="false" data-i18n="mup"></button></div></div>
+        <div class="advrow"><span class="advlab" data-i18n="lab_depth"></span><div class="seg" role="group" aria-label="显示层级">
+          <button type="button" data-depth="1" aria-pressed="false" data-i18n="d1"></button>
+          <button type="button" data-depth="2" aria-pressed="false" data-i18n="d2"></button>
+          <button type="button" data-depth="3" aria-pressed="true" data-i18n="d3"></button></div>
+          <div class="legend" id="legend"></div></div>
+        <p class="advnote" data-i18n="advnote"></p>
+      </div>
+    </details>
+  </div>
+  <div class="layout">
+    <div style="min-width:0">
+      <div class="hv" id="hv">
+        <nav class="crumbs" id="crumbs" aria-label="层级"></nav>
+        <p class="hvsub" id="hvsub"></p>
+        <div id="hvbody"></div>
+        <div class="map3d" id="m3" hidden>
+          <canvas aria-label="3D map"></canvas>
+          <div class="m3legend" id="m3legend"></div>
+          <div class="m3ctrl"><button type="button" class="ghost" id="m3rot" aria-pressed="false" data-i18n="m3rot"></button><button type="button" class="ghost" id="m3reset" data-i18n="m3reset"></button></div>
+          <p class="m3hint" data-i18n="m3hint"></p>
+        </div>
+      </div>
+      <div class="map" id="map" data-mode="down" hidden><svg class="overlay" id="ov" aria-hidden="true"></svg></div>
+    </div>
+    <aside class="detail" id="detail" data-mode="down" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section class="view prose" id="v-start" hidden></section>
+<section class="view prose" id="v-data" hidden></section>
+<section class="view prose" id="v-us" hidden></section>
+<section class="view prose" id="v-sources" hidden></section>
+</div>
+
+<script>
+const AS_OF = "2026-10-30";
+const DOMAINS = [
+ {k:"S",code:"01 STRATEGY",name:"战略与市场",c:"--dS",desc:"做什么、卖给谁、在哪里卖"},
+ {k:"P",code:"02 PRODUCT",name:"产品与供应链",c:"--dP",desc:"把想法变成稳定供应的合格产品"},
+ {k:"C",code:"03 COMPLIANCE",name:"合规与关务",c:"--dC",desc:"能不能合法进口、合法销售"},
+ {k:"L",code:"04 LOGISTICS",name:"物流与仓储",c:"--dL",desc:"货从工厂到用户手里的全过程"},
+ {k:"F",code:"05 STOREFRONT",name:"渠道与店铺",c:"--dF",desc:"在哪个平台、以什么页面面对用户"},
+ {k:"M",code:"06 MARKETING",name:"营销与流量",c:"--dM",desc:"让用户找到你、相信你"},
+ {k:"X",code:"07 SALES",name:"销售与客户",c:"--dX",desc:"流量变成订单，订单变成口碑"},
+ {k:"$",code:"08 FINANCE",name:"财务与利润",c:"--dF2",desc:"每一件赚多少，钱什么时候回来"},
+ {k:"D",code:"09 DATA & TEAM",name:"数据与组织",c:"--dD",desc:"让整个体系可以被衡量和管理"}
+];
+const NODES = [
+ {id:"market",d:"S",n:"市场调研",en:"Market research",what:"判断一个市场值不值得进入：需求有多大、增长如何、竞争多激烈、利润空间够不够。",how:["用平台搜索量和类目榜单估算需求规模与季节性","分析头部卖家的价格带、评论数和评分","看趋势：搜索趋势、社交媒体话题","估算进入成本：认证、首批库存、广告投入","给出结论：做、不做，或者怎样差异化"],m:["搜索量","类目规模","头部集中度","平均售价","评论门槛"],data:"来源：Amazon Brand Analytics（需品牌备案）、第三方选品工具、Google Trends。方法：描述统计、季节性分解。"},
+ {id:"competitors",d:"S",n:"竞争对手",en:"Competitors",what:"和你争同一批用户和关键词的卖家与品牌。它们的价格、广告和产品迭代会直接影响你。",how:["列出核心竞品的商品和品牌","定期记录价格、排名、评论数、促销","拆解竞品差评，找到改进点","查看它们在投放哪些关键词"],m:["竞品价格","竞品排名","评分","评论增速","广告位占有"],data:"来源：Keepa 等价格和排名历史数据。方法：时间序列对比、市场份额估算。"},
+ {id:"selection",d:"S",n:"选品",en:"Product selection",what:"决定卖什么具体产品。合规、物流、竞争和利润的难度，大多在这一步就被定下来了。",how:["用市场调研筛出候选品","每个候选品先做单件利润测算（落地成本、平台费、广告）","检查合规门槛：认证要求、受限类目","检查物流属性：尺寸、重量、易碎、带电","小批量测款，验证后再加单"],m:["预估毛利率","预估回本周期","合规难度","尺寸分段"],data:"方法：加权打分卡、盈亏平衡分析。"},
+ {id:"positioning",d:"S",n:"定位与定价策略",en:"Positioning",what:"你为谁解决什么问题，以什么价格段出现。定位决定品牌调性、文案、广告关键词和目标价格。",how:["明确目标用户和使用场景","找到和竞品不同的卖点","选择价格带：低价走量、中端性价比或高端品牌","写成一句话定位，用来指导所有内容"],m:["目标价格带","目标毛利率","差异化卖点"],data:"方法：价格分布分析、评论文本分析（找用户痛点）。"},
+ {id:"model",d:"S",n:"商业模式与渠道策略",en:"Business model",what:"决定在哪里卖、怎么卖：只做 Amazon、只做独立站，还是多平台；用平台仓还是自发货。",how:["评估各渠道的流量、费用、规则和回款周期","起步通常集中在一个主渠道","主渠道稳定后再扩展","选择履约模式：平台仓、第三方仓或自发货"],m:["渠道收入占比","渠道利润率","单一渠道依赖度"],data:"方法：分渠道利润对比、集中度风险评估。"},
+
+ {id:"dev",d:"P",n:"产品开发",en:"Product development",what:"把选品想法变成可以量产的产品：规格、材料、外观、功能和成本。",how:["写产品需求文档","打样并测试","根据竞品差评做改进","同步确认合规要求和包装尺寸","定稿后冻结规格"],m:["打样周期","单件目标成本","缺陷率目标"],data:"来源：评论文本、退货原因。方法：文本聚类找痛点。"},
+ {id:"sourcing",d:"P",n:"供应商与采购",en:"Sourcing",what:"找到能稳定供货的工厂，谈价格、起订量（MOQ）、交期和付款条件。",how:["多家比价并验厂","谈定 MOQ、单价、交期和付款方式（常见为定金加尾款）","签采购合同，写明质量标准","建立备选供应商"],m:["采购单价","MOQ","生产交期","准时交货率"],data:"来源：ERP 采购单。方法：交期分布统计、供应商评分。"},
+ {id:"qc",d:"P",n:"质量控制",en:"Quality control",what:"在出货前发现问题，避免把次品卖给用户。质量问题最终会变成退货、差评和账户风险。",how:["定义验货标准（如 AQL 抽样）","做产前、产中和出货前检验","记录缺陷类型并反馈给工厂"],m:["验货不合格率","质量原因退货占比"],data:"来源：验货报告、退货原因代码。方法：帕累托分析，找出最主要的几类缺陷。"},
+ {id:"packaging",d:"P",n:"包装与标签",en:"Packaging",what:"包装决定产品的尺寸和重量，直接影响运费和平台配送费档位，也承载合规标签和品牌体验。",how:["尽量缩小体积和重量","通过跌落测试","印上合规标识：原产地、警示语、条码","贴平台要求的标签（如 Amazon 的 FNSKU）"],m:["包装尺寸","计费重量","破损率"],data:"方法：按尺寸分段对比，算出每缩小一档能省多少费用。"},
+ {id:"brand_ip",d:"P",n:"品牌与知识产权",en:"Brand & IP",what:"注册商标、保护外观和专利，同时避免侵犯别人的权利。品牌是长期资产，也是很多平台功能的入口。",how:["在目标国家注册商标","申请平台品牌备案","上架前做侵权排查：商标、外观设计、专利","监控跟卖和仿冒"],m:["商标状态","侵权投诉数","跟卖次数"],us:"美国商标在 USPTO 申请。Amazon 品牌备案（Brand Registry）需要已注册或已申请的商标，备案后才能使用 A+ 内容、品牌旗舰店和 Brand Analytics 等功能。",data:"来源：投诉和跟卖记录。方法：频次统计。"},
+
+ {id:"entity",d:"C",n:"公司主体与税务登记",en:"Legal entity",what:"以什么法律主体经营、在哪里报税。主体决定能开哪些账户、要承担哪些税务义务。",how:["选择经营主体：本地公司或海外公司","办理税号","开设可以收款的银行或支付账户","完成平台身份验证"],m:["主体资质","年度申报节点"],us:"外国公司可以直接在 Amazon.com 开店。非美国主体涉及美国税务表格时，通常提交 W-8BEN-E。主体和税务结构请咨询专业会计师或律师。",data:"非数据节点，用台账管理即可。"},
+ {id:"product_compliance",d:"C",n:"产品合规认证",en:"Product compliance",what:"产品必须符合目标市场的安全、电气、化学等法规，否则无法进口，或者会被平台下架。",how:["按品类确认适用法规","找认可实验室检测","准备合格证书和技术文件","在平台上传合规文件","法规更新时复核"],m:["证书有效期","检测费用","被要求补件次数"],us:"一般消费品需要 GCC（通用合格证书），儿童产品需要由 CPSC 认可的第三方实验室检测并出具 CPC。自 2026-07-08 起，CPSC 监管的产品进口时需在 CBP 的 ACE 系统里电子申报证书数据（eFiling）。电子产品常涉及 FCC；食品、化妆品、医疗器械归 FDA 监管；加州 Proposition 65 要求对特定化学物质做警示。",src:[7],data:"来源：证书台账。方法：到期提醒。"},
+ {id:"customs",d:"C",n:"进口清关",en:"Customs clearance",what:"货物进入目的国时向海关申报商品编码、价值和原产地，并缴纳关税和费用。",how:["确定进口商（Importer of Record）","委托报关行","正确归类商品编码（HS / HTS）","海运货物提前申报","缴税放行"],m:["清关时长","查验率","申报差错数"],us:"美国进口需要 IOR 和海关保证金（customs bond），海运货物需在装船前提交 ISF（10+2）申报。800 美元以下包裹免税的 de minimis 待遇自 2025 年 8 月起暂停；CBP 自 2026-06-24 起对所有运输方式无限期暂停，法律层面该豁免将于 2027-07-01 终止。邮政小包新的非正式报关流程，合规日期已推迟到 2027-01-20。",src:[4,5,6],data:"来源：报关单（Entry Summary）。方法：清关时效统计。"},
+ {id:"tariff",d:"C",n:"关税",en:"Tariffs",what:"进口时按商品编码和原产地征收的税，直接计入落地成本。",how:["查准商品编码对应的基础税率","叠加适用的附加关税","计入落地成本","跟踪政策变化，评估原产地多元化"],m:["有效关税率","单件关税成本"],us:"基础税率按 HTSUS 10 位编码确定。2026-02-20 美国最高法院裁定 IEEPA 关税无效；随后的 Section 122 临时附加税于 2026-07-24 到期，由对约 60 个经济体征收 10% 或 12.5% 的新 Section 301 关税接替；钢、铝、汽车等仍有 Section 232 关税。关税政策变化频繁，下单前应在官方 HTS 和 CBP 查询最新税率。",src:[1,2,3],data:"来源：报关单、HTS 税率表。方法：情景对比（不同税率下的单件利润）。"},
+ {id:"sales_tax",d:"C",n:"销售税与间接税",en:"Sales tax / VAT",what:"卖给消费者时要代收的税。美国按州征收销售税，欧盟等地区征收增值税（VAT）。",how:["判断在哪些地区有纳税义务","区分平台代收和自己申报的部分","在独立站配置税费计算","按期申报"],m:["有纳税义务的地区数","申报准确率"],us:"美国没有联邦增值税，由各州征收销售税。2018 年 South Dakota v. Wayfair 案后，各州可以按销售额或订单数认定远程卖家的纳税义务（economic nexus）。征收销售税的州都有 marketplace facilitator 法规，由 Amazon 等平台代收代缴；独立站需要卖家自己追踪和申报。",data:"来源：订单的收货州、税务软件。方法：各州销售额阈值监控。"},
+ {id:"platform_policy",d:"C",n:"平台政策",en:"Platform policy",what:"平台自己的规则：类目审核、商品政策、费用调整、卖家身份验证等。违反会导致下架或封号。",how:["定期阅读平台公告","上架前检查类目是否受限","记录费用调整，并更新成本模型"],m:["政策变化次数","受影响 SKU 数"],us:"根据 INFORM Consumers Act（2023-06-27 生效），平台必须核验高销量卖家的身份和银行信息。Amazon 美国站自 2026-01-01 起停止 FBA 预处理和贴标服务，2026 年费用调整自 2026-01-15 生效。",src:[8,9,10],data:"来源：平台公告。方法：变更日志。"},
+
+ {id:"firstmile",d:"L",n:"头程物流",en:"First-mile freight",what:"把货从工厂运到目的国仓库：海运、空运、快递，以及中间的订舱、拖车和清关衔接。",how:["按时效和成本选择运输方式","订舱并安排装柜","衔接报关和清关","送到平台仓或第三方仓"],m:["单件头程成本","运输时效","时效波动"],data:"来源：货代账单、物流轨迹。方法：时效分布统计（看波动，不只看平均值）。"},
+ {id:"warehouse",d:"L",n:"仓储",en:"Warehousing (FBA / 3PL)",what:"货物在目的国存放的地方：平台仓（如 FBA）或第三方海外仓（3PL）。",how:["选择仓储模式","按要求备货入库","管理库龄","及时清理滞销库存"],m:["库容使用率","库龄","仓储费","入库时长"],data:"来源：库存报表。方法：库龄分布、仓储费归因。"},
+ {id:"inventory_plan",d:"L",n:"库存计划与补货",en:"Inventory planning",what:"决定什么时候补货、补多少。补少了会断货掉排名，补多了占资金还产生仓储费。",how:["预测未来日均销量","计算补货周期：生产交期 + 运输时效 + 入库时长","设置安全库存","算出补货点和补货量"],m:["库存周转天数","可售天数","断货率","补货点"],data:"方法：补货点 = 日均销量 × 补货周期 + 安全库存；安全库存根据销量和交期的波动计算。"},
+ {id:"lastmile",d:"L",n:"尾程配送",en:"Last-mile delivery",what:"从仓库送到消费者手里。配送速度和体验会影响转化率和评价。",how:["平台仓订单由平台配送","自发货订单选择承运商","监控时效和丢件"],m:["送达时效","准时率","丢件破损率"],data:"来源：订单物流数据。方法：承运商时效对比。"},
+ {id:"returns",d:"L",n:"退货与逆向物流",en:"Returns",what:"处理用户退回的商品：退款、检查、重新上架或报废。",how:["分析退货原因","可售退货重新入库","不可售的移除或清货","针对主要原因改进产品或页面描述"],m:["退货率","退货原因分布","退货损失"],data:"来源：退货报告。方法：原因分类统计。"},
+
+ {id:"amazon",d:"F",n:"Amazon 店铺",en:"Amazon store",what:"作为第三方卖家在 Amazon 开店。平台自带流量，但费用高、规则严、竞争激烈。",how:["注册卖家账户并完成验证","选择专业销售计划","创建或跟卖商品页面","选择履约方式","维护账户健康"],m:["销售额","Buy Box 占有率","账户健康评分"],data:"来源：Selling Partner API。方法：报表自动化。"},
+ {id:"dtc",d:"F",n:"独立站",en:"DTC website",what:"自己的品牌网站（如基于 Shopify 搭建）。利润空间和用户数据都归自己，但流量要自己获取。",how:["搭建网站，配置支付、税费和物流","设计从浏览到下单的路径","通过广告、内容、邮件获取流量","处理隐私合规"],m:["访问量","转化率","客单价","复购率","获客成本"],data:"来源：Shopify API、GA4。方法：漏斗分析、留存分析。"},
+ {id:"other_platforms",d:"F",n:"其他平台",en:"Other marketplaces",what:"Walmart、eBay、TikTok Shop、Temu 等。可以分散风险，但每个平台的规则和用户都不一样。",how:["评估平台用户与品类是否匹配","按平台规则上架","统一管理库存和订单"],m:["各平台销售占比","各平台利润率"],data:"方法：分渠道利润对比。"},
+ {id:"listing",d:"F",n:"商品页面",en:"Listing",what:"用户看到的商品页面：标题、图片、要点描述、详情和价格。它既决定搜索能不能找到你，也决定找到后会不会买。",how:["标题和要点覆盖核心关键词","主图符合规范并有点击吸引力","副图讲清卖点和使用场景","根据数据持续优化"],m:["点击率","转化率","页面质量问题数"],data:"方法：A/B 测试（如 Amazon 的 Manage Your Experiments）。"},
+ {id:"account_health",d:"F",n:"账户健康",en:"Account health",what:"平台对卖家表现的考核：订单缺陷率、迟发率、政策违规等。指标超标会被限制甚至停用。",how:["每天查看账户健康页面","及时回应投诉和侵权通知","保留合规文件，以便申诉"],m:["订单缺陷率（ODR）","迟发率","政策违规数"],data:"来源：账户健康报告。方法：阈值预警。"},
+
+ {id:"seo",d:"M",n:"关键词与站内搜索",en:"Search & keywords",what:"让用户搜索时能找到你。平台搜索排名取决于相关性和销售表现。",how:["建立关键词库并分级","把核心词放进标题和要点","用后台搜索词补充","跟踪关键词排名"],m:["关键词自然排名","搜索曝光量"],data:"来源：Brand Analytics 搜索词报告。方法：关键词覆盖率分析。"},
+ {id:"ppc",d:"M",n:"站内广告",en:"PPC advertising",what:"在平台内付费获取曝光，如 Amazon Sponsored Products。新品起量和稳住排名的主要手段。",how:["先开自动广告收集搜索词","把转化好的词放进手动精准投放","否定无效词","按 ACoS / TACoS 目标调整出价"],m:["ACoS（广告花费 ÷ 广告销售额）","TACoS（广告花费 ÷ 总销售额）","CPC","广告转化率"],data:"来源：Amazon Ads API。方法：搜索词归因、出价与转化的关系分析。"},
+ {id:"offsite",d:"M",n:"站外流量",en:"Off-site traffic",what:"来自平台以外的流量：社交媒体、网红合作、内容营销、邮件、搜索引擎广告。",how:["选择目标用户聚集的渠道","用追踪链接衡量效果（如 Amazon Attribution）","积累自己的用户名单"],m:["站外引流量","站外转化率","获客成本"],data:"来源：Amazon Attribution、GA4。方法：渠道归因。"},
+ {id:"promo",d:"M",n:"促销活动",en:"Promotions",what:"优惠券、秒杀、会员日、节日大促。可以短期拉高销量和排名，但会压缩利润。",how:["提前规划全年大促日历","算清促销后的单件利润","备足库存","复盘活动带来的真实增量"],m:["促销增量销量","促销期利润","活动后排名保持"],data:"方法：增量分析（和没有活动时的基线销量对比）。"},
+ {id:"reviews",d:"M",n:"评论与评分",en:"Reviews & ratings",what:"用户评价是影响转化最强的因素之一，也是发现产品问题的信号。",how:["只通过合规方式请求评论（如平台自带的请求功能）","分析差评并改进产品","不做任何操纵评论的行为"],m:["星级评分","评论数","差评率"],us:"美国 FTC 有专门针对虚假评论和评价的规则，Amazon 也禁止购买或操纵评论。",data:"方法：评论文本分析、评分趋势。"},
+ {id:"content",d:"M",n:"品牌内容",en:"Brand content",what:"A+ 内容、品牌旗舰店、视频。提升信任和转化，让用户记住品牌。",how:["完成品牌备案","用 A+ 模块讲清卖点","搭建品牌旗舰店","制作产品视频"],m:["品牌店访问量","A+ 带来的转化提升"],data:"方法：A/B 测试。"},
+
+ {id:"traffic",d:"X",n:"流量",en:"Traffic",what:"进入商品页面的访问量，来自自然搜索、广告、站外和推荐位。",how:["按来源拆分流量","找出主要来源和缺口","针对缺口提升"],m:["会话数（Sessions）","页面浏览量","来源占比"],data:"来源：业务报告。方法：来源分解、趋势分析。"},
+ {id:"cvr",d:"X",n:"转化率",en:"Conversion rate",what:"访问中下单的比例。由价格、评论、页面、配送时效和库存状态共同决定。",how:["和同类目水平对比","逐项检查影响因素","一次只改一个变量，观察结果"],m:["订单转化率（Unit Session Percentage）"],data:"方法：分组对比；数据量足够时用回归分析找主要影响因素。"},
+ {id:"price",d:"X",n:"售价",en:"Price",what:"商品的销售价格，直接影响利润和转化率，也影响能否拿到 Buy Box。",how:["按成本加目标利润定出底价","参考竞品价格带","设置价格下限，防止亏本","记录每次调价的结果"],m:["售价","价格弹性","Buy Box 占有率"],data:"方法：用历史调价数据估算价格弹性。需要足够样本，并标出误差范围。"},
+ {id:"sales",d:"X",n:"销量与销售额",en:"Sales",what:"卖出的件数和金额。销量 = 流量 × 转化率。",how:["每天跟踪","拆成流量和转化两部分找原因","区分自然订单和广告订单"],m:["销量","销售额","自然订单占比"],data:"方法：驱动拆解（销量 = 流量 × 转化率），这是精确的恒等式。"},
+ {id:"bsr",d:"X",n:"排名",en:"BSR & search rank",what:"平台根据近期销量给出的排名。排名越高自然流量越多，形成正循环；断货会让排名迅速下跌。",how:["跟踪类目排名和关键词排名","排名下跌时查明原因","避免断货"],m:["Best Sellers Rank","核心词自然排名"],data:"方法：排名与销量的相关性统计。"},
+ {id:"cs",d:"X",n:"客服与售后",en:"Customer service",what:"回答售前问题，处理售后投诉和退换。影响评价、账户健康和复购。",how:["在平台规定时间内回复买家消息","准备常见问题模板","记录问题类型，反馈给产品团队"],m:["回复时长","问题解决率","投诉类型"],data:"方法：问题分类统计。"},
+
+ {id:"landed_cost",d:"$",n:"落地成本",en:"Landed cost",what:"一件商品到达可售仓库时的全部成本：采购价、头程运费、关税、清关费用、检测认证分摊等。",how:["列出所有成本项","按体积或货值分摊到每一件","每批货单独核算","汇率变动时更新"],m:["单件落地成本","各成本项占比"],data:"来源：采购单、货代账单、报关单。方法：按批次核算。这是确定性计算，数据准确就能算准。"},
+ {id:"platform_fees",d:"$",n:"平台费用",en:"Platform fees",what:"平台收取的佣金、配送费、仓储费等，或者独立站的订阅费和支付手续费。",how:["按类目查佣金比例","按尺寸和重量查配送费","计入仓储费等附加费用","平台每年调费后更新模型"],m:["佣金率","单件配送费","费用占售价比例"],us:"Amazon 美国站按类目收取佣金，多数类目约为 15%，以官方费率表为准；FBA 配送费按尺寸分段和重量计算。2026 年费用调整自 2026-01-15 生效，官方称 FBA 配送费平均每件增加约 0.08 美元。",src:[8,9],data:"来源：费用预览报告、结算报告。方法：逐笔对账。"},
+ {id:"fx",d:"$",n:"汇率",en:"FX rate",what:"采购用人民币等货币支付，销售收的是美元等外币，汇率变化会直接影响利润。",how:["记录采购和回款时的汇率","估算汇率波动对利润的影响","规模较大时考虑锁汇"],m:["汇率","汇兑损益"],data:"来源：银行或央行公布的汇率。方法：敏感性分析。"},
+ {id:"unit_econ",d:"$",n:"单件利润",en:"Unit economics",what:"卖一件赚多少钱。这是整个体系里最核心的指标，几乎所有节点最终都会汇到这里。",how:["单件利润 = 售价 − 落地成本 − 平台佣金 − 配送费 − 仓储分摊 − 单件广告费 − 退货损失","按 SKU 和渠道分别计算","每月复核"],m:["单件利润","毛利率","净利率","盈亏平衡 ACoS"],data:"方法：确定性公式计算，输入数据准确时结果就是准的。"},
+ {id:"pnl",d:"$",n:"利润表",en:"P&L",what:"一段时间内的总收入、总成本和总利润，用来判断生意整体是否健康。",how:["按月出利润表","按渠道和 SKU 拆分","与预算和上期对比"],m:["收入","毛利","营业利润","各项费用率"],data:"来源：平台结算报告、财务软件。方法：差异分析。"},
+ {id:"cashflow",d:"$",n:"现金流",en:"Cash flow",what:"钱什么时候出去、什么时候回来。电商常见的问题是账面有利润但手上没现金：采购要先付款，回款要等几个月。",how:["画出资金周期：定金 → 尾款 → 运输 → 销售 → 平台回款","做未来 12 周的现金预测","据此安排采购节奏和融资"],m:["现金转换周期","可用现金","库存占用资金"],data:"方法：基于已确定的采购和回款计划做现金预测。"},
+
+ {id:"erp",d:"D",n:"ERP 与系统",en:"ERP & systems",what:"管理商品、采购、库存、订单和财务的系统，是所有数据的底座。",how:["统一 SKU 编码","对接平台和仓库","让采购、库存、订单在同一个系统里流转"],m:["数据完整度","对账差异"],data:"这是后续做数据化的基础。"},
+ {id:"analytics",d:"D",n:"数据分析与报表",en:"Analytics",what:"把各系统的数据汇总成报表，回答“发生了什么”和“为什么”。",how:["定义统一的指标口径","搭建日常看板","出现异常时按指标逐层拆解找原因"],m:["报表覆盖率","指标口径一致性"],data:"方法：描述统计、驱动拆解、异常检测。"},
+ {id:"forecast",d:"D",n:"需求预测",en:"Demand forecasting",what:"预测未来销量，用于补货、采购和资金规划。",how:["用历史销量做基础预测","叠加季节性、促销和价格变化","用历史数据回测准确度","定期修正"],m:["预测误差（如 MAPE）","预测偏差"],data:"方法：时间序列模型。准确度要先通过回测验证，才能用于决策。"},
+ {id:"team",d:"D",n:"团队与分工",en:"Team",what:"谁负责哪些节点。小团队一人多岗，规模扩大后按职能拆分。",how:["按图谱的领域划分职责","每个关键指标都有明确负责人","建立每周复盘机制"],m:["关键指标是否都有负责人"],data:"非数据节点。"}
+];
+const EDGES = [
+ ["market","selection","需求和竞争情况决定选什么"],["market","competitors","确定主要竞争者"],
+ ["competitors","price","竞品价格限定你的价格空间"],["competitors","ppc","竞品出价抬高广告单价"],["competitors","positioning","差异化要避开竞品优势"],
+ ["selection","dev","选定产品后开始开发"],["selection","positioning","产品决定目标用户"],["selection","product_compliance","品类决定适用哪些法规"],["selection","packaging","产品尺寸决定包装"],
+ ["positioning","price","定位决定价格带"],["positioning","listing","定位决定文案和卖点"],["positioning","brand_ip","定位决定品牌方向"],
+ ["model","amazon","选择平台渠道"],["model","dtc","选择独立站"],["model","other_platforms","选择多平台"],["model","warehouse","选择履约模式"],
+ ["dev","sourcing","规格决定找哪家工厂"],["dev","qc","规格是验货标准"],["dev","product_compliance","设计和材料影响认证"],
+ ["sourcing","landed_cost","采购价是落地成本的主体"],["sourcing","inventory_plan","生产交期决定补货周期"],["sourcing","qc","工厂能力决定质量"],["sourcing","cashflow","定金和尾款占用资金"],
+ ["qc","returns","质量问题导致退货"],["qc","reviews","质量问题导致差评"],
+ ["packaging","platform_fees","尺寸重量决定配送费档位"],["packaging","firstmile","体积重决定运费"],["packaging","returns","包装不好导致破损退货"],
+ ["brand_ip","content","品牌备案后才能用 A+ 和品牌店"],["brand_ip","account_health","侵权投诉影响账户"],
+ ["entity","customs","主体可以作为进口商"],["entity","sales_tax","主体决定税务义务"],["entity","amazon","用于开店和身份验证"],
+ ["product_compliance","customs","缺少证书可能被扣关"],["product_compliance","account_health","缺少证书会被下架"],["product_compliance","landed_cost","检测认证费用分摊到每件"],
+ ["customs","tariff","申报的编码和原产地决定税率"],["customs","firstmile","清关时长影响整体时效"],
+ ["tariff","landed_cost","关税计入落地成本"],
+ ["sales_tax","dtc","独立站需要自己处理税费"],["sales_tax","price","是否含税影响定价"],
+ ["platform_policy","platform_fees","平台调整费用"],["platform_policy","account_health","违反政策影响账户"],["platform_policy","listing","类目和内容规则"],
+ ["firstmile","landed_cost","运费计入落地成本"],["firstmile","inventory_plan","运输时效决定补货周期"],
+ ["fx","landed_cost","汇率改变以美元计算的采购成本"],["fx","pnl","产生汇兑损益"],
+ ["inventory_plan","warehouse","补货量决定库存水位"],["inventory_plan","sales","断货直接丢失销量"],["inventory_plan","cashflow","库存占用资金"],["inventory_plan","bsr","断货导致排名下跌"],
+ ["warehouse","platform_fees","产生仓储费和长期仓储费"],["warehouse","lastmile","仓库位置影响配送时效"],
+ ["lastmile","cvr","配送速度影响转化"],["lastmile","reviews","配送体验影响评价"],["lastmile","account_health","迟发影响账户指标"],
+ ["returns","unit_econ","退货损失计入单件成本"],["returns","account_health","退货和投诉影响账户"],["returns","inventory_plan","可售退货回到库存"],
+ ["amazon","platform_fees","产生佣金和配送费"],["amazon","listing","在平台上创建商品页面"],["amazon","traffic","平台自带流量"],
+ ["dtc","offsite","独立站流量需要自己获取"],["dtc","platform_fees","订阅费和支付手续费"],
+ ["other_platforms","sales","增加销售渠道"],
+ ["listing","seo","文案关键词决定搜索相关性"],["listing","cvr","页面质量决定转化"],
+ ["account_health","sales","账户受限会停售"],["account_health","listing","违规导致商品下架"],
+ ["seo","traffic","自然排名带来流量"],
+ ["ppc","traffic","广告带来流量"],["ppc","unit_econ","单件广告费计入成本"],["ppc","seo","广告订单帮助提升自然排名"],
+ ["offsite","traffic","站外引流"],
+ ["promo","cvr","折扣提升转化"],["promo","unit_econ","折扣压缩单件利润"],["promo","sales","活动带来短期增量"],
+ ["reviews","cvr","评分和评论数影响转化"],["content","cvr","品牌内容提升转化"],
+ ["traffic","sales","销量 = 流量 × 转化率"],["cvr","sales","销量 = 流量 × 转化率"],["cvr","ppc","转化率高，广告效率就高"],
+ ["price","cvr","价格影响转化"],["price","unit_econ","售价是利润的起点"],
+ ["sales","bsr","销量决定排名"],["sales","reviews","订单越多，评论越多"],["sales","pnl","销量 × 单件利润 = 利润"],["sales","forecast","历史销量是预测的基础"],
+ ["bsr","traffic","排名带来自然流量（正循环）"],
+ ["cs","reviews","售后处理影响评价"],["cs","account_health","回复时效和投诉处理影响账户"],
+ ["landed_cost","unit_econ","落地成本计入单件成本"],["landed_cost","cashflow","采购和运输都要先付钱"],
+ ["platform_fees","unit_econ","平台费用计入单件成本"],
+ ["unit_econ","pnl","单件利润 × 销量"],["unit_econ","ppc","单件利润决定能承受多高的广告成本"],
+ ["pnl","cashflow","利润最终变成现金"],
+ ["cashflow","sourcing","现金决定能不能下单补货"],["cashflow","ppc","现金决定广告预算"],
+ ["erp","analytics","提供统一数据"],["analytics","forecast","整理好的数据用于预测"],["analytics","positioning","数据反馈用于调整策略"],
+ ["forecast","inventory_plan","预测决定补货量"],["forecast","cashflow","预测决定资金需求"],
+ ["team","analytics","指标有人负责才会被跟踪"]
+];
+const SOURCES = [
+ {id:1,t:"Supreme Court Strikes Down IEEPA Tariffs: What Importers Need to Know Now",o:"Holland & Knight，2026 年 2 月",u:"https://www.hklaw.com/en/insights/publications/2026/02/supreme-court-strikes-down-ieepa-tariffs"},
+ {id:2,t:"Effective Tariff Rates and Revenues (Updated October 14, 2026)",o:"Penn Wharton Budget Model，2026-10-14",u:"https://budgetmodel.wharton.upenn.edu/p/2026-10-14-effective-tariff-rates-and-revenues-updated-october-14-2026/"},
+ {id:3,t:"Section 122 in effect: what the US tariff regime looks like now",o:"Global Trade Alert，2026 年 2 月",u:"https://globaltradealert.org/reports/S122-US-Tariff-Estimates"},
+ {id:4,t:"U.S. CBP indefinitely suspends de minimis exemption for all modes of importation",o:"KPMG TaxNewsFlash，2026 年 6 月",u:"https://kpmg.com/us/en/taxnewsflash/news/2026/06/cbp-suspends-de-minimis-exemption.html"},
+ {id:5,t:"Indefinite Suspension of the De Minimis Exemption (all modes other than postal)",o:"Federal Register，2026-06-24",u:"https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other"},
+ {id:6,t:"CBP Delays Implementation Date of De Minimis Exemption for Mail Shipments",o:"Thompson Hine SmarTrade，2026 年 10 月",u:"https://www.thompsonhinesmartrade.com/2026/10/cbp-delays-implementation-date-of-de-minimis-exemption-for-mail-shipments/"},
+ {id:7,t:"CPSC eFiling Requirement Takes Effect One Year From Today",o:"Arnold & Porter，2025 年 7 月",u:"https://www.arnoldporter.com/en/perspectives/blogs/consumer-products-and-retail-navigator/2025/07/cpsc-efiling-requirement-takes-effect-one-year-from-today"},
+ {id:8,t:"Amazon's 2026 Fee Update: 3 Things to Know Before Q1",o:"Feedvisor",u:"https://feedvisor.com/resources/amazon-trends/amazon-2026-fee-updates/"},
+ {id:9,t:"2026 Updates to US Referral and Fulfillment by Amazon Fees",o:"Amazon Seller Central 论坛公告",u:"https://sellercentral.amazon.com/seller-forums/discussions/t/f3fa3211-820b-4e2e-a023-158a9cf55f99"},
+ {id:10,t:"INFORM Consumers Act takes effect on June 27",o:"About Amazon",u:"https://aboutamazon.com/news/policy-news-views/inform-consumers-act-takes-effect-on-june-27"}
+];
+const TOOLS = [
+ {t:"HTS 关税税率查询（USITC）",u:"https://hts.usitc.gov/"},
+ {t:"美国海关与边境保护局（CBP）",u:"https://www.cbp.gov/"},
+ {t:"美国消费品安全委员会（CPSC）",u:"https://www.cpsc.gov/"},
+ {t:"美国专利商标局（USPTO）",u:"https://www.uspto.gov/"}
+];
+const PHASES = [
+ {t:"学习体系，确定方向",out:"产出：选定的目标市场和主渠道。",warn:"常见问题：还没算过账就先找工厂。",ids:["market","model","unit_econ","cashflow"]},
+ {t:"市场调研与选品",out:"产出：3–5 个候选品，每个都有单件利润测算和合规清单。",warn:"常见问题：只看销量不看利润，或者忽略认证门槛。",ids:["market","competitors","selection","positioning","price","landed_cost","platform_fees"]},
+ {t:"主体、税务与合规",out:"产出：可以开店和进口的主体、商标申请、产品合规方案。",warn:"常见问题：上架后才发现缺证书，或商标侵权。",ids:["entity","sales_tax","product_compliance","brand_ip","platform_policy"]},
+ {t:"产品开发与采购",out:"产出：定稿样品、采购合同、验货标准、包装方案。",warn:"常见问题：包装尺寸多出一档，配送费一直多付。",ids:["dev","sourcing","qc","packaging"]},
+ {t:"头程、清关与入仓",out:"产出：第一批货安全入仓，落地成本按批次核算清楚。",warn:"常见问题：编码归类错误导致补税或扣关。",ids:["customs","tariff","firstmile","warehouse","fx"]},
+ {t:"上架与冷启动",out:"产出：完整的商品页面、品牌内容、第一轮广告。",warn:"常见问题：广告没有利润底线，烧钱换不来自然排名。",ids:["amazon","dtc","listing","content","seo","ppc","promo"]},
+ {t:"日常运营与优化",out:"产出：每周复盘的指标看板和补货计划。",warn:"常见问题：断货导致排名掉了再追回来，代价很高。",ids:["traffic","cvr","sales","bsr","reviews","cs","returns","inventory_plan","account_health","lastmile"]},
+ {t:"财务管理与扩张",out:"产出：月度利润表、现金预测；再决定扩品类、扩渠道或扩市场。",warn:"常见问题：账面盈利但现金断裂。",ids:["pnl","cashflow","erp","analytics","forecast","other_platforms","offsite","team"]}
+];
+/* running example: a fictional collapsible silicone cup. All numbers are illustrative. */
+const CASE = {name:"折叠硅胶水杯", price:19.99};
+const EX = {
+ market:"搜索“折叠水杯”，发现头部商品售价集中在 $15–25，前 10 名大多有几百到上千条评论。说明有需求，但新卖家要靠差异化进入。",
+ competitors:"记录 3 个主要竞品每周的价格和排名，发现其中一家每到周末降价 $2，你的广告在周末也会跟着变贵。",
+ selection:"从 30 个想法里排除掉太大、带电、易碎、季节性强的，剩下折叠水杯、宠物喂食器、瑜伽弹力带 3 个。按需求、竞争、利润、操作难度、差异化机会打分，折叠水杯 20 分最高。再粗算一遍：售价 $19.99 时每件还能剩约 $5，才决定做。",
+ positioning:"定位为“能放进口袋的通勤水杯”，目标用户是通勤上班族，价格放在中段 $19.99，不和 $9.99 的低价款拼价格。",
+ model:"起步只做 Amazon 美国站，用 FBA 发货；等月销稳定在 300 件以上，再考虑开独立站。",
+ dev:"竞品差评里常见“折叠处漏水”，所以开发时加厚密封圈，打样后做 100 次折叠测试。",
+ sourcing:"工厂报价 ¥22/件，起订量 1,000 件，生产交期 25 天，付款方式为 30% 定金、70% 出货前付清。",
+ qc:"出货前按 AQL 抽检 80 件，发现 2 件盖子拧不紧，要求工厂返工后再发货，避免变成差评。",
+ packaging:"把包装盒高度从 10 cm 减到 8 cm，商品可能落进更低的 FBA 尺寸档，每件配送费就少交一些。具体档位以 Amazon 官方费率表为准。",
+ brand_ip:"上架前申请美国商标，拿到申请号后就能做品牌备案，解锁 A+ 页面；同时查一遍有没有相似的外观专利。",
+ entity:"用国内公司主体注册 Amazon 美国站，按要求填写税务信息。具体怎么选主体，应该问会计师。",
+ product_compliance:"水杯属于食品接触产品，需要按美国要求做材料检测。检测费 $600，摊到首批 1,000 件上是每件 $0.60。",
+ customs:"货物海运到洛杉矶，由报关行以你的公司作为进口商申报。商品编码决定税率，清关大约需要几天。",
+ tariff:"按货值 $3.10/件、示例税率 20% 计算，关税是每件 $0.62。真实税率要按商品的 HTS 编码查询。",
+ sales_tax:"顾客在加州下单，Amazon 作为平台代收代缴销售税，你不用自己申报；以后开独立站就要自己处理。",
+ platform_policy:"Amazon 每年调整一次费用。调整后要把新的配送费更新到利润表里，否则利润会算错。",
+ firstmile:"1,000 件拼箱海运，运费每件 $0.80，从工厂到 FBA 仓大约 35 天。",
+ warehouse:"货存在 FBA 仓。卖得慢的部分库龄过长会产生额外仓储费，所以首批不宜备太多。",
+ inventory_plan:"日销 10 件，补货周期 = 生产 25 天 + 运输 35 天 + 入仓 10 天 = 70 天，加 14 天安全库存，补货点 = 10 × 84 = 840 件。也就是说，首批 1,000 件卖出 160 件就该下第二单了。",
+ lastmile:"FBA 订单带 Prime 标志，多数顾客 1–2 天就能收到，这本身就能提高转化率。",
+ returns:"退货率 3%，每次退货平均损失 $10（退款、退货费、无法再卖），摊到每件销量上是 $0.30。",
+ amazon:"在 Amazon 美国站开专业卖家账户，创建折叠水杯的商品页面，选择 FBA 发货。",
+ dtc:"开独立站后同样卖 $19.99，不用交 15% 佣金，但每个订单的广告获客成本可能更高。",
+ other_platforms:"Amazon 稳定后在 Walmart 上架同款，和 Amazon 共用美国的库存。",
+ listing:"标题写清“折叠硅胶水杯、可放口袋、容量”，主图展示折叠前后对比，让人一眼看懂卖点。",
+ account_health:"如果连续多单发货延迟或被投诉，账户健康分下降，严重时商品会被暂停销售。",
+ seo:"把 “collapsible cup”“travel cup” 这类核心词放进标题和要点，顾客搜索时才能找到你。",
+ ppc:"新品期为了起量，每卖一件平均花 $8 广告费，单件利润变成 −$0.78；进入稳定期降到 $2.40，单件利润回到 $4.82。",
+ offsite:"找健身博主发一条通勤水杯测评，用追踪链接统计带来了多少访问和订单。",
+ promo:"会员日打 8 折，售价从 $19.99 降到 $15.99。佣金跟着降一点，但单件利润从 $4.82 降到约 $1.42。",
+ reviews:"评分从 4.5 降到 4.0，同样的流量下转化率可能明显下降。所以每条差评都要看，找出产品问题。",
+ content:"A+ 页面用对比图说明“折叠后厚度只有 2 cm”，帮犹豫的顾客下决心。",
+ traffic:"每月 3,000 次访问，其中 1,800 次来自自然搜索，1,200 次来自广告。",
+ cvr:"3,000 次访问中有 300 次下单，转化率 10%。",
+ price:"售价 $19.99。涨到 $21.99 每件多赚约 $1.70，但转化率会降多少，只能用真实数据测试。",
+ sales:"3,000 次访问 × 10% 转化率 = 每月 300 件，约每天 10 件。",
+ bsr:"连续一周每天卖 10 件以上，类目排名上升，自然流量跟着增加；一旦断货，排名会很快掉下去。",
+ cs:"顾客问“能装热水吗”，24 小时内回复，并把答案补充到商品页面，减少类似咨询和退货。",
+ landed_cost:"采购 $3.10 + 头程 $0.80 + 关税 $0.62 + 清关杂费 $0.15 + 检测分摊 $0.60 = 落地成本 $5.27/件。",
+ platform_fees:"佣金 15% × $19.99 = $3.00，FBA 配送费 $4.00，仓储分摊 $0.20，合计 $7.20，占售价约 36%。",
+ fx:"按 1 美元 = 7.1 元，¥22 的采购价是 $3.10；如果汇率变成 6.8，同样的采购价就是 $3.24。",
+ unit_econ:"$19.99 − 落地成本 $5.27 − 佣金 $3.00 − 配送费 $4.00 − 仓储 $0.20 − 退货 $0.30 − 广告 $2.40 = 单件利润 $4.82，约 24%。",
+ pnl:"每月 300 件 × $4.82 ≈ $1,446 利润。这还没扣人工、软件等固定开支。",
+ cashflow:"首批货要先付出约 $5,270（采购、运费、关税、检测等），大约 70 天后才开始卖，平台定期回款，加上新品期的广告投入，往往要几个月才能收回这笔钱。",
+ erp:"用一张表或 ERP 统一 SKU 编号，采购、库存、销售都用同一个编号，账才对得上。",
+ analytics:"利润下降时，先拆成“销量变了”还是“单件利润变了”，再一层层往下找原因。",
+ forecast:"用过去 3 个月的日销预测下个月每天 12 件，再用之后的真实销量检查预测偏差有多大。",
+ team:"两个人的小团队：一人负责产品、采购和物流，一人负责页面、广告和客服，每周一起看一次利润表。"
+};
+const TOUR = [
+ {d:"S",title:"选品：先决定卖什么",node:"selection",one:"好产品要同时满足四个条件：有人买、竞争不太激烈、扣完所有成本还能赚钱、你有能力做好。",ex:`<p class="head">从一堆想法到一个产品，要经过四步：</p>
+<ol class="tsel">
+<li><b>找想法，先列 30 个。</b>来源可以是 Amazon 的 Best Sellers 和 Movers & Shakers 榜单、搜索词数据、竞品差评里的抱怨、你自己熟悉的生活场景。</li>
+<li><b>快速排除，剩 3 个。</b>太大太重、带电池、易碎、季节性强、需要特殊资质、可能侵犯专利的，先划掉。新手越简单越好。</li>
+<li><b>给剩下的打分对比</b>（1–5 分，越高越好；竞争越小、操作越简单，分越高）：
+<div class="tscore"><table><thead><tr><th>候选品</th><th>需求</th><th>竞争</th><th>利润空间</th><th>操作难度</th><th>差异化机会</th><th>总分</th></tr></thead><tbody>
+<tr class="win"><td>折叠硅胶水杯</td><td>4</td><td>3</td><td>4</td><td>5</td><td>4</td><td><b>20</b></td></tr>
+<tr><td>宠物自动喂食器</td><td>4</td><td>3</td><td>3</td><td>2</td><td>3</td><td>15</td></tr>
+<tr><td>瑜伽弹力带</td><td>4</td><td>1</td><td>2</td><td>5</td><td>2</td><td>14</td></tr></tbody></table></div>
+<ul><li>喂食器带电、体积大，认证和运费都高，首批要压的钱也多。</li><li>弹力带简单好做，但卖的人太多、低价款扎堆，很难做出差别。</li><li>折叠水杯轻、小、不带电，需求稳定，而且竞品差评里反复出现“折叠处漏水”，这就是可以改进的机会。</li></ul></li>
+<li><b>小批量验证。</b>第一批只做 1,000 件，卖得动再加单，不要一开始就压大量库存。</li></ol>`},
+ {d:"S",title:"市场与定位",one:"选定产品后，确认市场够大，想清楚卖给谁、卖多少钱。",ex:`<p>上一站选中了虚构的<b>折叠硅胶水杯</b>，接下来：</p><ul><li>市场：头部商品售价集中在 $15–25，前几名都有稳定的销量和评论，说明有需求。</li><li>定位：主打“能放进口袋的通勤水杯”，定价 <b>$19.99</b>。</li><li>粗算：扣掉所有成本后，每件大约能剩 $5，值得做。</li></ul>`},
+ {d:"P",one:"把想法变成稳定、合格、成本可控的产品。",ex:`<ul><li>工厂报价 ¥22/件，按 1 美元 = 7.1 元，约 <b>$3.10/件</b>。</li><li>起订量 1,000 件，首批采购 $3,100，先付 30% 定金。</li><li>生产交期 25 天。</li><li>包装盒压低 2 cm，可能让 FBA 配送费降一档。</li></ul>`},
+ {d:"C",one:"确认产品能合法进口和销售，并算清关税。",ex:`<ul><li>水杯接触食品，要做材料检测：$600 ÷ 1,000 件 = <b>$0.60/件</b>。</li><li>关税：$3.10 × 示例税率 20% = <b>$0.62/件</b>（真实税率要查 HTS 编码）。</li><li>报关行以你的公司作为进口商（IOR）申报，清关杂费约 $0.15/件。</li></ul>`},
+ {d:"L",one:"把货运进美国仓库，并且不能断货。",ex:`<ul><li>海运每件 <b>$0.80</b>，路上约 35 天。</li><li>把前面几项加起来就是落地成本：$3.10 + $0.80 + $0.62 + $0.15 + $0.60 = <b>$5.27/件</b>。</li><li>补货点：日销 10 件 × (生产 25 + 运输 35 + 入仓 10 + 安全库存 14 天) = <b>840 件</b>。首批 1,000 件卖掉 160 件就该下第二单。</li></ul>`},
+ {d:"F",one:"选好在哪里卖，搭好商品页面，记清平台要收多少钱。",ex:`<p>在 Amazon 美国站用 FBA 发货，每卖一件 $19.99，平台收：</p><ul><li>佣金 15%：<b>$3.00</b></li><li>FBA 配送费：<b>$4.00</b></li><li>仓储分摊：<b>$0.20</b></li></ul><p>合计 $7.20，占售价约 36%。</p>`},
+ {d:"M",one:"让顾客找到你，但每一分广告费都从利润里出。",ex:`<div class="tcmp"><div><span class="k">新品期</span><b>每件广告 $8.00</b><span>单件利润 <em class="neg">−$0.78</em></span></div><div><span class="k">稳定期</span><b>每件广告 $2.40</b><span>单件利润 <em class="pos">$4.82</em></span></div></div><p>没算广告前每件剩 $7.22，所以每件广告费一旦超过 $7.22 就开始亏。新品期亏一点换排名可以接受，但要有截止时间。</p>`},
+ {d:"X",one:"销量 = 流量 × 转化率；评价和服务决定转化率。",ex:`<ul><li>每月 3,000 次访问 × 10% 转化率 = <b>300 件</b>，约每天 10 件。</li><li>退货率 3%，每次损失约 $10，摊到每件是 <b>$0.30</b>。</li><li>如果评分从 4.5 掉到 4.0，转化率下降，销量会跟着掉。</li></ul>`},
+ {d:"$",one:"把所有数字放到一起：每件赚多少，钱什么时候回来。",ex:"__WATERFALL__"}
+];
+const GLOSS = {
+ "TACoS":"广告花费 ÷ 全部销售额（含自然订单），看广告在整体生意里占多大比例。",
+ "ACoS":"广告花费 ÷ 广告带来的销售额。越低，说明广告越划算。",
+ "FBA":"Fulfillment by Amazon：由 Amazon 仓库负责存货、配送和售后，你只要把货送进它的仓库。",
+ "FNSKU":"Amazon 给 FBA 商品贴的仓库条码，用来区分不同卖家的同款商品。",
+ "IOR":"Importer of Record，进口商，对报关和缴税负法律责任的一方。",
+ "MOQ":"最小起订量：工厂愿意接单的最低数量。",
+ "AQL":"抽样验货标准：按批量大小抽检一部分，缺陷数超过上限就判不合格。",
+ "BSR":"Best Sellers Rank：Amazon 按近期销量给出的类目排名。",
+ "CPC":"有两种含义：广告里是单次点击费用（Cost Per Click）；合规里是儿童产品证书（Children's Product Certificate）。",
+ "GCC":"通用合格证书：证明一般消费品符合美国安全要求的文件。",
+ "ODR":"订单缺陷率：差评、纠纷、拒付占订单的比例，是账户健康的核心指标。",
+ "HTSUS":"美国海关商品编码表，10 位编码决定关税税率。",
+ "HTS":"美国海关商品编码（Harmonized Tariff Schedule），10 位编码决定关税税率。",
+ "HS":"国际通用的商品编码（前 6 位各国一致），各国在此基础上细分。",
+ "ISF":"海运进口美国前必须提交的安全申报，俗称 10+2。",
+ "de minimis":"小额免税待遇。美国原来对 800 美元以下的包裹免关税，现已暂停。",
+ "Buy Box":"商品页面上“加入购物车”的位置。多个卖家卖同款时，只有一个能拿到。",
+ "A+":"品牌备案后可用的图文详情模块，显示在商品页面下方。",
+ "3PL":"第三方物流仓：替你存货和发货的服务商。",
+ "SKU":"库存单位：每个具体规格（颜色、容量等）对应一个编码。",
+ "ASIN":"Amazon 给每个商品分配的唯一编号。",
+ "PPC":"按点击付费的广告，Amazon 站内广告就属于这一类。",
+ "ERP":"企业资源管理系统：统一管理商品、采购、库存、订单和财务。",
+ "MAPE":"平均绝对百分比误差，用来衡量预测准不准，越低越好。",
+ "CPSC":"美国消费品安全委员会，负责消费品的安全监管。",
+ "FCC":"美国联邦通信委员会，电子产品的无线和电磁兼容认证归它管。",
+ "FDA":"美国食品药品监督管理局，管食品、化妆品、医疗器械等。",
+ "CBP":"美国海关与边境保护局，负责清关和征收关税。",
+ "ACE":"美国海关的电子申报系统。",
+ "USPTO":"美国专利商标局，在这里申请美国商标。",
+ "VAT":"增值税，欧盟等地区征收，美国没有。",
+ "W-8BEN-E":"非美国公司向美国付款方说明自己税务身份的表格。",
+ "Proposition 65":"加州法规，要求对含有特定化学物质的商品做警示。",
+ "Sessions":"访问次数，Amazon 业务报告里衡量流量的指标。",
+ "Brand Registry":"Amazon 品牌备案：用商标证明品牌归属，解锁 A+、品牌店等工具。",
+ "GA4":"Google Analytics 4，网站流量分析工具。",
+ "Best Sellers":"Amazon 按销量排出的各类目热销榜，每小时更新。",
+ "Movers & Shakers":"Amazon 的飙升榜，列出近期销量排名上升最快的商品。",
+ "Prime":"Amazon 会员服务。FBA 商品通常带 Prime 标志，配送更快。",
+ "落地成本":"一件货到达可以销售的仓库时，累计花掉的全部成本。",
+ "头程":"从工厂到目的国仓库这一段运输。",
+ "尾程":"从目的国仓库送到顾客手里这一段运输。",
+ "跟卖":"在别人已经创建好的商品页面上卖同一款商品。",
+ "补货点":"库存降到这个数量时就必须下新订单，否则会断货。",
+ "安全库存":"为了应对销量和交期波动，额外多备的一部分库存。",
+ "转化率":"访问中下单的比例。",
+ "品牌备案":"Amazon 的 Brand Registry：用商标证明品牌归属，解锁 A+、品牌店等工具。"
+};
+/* ---------- English content ---------- */
+const DOMAINS_EN = {
+ S:{name:"Strategy & Market",desc:"What to sell, to whom, and where"},
+ P:{name:"Product & Supply",desc:"Turn an idea into a reliable, compliant product"},
+ C:{name:"Compliance & Customs",desc:"Can you legally import and sell it"},
+ L:{name:"Logistics & Warehousing",desc:"Getting goods from the factory to the customer"},
+ F:{name:"Channels & Storefronts",desc:"Which platform, and the page customers see"},
+ M:{name:"Marketing & Traffic",desc:"Help customers find you and trust you"},
+ X:{name:"Sales & Customers",desc:"Turn visits into orders, and orders into reputation"},
+ $:{name:"Finance & Profit",desc:"What each unit earns, and when the cash comes back"},
+ D:{name:"Data & Team",desc:"Make the whole system measurable and manageable"}
+};
+const NODES_EN = {
+ market:{n:"Market research",what:"Decide whether a market is worth entering: how big demand is, how it is growing, how fierce competition is, and whether there is enough margin.",how:["Estimate demand and seasonality from platform search volume and category rankings","Study the top sellers' price bands, review counts and ratings","Look at trends: search trends and social media topics","Estimate the cost of entry: certification, first inventory, advertising","Conclude: go, no-go, or how to differentiate"],m:["Search volume","Category size","Top-seller concentration","Average selling price","Review barrier"],data:"Sources: Amazon Brand Analytics (needs Brand Registry), third-party research tools, Google Trends. Methods: descriptive statistics, seasonal decomposition."},
+ competitors:{n:"Competitors",what:"Sellers and brands fighting for the same customers and keywords. Their prices, ads and product updates affect you directly.",how:["List the core competing products and brands","Track their price, rank, review count and promotions regularly","Read their negative reviews to find improvements","See which keywords they advertise on"],m:["Competitor price","Competitor rank","Rating","Review growth","Ad placement share"],data:"Sources: price and rank history tools such as Keepa. Methods: time-series comparison, market share estimates."},
+ selection:{n:"Product selection",what:"Decide exactly which product to sell. Most of the difficulty in compliance, logistics, competition and profit is locked in at this step.",how:["Shortlist candidates from market research","Run a quick unit-profit estimate for each (landed cost, platform fees, ads)","Check compliance hurdles: certifications, restricted categories","Check logistics traits: size, weight, fragility, batteries","Test with a small batch before ordering more"],m:["Estimated margin","Estimated payback period","Compliance difficulty","Size tier"],data:"Methods: weighted scorecard, break-even analysis."},
+ positioning:{n:"Positioning & pricing strategy",what:"Who you solve what problem for, and in which price band. Positioning drives brand tone, copy, ad keywords and target price.",how:["Define the target customer and use case","Find a selling point that differs from competitors","Choose a price band: low-price volume, mid-range value, or premium brand","Write a one-sentence positioning that guides all content"],m:["Target price band","Target margin","Differentiators"],data:"Methods: price distribution analysis, review text analysis (to find pain points)."},
+ model:{n:"Business model & channel strategy",what:"Decide where and how to sell: Amazon only, your own website only, or several marketplaces; platform fulfilment or self-fulfilment.",how:["Compare each channel's traffic, fees, rules and payout cycle","Start by focusing on one main channel","Expand only once the main channel is stable","Choose fulfilment: platform warehouse, third-party warehouse, or ship yourself"],m:["Revenue share by channel","Margin by channel","Dependence on a single channel"],data:"Methods: profit comparison by channel, concentration risk assessment."},
+ dev:{n:"Product development",what:"Turn the product idea into something that can be mass-produced: specs, materials, design, features and cost.",how:["Write a product requirements document","Make samples and test them","Fix problems found in competitors' negative reviews","Confirm compliance requirements and packaging size at the same time","Freeze the specs once final"],m:["Sampling time","Target unit cost","Target defect rate"],data:"Sources: review text, return reasons. Methods: text clustering to find pain points."},
+ sourcing:{n:"Suppliers & purchasing",what:"Find a factory that can supply reliably, and agree on price, minimum order quantity (MOQ), lead time and payment terms.",how:["Compare quotes from several factories and audit them","Agree on MOQ, unit price, lead time and payment (often a deposit plus balance)","Sign a purchase contract with clear quality standards","Line up a backup supplier"],m:["Unit cost","MOQ","Production lead time","On-time delivery rate"],data:"Sources: ERP purchase orders. Methods: lead-time distribution, supplier scoring."},
+ qc:{n:"Quality control",what:"Catch problems before shipping so defective units never reach customers. Quality issues end up as returns, bad reviews and account risk.",how:["Define inspection standards (e.g. AQL sampling)","Inspect before, during and after production","Record defect types and feed them back to the factory"],m:["Inspection failure rate","Share of returns due to quality"],data:"Sources: inspection reports, return reason codes. Methods: Pareto analysis to find the biggest defect types."},
+ packaging:{n:"Packaging & labelling",what:"Packaging sets the product's size and weight, which directly drives shipping costs and the platform's fulfilment fee tier. It also carries compliance labels and the brand experience.",how:["Make it as small and light as possible","Pass drop tests","Print compliance marks: country of origin, warnings, barcodes","Apply the labels the platform requires (e.g. Amazon's FNSKU)"],m:["Package dimensions","Billable weight","Damage rate"],data:"Methods: compare size tiers and work out the saving from dropping one tier."},
+ brand_ip:{n:"Brand & intellectual property",what:"Register trademarks, protect designs and patents, and avoid infringing on others' rights. A brand is a long-term asset and unlocks many platform features.",how:["Register a trademark in the target country","Apply for the platform's brand registry","Check for infringement before listing: trademarks, design patents, utility patents","Monitor hijackers and counterfeits"],m:["Trademark status","Infringement complaints","Hijacking incidents"],us:"US trademarks are filed with the USPTO. Amazon Brand Registry requires a registered or pending trademark; it unlocks A+ content, Brand Stores and Brand Analytics.",data:"Sources: complaint and hijacking records. Methods: frequency counts."},
+ entity:{n:"Legal entity & tax registration",what:"Which legal entity you operate under and where you file taxes. The entity decides which accounts you can open and what tax obligations you carry.",how:["Choose an entity: domestic or overseas company","Obtain tax identification numbers","Open bank or payment accounts that can receive payouts","Complete platform identity verification"],m:["Entity qualifications","Annual filing deadlines"],us:"Foreign companies can sell directly on Amazon.com. Non-US entities usually submit Form W-8BEN-E for US tax purposes. Ask an accountant or lawyer about entity and tax structure.",data:"Not a data node; manage it with a register."},
+ product_compliance:{n:"Product compliance & certification",what:"The product must meet the target market's safety, electrical and chemical rules. Otherwise it cannot be imported, or the platform will remove it.",how:["Identify the rules that apply to the category","Test at an accredited lab","Prepare certificates and technical files","Upload compliance documents to the platform","Re-check when rules change"],m:["Certificate validity","Testing costs","Document requests from the platform"],us:"General consumer products need a GCC (General Certificate of Conformity); children's products need a CPC based on testing by a CPSC-accepted third-party lab. Since 2026-07-08, certificate data for CPSC-regulated imports must be filed electronically in CBP's ACE system (eFiling). Electronics often fall under the FCC; food, cosmetics and medical devices under the FDA. California's Proposition 65 requires warnings for certain chemicals.",data:"Sources: certificate register. Methods: expiry reminders."},
+ customs:{n:"Import customs clearance",what:"When goods enter the destination country, you declare the tariff code, value and origin to customs and pay duties and fees.",how:["Decide who is the Importer of Record","Hire a customs broker","Classify the product code correctly (HS / HTS)","File ahead of time for ocean freight","Pay duties and get release"],m:["Clearance time","Inspection rate","Filing errors"],us:"US imports need an IOR and a customs bond; ocean shipments need an ISF (10+2) filing before loading. The $800 de minimis duty-free treatment has been suspended since August 2025; CBP made the suspension indefinite for all modes from 2026-06-24, and the statutory exemption ends on 2027-07-01. The compliance date for the new informal entry process for postal parcels was pushed to 2027-01-20.",data:"Sources: entry summaries. Methods: clearance time statistics."},
+ tariff:{n:"Tariffs",what:"Duties charged on imports based on the product code and country of origin. They go straight into landed cost.",how:["Look up the base duty rate for the exact product code","Add any additional tariffs that apply","Include them in landed cost","Track policy changes and consider diversifying origin"],m:["Effective tariff rate","Duty per unit"],us:"Base rates follow the 10-digit HTSUS code. On 2026-02-20 the US Supreme Court ruled the IEEPA tariffs invalid; the temporary Section 122 surcharge that followed expired on 2026-07-24 and was replaced by new Section 301 tariffs of 10% or 12.5% on about 60 economies; Section 232 tariffs on steel, aluminium, autos and others remain. Tariff policy changes often, so check the official HTS and CBP before ordering.",data:"Sources: entry summaries, HTS rate tables. Methods: scenario comparison (unit profit at different rates)."},
+ sales_tax:{n:"Sales tax & indirect tax",what:"Tax collected from consumers at the point of sale. The US has state sales taxes; the EU and others have VAT.",how:["Work out where you have tax obligations","Separate what the platform collects from what you file yourself","Set up tax calculation on your own website","File on time"],m:["Jurisdictions with obligations","Filing accuracy"],us:"The US has no federal VAT; states levy sales tax. After South Dakota v. Wayfair (2018), states can establish economic nexus for remote sellers based on sales or order counts. Every state with a sales tax has marketplace facilitator laws, so platforms like Amazon collect and remit; on your own website you must track and file yourself.",data:"Sources: ship-to state on orders, tax software. Methods: monitor state sales thresholds."},
+ platform_policy:{n:"Platform policy",what:"The platform's own rules: category approval, product policies, fee changes, seller verification and more. Breaking them can mean delisting or account suspension.",how:["Read platform announcements regularly","Check whether a category is restricted before listing","Log fee changes and update your cost model"],m:["Policy changes","SKUs affected"],us:"Under the INFORM Consumers Act (effective 2023-06-27), marketplaces must verify high-volume sellers' identity and bank details. Amazon US stopped FBA prep and labelling services from 2026-01-01, and its 2026 fee changes took effect on 2026-01-15.",data:"Sources: platform announcements. Methods: change log."},
+ firstmile:{n:"First-mile freight",what:"Moving goods from the factory to a warehouse in the destination country: ocean, air or express, plus booking, trucking and hand-off to customs.",how:["Pick a mode based on speed and cost","Book space and arrange loading","Coordinate export and import clearance","Deliver to the platform or third-party warehouse"],m:["First-mile cost per unit","Transit time","Transit-time variability"],data:"Sources: freight forwarder invoices, tracking data. Methods: transit-time distribution (look at variability, not just the average)."},
+ warehouse:{n:"Warehousing",what:"Where goods are stored in the destination country: a platform warehouse (e.g. FBA) or a third-party warehouse (3PL).",how:["Choose a warehousing model","Prepare and send inventory as required","Manage inventory age","Clear slow-moving stock in time"],m:["Capacity use","Inventory age","Storage fees","Receiving time"],data:"Sources: inventory reports. Methods: inventory-age distribution, storage fee attribution."},
+ inventory_plan:{n:"Inventory planning & replenishment",what:"Decide when to reorder and how much. Too little and you stock out and lose rank; too much ties up cash and adds storage fees.",how:["Forecast average daily sales","Calculate the replenishment cycle: production lead time + transit + receiving","Set safety stock","Work out the reorder point and quantity"],m:["Days of inventory","Days of cover","Stock-out rate","Reorder point"],data:"Method: reorder point = average daily sales × replenishment cycle + safety stock; safety stock is based on the variability of sales and lead time."},
+ lastmile:{n:"Last-mile delivery",what:"Delivery from the warehouse to the customer. Speed and experience affect conversion rate and reviews.",how:["Platform-warehouse orders are delivered by the platform","Choose carriers for self-fulfilled orders","Monitor delivery times and lost parcels"],m:["Delivery time","On-time rate","Lost or damaged rate"],data:"Sources: order shipping data. Methods: carrier performance comparison."},
+ returns:{n:"Returns & reverse logistics",what:"Handling items customers send back: refund, inspect, restock or dispose.",how:["Analyse return reasons","Restock sellable returns","Remove or liquidate unsellable ones","Fix the product or listing for the main reasons"],m:["Return rate","Return reasons","Return losses"],data:"Sources: returns reports. Methods: reason categorisation."},
+ amazon:{n:"Amazon store",what:"Selling on Amazon as a third-party seller. Built-in traffic, but high fees, strict rules and fierce competition.",how:["Register a seller account and complete verification","Choose the Professional selling plan","Create a listing or join an existing one","Choose a fulfilment method","Keep the account healthy"],m:["Sales","Buy Box share","Account health score"],data:"Sources: Selling Partner API. Methods: automated reporting."},
+ dtc:{n:"Own website (DTC)",what:"Your own brand website (e.g. built on Shopify). You keep the margin and the customer data, but you must bring in all the traffic yourself.",how:["Build the site and set up payments, tax and shipping","Design the path from browsing to checkout","Drive traffic with ads, content and email","Handle privacy compliance"],m:["Visits","Conversion rate","Average order value","Repeat rate","Customer acquisition cost"],data:"Sources: Shopify API, GA4. Methods: funnel analysis, retention analysis."},
+ other_platforms:{n:"Other marketplaces",what:"Walmart, eBay, TikTok Shop, Temu and others. They spread risk, but every platform has different rules and customers.",how:["Check how well the platform's customers match your category","List according to each platform's rules","Manage inventory and orders in one place"],m:["Sales share by platform","Margin by platform"],data:"Methods: profit comparison by channel."},
+ listing:{n:"Product listing",what:"The product page customers see: title, images, bullet points, description and price. It decides whether search finds you and whether visitors buy.",how:["Cover core keywords in the title and bullets","Make the main image compliant and eye-catching","Use secondary images to explain benefits and use cases","Keep optimising based on data"],m:["Click-through rate","Conversion rate","Listing quality issues"],data:"Methods: A/B tests (e.g. Amazon's Manage Your Experiments)."},
+ account_health:{n:"Account health",what:"The platform's scorecard for sellers: order defect rate, late shipment rate, policy violations and more. Breaching thresholds can lead to restrictions or suspension.",how:["Check the account health page daily","Respond to complaints and infringement notices quickly","Keep compliance documents ready for appeals"],m:["Order defect rate (ODR)","Late shipment rate","Policy violations"],data:"Sources: account health reports. Methods: threshold alerts."},
+ seo:{n:"Keywords & on-platform search",what:"Make sure customers find you when they search. Platform search ranking depends on relevance and sales performance.",how:["Build and tier a keyword list","Put core keywords in the title and bullets","Add more in backend search terms","Track keyword rankings"],m:["Organic keyword rank","Search impressions"],data:"Sources: Brand Analytics search term reports. Methods: keyword coverage analysis."},
+ ppc:{n:"On-platform advertising",what:"Paying for visibility inside the platform, such as Amazon Sponsored Products. The main lever for launching new products and holding rank.",how:["Start with automatic campaigns to collect search terms","Move converting terms into manual exact match","Add negative keywords for wasted terms","Adjust bids to ACoS / TACoS targets"],m:["ACoS (ad spend ÷ ad sales)","TACoS (ad spend ÷ total sales)","CPC","Ad conversion rate"],data:"Sources: Amazon Ads API. Methods: search term attribution, bid-vs-conversion analysis."},
+ offsite:{n:"Off-site traffic",what:"Traffic from outside the platform: social media, influencers, content marketing, email and search ads.",how:["Pick channels where target customers gather","Measure with tracking links (e.g. Amazon Attribution)","Build your own customer list"],m:["Off-site visits","Off-site conversion rate","Customer acquisition cost"],data:"Sources: Amazon Attribution, GA4. Methods: channel attribution."},
+ promo:{n:"Promotions",what:"Coupons, deals, member days and holiday sales. They lift sales and rank in the short term but squeeze margin.",how:["Plan the year's promotion calendar early","Work out unit profit after the discount","Stock enough inventory","Review the real incremental lift afterwards"],m:["Incremental units","Profit during promotion","Rank retained afterwards"],data:"Methods: incrementality analysis (compare with baseline sales)."},
+ reviews:{n:"Reviews & ratings",what:"Customer reviews are one of the strongest drivers of conversion, and an early signal of product problems.",how:["Request reviews only through compliant means (e.g. the platform's request button)","Analyse negative reviews and improve the product","Never manipulate reviews"],m:["Star rating","Review count","Negative review rate"],us:"The US FTC has rules against fake reviews and testimonials, and Amazon prohibits buying or manipulating reviews.",data:"Methods: review text analysis, rating trends."},
+ content:{n:"Brand content",what:"A+ content, Brand Stores and video. They build trust, lift conversion and make the brand memorable.",how:["Complete Brand Registry","Use A+ modules to explain the benefits","Build a Brand Store","Make a product video"],m:["Brand Store visits","Conversion lift from A+"],data:"Methods: A/B tests."},
+ traffic:{n:"Traffic",what:"Visits to the product page, from organic search, ads, off-site sources and recommendations.",how:["Split traffic by source","Find the main sources and the gaps","Work on the gaps"],m:["Sessions","Page views","Share by source"],data:"Sources: business reports. Methods: source breakdown, trend analysis."},
+ cvr:{n:"Conversion rate",what:"The share of visits that turn into orders. Driven by price, reviews, the listing, delivery speed and stock status together.",how:["Compare with category benchmarks","Check each driver one by one","Change one variable at a time and watch the result"],m:["Unit Session Percentage"],data:"Methods: group comparison; regression to find the main drivers once there is enough data."},
+ price:{n:"Price",what:"The selling price. It directly affects profit and conversion, and whether you win the Buy Box.",how:["Set a floor price from cost plus target profit","Check competitors' price bands","Set a minimum price to avoid selling at a loss","Record the result of every price change"],m:["Price","Price elasticity","Buy Box share"],data:"Methods: estimate price elasticity from past price changes. Needs enough data, and must show the error range."},
+ sales:{n:"Sales",what:"Units sold and revenue. Units = traffic × conversion rate.",how:["Track daily","Split into traffic and conversion to find causes","Separate organic and ad-driven orders"],m:["Units","Revenue","Share of organic orders"],data:"Methods: driver decomposition (units = traffic × conversion), an exact identity."},
+ bsr:{n:"Rank",what:"The platform's ranking based on recent sales. Higher rank brings more organic traffic, a positive loop; stocking out drops rank fast.",how:["Track category rank and keyword rank","Find the cause when rank drops","Avoid stock-outs"],m:["Best Sellers Rank","Organic rank for core keywords"],data:"Methods: correlation between rank and sales."},
+ cs:{n:"Customer service",what:"Answering pre-sale questions and handling complaints, returns and exchanges. Affects reviews, account health and repeat purchases.",how:["Reply within the platform's required time","Prepare templates for common questions","Log issue types and feed them to the product team"],m:["Response time","Resolution rate","Complaint types"],data:"Methods: issue categorisation."},
+ landed_cost:{n:"Landed cost",what:"The full cost of one unit once it reaches a warehouse ready for sale: purchase price, first-mile freight, duties, clearance fees, testing and certification spread per unit, and so on.",how:["List every cost item","Spread costs per unit by volume or value","Calculate each shipment separately","Update when exchange rates move"],m:["Landed cost per unit","Share of each cost item"],data:"Sources: purchase orders, forwarder invoices, entry summaries. Methods: cost per shipment. This is an exact calculation: correct inputs give a correct result."},
+ platform_fees:{n:"Platform fees",what:"Commission, fulfilment fees and storage fees charged by the platform, or subscription and payment fees on your own website.",how:["Look up the commission rate for your category","Look up fulfilment fees by size and weight","Add storage and other surcharges","Update the model whenever the platform changes fees"],m:["Commission rate","Fulfilment fee per unit","Fees as % of price"],us:"Amazon US charges referral fees by category, about 15% for most categories; check the official fee schedule. FBA fulfilment fees depend on size tier and weight. The 2026 changes took effect on 2026-01-15; Amazon says FBA fees rose by about $0.08 per unit on average.",data:"Sources: fee preview reports, settlement reports. Methods: line-by-line reconciliation."},
+ fx:{n:"Exchange rate",what:"You pay suppliers in one currency (e.g. CNY) and get paid in another (e.g. USD), so rate moves hit profit directly.",how:["Record the rate at purchase and at payout","Estimate how rate moves affect profit","Consider hedging once volumes are large"],m:["Exchange rate","FX gains and losses"],data:"Sources: bank or central bank rates. Methods: sensitivity analysis."},
+ unit_econ:{n:"Unit profit",what:"How much you make on each unit sold. The most important number in the whole system; almost every node feeds into it.",how:["Unit profit = price − landed cost − commission − fulfilment fee − storage − ad cost per unit − return losses","Calculate by SKU and by channel","Review monthly"],m:["Unit profit","Gross margin","Net margin","Break-even ACoS"],data:"Methods: exact formula; correct inputs give a correct result."},
+ pnl:{n:"Profit & loss",what:"Total revenue, costs and profit over a period. Shows whether the business as a whole is healthy.",how:["Produce a monthly P&L","Split by channel and SKU","Compare with budget and the previous period"],m:["Revenue","Gross profit","Operating profit","Cost ratios"],data:"Sources: platform settlement reports, accounting software. Methods: variance analysis."},
+ cashflow:{n:"Cash flow",what:"When money goes out and when it comes back. A common e-commerce trap is showing a profit with no cash: suppliers are paid up front and platform payouts take months.",how:["Map the cash cycle: deposit → balance → shipping → selling → platform payout","Forecast cash for the next 12 weeks","Plan purchasing rhythm and financing from it"],m:["Cash conversion cycle","Available cash","Cash tied up in inventory"],data:"Methods: cash forecast based on committed purchases and expected payouts."},
+ erp:{n:"ERP & systems",what:"The system that manages products, purchasing, inventory, orders and finance. The foundation for all data.",how:["Standardise SKU codes","Connect platforms and warehouses","Run purchasing, inventory and orders in one system"],m:["Data completeness","Reconciliation differences"],data:"The foundation for everything data-driven later."},
+ analytics:{n:"Analytics & reporting",what:"Pulling data from every system into reports that answer “what happened” and “why”.",how:["Define consistent metric definitions","Build daily dashboards","When something looks off, break the metric down layer by layer"],m:["Report coverage","Consistent metric definitions"],data:"Methods: descriptive statistics, driver decomposition, anomaly detection."},
+ forecast:{n:"Demand forecasting",what:"Predicting future sales for replenishment, purchasing and cash planning.",how:["Build a baseline forecast from past sales","Add seasonality, promotions and price changes","Backtest accuracy on historical data","Revise regularly"],m:["Forecast error (e.g. MAPE)","Forecast bias"],data:"Methods: time-series models. Accuracy must be proven by backtesting before using forecasts for decisions."},
+ team:{n:"Team & roles",what:"Who owns which nodes. Small teams wear many hats; larger ones split by function.",how:["Assign responsibilities by the map's areas","Give every key metric a clear owner","Hold a weekly review"],m:["Every key metric has an owner"],data:"Not a data node."}
+};
+const EDGE_EN_LIST = [
+"Demand and competition decide what to sell","Identifies the main competitors",
+"Competitor prices limit your price room","Competitor bids raise ad costs","Differentiation must avoid competitors' strengths",
+"Development starts once the product is chosen","The product defines the target customer","The category decides which rules apply","Product size decides the packaging",
+"Positioning sets the price band","Positioning shapes copy and selling points","Positioning sets the brand direction",
+"Choose a marketplace","Choose your own website","Choose several marketplaces","Choose a fulfilment model",
+"Specs decide which factory to use","Specs are the inspection standard","Design and materials affect certification",
+"Purchase price is the bulk of landed cost","Production lead time sets the replenishment cycle","Factory capability decides quality","Deposits and balances tie up cash",
+"Quality problems cause returns","Quality problems cause bad reviews",
+"Size and weight set the fulfilment fee tier","Dimensional weight sets freight cost","Poor packaging causes damage returns",
+"A+ and Brand Stores need Brand Registry","Infringement complaints hurt the account",
+"The entity can act as importer","The entity decides tax obligations","Used to open the store and verify identity",
+"Missing certificates can get goods held at customs","Missing certificates get listings removed","Testing costs are spread per unit",
+"Declared code and origin decide the duty rate","Clearance time adds to total transit time",
+"Duties go into landed cost",
+"Your own website must handle tax itself","Tax-inclusive or not affects pricing",
+"The platform changes fees","Policy breaches hurt the account","Category and content rules",
+"Freight goes into landed cost","Transit time sets the replenishment cycle",
+"The rate changes the purchase cost in USD","Creates FX gains and losses",
+"Reorder quantity sets stock levels","Stock-outs lose sales directly","Inventory ties up cash","Stock-outs drop rank",
+"Creates storage and long-term storage fees","Warehouse location affects delivery speed",
+"Delivery speed affects conversion","Delivery experience affects reviews","Late shipments hurt account metrics",
+"Return losses go into unit cost","Returns and complaints hurt the account","Sellable returns go back into stock",
+"Creates commission and fulfilment fees","Create the product page on the platform","The platform brings its own traffic",
+"Your own site must bring in its own traffic","Subscription and payment fees",
+"Adds sales channels",
+"Keywords in the copy decide search relevance","Page quality decides conversion",
+"A restricted account stops sales","Violations get listings removed",
+"Organic rank brings traffic",
+"Ads bring traffic","Ad cost per unit goes into cost","Ad orders help organic rank",
+"Off-site traffic",
+"Discounts lift conversion","Discounts squeeze unit profit","Promotions bring a short-term lift",
+"Rating and review count affect conversion","Brand content lifts conversion",
+"Units = traffic × conversion rate","Units = traffic × conversion rate","Higher conversion makes ads more efficient",
+"Price affects conversion","Price is where profit starts",
+"Sales decide rank","More orders, more reviews","Units × unit profit = profit","Past sales are the basis of forecasts",
+"Rank brings organic traffic (a positive loop)",
+"After-sales handling affects reviews","Response time and complaint handling affect the account",
+"Landed cost goes into unit cost","Purchasing and freight are paid up front",
+"Platform fees go into unit cost",
+"Unit profit × units","Unit profit sets how much ad cost you can afford",
+"Profit eventually becomes cash",
+"Cash decides whether you can reorder","Cash sets the ad budget",
+"Provides consistent data","Clean data feeds forecasts","Data feedback adjusts strategy",
+"Forecasts set reorder quantity","Forecasts set cash needs",
+"Metrics only get tracked when someone owns them"];
+const EX_EN = {
+ market:"Searching for “collapsible cup” shows the top products priced mostly between $15 and $25, and most of the top 10 have hundreds to thousands of reviews. There is demand, but a new seller needs a point of difference.",
+ competitors:"Track the price and rank of 3 main competitors weekly. One of them cuts its price by $2 every weekend, so your ads get more expensive on weekends too.",
+ selection:"From 30 ideas, rule out anything too big, battery-powered, fragile or seasonal, leaving 3: the collapsible cup, a pet feeder and a yoga band. Score them on demand, competition, profit, difficulty and room to stand out; the cup scores highest with 20. A quick check shows about $5 left per unit at $19.99, so you go ahead.",
+ positioning:"Position it as “the commuter cup that fits in your pocket”, aimed at office commuters, priced mid-range at $19.99 instead of competing with $9.99 budget cups.",
+ model:"Start with Amazon US only and ship with FBA; consider your own website once sales hold above 300 units a month.",
+ dev:"Competitors' bad reviews often mention leaks at the fold, so you add a thicker seal and test samples with 100 fold cycles.",
+ sourcing:"The factory quotes ¥22 per unit, MOQ 1,000, 25 days to produce, 30% deposit and 70% before shipping.",
+ qc:"An AQL inspection of 80 units before shipping finds 2 lids that don't close tightly. The factory fixes them before shipping, so they never turn into bad reviews.",
+ packaging:"Cutting the box height from 10 cm to 8 cm may drop the product into a lower FBA size tier, so every unit pays a lower fulfilment fee. Check Amazon's official fee schedule for exact tiers.",
+ brand_ip:"File a US trademark before launch; with the application number you can enrol in Brand Registry and unlock A+ content. Also check for similar design patents.",
+ entity:"Register Amazon US with your existing company and complete the tax information. Ask an accountant which entity to use.",
+ product_compliance:"The cup touches food, so its materials need testing to US requirements. Testing costs $600, or $0.60 per unit across the first 1,000.",
+ customs:"The goods arrive in Los Angeles by sea; a customs broker files with your company as importer. The product code decides the duty rate; clearance takes a few days.",
+ tariff:"At a value of $3.10 per unit and an example rate of 20%, duty is $0.62 per unit. Look up the real rate by the product's HTS code.",
+ sales_tax:"A customer in California orders; Amazon collects and remits sales tax as the marketplace, so you don't file it. On your own website you would.",
+ platform_policy:"Amazon adjusts fees once a year. After each change, update the new fulfilment fee in your profit sheet or your profit numbers will be wrong.",
+ firstmile:"1,000 units go by shared-container ocean freight at $0.80 per unit, about 35 days from factory to FBA warehouse.",
+ warehouse:"Stock sits in an FBA warehouse. Slow sellers that sit too long trigger extra storage fees, so don't overstock the first order.",
+ inventory_plan:"Selling 10 a day, the cycle is production 25 + transit 35 + receiving 10 = 70 days; add 14 days of safety stock and the reorder point is 10 × 84 = 840 units. So after selling just 160 of the first 1,000, it's time to reorder.",
+ lastmile:"FBA orders carry the Prime badge and most customers get them in 1–2 days, which itself lifts conversion.",
+ returns:"A 3% return rate with about $10 lost per return (refund, return fees, unsellable stock) works out to $0.30 per unit sold.",
+ amazon:"Open a Professional seller account on Amazon US, create the cup's listing and choose FBA.",
+ dtc:"On your own website the same $19.99 cup pays no 15% commission, but the ad cost to win each order may be higher.",
+ other_platforms:"Once Amazon is stable, list the same cup on Walmart and share US inventory.",
+ listing:"The title says “collapsible silicone cup, fits in a pocket, capacity”, and the main image shows the cup folded and unfolded so the benefit is obvious at a glance.",
+ account_health:"Several late shipments or complaints in a row lower the account health score; in serious cases listings are suspended.",
+ seo:"Put core terms like “collapsible cup” and “travel cup” in the title and bullets so customers find you when they search.",
+ ppc:"To launch, you spend about $8 on ads per unit sold, so unit profit becomes −$0.78; in the steady phase that drops to $2.40 and unit profit is back to $4.82.",
+ offsite:"A fitness creator posts a review of the commuter cup; a tracking link counts the visits and orders it brings.",
+ promo:"A 20% member-day discount takes the price from $19.99 to $15.99. Commission falls slightly, but unit profit drops from $4.82 to about $1.42.",
+ reviews:"If the rating slips from 4.5 to 4.0, conversion can fall noticeably at the same traffic. Read every bad review and look for product problems.",
+ content:"The A+ page uses a comparison image showing it folds to just 2 cm, helping hesitant customers decide.",
+ traffic:"3,000 visits a month: 1,800 from organic search and 1,200 from ads.",
+ cvr:"300 orders from 3,000 visits is a 10% conversion rate.",
+ price:"At $19.99 now. Raising it to $21.99 adds about $1.70 per unit, but how much conversion drops can only be learned by testing with real data.",
+ sales:"3,000 visits × 10% conversion = 300 units a month, about 10 a day.",
+ bsr:"A week of 10+ sales a day lifts category rank and organic traffic follows; a stock-out drops rank fast.",
+ cs:"A customer asks whether it holds hot water. You reply within 24 hours and add the answer to the listing, cutting similar questions and returns.",
+ landed_cost:"Purchase $3.10 + first-mile $0.80 + duty $0.62 + clearance fees $0.15 + testing $0.60 = landed cost of $5.27 per unit.",
+ platform_fees:"Commission 15% × $19.99 = $3.00, FBA fulfilment fee $4.00, storage $0.20: $7.20 in total, about 36% of the price.",
+ fx:"At 7.1 yuan to the dollar, the ¥22 purchase price is $3.10; at 6.8 the same price is $3.24.",
+ unit_econ:"$19.99 − landed cost $5.27 − commission $3.00 − fulfilment $4.00 − storage $0.20 − returns $0.30 − ads $2.40 = unit profit of $4.82, about 24%.",
+ pnl:"300 units a month × $4.82 ≈ $1,446 profit, before staff, software and other fixed costs.",
+ cashflow:"The first order needs about $5,270 up front (goods, freight, duty, testing). Sales start about 70 days later, payouts arrive periodically, and with launch ad spend it often takes several months to earn that back.",
+ erp:"Use one sheet or an ERP to standardise SKU codes so purchasing, inventory and sales all use the same code and the books reconcile.",
+ analytics:"When profit drops, first ask whether units changed or unit profit changed, then dig down layer by layer.",
+ forecast:"Use the last 3 months of daily sales to forecast 12 a day next month, then compare with actual sales to measure the error.",
+ team:"A two-person team: one handles product, purchasing and logistics; the other handles listings, ads and customer service. They review the P&L together weekly."
+};
+const TOUR_EN = [
+ {title:"Choosing a product",one:"A good product meets four tests at once: people want it, competition isn't too fierce, it still makes money after every cost, and you can do it well.",ex:`<p class="head">Getting from a pile of ideas to one product takes four steps:</p>
+<ol class="tsel">
+<li><b>Collect ideas: list 30.</b> Sources include Amazon's Best Sellers and Movers & Shakers lists, search term data, complaints in competitors' bad reviews, and everyday situations you know well.</li>
+<li><b>Rule out quickly: keep 3.</b> Cross off anything too big or heavy, battery-powered, fragile, strongly seasonal, needing special licences, or at risk of patent infringement. For beginners, simpler is better.</li>
+<li><b>Score the remaining three</b> (1–5, higher is better; less competition and easier handling score higher):
+<div class="tscore"><table><thead><tr><th>Candidate</th><th>Demand</th><th>Competition</th><th>Profit room</th><th>Difficulty</th><th>Room to stand out</th><th>Total</th></tr></thead><tbody>
+<tr class="win"><td>Collapsible silicone cup</td><td>4</td><td>3</td><td>4</td><td>5</td><td>4</td><td><b>20</b></td></tr>
+<tr><td>Automatic pet feeder</td><td>4</td><td>3</td><td>3</td><td>2</td><td>3</td><td>15</td></tr>
+<tr><td>Yoga resistance band</td><td>4</td><td>1</td><td>2</td><td>5</td><td>2</td><td>14</td></tr></tbody></table></div>
+<ul><li>The feeder has a battery and is bulky: certification and shipping cost more, and the first order ties up more cash.</li><li>The band is easy to make, but there are too many sellers and cheap versions, so it's hard to stand out.</li><li>The cup is light, small and battery-free with steady demand, and competitors' bad reviews keep mentioning leaks at the fold: a problem you can fix.</li></ul></li>
+<li><b>Test small.</b> Make only 1,000 units first and reorder once they sell; don't sink cash into a big inventory at the start.</li></ol>`},
+ {title:"Market & positioning",one:"With a product chosen, confirm the market is big enough and decide who it's for and what it costs.",ex:`<p>The previous stop chose the fictional <b>collapsible silicone cup</b>. Next:</p><ul><li>Market: top products sell for $15–25 with steady sales and reviews, so there is demand.</li><li>Positioning: “the commuter cup that fits in your pocket”, priced at <b>$19.99</b>.</li><li>Quick check: after every cost, about $5 is left per unit. Worth doing.</li></ul>`},
+ {title:"",one:"Turn the idea into a product that is reliable, compliant and affordable to make.",ex:`<ul><li>The factory quotes ¥22 per unit; at 7.1 yuan to the dollar that's about <b>$3.10</b>.</li><li>MOQ 1,000: the first order costs $3,100, with a 30% deposit up front.</li><li>Production takes 25 days.</li><li>Making the box 2 cm shorter may drop it into a cheaper FBA fee tier.</li></ul>`},
+ {title:"",one:"Make sure the product can be legally imported and sold, and work out the duty.",ex:`<ul><li>The cup touches food, so materials need testing: $600 ÷ 1,000 units = <b>$0.60 per unit</b>.</li><li>Duty: $3.10 × example rate 20% = <b>$0.62 per unit</b> (look up the real rate by HTS code).</li><li>A customs broker files with your company as importer (IOR); clearance fees are about $0.15 per unit.</li></ul>`},
+ {title:"",one:"Get the goods into a US warehouse, and never run out.",ex:`<ul><li>Ocean freight costs <b>$0.80 per unit</b> and takes about 35 days.</li><li>Adding it all up gives the landed cost: $3.10 + $0.80 + $0.62 + $0.15 + $0.60 = <b>$5.27 per unit</b>.</li><li>Reorder point: 10 a day × (production 25 + transit 35 + receiving 10 + safety stock 14 days) = <b>840 units</b>. After selling 160 of the first 1,000, it's time to reorder.</li></ul>`},
+ {title:"",one:"Choose where to sell, build the product page, and know what the platform takes.",ex:`<p>Selling on Amazon US with FBA, for every $19.99 sale the platform takes:</p><ul><li>15% commission: <b>$3.00</b></li><li>FBA fulfilment fee: <b>$4.00</b></li><li>Storage share: <b>$0.20</b></li></ul><p>$7.20 in total, about 36% of the price.</p>`},
+ {title:"",one:"Help customers find you, but every ad dollar comes out of profit.",ex:`<div class="tcmp"><div><span class="k">Launch phase</span><b>$8.00 ads per unit</b><span>Unit profit <em class="neg">−$0.78</em></span></div><div><span class="k">Steady phase</span><b>$2.40 ads per unit</b><span>Unit profit <em class="pos">$4.82</em></span></div></div><p>Before ads, $7.22 is left per unit, so once ad cost per unit passes $7.22 you lose money. Losing a little at launch to build rank is fine, but set an end date.</p>`},
+ {title:"",one:"Units = traffic × conversion rate; reviews and service decide the conversion rate.",ex:`<ul><li>3,000 visits a month × 10% conversion = <b>300 units</b>, about 10 a day.</li><li>A 3% return rate at about $10 lost each comes to <b>$0.30 per unit</b>.</li><li>If the rating drops from 4.5 to 4.0, conversion falls and sales follow.</li></ul>`},
+ {title:"",one:"Put all the numbers together: what each unit earns, and when the cash comes back.",ex:"__WATERFALL__"}
+];
+const GLOSS_EN = {
+ "TACoS":"Ad spend ÷ total sales (including organic orders). Shows how big advertising is relative to the whole business.",
+ "ACoS":"Ad spend ÷ sales from ads. Lower means the ads pay off better.",
+ "FBA":"Fulfillment by Amazon: Amazon stores, ships and handles returns; you just send stock to its warehouses.",
+ "FNSKU":"The warehouse barcode Amazon assigns to FBA items, used to tell different sellers' identical products apart.",
+ "IOR":"Importer of Record: the party legally responsible for the customs declaration and duties.",
+ "MOQ":"Minimum order quantity: the smallest order a factory will accept.",
+ "AQL":"A sampling inspection standard: inspect a set number of units per batch and fail the batch if defects exceed the limit.",
+ "BSR":"Best Sellers Rank: Amazon's category ranking based on recent sales.",
+ "CPC":"Two meanings: in ads, cost per click; in compliance, a Children's Product Certificate.",
+ "GCC":"General Certificate of Conformity: shows a general consumer product meets US safety rules.",
+ "ODR":"Order defect rate: negative feedback, claims and chargebacks as a share of orders; a core account health metric.",
+ "HTSUS":"The US tariff schedule; the 10-digit code sets the duty rate.",
+ "HTS":"Harmonized Tariff Schedule code; in the US the 10-digit code sets the duty rate.",
+ "HS":"The international product code system; the first 6 digits are shared worldwide and each country adds detail.",
+ "ISF":"Importer Security Filing, required before ocean cargo is loaded for the US (often called 10+2).",
+ "de minimis":"Low-value duty exemption. The US used to waive duty on parcels under $800; it is now suspended.",
+ "Buy Box":"The “Add to Cart” spot on a product page. When several sellers offer the same item, only one wins it.",
+ "A+":"Rich image-and-text modules available after Brand Registry, shown lower on the product page.",
+ "3PL":"Third-party logistics: a provider that stores and ships goods for you.",
+ "SKU":"Stock keeping unit: one code per specific variant (colour, size and so on).",
+ "ASIN":"The unique product ID Amazon assigns to each product.",
+ "PPC":"Pay-per-click advertising; Amazon's on-site ads work this way.",
+ "ERP":"Enterprise resource planning: one system for products, purchasing, inventory, orders and finance.",
+ "MAPE":"Mean absolute percentage error: measures forecast accuracy. Lower is better.",
+ "CPSC":"US Consumer Product Safety Commission, the regulator for consumer product safety.",
+ "FCC":"US Federal Communications Commission; covers wireless and electromagnetic compatibility for electronics.",
+ "FDA":"US Food and Drug Administration; covers food, cosmetics, medical devices and more.",
+ "CBP":"US Customs and Border Protection, which clears imports and collects duties.",
+ "ACE":"US customs' electronic filing system.",
+ "USPTO":"US Patent and Trademark Office, where US trademarks are filed.",
+ "VAT":"Value-added tax, charged in the EU and elsewhere; the US has none.",
+ "W-8BEN-E":"A form non-US companies give US payers to state their tax status.",
+ "Proposition 65":"A California law requiring warnings on products containing certain chemicals.",
+ "Sessions":"Visits; the traffic metric in Amazon's business reports.",
+ "Brand Registry":"Amazon's programme that uses a trademark to prove brand ownership and unlocks A+, Brand Stores and more.",
+ "GA4":"Google Analytics 4, a website traffic analytics tool.",
+ "Prime":"Amazon's membership service. FBA items usually carry the Prime badge and ship faster.",
+ "Best Sellers":"Amazon's bestseller lists by category, updated hourly.",
+ "Movers & Shakers":"Amazon's list of products whose sales rank has risen fastest recently.",
+ "landed cost":"The total cost of one unit by the time it reaches a warehouse ready for sale.",
+ "first-mile":"The leg from the factory to a warehouse in the destination country.",
+ "reorder point":"When stock falls to this level you must place a new order, or you'll run out.",
+ "safety stock":"Extra stock kept to absorb swings in sales and lead time.",
+ "conversion rate":"The share of visits that turn into orders.",
+ "hijackers":"Other sellers who join your existing listing to sell the same product.",
+ "Unit Session Percentage":"Amazon's name for conversion rate: units ordered ÷ sessions."
+};
+const PHASES_EN = [
+ {t:"Learn the system, pick a direction",out:"Output: a chosen target market and main channel.",warn:"Common mistake: looking for a factory before doing the maths."},
+ {t:"Market research & product selection",out:"Output: 3–5 candidates, each with a unit profit estimate and compliance checklist.",warn:"Common mistake: looking only at sales volume, not profit, or ignoring certification hurdles."},
+ {t:"Entity, tax & compliance",out:"Output: an entity that can sell and import, a trademark application, a compliance plan.",warn:"Common mistake: discovering missing certificates or trademark infringement after listing."},
+ {t:"Product development & purchasing",out:"Output: final sample, purchase contract, inspection standard, packaging plan.",warn:"Common mistake: packaging one size tier too big, overpaying fulfilment fees forever."},
+ {t:"Freight, customs & receiving",out:"Output: the first shipment safely received, with landed cost worked out per shipment.",warn:"Common mistake: wrong product classification leading to back duties or held goods."},
+ {t:"Listing & launch",out:"Output: a complete listing, brand content, the first round of ads.",warn:"Common mistake: ads with no profit floor that burn cash without building organic rank."},
+ {t:"Day-to-day operations",out:"Output: a weekly metrics review and a replenishment plan.",warn:"Common mistake: stocking out, then paying a lot to win the rank back."},
+ {t:"Finance & growth",out:"Output: a monthly P&L and cash forecast; then decide whether to add products, channels or markets.",warn:"Common mistake: profitable on paper but out of cash."}
+];
+const SOURCES_EN_O = ["Holland & Knight, Feb 2026","Penn Wharton Budget Model, 2026-10-14","Global Trade Alert, Feb 2026","KPMG TaxNewsFlash, Jun 2026","Federal Register, 2026-06-24","Thompson Hine SmarTrade, Oct 2026","Arnold & Porter, Jul 2025","Feedvisor","Amazon Seller Central forum announcement","About Amazon"];
+const TOOLS_EN = ["HTS tariff lookup (USITC)","US Customs and Border Protection (CBP)","US Consumer Product Safety Commission (CPSC)","US Patent and Trademark Office (USPTO)"];
+const UI = {
+ zh:{
+  h1:"电商运营全景图谱", sub:"把做电商需要的事情拆成 9 个领域、48 个节点，并标出它们之间的影响关系。第一次来，先走一遍“新手导览”；熟悉以后，到“全景图谱”里逐层展开。",
+  formula:"<b>利润</b> = 销量 × 单件利润 ｜ <b>销量</b> = 流量 × 转化率 ｜ <b>单件利润</b> = 售价 − 落地成本 − 平台费用 − 单件广告费 − 退货损失",
+  tab_tour:"新手导览",tab_map:"全景图谱",tab_start:"从零开始",tab_data:"数据化路线",tab_us:"美国市场要点",tab_sources:"来源",
+  q_ph:"搜索节点，如：关税、库存", tourbtn:"第一次来？从新手导览开始", adv:"高级", lab_view:"视图", lab_dir:"方向", lab_depth:"层级",
+  vwh:"分层视图", vw3:"3D 拓扑", vw2:"分组视图", mdown:"连锁影响（往下游）", mup:"问题排查（往上游）", d1:"1 级", d2:"2 级", d3:"3 级",
+  advnote:"方向和层级决定右侧面板“展开更多”里的连锁影响列表，以及分组视图里高亮的范围。",
+  m3rot:"自动旋转", m3reset:"重置视角", m3hint:"拖动旋转 · 滚轮或双指缩放 · 点击球体进入下一层 · Esc 返回上一层", langbtn:"EN", langlabel:"Switch to English",
+  lvDown:["直接影响","二级影响","三级影响"], lvUp:["直接原因","二级原因","三级原因"], src:"起点",
+  e_h:"从哪里开始", e_p:"左边是电商的业务主流程。点一个环节进入，再点里面的节点，这里会用一句话加一个例子讲清它是什么。", e_tour:"第一次来？先走一遍新手导览", e_or:"或者直接看：",
+  noDown:"这个节点不影响其他节点。", noUp:"这是起点节点：它由外部环境或经营决策决定，没有其他节点影响它。",
+  h_what:"是什么", h_ex:"举个例子", badge:"示例", more:"展开更多：怎么做、指标、美国规则、连锁影响", h_how:"怎么做", h_m:"关键指标", h_us:"美国市场要点", asof:"核对日期", h_data:"后续数据化",
+  h_chainDown:"连锁影响", h_chainUp:"可能原因", flipDown:"改看问题排查（上游）", flipUp:"改看连锁影响（下游）", back:"返回上一层",
+  nodesN:"{n} 个节点", rels:"{n} 条关系", dataDom:"数据与组织", support:"支撑所有环节", supportLong:"支撑所有环节：ERP、报表分析、需求预测、团队分工",
+  loop:"利润和现金决定下一轮投入", loop2:["利润和现金","决定下一轮投入"],
+  lg1:["主流程顺序","反馈：财务结果回到战略","点任意球体进入这个环节"],
+  lg2:["{d}的节点（上 → 下为先后）","左：输入来自其他环节","右：输出到其他环节","内部反馈回路"],
+  lg3:["左：直接原因 {a}","右：直接影响 {b}","点周围的球体切换到那个节点"],
+  lvTxt:["","第 1 层 · 业务主流程","第 2 层 · 环节内部","第 3 层 · 单个节点"], all:"全部流程",
+  s3d1:"三维视图第 1 层：8 个业务环节围成一个循环，数据与组织在中间下方支撑所有环节。点球体进入该环节。",
+  s3d2:"三维视图第 2 层：{d}的节点按先后从上到下排列，左侧一组是输入来自的环节，右侧一组是输出到的环节。点节点进入下一层，点两侧的环节可以跳过去。",
+  s3d3:"三维视图第 3 层：「{n}」在中间，左侧是直接原因，右侧是直接影响。点周围的球体切换节点。",
+  sL1:"电商的主流程分 8 个环节，按顺序推进，财务结果再反过来决定下一轮投入；数据与组织支撑所有环节。点任意环节进入下一层。",
+  sL2:"{d}：{desc}。中间是本环节的节点，从上到下按先后关系排列；左侧是影响本环节的其他环节，右侧是本环节影响到的环节。点节点进入下一层，点两侧的环节可以跳过去。",
+  sL3:"左边是直接影响「{n}」的节点，右边是它直接影响的节点，每条线都写明了影响方式。更深的连锁反应看右侧面板。",
+  boxFoot:"{n} 个节点 · 输入 {i} · 输出 {o}", enter:"进入", jump:"跳到", inFrom:"输入来自", outTo:"输出到", inner:"内部",
+  directIn:"直接原因", directOut:"直接影响", origin2:["起点：由外部环境","或经营决策决定"], origin1:"起点：由外部环境或经营决策决定", relOf:"的直接关系", flowAria:"电商主流程图", innerAria:"内部节点图",
+  dp_has:"这个环节有哪些事", dp_hint:"点任意一个节点，看它是什么、举个例子。", dp_more:"展开更多：和其他环节的关系", dp_in:"受哪些环节影响", dp_out:"影响哪些环节", none:"无",
+  wf:["售价","落地成本","佣金","FBA 配送费","仓储分摊","退货损失","广告","单件利润"], wfAria:"单件利润拆解：售价 19.99 美元，扣除各项成本后剩 4.82 美元",
+  wfHead:"每卖一件 $19.99，钱是这样被分掉的：",
+  wfList:"<ul><li>每月 300 件 × $4.82 ≈ <b>$1,446</b>（还没扣人工、软件等固定开支）。</li><li>但首批货要先付出约 <b>$5,270</b>，大约 70 天后才开始卖，再加上新品期广告投入，往往要几个月才能收回。</li><li>所以要同时看两本账：利润表看赚不赚钱，现金流看钱够不够周转。</li></ul>",
+  end:"终点", tnote:"跟着一个虚构的小产品“折叠硅胶水杯”，从“卖什么”开始，一站一站走完电商的 8 个环节。所有价格、分数、费用和税率都是为讲解编的<b>示例数字</b>，不代表真实费率或市场数据。把鼠标放在带虚线的词上（手机上点一下）可以看解释。",
+  stopOf:"第 {i} 站 / 共 {n} 站", prev:"← 上一站", seeNode:"在图谱里看这个节点", seeDom:"在图谱里看这个环节", toEnd:"到终点", nextStop:"下一站：{s}",
+  endHtml:`<div class="tnum">终点</div><h2>你已经走完了一遍</h2>
+      <p class="tone">记住这三件事，就抓住了电商的主线：</p>
+      <ol><li><b>利润 = 销量 × 单件利润。</b>单件利润要把落地成本、平台费用、广告和退货都扣干净。</li>
+      <li><b>每个环节都会牵动别的环节。</b>包装大一点，配送费就高；断货几天，排名和流量都会掉。</li>
+      <li><b>赚钱不等于有钱。</b>货款要先付，回款要等，现金流断了生意就停了。</li></ol>
+      <p style="color:var(--muted);font-size:14px">还有一个环节没讲：“数据与组织”。它支撑所有环节，等你熟悉以后再看。</p>`,
+  restart:"重新走一遍", byStart:"按“从零开始”的顺序学", goMap:"去全景图谱自己探索 →"
+ },
+ en:{
+  h1:"E-commerce Operations Atlas", sub:"Everything it takes to run an online store, split into 9 areas and 48 points, with how they affect each other. New here? Take the beginner tour first; once you're familiar, drill down level by level in the map.",
+  formula:"<b>Profit</b> = units × unit profit ｜ <b>Units</b> = traffic × conversion rate ｜ <b>Unit profit</b> = price − landed cost − platform fees − ad cost per unit − return losses",
+  tab_tour:"Beginner tour",tab_map:"Map",tab_start:"Start from zero",tab_data:"Data roadmap",tab_us:"US rules",tab_sources:"Sources",
+  q_ph:"Search, e.g. tariffs, inventory", tourbtn:"New here? Take the beginner tour", adv:"Advanced", lab_view:"View", lab_dir:"Direction", lab_depth:"Depth",
+  vwh:"Layered", vw3:"3D", vw2:"Grouped", mdown:"Knock-on effects (downstream)", mup:"Troubleshoot (upstream)", d1:"1 step", d2:"2 steps", d3:"3 steps",
+  advnote:"Direction and depth control the knock-on list under “Show more” in the side panel, and what gets highlighted in the Grouped view.",
+  m3rot:"Auto-rotate", m3reset:"Reset view", m3hint:"Drag to rotate · scroll or pinch to zoom · click a sphere to go down a level · Esc to go back up", langbtn:"中文", langlabel:"切换到中文",
+  lvDown:["Direct effects","2nd-order effects","3rd-order effects"], lvUp:["Direct causes","2nd-order causes","3rd-order causes"], src:"start",
+  e_h:"Where to start", e_p:"On the left is the main business flow. Click a step to open it, then click a point inside; this panel explains it in one sentence plus an example.", e_tour:"New here? Take the beginner tour first", e_or:"Or jump to:",
+  noDown:"This point doesn't affect any other point.", noUp:"This is a starting point: it's set by the outside world or a business decision, and nothing else in the map drives it.",
+  h_what:"What it is", h_ex:"Example", badge:"Example", more:"Show more: how to do it, metrics, US rules, knock-on effects", h_how:"How to do it", h_m:"Key metrics", h_us:"US rules", asof:"Checked", h_data:"Using data later",
+  h_chainDown:"Knock-on effects", h_chainUp:"Possible causes", flipDown:"Switch to troubleshooting (upstream)", flipUp:"Switch to knock-on effects (downstream)", back:"Back up a level",
+  nodesN:"{n} points", rels:"{n} links", dataDom:"Data & Team", support:"Supports every step", supportLong:"Supports every step: ERP, reporting, forecasting, team roles",
+  loop:"Profit and cash decide the next round of investment", loop2:["Profit and cash decide","the next round"],
+  lg1:["Main flow order","Feedback: finance results go back to strategy","Click any sphere to open that step"],
+  lg2:["{d} points (top → bottom in order)","Left: inputs from other steps","Right: outputs to other steps","Internal feedback loop"],
+  lg3:["Left: direct causes {a}","Right: direct effects {b}","Click a surrounding sphere to switch to it"],
+  lvTxt:["","Level 1 · Main flow","Level 2 · Inside a step","Level 3 · One point"], all:"All steps",
+  s3d1:"3D level 1: the 8 business steps form a loop, with Data & Team below the middle supporting them all. Click a sphere to open that step.",
+  s3d2:"3D level 2: {d} points run top to bottom in order; the group on the left feeds into this step and the group on the right is what it affects. Click a point to go down a level, or a side sphere to jump to that step.",
+  s3d3:"3D level 3: “{n}” is in the middle, direct causes on the left and direct effects on the right. Click a surrounding sphere to switch points.",
+  sL1:"E-commerce runs through 8 steps in order, and the finance results feed back into the next round of investment; Data & Team supports every step. Click any step to go down a level.",
+  sL2:"{d}: {desc}. This step's points are in the middle, top to bottom in order; other steps that affect it are on the left, and steps it affects are on the right. Click a point to go down a level, or a side box to jump to that step.",
+  sL3:"Points that directly affect “{n}” are on the left; points it directly affects are on the right. Each line says how. Deeper knock-on effects are in the side panel.",
+  boxFoot:"{n} points · in {i} · out {o}", enter:"Open ", jump:"Go to ", inFrom:"Inputs from", outTo:"Outputs to", inner:"inside",
+  directIn:"Direct causes", directOut:"Direct effects", origin2:["Starting point: set by","the market or a decision"], origin1:"Starting point: set by the market or a business decision", relOf:" direct links", flowAria:"Main e-commerce flow", innerAria:" internal map",
+  dp_has:"What this step covers", dp_hint:"Click any point to see what it is, with an example.", dp_more:"Show more: links with other steps", dp_in:"Affected by", dp_out:"Affects", none:"None",
+  wf:["Price","Landed cost","Commission","FBA fee","Storage","Returns","Ads","Unit profit"], wfAria:"Unit profit breakdown: a $19.99 price leaves $4.82 after all costs",
+  wfHead:"Here's where the money from each $19.99 sale goes:",
+  wfList:"<ul><li>300 units a month × $4.82 ≈ <b>$1,446</b> (before staff, software and other fixed costs).</li><li>But the first order needs about <b>$5,270</b> up front, sales start about 70 days later, and with launch ad spend it often takes several months to earn it back.</li><li>So watch two sets of books: the P&L tells you whether you make money; cash flow tells you whether you can keep going.</li></ul>",
+  end:"Finish", tnote:"Follow a fictional product, a collapsible silicone cup, from deciding what to sell through all 8 steps of e-commerce. Every price, score, fee and tax rate is an <b>illustrative number</b> made up for teaching, not a real rate or market figure. Hover over a dotted-underlined term (tap on a phone) for a quick explanation.",
+  stopOf:"Stop {i} of {n}", prev:"← Previous", seeNode:"See this point on the map", seeDom:"See this step on the map", toEnd:"To the finish", nextStop:"Next: {s}",
+  endHtml:`<div class="tnum">Finish</div><h2>You've made it through once</h2>
+      <p class="tone">Remember these three things and you have the core of e-commerce:</p>
+      <ol><li><b>Profit = units × unit profit.</b> Unit profit must take out landed cost, platform fees, ads and returns.</li>
+      <li><b>Every step pulls on the others.</b> A slightly bigger box raises fulfilment fees; a few days out of stock drops rank and traffic.</li>
+      <li><b>Making a profit isn't the same as having cash.</b> You pay suppliers first and get paid later; when cash runs out, the business stops.</li></ol>
+      <p style="color:var(--muted);font-size:14px">One area wasn't covered: Data & Team. It supports every step; look at it once you're comfortable.</p>`,
+  restart:"Start again", byStart:"Learn in “Start from zero” order", goMap:"Explore the map yourself →"
+ }
+};
+</script>
+<script>
+(function(){
+let lang="en"; try{lang=localStorage.getItem("ecomLang")||"en"}catch(e){}
+const tx=k=>UI[lang][k];
+const tf=(k,o)=>String(tx(k)).replace(/\{(\w+)\}/g,(_,x)=>o[x]);
+const ZH={dom:DOMAINS.map(d=>({name:d.name,desc:d.desc})),nodes:Object.fromEntries(NODES.map(n=>[n.id,{n:n.n,what:n.what,how:n.how,m:n.m,us:n.us,data:n.data}])),
+  edges:EDGES.map(e=>e[2]),ex:{...EX},tour:TOUR.map(x=>({title:x.title,one:x.one,ex:x.ex})),gloss:{...GLOSS},phases:PHASES.map(x=>({t:x.t,out:x.out,warn:x.warn})),src:SOURCES.map(x=>x.o),tools:TOOLS.map(x=>x.t)};
+function applyData(l){
+  const E=l==="en";
+  DOMAINS.forEach((d,i)=>{const z=E?DOMAINS_EN[d.k]:ZH.dom[i]; d.name=z.name; d.desc=z.desc;});
+  NODES.forEach(n=>{const z=E?NODES_EN[n.id]:ZH.nodes[n.id]; n.n=z.n; n.what=z.what; n.how=z.how; n.m=z.m; n.us=z.us; n.data=z.data;});
+  EDGES.forEach((e,i)=>{e[2]=E?EDGE_EN_LIST[i]:ZH.edges[i];});
+  Object.assign(EX,E?EX_EN:ZH.ex);
+  TOUR.forEach((x,i)=>{const z=E?TOUR_EN[i]:ZH.tour[i]; x.title=z.title; x.one=z.one; x.ex=z.ex;});
+  Object.keys(GLOSS).forEach(k=>delete GLOSS[k]); Object.assign(GLOSS,E?GLOSS_EN:ZH.gloss);
+  PHASES.forEach((x,i)=>{const z=E?PHASES_EN[i]:ZH.phases[i]; x.t=z.t; x.out=z.out; x.warn=z.warn;});
+  SOURCES.forEach((x,i)=>{x.o=E?SOURCES_EN_O[i]:ZH.src[i];});
+  TOOLS.forEach((x,i)=>{x.t=E?TOOLS_EN[i]:ZH.tools[i];});
+}
+applyData(lang);
+const byId = Object.fromEntries(NODES.map(n=>[n.id,n]));
+const dom = Object.fromEntries(DOMAINS.map(d=>[d.k,d]));
+const out = {}, inn = {};
+NODES.forEach(n=>{out[n.id]=[];inn[n.id]=[]});
+EDGES.forEach(([a,b,l])=>{ if(!byId[a]||!byId[b]) console.warn("bad edge",a,b); else {out[a].push({to:b,l});inn[b].push({to:a,l});}});
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let GRE, GCI={};
+function buildGloss(){
+  const keys=Object.keys(GLOSS).sort((a,b)=>b.length-a.length); GCI={}; keys.forEach(k=>GCI[k.toLowerCase()]=k);
+  GRE=new RegExp("(?<![A-Za-z0-9])("+keys.map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,"\\$&").replace(/&/g,"(?:&|&amp;)")).join("|")+")(?![A-Za-z0-9])",lang==="en"?"gi":"g");
+}
+buildGloss();
+function gl(escaped){ const seen=new Set(); return escaped.replace(GRE,m=>{ const k=GLOSS[m]?m:GCI[m.toLowerCase().replace(/&amp;/g,"&")]; if(!k||seen.has(k)) return m; seen.add(k); return `<span class="term" tabindex="0" data-term="${esc(k)}">${m}</span>`; }); }
+function rebuildAdj(){ NODES.forEach(n=>{out[n.id].length=0;inn[n.id].length=0}); EDGES.forEach(([a,b,l])=>{out[a].push({to:b,l});inn[b].push({to:a,l});}); }
+const G=t=>gl(esc(t));
+let sel = null, mode = "down", curView = "h";
+const hvS = {level:1, domain:null};
+let MAXD = 3;
+document.querySelectorAll("[data-depth]").forEach(b=>b.onclick=()=>{
+  MAXD=+b.dataset.depth;
+  document.querySelectorAll("[data-depth]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  render();
+});
+
+/* build map */
+const map = document.getElementById("map"), ov = document.getElementById("ov"), detail = document.getElementById("detail");
+function buildMap(){
+map.querySelectorAll(".domain").forEach(x=>x.remove());
+DOMAINS.forEach(d=>{
+  const box = document.createElement("div");
+  box.className = "domain"; box.style.setProperty("--dc", `var(${d.c})`);
+  box.innerHTML = `<h3><span>${esc(d.name)}</span><span class="code">${esc(d.code)}</span></h3><p class="dd">${esc(d.desc)}</p><div class="chips"></div>`;
+  const chips = box.querySelector(".chips");
+  NODES.filter(n=>n.d===d.k).forEach(n=>{
+    const b = document.createElement("button");
+    b.type="button"; b.className="chip"; b.dataset.id=n.id; b.style.setProperty("--dc",`var(${d.c})`);
+    b.textContent = n.n; b.dataset.st = tx("src");
+    b.addEventListener("click",()=>select(sel===n.id?null:n.id, true));
+    chips.appendChild(b);
+  });
+  map.appendChild(box);
+});
+document.getElementById("nodelist").innerHTML = NODES.map(n=>`<option value="${esc(n.n)}">`).join("");
+}
+buildMap();
+const q = document.getElementById("q");
+q.addEventListener("change",()=>{const v=q.value.trim().toLowerCase(); if(!v) return; const n=NODES.find(x=>x.n.toLowerCase()===v)||NODES.find(x=>x.n.toLowerCase().includes(v)); if(n){select(n.id,true); q.value="";}});
+q.addEventListener("keydown",e=>{if(e.key==="Enter"){q.dispatchEvent(new Event("change"))}});
+
+function setMode(m){
+  mode=m; map.dataset.mode=m; detail.dataset.mode=m;
+  document.getElementById("m-down").setAttribute("aria-pressed",m==="down");
+  document.getElementById("m-up").setAttribute("aria-pressed",m==="up");
+  renderLegend(); render();
+}
+document.getElementById("m-down").onclick=()=>setMode("down");
+document.getElementById("m-up").onclick=()=>setMode("up");
+
+function renderLegend(){
+  const w = mode==="down"?tx("lvDown"):tx("lvUp");
+  const c = mode==="down"?["--l1","--l2","--l3"]:["--up1","--up2","--up3"];
+  document.getElementById("legend").innerHTML = w.map((t,i)=>`<span><i style="background:var(${c[i]})"></i>${t}</span>`).join("");
+}
+
+function bfs(start){
+  const adj = mode==="down"?out:inn;
+  const lvl = {[start]:0}, par = {}, order=[[],[],[],[]];
+  let frontier=[start];
+  for(let d=1; d<=MAXD; d++){
+    const next=[];
+    frontier.forEach(u=>adj[u].forEach(({to,l})=>{
+      if(lvl[to]===undefined){lvl[to]=d; par[to]={from:u,l}; next.push(to); order[d].push(to);}
+    }));
+    frontier=next;
+  }
+  return {lvl,par,order};
+}
+
+function select(id, scroll){
+  sel=id;
+  if(id){ hvS.level=3; hvS.domain=byId[id].d; } else if(hvS.level===3){ hvS.level=2; }
+  render();
+  if(id && scroll && window.matchMedia("(max-width:1040px)").matches) detail.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function render(){
+  const chips = map.querySelectorAll(".chip");
+  map.classList.toggle("has-sel",!!sel);
+  let res=null;
+  if(sel) res=bfs(sel);
+  chips.forEach(c=>{
+    const id=c.dataset.id; c.className="chip";
+    c.querySelector(".ord")?.remove();
+    if(!sel){ if(inn[id].length===0) c.classList.add("src"); return; }
+    if(id===sel) c.classList.add("sel");
+    else if(res.lvl[id]!==undefined) c.classList.add("lv"+res.lvl[id]);
+    else c.classList.add("dim");
+  });
+  if(!map.hidden) drawEdges(res);
+  m3.update(res);
+  renderHV();
+  renderDetail(res);
+}
+
+function drawEdges(res){
+  const R = map.getBoundingClientRect();
+  ov.setAttribute("viewBox",`0 0 ${R.width} ${R.height}`);
+  if(!res){ov.innerHTML="";return;}
+  let s = `<defs>${[1,2,3].map(k=>`<marker id="ar${k}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="m${k}" d="M0,0 L8,4 L0,8 z"/></marker>`).join("")}</defs>`;
+  const pos = id=>{const el=map.querySelector(`.chip[data-id="${id}"]`).getBoundingClientRect();return {x:el.left-R.left+el.width/2,y:el.top-R.top+el.height/2,w:el.width,h:el.height};};
+  Object.entries(res.par).forEach(([child,{from}])=>{
+    const k=res.lvl[child];
+    let a=pos(from), b=pos(child);
+    if(mode==="up"){[a,b]=[b,a];} // arrows always point in causal direction
+    const clip=(p,q)=>{const dx=q.x-p.x,dy=q.y-p.y; const t=Math.min(Math.abs((p.w/2+2)/(dx||1e-6)),Math.abs((p.h/2+2)/(dy||1e-6)),1); return {x:p.x+dx*t,y:p.y+dy*t};};
+    const p1=clip(a,b), p2=clip(b,a);
+    const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2, dx=p2.x-p1.x, dy=p2.y-p1.y, len=Math.hypot(dx,dy)||1;
+    const bend=Math.min(60,len*0.18);
+    const cx=mx-dy/len*bend, cy=my+dx/len*bend;
+    s+=`<path class="e l${k}" d="M${p1.x.toFixed(1)},${p1.y.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}" marker-end="url(#ar${k})"/>`;
+  });
+  ov.innerHTML=s;
+}
+
+function refs(src){ return (src||[]).map(i=>`<a class="ref" href="#sources" data-src="${i}">[${i}]</a>`).join(""); }
+
+let moreOpen=false;
+function renderDetail(res){
+  if(!sel && curView!=="2d" && hvS.level===2){ renderDomainPanel(hvS.domain); return; }
+  if(!sel){
+    detail.innerHTML = `<div class="empty"><h2>${tx("e_h")}</h2>
+    <p style="color:var(--muted);margin-bottom:10px">${tx("e_p")}</p>
+    <p><button class="ghost" id="gotour">${tx("e_tour")}</button></p>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:12px">${tx("e_or")} ${["unit_econ","landed_cost","inventory_plan"].map(id=>`<button class="ghost" data-go="${id}">${esc(byId[id].n)}</button>`).join(" ")}</p></div>`;
+    detail.querySelector("#gotour").onclick=()=>{location.hash="tour";};
+    detail.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>select(b.dataset.go,true));
+    return;
+  }
+  const n=byId[sel], d=dom[n.d];
+  detail.style.setProperty("--dc",`var(${d.c})`);
+  const lvName = ["",...(mode==="down"?tx("lvDown"):tx("lvUp"))];
+  let chain="";
+  for(let k=1;k<=MAXD;k++){
+    if(!res.order[k].length) continue;
+    chain+=`<div class="lvl k${k}"><b>${lvName[k]} · ${res.order[k].length}</b><ul>`+res.order[k].map(id=>{
+      const p=res.par[id];
+      const via = mode==="down" ? `${esc(byId[p.from].n)} → ${esc(byId[id].n)}` : `${esc(byId[id].n)} → ${esc(byId[p.from].n)}`;
+      return `<li><button data-go="${id}">${esc(byId[id].n)}</button> <span class="via">${via}：${esc(p.l)}</span></li>`;
+    }).join("")+`</ul></div>`;
+  }
+  if(!chain) chain = `<p style="color:var(--muted);font-size:14px">${mode==="down"?tx("noDown"):tx("noUp")}</p>`;
+  detail.innerHTML = `
+   <div class="dtag">${esc(d.code)} · ${esc(d.name)}</div>
+   <h2>${esc(n.n)}</h2>
+   ${lang==="en"?"":`<div style="font-family:var(--mono);font-size:12px;color:var(--muted)">${esc(n.en)}</div>`}
+   <h4>${tx("h_what")}</h4><p>${G(n.what)}</p>
+   <h4>${tx("h_ex")}</h4><div class="exbox"><span class="badge">${tx("badge")}</span>${G(EX[n.id]||"")}</div>
+   <details class="more" id="more"${moreOpen?" open":""}><summary>${tx("more")}</summary>
+   <h4>${tx("h_how")}</h4><ol>${n.how.map(h=>`<li>${G(h)}</li>`).join("")}</ol>
+   <h4>${tx("h_m")}</h4><div class="metrics">${n.m.map(x=>`<span>${G(x)}</span>`).join("")}</div>
+   ${n.us?`<h4>${tx("h_us")}</h4><div class="us"><span class="asof">${tx("asof")} ${AS_OF}</span>${G(n.us)}${refs(n.src)}</div>`:""}
+   <h4>${tx("h_data")}</h4><p class="datab">${G(n.data)}</p>
+   <h4>${mode==="down"?tx("h_chainDown"):tx("h_chainUp")}</h4>
+   <div class="chain">${chain}</div>
+   <div class="btnrow"><button class="ghost" id="flip">${mode==="down"?tx("flipDown"):tx("flipUp")}</button></div>
+   </details>
+   <div class="btnrow" style="margin-top:12px"><button class="ghost" id="clr">${tx("back")}</button></div>`;
+  detail.querySelector("#more").addEventListener("toggle",e=>{moreOpen=e.target.open;});
+  detail.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>select(b.dataset.go,false));
+  detail.querySelector("#flip").onclick=()=>setMode(mode==="down"?"up":"down");
+  detail.querySelector("#clr").onclick=()=>select(null);
+  detail.scrollTop=0;
+}
+
+let rt; window.addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{if(sel)render();},120)});
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{if(sel)render();});
+
+/* ---------- 3D topology (layered, shares level state with the layered view) ---------- */
+function domainLayers(k){
+  const ids=NODES.filter(n=>n.d===k).map(n=>n.id), set=new Set(ids);
+  const ie=EDGES.filter(([a,b])=>set.has(a)&&set.has(b));
+  const st={}, back=new Set();
+  const dfs=u=>{st[u]=1; ie.filter(e=>e[0]===u).forEach(([,v])=>{if(st[v]===1)back.add(u+">"+v); else if(!st[v])dfs(v);}); st[u]=2;};
+  ids.filter(id=>!ie.some(e=>e[1]===id)).forEach(id=>{if(!st[id])dfs(id)}); ids.forEach(id=>{if(!st[id])dfs(id)});
+  const L={}; const lay=id=>{if(L[id]!==undefined)return L[id]; let m=0; ie.filter(e=>e[1]===id&&!back.has(e[0]+">"+id)).forEach(([a])=>m=Math.max(m,lay(a)+1)); return L[id]=m;};
+  ids.forEach(lay);
+  return {ids,ie,back,L,nL:Math.max(...ids.map(i=>L[i]))+1};
+}
+const m3 = (function(){
+  const wrap=document.getElementById("m3"), cv=wrap.querySelector("canvas"), ctx=cv.getContext("2d");
+  const legend=document.getElementById("m3legend");
+  let C={}, scene={nodes:[],edges:[]}, sceneKey="", NB={};
+  function hexRgb(h){h=(h||"#888").trim().replace("#",""); if(h.length===3)h=h.split("").map(c=>c+c).join(""); const v=parseInt(h,16); return [(v>>16)&255,(v>>8)&255,v&255];}
+  const VARS=["--fg","--muted","--surface","--bg","--ink","--up1","--l1","--line",...DOMAINS.map(d=>d.c)];
+  function readColors(){const cs=getComputedStyle(document.documentElement); VARS.forEach(v=>C[v]=hexRgb(cs.getPropertyValue(v))); dirty=true;}
+  const rgba=(c,a)=>`rgba(${c[0]},${c[1]},${c[2]},${a})`;
+  const mix=(c,w,t)=>c.map((v,i)=>Math.round(v+(w[i]-v)*t));
+
+  /* scene builders */
+  function circle(n,r,i,off){const a=(n<=1?0:i/n*Math.PI*2)+(off||0); return [r*Math.cos(a), r*Math.sin(a)];}
+  function buildL1(){
+    const nodes=[], edges=[];
+    MAIN.forEach((k,i)=>{const a=Math.PI*0.8-i/8*Math.PI*2; const n=NODES.filter(x=>x.d===k).length;
+      nodes.push({id:"d:"+k,kind:"dom",key:k,label:dom[k].name,sub:`0${i+1} · ${tf("nodesN",{n})}`,col:dom[k].c,r:18,x:330*Math.cos(a),y:0,z:330*Math.sin(a)});});
+    nodes.push({id:"d:D",kind:"dom",key:"D",label:dom.D.name,sub:tx("support"),col:dom.D.c,r:15,x:0,y:330,z:0});
+    for(let i=0;i<MAIN.length-1;i++) edges.push({a:"d:"+MAIN[i],b:"d:"+MAIN[i+1],col:"--muted",w:2});
+    edges.push({a:"d:$",b:"d:S",col:dom["$"].c,w:2,dash:true,label:tx("loop")});
+    MAIN.forEach(k=>edges.push({a:"d:D",b:"d:"+k,col:"--muted",w:1,dash:true,faint:true,noArrow:true}));
+    {const g=tx("lg1"); legend.innerHTML=`<span><i style="width:16px;height:0;border-radius:0;border-top:2px solid var(--muted)"></i>${g[0]}</span><span class="fb"><i></i>${g[1]}</span><span>${g[2]}</span>`;}
+    return {nodes,edges,yaw:0,pitch:0.5};
+  }
+  function buildL2(k){
+    const {ids,ie,back,L,nL}=domainLayers(k), cl=crossLinks(k), nodes=[], edges=[];
+    for(let l=0;l<nL;l++){const row=ids.filter(i=>L[i]===l), rr=row.length<=1?0:60+26*row.length;
+      row.forEach((id,i)=>{const [x,z]=circle(row.length,rr,i,l*0.9); nodes.push({id,kind:"node",key:id,label:byId[id].n,col:dom[k].c,r:13,x,y:(l-(nL-1)/2)*115,z});});}
+    const port=(arr,side,pre)=>arr.forEach((dk,i)=>{const n=arr.length, rr=n<=1?0:50+26*n; const [y,z]=circle(n,rr,i,0.4);
+      nodes.push({id:pre+dk,kind:"port",key:dk,label:dom[dk].name,sub:tf("rels",{n:(pre==="in:"?cl.ins:cl.outs)[dk].length}),col:dom[dk].c,r:9,x:side*330,y,z});});
+    port(cl.inK,-1,"in:"); port(cl.outK,1,"out:");
+    Object.entries(cl.ins).forEach(([dk,es])=>es.forEach(e=>edges.push({a:"in:"+dk,b:e.b,col:dom[dk].c,w:1.2,ext:true,tip:`${byId[e.a].n} → ${byId[e.b].n}：${e.l}`})));
+    Object.entries(cl.outs).forEach(([dk,es])=>es.forEach(e=>edges.push({a:e.a,b:"out:"+dk,col:dom[dk].c,w:1.2,ext:true,tip:`${byId[e.a].n} → ${byId[e.b].n}：${e.l}`})));
+    ie.forEach(([a,b,l])=>edges.push({a,b,col:"--fg",w:2,dash:back.has(a+">"+b),tip:`${byId[a].n} → ${byId[b].n}：${l}`}));
+    {const g=tx("lg2"); legend.innerHTML=`<span><i style="background:var(${dom[k].c})"></i>${esc(g[0].replace("{d}",dom[k].name))}</span><span><i style="width:7px;height:7px;opacity:.7;background:var(--muted)"></i>${g[1]}</span><span><i style="width:7px;height:7px;opacity:.7;background:var(--muted)"></i>${g[2]}</span><span class="fb"><i></i>${g[3]}</span>`;}
+    return {nodes,edges,yaw:-0.25,pitch:0.22};
+  }
+  function buildL3(id){
+    const n=byId[id], ins=inn[id], outs=out[id], nodes=[], edges=[];
+    nodes.push({id,kind:"center",key:id,label:n.n,sub:dom[n.d].name,col:dom[n.d].c,r:22,x:0,y:0,z:0});
+    const ring=(arr,side,pre)=>arr.forEach((o,i)=>{const k=arr.length, rr=k<=1?0:55+30*k; const [y,z]=circle(k,rr,i,0.3); const m=byId[o.to];
+      nodes.push({id:pre+o.to,kind:"node",key:o.to,label:m.n,sub:o.l,col:dom[m.d].c,r:12,x:side*300,y,z});
+      edges.push(side<0?{a:pre+o.to,b:id,col:"--up1",w:2,tip:o.l}:{a:id,b:pre+o.to,col:"--l1",w:2,tip:o.l});});
+    ring(ins,-1,"i:"); ring(outs,1,"o:");
+    {const g=tx("lg3"); legend.innerHTML=`<span><i style="background:var(--up1)"></i>${g[0].replace("{a}",ins.length)}</span><span><i style="background:var(--l1)"></i>${g[1].replace("{b}",outs.length)}</span><span>${g[2]}</span>`;}
+    return {nodes,edges,yaw:0.3,pitch:0.2};
+  }
+  function rebuild(){
+    const key=`${hvS.level}|${hvS.domain}|${sel}`; if(key===sceneKey) return; sceneKey=key;
+    scene = hvS.level===1?buildL1(): hvS.level===2?buildL2(hvS.domain): buildL3(sel);
+    NB={}; scene.nodes.forEach(n=>NB[n.id]=n);
+    yaw=scene.yaw; pitch=scene.pitch; zoomMul=1; appear=0; hover=null; fit(); dirty=true;
+  }
+
+  /* camera */
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let W=0,H=0,dpr=1,yaw=0,pitch=.3,zoomMul=1,baseZoom=1,ox=0,oy=0,dirty=true,hover=null,auto=false,appear=1,proj={};
+  const F=2400;
+  let portrait=false;
+  function rot(p0){const p=!portrait?p0:hvS.level>=2?{x:p0.y,y:p0.x,z:p0.z}:{x:p0.x,y:p0.z,z:p0.y}; const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
+    const x1=p.x*cy+p.z*sy, z1=-p.x*sy+p.z*cy, y1=p.y*cp-z1*sp, z2=p.y*sp+z1*cp, s=F/(F+z2); return {x:x1*s,y:y1*s,s,z:z2};}
+  function fit(){
+    if(!W||!scene.nodes.length) return;
+    let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
+    // fit over a full turn so auto-rotation never leaves the frame
+    const sv=yaw; for(let t=0;t<8;t++){yaw=sv+t/8*Math.PI*2; scene.nodes.forEach(p=>{const r=rot(p);x0=Math.min(x0,r.x-p.r);x1=Math.max(x1,r.x+p.r);y0=Math.min(y0,r.y-p.r);y1=Math.max(y1,r.y+p.r);});} yaw=sv;
+    const labelPad=W<500?90:150;
+    baseZoom=Math.min(1.6,(W-labelPad-40)/(x1-x0||1),(H-110)/(y1-y0||1)); ox=(x0+x1)/2+labelPad/2/baseZoom*0.5; oy=(y0+y1)/2;
+  }
+  function resize(){const r=wrap.getBoundingClientRect(); if(!r.width) return; dpr=Math.min(window.devicePixelRatio||1,2); W=r.width; H=r.height;
+    portrait=H>W*1.15; cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); fit(); dirty=true;}
+  new ResizeObserver(resize).observe(wrap);
+
+  function project(){const z0=baseZoom*zoomMul; scene.nodes.forEach(p=>{const r=rot(p); proj[p.id]={x:W/2+(r.x-ox)*z0,y:H/2+8+(r.y-oy)*z0,s:r.s,z:r.z,R:Math.max(4,p.r*r.s*z0)};});}
+  function arrow(x1,y1,x2,y2,size,color){const a=Math.atan2(y2-y1,x2-x1); ctx.fillStyle=color; ctx.beginPath(); ctx.moveTo(x2,y2);
+    ctx.lineTo(x2-size*Math.cos(a-0.42),y2-size*Math.sin(a-0.42)); ctx.lineTo(x2-size*Math.cos(a+0.42),y2-size*Math.sin(a+0.42)); ctx.closePath(); ctx.fill();}
+
+  function draw(){
+    if(!W) return;
+    ctx.clearRect(0,0,W,H); project();
+    const A=appear, hv=hover;
+    const conn=e=>hv&&(e.a===hv||e.b===hv);
+    const zs=scene.nodes.map(n=>proj[n.id].z), zmin=Math.min(...zs), zmax=Math.max(...zs);
+    const depth=id=>1-(proj[id].z-zmin)/((zmax-zmin)||1);
+    // edges, far first
+    const es=[...scene.edges].sort((e,f)=>(proj[f.a].z+proj[f.b].z)-(proj[e.a].z+proj[e.b].z));
+    es.forEach(e=>{
+      const a=proj[e.a], b=proj[e.b]; const c=C[e.col];
+      const dx=b.x-a.x, dy=b.y-a.y, len=Math.hypot(dx,dy)||1;
+      const x1=a.x+dx/len*(a.R+2), y1=a.y+dy/len*(a.R+2), x2=b.x-dx/len*(b.R+4), y2=b.y-dy/len*(b.R+4);
+      const dpt=(depth(e.a)+depth(e.b))/2;
+      let al=(e.faint?.25:e.ext?.45:.8)*(.55+.45*dpt);
+      if(hv) al = conn(e)? 1 : al*.18;
+      al*=A;
+      ctx.strokeStyle=rgba(c,al); ctx.lineWidth=(conn(e)?e.w+1:e.w); ctx.setLineDash(e.dash?[6,5]:[]);
+      // gentle arc so edges read as 3D curves
+      const mx=(x1+x2)/2-dy/len*len*0.08, my=(y1+y2)/2+dx/len*len*0.08;
+      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.quadraticCurveTo(mx,my,x2,y2); ctx.stroke(); ctx.setLineDash([]);
+      if(!e.noArrow) arrow(mx,my,x2,y2,e.ext?7:9,rgba(c,Math.min(1,al+.15)));
+      if(e.label && (!hv||conn(e))){ctx.font=`500 12px "Noto Sans SC","PingFang SC",sans-serif`; ctx.textAlign="center"; ctx.fillStyle=rgba(C["--muted"],A); ctx.fillText(e.label,mx,my-8);}
+    });
+    // nodes far → near
+    const ns=[...scene.nodes].sort((a,b)=>proj[b.id].z-proj[a.id].z);
+    ns.forEach(n=>{
+      const p=proj[n.id], c=C[n.col], dp=depth(n.id);
+      let al=(.55+.45*dp)*A; const on=!hv||n.id===hv||scene.edges.some(e=>conn(e)&&(e.a===n.id||e.b===n.id));
+      if(!on) al*=.3;
+      const g=ctx.createRadialGradient(p.x-p.R*.35,p.y-p.R*.4,p.R*.1,p.x,p.y,p.R);
+      g.addColorStop(0,rgba(mix(c,[255,255,255],.55),al)); g.addColorStop(1,rgba(c,al));
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.R,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+      if(n.kind==="port"){ctx.setLineDash([3,3]); ctx.lineWidth=1.2; ctx.strokeStyle=rgba(C["--fg"],.5*al); ctx.beginPath(); ctx.arc(p.x,p.y,p.R+4,0,Math.PI*2); ctx.stroke(); ctx.setLineDash([]);}
+      if(n.kind==="center"){ctx.lineWidth=2; ctx.strokeStyle=rgba(C["--fg"],A); ctx.beginPath(); ctx.arc(p.x,p.y,p.R+5,0,Math.PI*2); ctx.stroke();}
+      if(n.id===hv){ctx.lineWidth=2; ctx.strokeStyle=rgba(C["--fg"],.9); ctx.beginPath(); ctx.arc(p.x,p.y,p.R+3,0,Math.PI*2); ctx.stroke();}
+      // label
+      const big=n.kind==="center"||n.kind==="dom";
+      const fs=Math.max(11.5,Math.min(big?18:15,(big?15.5:13.5)*Math.sqrt(p.s*zoomMul)));
+      const la=on?(.5+.5*dp)*A:.25*A;
+      ctx.textAlign="left"; ctx.textBaseline="middle"; ctx.lineJoin="round";
+      ctx.font=`${big||n.id===hv?700:600} ${fs}px "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif`;
+      const tx=p.x+p.R+7, ty=n.sub?p.y-7:p.y;
+      ctx.lineWidth=3.5; ctx.strokeStyle=rgba(C["--bg"],.85*la); ctx.strokeText(n.label,tx,ty);
+      ctx.fillStyle=rgba(C["--fg"],la); ctx.fillText(n.label,tx,ty);
+      if(n.sub){ctx.font=`400 ${Math.max(10.5,fs-3)}px "Noto Sans SC","PingFang SC",sans-serif`;
+        const sub=n.id===hv?n.sub:fitText(n.sub,lang==="en"?240:200,Math.max(10.5,fs-3));
+        ctx.strokeText(sub,tx,ty+fs*.95); ctx.fillStyle=rgba(C["--muted"],la); ctx.fillText(sub,tx,ty+fs*.95);}
+    });
+  }
+
+  /* interaction */
+  const ptrs=new Map(); let moved=0,pinch0=0,zoom0=1;
+  function hit(x,y){let best=null,bz=1e9; scene.nodes.forEach(n=>{const p=proj[n.id]; if(p&&Math.hypot(p.x-x,p.y-y)<p.R+8&&p.z<bz){best=n;bz=p.z;}}); return best;}
+  const local=e=>{const r=cv.getBoundingClientRect(); return {x:e.clientX-r.left,y:e.clientY-r.top};};
+  cv.addEventListener("pointerdown",e=>{cv.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,local(e)); moved=0;
+    if(ptrs.size===2){const [a,b]=[...ptrs.values()]; pinch0=Math.hypot(a.x-b.x,a.y-b.y); zoom0=zoomMul;}});
+  cv.addEventListener("pointermove",e=>{const q=local(e);
+    if(!ptrs.has(e.pointerId)){const h=hit(q.x,q.y), id=h?h.id:null; if(id!==hover){hover=id; cv.classList.toggle("hov",!!h); dirty=true;} return;}
+    const p=ptrs.get(e.pointerId);
+    if(ptrs.size===1){const dx=q.x-p.x, dy=q.y-p.y; moved+=Math.abs(dx)+Math.abs(dy); yaw+=dx*.006; pitch=Math.max(-1.3,Math.min(1.3,pitch+dy*.006)); cv.classList.add("drag"); dirty=true;}
+    ptrs.set(e.pointerId,q);
+    if(ptrs.size===2){const [a,b]=[...ptrs.values()]; zoomMul=Math.max(.4,Math.min(4,zoom0*Math.hypot(a.x-b.x,a.y-b.y)/(pinch0||1))); moved=99; dirty=true;}});
+  cv.addEventListener("pointerup",e=>{const single=ptrs.size===1, q=local(e); ptrs.delete(e.pointerId); cv.classList.remove("drag");
+    if(single&&moved<6){const h=hit(q.x,q.y); if(!h) return;
+      if(h.kind==="dom"){hvS.level=2;hvS.domain=h.key;sel=null;render();}
+      else if(h.kind==="port"){hvS.level=2;hvS.domain=h.key;sel=null;render();}
+      else if(h.kind==="node") select(h.key,false);}});
+  cv.addEventListener("pointercancel",e=>{ptrs.delete(e.pointerId);cv.classList.remove("drag");});
+  cv.addEventListener("pointerleave",()=>{if(hover){hover=null;cv.classList.remove("hov");dirty=true;}});
+  cv.addEventListener("wheel",e=>{e.preventDefault(); zoomMul=Math.max(.4,Math.min(4,zoomMul*Math.exp(-e.deltaY*.0015))); dirty=true;},{passive:false});
+  const rotBtn=document.getElementById("m3rot");
+  rotBtn.onclick=()=>{auto=!auto; rotBtn.setAttribute("aria-pressed",auto);};
+  document.getElementById("m3reset").onclick=()=>{yaw=scene.yaw;pitch=scene.pitch;zoomMul=1;fit();dirty=true;};
+  if(!reduce){auto=true; rotBtn.setAttribute("aria-pressed","true");}
+  readColors();
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",readColors);
+  new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>dirty=true);
+  (function loop(){
+    if(wrap.offsetParent!==null){
+      if(appear<1){appear=reduce?1:Math.min(1,appear+0.07); dirty=true;}
+      if(auto&&ptrs.size===0&&!hover){yaw+=0.0025; dirty=true;}
+      if(dirty){draw(); dirty=false;}
+    }
+    requestAnimationFrame(loop);
+  })();
+  return { reset(){ sceneKey=""; if(!wrap.hidden){rebuild(); dirty=true;} }, update(){ if(!wrap.hidden){ rebuild(); dirty=true; } }, show(on){ wrap.hidden=!on; if(on){ sceneKey=""; resize(); rebuild(); } } };
+})();
+
+/* ---------- layered view ---------- */
+const hvEl=document.getElementById("hv"), hvBody=document.getElementById("hvbody"), crumbs=document.getElementById("crumbs"), hvSub=document.getElementById("hvsub");
+const MAIN=["S","P","C","L","F","M","X","$"];
+const dCol=k=>`var(${dom[k].c})`;
+function crossLinks(k){
+  const ins={}, outs={};
+  EDGES.forEach(([a,b,l])=>{const da=byId[a].d, db=byId[b].d;
+    if(db===k && da!==k)(ins[da]=ins[da]||[]).push({a,b,l});
+    if(da===k && db!==k)(outs[db]=outs[db]||[]).push({a,b,l});});
+  const ord=o=>DOMAINS.map(d=>d.k).filter(x=>o[x]);
+  return {ins,outs,inK:ord(ins),outK:ord(outs)};
+}
+const tw=(s,fs)=>{let w=0; for(const ch of String(s)) w+= /[\u2E80-\uFFEF]/.test(ch)?fs:(/[A-Z]/.test(ch)?fs*.66:fs*.54); return w;};
+function fitText(s,maxW,fs){ s=String(s); if(tw(s,fs)<=maxW) return s; let o=""; for(const ch of s){ if(tw(o+ch+"…",fs)>maxW) break; o+=ch; } return o.replace(/\s+$/,"")+"…"; }
+function wrapLines(s,maxW,fs,max){ s=String(s); if(tw(s,fs)<=maxW) return [s];
+  const toks=/\s/.test(s)?s.split(/(\s+)/):[...s]; const lines=[]; let cur="";
+  for(const tk of toks){ if(tw(cur+tk,fs)>maxW && cur.trim()){ lines.push(cur.trim()); cur=tk.trim()?tk:""; } else cur+=tk; }
+  if(cur.trim()) lines.push(cur.trim());
+  if(lines.length>max){ const keep=lines.slice(0,max); keep[max-1]=fitText(lines.slice(max-1).join(/\s/.test(s)?" ":""),maxW,fs); return keep; }
+  return lines.map(l=>fitText(l,maxW,fs)); }
+function fontFit(s,maxW,fs,min){ let f=fs; while(f>min && tw(s,f)>maxW) f-=.5; return f; }
+function wrapName(t,max){ if(t.length<=max) return [t]; const h=Math.ceil(t.length/2); return [t.slice(0,h),t.slice(h)]; }
+function textLines(lines,x,y,cls,size,weight,anchor){
+  const lh=size*1.3, y0=y-(lines.length-1)*lh/2;
+  return lines.map((t,i)=>`<text x="${x}" y="${(y0+i*lh).toFixed(1)}" font-size="${size}" font-weight="${weight||500}" text-anchor="${anchor||"middle"}" dominant-baseline="central"${cls?` class="${cls}"`:""}>${esc(t)}</text>`).join("");
+}
+function defs(){
+  const cs=[["mu","var(--muted)"],["fg","var(--fg)"],["up","var(--up1)"],["dn","var(--l1)"],...DOMAINS.map(d=>["d"+DOMAINS.indexOf(d),`var(${d.c})`])];
+  return `<defs>${cs.map(([k,c])=>`<marker id="hv-${k}" viewBox="0 0 8 8" refX="7.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" style="fill:${c}"/></marker>`).join("")}</defs>`;
+}
+const mk=k=>`url(#hv-d${DOMAINS.findIndex(d=>d.k===k)})`;
+function curveH(x1,y1,x2,y2){const dx=Math.max(28,Math.abs(x2-x1)/2);return `M${x1},${y1} C${x1+dx},${y1} ${x2-dx},${y2} ${x2},${y2}`;}
+function curveV(x1,y1,x2,y2){const dy=Math.max(24,Math.abs(y2-y1)/2);return `M${x1},${y1} C${x1},${y1+dy} ${x2},${y2-dy} ${x2},${y2}`;}
+
+function renderHV(){
+  if(hvEl.hidden) return;
+  if(hvS.level===3 && !sel) hvS.level=hvS.domain?2:1;
+  const W=Math.max(300,hvBody.clientWidth);
+  const lvTxt=tx("lvTxt")[hvS.level];
+  let c=`<button type="button" data-hv="top">${tx("all")}</button>`;
+  if(hvS.level>=2){ c+=`<span class="sep">›</span>`+(hvS.level===2?`<span class="cur">${esc(dom[hvS.domain].name)}</span>`:`<button type="button" data-hv="dom">${esc(dom[hvS.domain].name)}</button>`); }
+  if(hvS.level===3){ c+=`<span class="sep">›</span><span class="cur">${esc(byId[sel].n)}</span>`; }
+  if(hvS.level===1) c=`<span class="cur">${tx("all")}</span>`;
+  crumbs.innerHTML=c+`<span class="lv">${lvTxt}</span>`;
+  crumbs.querySelector('[data-hv="top"]')?.addEventListener("click",()=>{hvS.level=1;hvS.domain=null;sel=null;render();});
+  crumbs.querySelector('[data-hv="dom"]')?.addEventListener("click",()=>{hvS.level=2;sel=null;render();});
+  if(hvBody.hidden){
+    hvSub.textContent = hvS.level===1 ? tx("s3d1") : hvS.level===2 ? tf("s3d2",{d:dom[hvS.domain].name}) : tf("s3d3",{n:byId[sel].n});
+    m3.update(); return;
+  }
+  if(hvS.level===1) hvL1(W); else if(hvS.level===2) hvL2(W,hvS.domain); else hvL3(W,sel);
+  const svg=hvBody.querySelector("svg.hsvg");
+  if(svg) bindHover(svg);
+}
+function bindHover(svg){
+  svg.addEventListener("pointerover",e=>{const g=e.target.closest("g.n"); if(!g) return;
+    const id=g.dataset.k; svg.classList.add("hl");
+    svg.querySelectorAll(".e").forEach(p=>p.classList.toggle("on",p.dataset.a===id||p.dataset.b===id));
+    svg.querySelectorAll("g.n").forEach(n=>{const on=n===g||[...svg.querySelectorAll(".e.on")].some(p=>p.dataset.a===n.dataset.k||p.dataset.b===n.dataset.k); n.classList.toggle("on",on);});
+  });
+  svg.addEventListener("pointerout",e=>{const g=e.target.closest("g.n"); if(g && !g.contains(e.relatedTarget)) svg.classList.remove("hl");});
+  svg.querySelectorAll("g.clk").forEach(g=>g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();g.dispatchEvent(new MouseEvent("click",{bubbles:true}));}}));
+}
+
+/* level 1: main business flow */
+function hvL1(W){
+  hvSub.textContent=tx("sL1");
+  const vert=W<640, P={}; let H;
+  if(!vert){
+    const pad=16, gx=(W-2*pad)/4, bw=Math.min(210,gx-38), bh=lang==='en'?132:118;
+    MAIN.forEach((k,i)=>{const row=i<4?0:1, col=row?3-(i-4):i; P[k]={x:pad+gx*(col+.5),y:row?(lang==='en'?335:320):(lang==='en'?86:80),w:bw,h:bh};});
+    P.D={x:W/2,y:lang==='en'?490:470,w:W-2*pad-8,h:58}; H=lang==='en'?525:505;
+  } else {
+    const bw=W-58, bh=78;
+    MAIN.forEach((k,i)=>P[k]={x:W/2+16,y:52+i*104,w:bw,h:bh});
+    P.D={x:W/2,y:52+8*104,w:W-8,h:62}; H=52+8*104+44;
+  }
+  let s=`<svg class="hsvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${tx("flowAria")}">${defs()}`;
+  // flow edges
+  for(let i=0;i<MAIN.length-1;i++){
+    const a=P[MAIN[i]], b=P[MAIN[i+1]]; let d;
+    if(Math.abs(a.y-b.y)<1){ d = a.x<b.x?`M${a.x+a.w/2},${a.y} L${b.x-b.w/2-2},${b.y}`:`M${a.x-a.w/2},${a.y} L${b.x+b.w/2+2},${b.y}`; }
+    else d=`M${a.x},${a.y+a.h/2} L${b.x},${b.y-b.h/2-2}`;
+    s+=`<path class="e" d="${d}" style="stroke:var(--muted)" marker-end="url(#hv-mu)"/>`;
+  }
+  const f=P["$"], st=P["S"];
+  if(!vert){
+    s+=`<path class="e bk" d="M${f.x},${f.y-f.h/2} L${st.x},${st.y+st.h/2+2}" style="stroke:var(--dF2)" marker-end="url(#hv-d7)"/>`;
+    s+=textLines(tx("loop2"),f.x+10,(f.y+st.y)/2,"mu",11.5,500,"start");
+  } else {
+    s+=`<path class="e bk" d="M${f.x-f.w/2},${f.y} H8 V${st.y} H${st.x-f.w/2-2}" style="stroke:var(--dF2)" marker-end="url(#hv-d7)"/>`;
+  }
+  // boxes
+  MAIN.forEach((k,i)=>{const p=P[k], d=dom[k], n=NODES.filter(x=>x.d===k).length, cl=crossLinks(k);
+    const nIn=Object.values(cl.ins).reduce((a,v)=>a+v.length,0), nOut=Object.values(cl.outs).reduce((a,v)=>a+v.length,0);
+    s+=`<g class="clk" data-dom="${k}" tabindex="0" role="button" aria-label="${tx("enter")}${esc(d.name)}">
+      <rect class="box" x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="${p.w}" height="${p.h}" rx="8"/>
+      <rect x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="4" height="${p.h}" rx="2" style="fill:${dCol(k)}"/>
+      <text class="mono" x="${p.x-p.w/2+14}" y="${p.y-p.h/2+17}" font-size="11">0${i+1}</text>
+      <text x="${p.x-p.w/2+14}" y="${p.y-p.h/2+(vert?40:42)}" font-size="${fontFit(d.name,p.w-24,16,12)}" font-weight="700">${esc(d.name)}</text>
+      ${(()=>{const ls=vert?[fitText(d.desc,p.w-26,12)]:wrapLines(d.desc,p.w-26,12,lang==='en'?3:2);
+        return ls.map((x,j)=>`<text class="mu" x="${p.x-p.w/2+14}" y="${p.y-p.h/2+(vert?59:62)+j*16}" font-size="12">${esc(x)}</text>`).join("");})()}
+      <text class="mono" x="${p.x-p.w/2+14}" y="${p.y+p.h/2-(vert?6:11)}" font-size="10">${tf("boxFoot",{n,i:nIn,o:nOut})}</text>
+    </g>`;});
+  const p=P.D;
+  s+=`<g class="clk" data-dom="D" tabindex="0" role="button" aria-label="${tx("enter")}${esc(dom.D.name)}">
+    <rect class="box port" x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="${p.w}" height="${p.h}" rx="8"/>
+    <rect x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="4" height="${p.h}" rx="2" style="fill:${dCol("D")}"/>
+    <text x="${p.x-p.w/2+14}" y="${p.y-6}" font-size="15" font-weight="700">${esc(dom.D.name)}</text>
+    <text class="mu" x="${p.x-p.w/2+14}" y="${p.y+14}" font-size="12">${vert?tx("support"):tx("supportLong")}</text></g>`;
+  s+=`</svg>`;
+  hvBody.innerHTML=s;
+  hvBody.querySelectorAll("g[data-dom]").forEach(g=>g.addEventListener("click",()=>{hvS.level=2;hvS.domain=g.dataset.dom;sel=null;render();}));
+}
+
+/* level 2: inside one domain */
+function hvL2(W,k){
+  const d=dom[k], ids=NODES.filter(n=>n.d===k).map(n=>n.id), set=new Set(ids);
+  hvSub.textContent=tf("sL2",{d:d.name,desc:d.desc});
+  const ie=EDGES.filter(([a,b])=>set.has(a)&&set.has(b));
+  const st={}, back=new Set();
+  const dfs=u=>{st[u]=1; ie.filter(e=>e[0]===u).forEach(([,v])=>{if(st[v]===1)back.add(u+">"+v); else if(!st[v])dfs(v);}); st[u]=2;};
+  ids.filter(id=>!ie.some(e=>e[1]===id)).forEach(id=>{if(!st[id])dfs(id)}); ids.forEach(id=>{if(!st[id])dfs(id)});
+  const L={}; const lay=id=>{if(L[id]!==undefined)return L[id]; let m=0; ie.filter(e=>e[1]===id&&!back.has(e[0]+">"+id)).forEach(([a])=>m=Math.max(m,lay(a)+1)); return L[id]=m;};
+  ids.forEach(lay);
+  const nL=Math.max(...ids.map(i=>L[i]))+1, rows=[...Array(nL)].map((_,l)=>ids.filter(i=>L[i]===l));
+  const cl=crossLinks(k);
+  const vert=W<680;
+  const nodeHv=vert&&lang==="en"?58:48; const portW=vert?0:Math.min(lang==="en"?172:124,W*(lang==="en"?0.2:0.15)), nodeH=nodeHv, rowGap=92;
+  let P={}, H, top;
+  if(!vert){
+    const cx0=16+portW+56, cx1=W-16-portW-56, cw=cx1-cx0, mid=(cx0+cx1)/2;
+    const maxRow=Math.max(...rows.map(r=>r.length)); const nodeW=Math.min(150,(cw-(maxRow-1)*20)/maxRow);
+    const nPort=Math.max(cl.inK.length,cl.outK.length);
+    const inner=Math.max((nL-1)*rowGap, (nPort-1)*52);
+    top=50; H=top+inner+nodeH+40;
+    const off=top+nodeH/2+(inner-(nL-1)*rowGap)/2;
+    rows.forEach((r,l)=>{ // order by parents' x
+      if(l>0) r.sort((a,b)=>{const px=id=>{const ps=ie.filter(e=>e[1]===id&&P[e[0]]).map(e=>P[e[0]].x);return ps.length?ps.reduce((x,y)=>x+y)/ps.length:mid;};return px(a)-px(b);});
+      r.forEach((id,i)=>P[id]={x:mid+(i-(r.length-1)/2)*(nodeW+20),y:off+l*rowGap,w:nodeW,h:nodeH});});
+    const pTop=k=>top+nodeH/2+(inner-(k-1)*52)/2;
+    cl.inK.forEach((x,i)=>P["in:"+x]={x:16+portW/2,y:pTop(cl.inK.length)+i*52,w:portW,h:38});
+    cl.outK.forEach((x,i)=>P["out:"+x]={x:W-16-portW/2,y:pTop(cl.outK.length)+i*52,w:portW,h:38});
+  } else {
+    const cols=W<420?2:3, pw=(W-8-(cols-1)*8)/cols;
+    const place=(arr,pre,y0)=>arr.forEach((x,i)=>P[pre+x]={x:4+pw/2+(i%cols)*(pw+8),y:y0+Math.floor(i/cols)*44,w:pw,h:36});
+    const inRows=Math.ceil(cl.inK.length/cols), outRows=Math.ceil(cl.outK.length/cols);
+    place(cl.inK,"in:",44);
+    top=44+inRows*44+40;
+    const maxRow=Math.max(...rows.map(r=>r.length)); const nodeW=Math.min(150,(W-8-(maxRow-1)*10)/maxRow);
+    rows.forEach((r,l)=>r.forEach((id,i)=>P[id]={x:W/2+(i-(r.length-1)/2)*(nodeW+10),y:top+nodeH/2+l*rowGap,w:nodeW,h:nodeH}));
+    const yOut=top+(nL-1)*rowGap+nodeH+70;
+    place(cl.outK,"out:",yOut+16);
+    H=yOut+16+outRows*44+10;
+  }
+  let s=`<svg class="hsvg${vert?" v":""}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(d.name)}${tx("innerAria")}">${defs()}`;
+  if(!vert){
+    s+=`<text class="mu" x="${16}" y="24" font-size="12" font-weight="700">${tx("inFrom")}</text>`;
+    s+=`<text class="mu" x="${W-16}" y="24" font-size="12" font-weight="700" text-anchor="end">${tx("outTo")}</text>`;
+    s+=`<text class="mu" x="${W/2}" y="24" font-size="12" font-weight="700" text-anchor="middle">${esc(d.name)} · ${tx("inner")}</text>`;
+  } else {
+    s+=`<text class="mu" x="4" y="16" font-size="12" font-weight="700">${tx("inFrom")}</text>`;
+    s+=`<text class="mu" x="4" y="${top-18}" font-size="12" font-weight="700">${esc(d.name)} · ${tx("inner")}</text>`;
+    const yo=P["out:"+cl.outK[0]]; if(yo) s+=`<text class="mu" x="4" y="${yo.y-30}" font-size="12" font-weight="700">${tx("outTo")}</text>`;
+  }
+  // external edges
+  Object.entries(cl.ins).forEach(([dk,es])=>es.forEach(e=>{const a=P["in:"+dk], b=P[e.b];
+    const dpath=vert?curveV(a.x,a.y+a.h/2,b.x,b.y-b.h/2-2):curveH(a.x+a.w/2,a.y,b.x-b.w/2-2,b.y);
+    s+=`<path class="e ext" data-a="in:${dk}" data-b="${e.b}" d="${dpath}" style="stroke:${dCol(dk)}" marker-end="${mk(dk)}"><title>${esc(byId[e.a].n)} → ${esc(byId[e.b].n)}：${esc(e.l)}</title></path>`;}));
+  Object.entries(cl.outs).forEach(([dk,es])=>es.forEach(e=>{const a=P[e.a], b=P["out:"+dk];
+    const dpath=vert?curveV(a.x,a.y+a.h/2,b.x,b.y-b.h/2-2):curveH(a.x+a.w/2,a.y,b.x-b.w/2-2,b.y);
+    s+=`<path class="e ext" data-a="${e.a}" data-b="out:${dk}" d="${dpath}" style="stroke:${dCol(dk)}" marker-end="${mk(dk)}"><title>${esc(byId[e.a].n)} → ${esc(byId[e.b].n)}：${esc(e.l)}</title></path>`;}));
+  // internal edges
+  ie.forEach(([a,b,l])=>{const A=P[a],B=P[b]; let dpath, bk=false;
+    if(B.y>A.y+1) dpath=curveV(A.x,A.y+A.h/2,B.x,B.y-B.h/2-2);
+    else if(Math.abs(B.y-A.y)<1) dpath=`M${A.x+(B.x>A.x?A.w/2:-A.w/2)},${A.y} L${B.x-(B.x>A.x?B.w/2+2:-B.w/2-2)},${B.y}`;
+    else { bk=true; const xr=Math.max(A.x+A.w/2,B.x+B.w/2)+36; dpath=`M${A.x+A.w/2},${A.y} C${xr},${A.y} ${xr},${B.y} ${B.x+B.w/2+2},${B.y}`; }
+    s+=`<path class="e${bk?" bk":""}" data-a="${a}" data-b="${b}" d="${dpath}" style="stroke:var(--fg)" marker-end="url(#hv-fg)"><title>${esc(byId[a].n)} → ${esc(byId[b].n)}：${esc(l)}</title></path>`;});
+  // ports
+  const port=(dk,pre)=>{const p=P[pre+dk], n=(pre==="in:"?cl.ins:cl.outs)[dk].length;
+    return `<g class="n clk" data-k="${pre}${dk}" data-port="${dk}" tabindex="0" role="button" aria-label="${tx("jump")}${esc(dom[dk].name)}">
+      <rect class="box port" x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="${p.w}" height="${p.h}" rx="6"/>
+      <rect x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="3" height="${p.h}" style="fill:${dCol(dk)}"/>
+      <text x="${p.x-p.w/2+10}" y="${p.y}" font-size="12.5" font-weight="500" dominant-baseline="central">${esc(fitText(dom[dk].name,p.w-26,12.5))}</text>
+      <text class="mono" x="${p.x+p.w/2-7}" y="${p.y}" font-size="10.5" text-anchor="end" dominant-baseline="central">${n}</text></g>`;};
+  cl.inK.forEach(dk=>s+=port(dk,"in:")); cl.outK.forEach(dk=>s+=port(dk,"out:"));
+  // nodes
+  ids.forEach(id=>{const p=P[id], n=byId[id];
+    s+=`<g class="n clk" data-k="${id}" data-node="${id}" tabindex="0" role="button" aria-label="${esc(n.n)}">
+      <rect class="box" x="${p.x-p.w/2}" y="${p.y-p.h/2}" width="${p.w}" height="${p.h}" rx="7" style="stroke:${dCol(k)}"/>
+      ${vert?textLines(wrapLines(n.n,p.w-10,12,3),p.x,p.y,"",12,700):textLines(wrapLines(n.n,p.w-14,13.5,2),p.x,p.y,"",13.5,700)}</g>`;});
+  s+=`</svg>`;
+  hvBody.innerHTML=s;
+  hvBody.querySelectorAll("g[data-node]").forEach(g=>g.addEventListener("click",()=>select(g.dataset.node,true)));
+  hvBody.querySelectorAll("g[data-port]").forEach(g=>g.addEventListener("click",()=>{hvS.domain=g.dataset.port;hvS.level=2;sel=null;render();}));
+}
+
+/* level 3: one node */
+function hvL3(W,id){
+  const n=byId[id], ins=inn[id], outs=out[id];
+  hvSub.textContent=tf("sL3",{n:n.n});
+  const vert=W<760; let s, H;
+  const nb=(x,y,w,h,o,side)=>{const m=byId[o.to]; const lab=fitText(o.l,w-22,11.5);
+    return `<g class="n clk" data-k="${o.to}" data-node="${o.to}" tabindex="0" role="button" aria-label="${esc(m.n)}">
+      <rect class="box" x="${x}" y="${y}" width="${w}" height="${h}" rx="7"/>
+      <rect x="${x}" y="${y}" width="3" height="${h}" style="fill:${dCol(m.d)}"/>
+      <text x="${x+12}" y="${y+18}" font-size="13.5" font-weight="700">${esc(fitText(m.n,w-24,13.5))}${tw(m.n,13.5)+tw(dom[m.d].name,10.5)+10<w-24?`<tspan class="mono" font-size="10.5" dx="6" font-weight="400" style="fill:var(--muted)">${esc(dom[m.d].name)}</tspan>`:""}</text>
+      <text class="mu" x="${x+12}" y="${y+37}" font-size="11.5">${esc(lab)}<title>${esc(o.l)}</title></text></g>`;};
+  const center=(x,y,w,h)=>`<g><rect class="box center" x="${x}" y="${y}" width="${w}" height="${h}" rx="9"/>
+      ${(()=>{const ls=wrapLines(n.n,w-20,16,2); return ls.map((l,j)=>`<text class="oncenter" x="${x+w/2}" y="${y+h/2-9-(ls.length-1)*9+j*18}" font-size="16" font-weight="900" text-anchor="middle" dominant-baseline="central" style="font-family:var(--display)">${esc(l)}</text>`).join("");})()}
+      <text class="oncenter" x="${x+w/2}" y="${y+h/2+14}" font-size="11" text-anchor="middle" dominant-baseline="central" style="opacity:.75">${esc(dom[n.d].name)}</text></g>`;
+  if(!vert){
+    const cw=190, ch=72, nbW=Math.min(250,(W-32-cw-120)/2), nbH=48, gap=58;
+    const nMax=Math.max(ins.length,outs.length,1); H=Math.max(160,nMax*gap+44);
+    const cy=H/2, cx=W/2;
+    s=`<svg class="hsvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(n.n)}${tx("relOf")}">${defs()}`;
+    s+=`<text class="mu" x="16" y="14" font-size="12" font-weight="700">${tx("directIn")} · ${ins.length}</text><text class="mu" x="${W-16}" y="14" font-size="12" font-weight="700" text-anchor="end">${tx("directOut")} · ${outs.length}</text>`;
+    const yOf=(i,k)=>cy+(i-(k-1)/2)*gap;
+    ins.forEach((o,i)=>{const y=yOf(i,ins.length); s+=`<path class="e" data-a="${o.to}" data-b="${id}" d="${curveH(16+nbW,y,cx-cw/2-2,cy)}" style="stroke:var(--up1)" marker-end="url(#hv-up)"/>`;});
+    outs.forEach((o,i)=>{const y=yOf(i,outs.length); s+=`<path class="e" data-a="${id}" data-b="${o.to}" d="${curveH(cx+cw/2,cy,W-16-nbW-2,y)}" style="stroke:var(--l1)" marker-end="url(#hv-dn)"/>`;});
+    ins.forEach((o,i)=>s+=nb(16,yOf(i,ins.length)-nbH/2,nbW,nbH,o));
+    outs.forEach((o,i)=>s+=nb(W-16-nbW,yOf(i,outs.length)-nbH/2,nbW,nbH,o));
+    s+=center(cx-cw/2,cy-ch/2,cw,ch);
+    if(!ins.length) s+=textLines(tx("origin2"),16+nbW/2,cy,"mu",12);
+  } else {
+    const nbH=48, gap=56, x0=30, w=W-x0-4, cw=Math.min(240,W-40), ch=64;
+    let y=24; s="";
+    const inY=ins.map(()=>{const v=y; y+=gap; return v;});
+    const cY=y+20; y=cY+ch+40;
+    const outY=outs.map(()=>{const v=y; y+=gap; return v;});
+    H=y;
+    s=`<svg class="hsvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(n.n)}${tx("relOf")}">${defs()}`;
+    s+=`<text class="mu" x="4" y="12" font-size="12" font-weight="700">${tx("directIn")} · ${ins.length}</text>`;
+    if(ins.length){ s+=`<path class="e" d="M14,${inY[0]+nbH/2} V${cY-4}" style="stroke:var(--up1)" marker-end="url(#hv-up)"/>`;
+      ins.forEach((o,i)=>{s+=`<path class="e" data-a="${o.to}" data-b="${id}" d="M${x0},${inY[i]+nbH/2} H14" style="stroke:var(--up1)"/>`; s+=nb(x0,inY[i],w,nbH,o);}); }
+    else s+=`<text class="mu" x="4" y="${cY-8}" font-size="12">${tx("origin1")}</text>`;
+    s+=center(W/2-cw/2,cY,cw,ch);
+    if(outs.length){ s+=`<text class="mu" x="4" y="${cY+ch+26}" font-size="12" font-weight="700">${tx("directOut")} · ${outs.length}</text>`;
+      s+=`<path class="e" d="M14,${cY+ch/2} V${outY[outY.length-1]+nbH/2}" style="stroke:var(--l1)"/>`;
+      outs.forEach((o,i)=>{s+=`<path class="e" data-a="${id}" data-b="${o.to}" d="M14,${outY[i]+nbH/2} H${x0-2}" style="stroke:var(--l1)" marker-end="url(#hv-dn)"/>`; s+=nb(x0,outY[i],w,nbH,o);}); }
+  }
+  s+=`</svg><div class="hsteps-h">${tx("h_how")}</div><ol class="hsteps">${n.how.map(h=>`<li>${G(h)}</li>`).join("")}</ol>`;
+  hvBody.innerHTML=s;
+  hvBody.querySelectorAll("g[data-node]").forEach(g=>g.addEventListener("click",()=>select(g.dataset.node,false)));
+}
+
+function renderDomainPanel(k){
+  const d=dom[k], cl=crossLinks(k), t=TOUR.find(x=>x.d===k);
+  detail.style.setProperty("--dc",dCol(k));
+  const grp=(o,keys,dir)=>keys.map(dk=>`<li><b style="color:${dCol(dk)}">${esc(dom[dk].name)}</b><ul class="dlist">${o[dk].map(e=>`<li>${dir==="in"?`<button class="linkbtn" data-go="${e.a}">${esc(byId[e.a].n)}</button> → ${esc(byId[e.b].n)}`:`${esc(byId[e.a].n)} → <button class="linkbtn" data-go="${e.b}">${esc(byId[e.b].n)}</button>`} <span class="mu">${esc(e.l)}</span></li>`).join("")}</ul></li>`).join("");
+  detail.innerHTML=`<div class="dtag">${esc(d.code)}</div><h2>${esc(d.name)}</h2>
+   <p>${t?G(t.one):esc(d.desc)}</p>
+   <h4>${tx("dp_has")}</h4><div class="metrics">${NODES.filter(n=>n.d===k).map(n=>`<span><button class="linkbtn" style="font-weight:500" data-go="${n.id}">${esc(n.n)}</button></span>`).join("")}</div>
+   <p style="font-size:13px;color:var(--muted);margin-top:10px">${tx("dp_hint")}</p>
+   <details class="more"><summary>${tx("dp_more")}</summary>
+   <h4>${tx("dp_in")}</h4><ul class="dlist">${grp(cl.ins,cl.inK,"in")||`<li class='mu'>${tx("none")}</li>`}</ul>
+   <h4>${tx("dp_out")}</h4><ul class="dlist">${grp(cl.outs,cl.outK,"out")||`<li class='mu'>${tx("none")}</li>`}</ul></details>`;
+  detail.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>select(b.dataset.go,true));
+}
+
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && curView!=="2d" && !document.getElementById("v-map").hidden){
+  if(hvS.level===3){hvS.level=2;sel=null;render();} else if(hvS.level===2){hvS.level=1;hvS.domain=null;render();} }});
+let hvRt; new ResizeObserver(()=>{clearTimeout(hvRt);hvRt=setTimeout(()=>{if(!hvBody.hidden)renderHV();},80)}).observe(hvBody);
+
+function setView(v){
+  curView=v;
+  map.hidden=v!=="2d"; hvEl.hidden=v==="2d"; hvBody.hidden=v!=="h"; m3.show(v==="3d");
+  ["h","3d","2d"].forEach(x=>document.getElementById(x==="h"?"vwh":x==="3d"?"vw3":"vw2").setAttribute("aria-pressed",x===v));
+  try{localStorage.setItem("ecomView2",v)}catch(e){}
+  requestAnimationFrame(render);
+}
+document.getElementById("vwh").onclick=()=>setView("h");
+document.getElementById("vw3").onclick=()=>setView("3d");
+document.getElementById("vw2").onclick=()=>setView("2d");
+let savedView="h"; try{savedView=localStorage.getItem("ecomView2")||"h"}catch(e){}
+
+/* ---------- beginner tour ---------- */
+let tourI=0;
+function waterfall(){
+  const L=tx("wf"); const rows=[[L[0],19.99,"p"],[L[1],-5.27,"c"],[L[2],-3.00,"c"],[L[3],-4.00,"c"],[L[4],-0.20,"c"],[L[5],-0.30,"c"],[L[6],-2.40,"c"],[L[7],4.82,"n"]];
+  const W=560, lw=lang==="en"?100:92, vw=64, bw=W-lw-vw-8, rh=30, H=rows.length*rh+6, sc=bw/19.99;
+  let run=0, out=`<svg class="wf" viewBox="0 0 ${W} ${H}" role="img" aria-label="${tx("wfAria")}">`;
+  rows.forEach(([lab,v,k],i)=>{const y=i*rh+4; let x0,x1;
+    if(k==="p"){x0=0;x1=v;run=v;} else if(k==="n"){x0=0;x1=v;} else {x1=run;x0=run+v;run=x0;}
+    out+=`<text x="0" y="${y+rh/2}" dominant-baseline="central">${lab}</text>
+      <rect class="b${k}" x="${lw+x0*sc}" y="${y+5}" width="${Math.max(1.5,(x1-x0)*sc)}" height="${rh-12}" rx="3"/>
+      <text class="v" x="${W}" y="${y+rh/2}" text-anchor="end" dominant-baseline="central">${v<0?"−":""}$${Math.abs(v).toFixed(2)}</text>`;});
+  return out+`</svg>`;
+}
+function renderTour(){
+  const el=document.getElementById("v-tour"), N=TOUR.length;
+  const steps=`<div class="tsteps" role="list">${TOUR.map((t,i)=>`<button type="button" role="listitem" data-ti="${i}" class="${i<tourI?"done":""}" ${i===tourI?'aria-current="step"':""}>${i+1} ${esc(t.title||dom[t.d].name)}</button>`).join("")}<button type="button" data-ti="${N}" ${tourI===N?'aria-current="step"':""}>${tx("end")}</button></div>`;
+  const note=`<p class="tnote">${tx("tnote")}</p>`;
+  if(tourI<N){
+    const t=TOUR[tourI], d=dom[t.d];
+    const ex=t.ex==="__WATERFALL__" ? `<p class="head">${tx("wfHead")}</p>${waterfall()}`+gl(tx("wfList")) : gl(t.ex);
+    el.innerHTML=note+steps+`<article class="tcard" style="--dc:var(${d.c})">
+      <div class="tnum">${tf("stopOf",{i:tourI+1,n:N})} · ${esc(d.code)}</div>
+      <h2>${esc(t.title||d.name)}</h2>
+      <p class="tone">${G(t.one)}</p>
+      <div class="tex"><span class="badge">${tx("badge")}</span>${ex}</div>
+      <div class="tnav">
+        <div>${tourI>0?`<button type="button" class="link" id="tprev">${tx("prev")}</button>`:""} <button type="button" class="link" id="tmap">${t.node?tx("seeNode"):tx("seeDom")}</button></div>
+        <button type="button" class="primary" id="tnext">${tourI===N-1?tx("toEnd"):tf("nextStop",{s:esc(TOUR[tourI+1].title||dom[TOUR[tourI+1].d].name)})} →</button>
+      </div></article>`;
+    el.querySelector("#tnext").onclick=()=>{tourI++;renderTour();window.scrollTo({top:0,behavior:"smooth"});};
+    el.querySelector("#tprev")?.addEventListener("click",()=>{tourI--;renderTour();});
+    el.querySelector("#tmap").onclick=()=>{ if(t.node){ location.hash="map"; setTimeout(()=>select(t.node,true),30); } else { hvS.level=2;hvS.domain=t.d;sel=null;location.hash="map"; } };
+  } else {
+    el.innerHTML=note+steps+`<article class="tcard tend" style="--dc:var(--dD)">
+      ${gl(tx("endHtml"))}
+      <div class="tnav"><button type="button" class="link" id="trestart">${tx("restart")}</button>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="ghost" id="tstart">${tx("byStart")}</button><button type="button" class="primary" id="tgo">${tx("goMap")}</button></div></div></article>`;
+    el.querySelector("#trestart").onclick=()=>{tourI=0;renderTour();};
+    el.querySelector("#tstart").onclick=()=>{location.hash="start";};
+    el.querySelector("#tgo").onclick=()=>{hvS.level=1;hvS.domain=null;sel=null;location.hash="map";};
+  }
+  el.querySelectorAll("[data-ti]").forEach(b=>b.onclick=()=>{tourI=+b.dataset.ti;renderTour();});
+}
+document.addEventListener("click",e=>{const ad=document.getElementById("adv"); if(ad.open && !ad.contains(e.target)) ad.open=false;});
+document.getElementById("tourbtn").onclick=()=>{tourI=0;location.hash="tour";};
+
+/* glossary tooltip */
+const tip=document.createElement("div"); tip.id="tip"; tip.hidden=true; tip.setAttribute("role","tooltip"); document.body.appendChild(tip);
+let tipFor=null;
+function showTip(el){ const k=el.dataset.term; tip.innerHTML=`<b>${esc(k)}</b>${esc(GLOSS[k]||"")}`; tip.hidden=false; tipFor=el;
+  const r=el.getBoundingClientRect(), tw=tip.offsetWidth, th=tip.offsetHeight;
+  let x=Math.min(Math.max(8,r.left+r.width/2-tw/2),window.innerWidth-tw-8), y=r.top-th-8; if(y<8) y=r.bottom+8;
+  tip.style.left=x+"px"; tip.style.top=y+"px"; }
+function hideTip(){ tip.hidden=true; tipFor=null; }
+document.addEventListener("pointerover",e=>{const t=e.target.closest(".term"); if(t&&e.pointerType==="mouse") showTip(t);});
+document.addEventListener("pointerout",e=>{const t=e.target.closest(".term"); if(t&&e.pointerType==="mouse") hideTip();});
+document.addEventListener("focusin",e=>{const t=e.target.closest(".term"); if(t) showTip(t);});
+document.addEventListener("focusout",e=>{if(e.target.closest(".term")) hideTip();});
+document.addEventListener("click",e=>{const t=e.target.closest(".term"); if(t){ if(tipFor===t) hideTip(); else showTip(t); } else if(tipFor) hideTip();});
+window.addEventListener("scroll",()=>{if(tipFor)hideTip();},{passive:true});
+
+function renderStatic(){
+const EN=lang==="en";
+/* start view */
+document.getElementById("v-start").innerHTML = (EN?`<h2>Starting an online business from zero</h2>
+<p class="lead">Eight stages in order. Each lists what you should have at the end, the most common mistake, and the matching points on the map. Click a point to open it on the map.</p>`:`<h2>从零开始做电商</h2>
+<p class="lead">按顺序排列的八个阶段。每个阶段列出要产出什么、最容易出什么问题，以及对应图谱里的哪些节点。点节点可以跳到图谱查看详情。</p>`)+
+PHASES.map((p,i)=>`<div class="phase"><div class="n">${i}</div><div><h3>${esc(p.t)}</h3><p class="out">${G(p.out)}</p><p class="warn">${G(p.warn)}</p><div class="links">${p.ids.map(id=>`<button class="chip" style="--dc:var(${dom[byId[id].d].c})" data-jump="${id}">${esc(byId[id].n)}</button>`).join("")}</div></div></div>`).join("");
+
+/* data view */
+document.getElementById("v-data").innerHTML = EN ? `<h2>From knowledge map to working tool</h2>
+<p class="lead">This map is the first layer: what the work is and how it connects. To become a tool you can make decisions with, it needs real data, and calculation methods used according to how reliable they are.</p>
+<h3>Four layers</h3>
+<div class="tbl"><table><thead><tr><th>Layer</th><th>Question it answers</th><th>Status now</th></tr></thead><tbody>
+<tr><td>Knowledge</td><td>What the work is and how it connects</td><td>First version done (this page)</td></tr>
+<tr><td>Metrics</td><td>Which metrics measure each point, and how they're defined</td><td>Key metrics listed per point; definitions need to match your company</td></tr>
+<tr><td>Data</td><td>Where each metric's real numbers come from</td><td>Not connected yet; see the data sources table below</td></tr>
+<tr><td>Analysis</td><td>What happened, why, and what comes next</td><td>Built step by step in the four stages below</td></tr>
+</tbody></table></div>
+<h3>Four stages of analysis</h3>
+<div class="stage">
+<div><span class="k">Stage 1 · exact</span><h4>Reporting & accounting</h4><p>Sales dashboards, unit profit, landed cost, days of inventory. All exact calculations: correct data gives correct results.</p></div>
+<div><span class="k">Stage 2 · exact</span><h4>Driver breakdown</h4><p>Split profit changes into units and unit profit, and units into traffic and conversion. Identities show which step the problem is in.</p></div>
+<div><span class="k">Stage 3 · has error, must be validated</span><h4>Statistics & forecasting</h4><p>Demand forecasts, price elasticity, ad effectiveness. Must be backtested on history and reported with an error range before use.</p></div>
+<div><span class="k">Stage 4 · has error, must be validated</span><h4>Decision optimisation</h4><p>Optimal reorder quantities, ad budget allocation. Built on models already validated in stage 3.</p></div>
+</div>
+<h3>Data sources</h3>
+<div class="tbl"><table><thead><tr><th>Data</th><th>Source</th><th>Points it supports</th></tr></thead><tbody>
+<tr><td>Orders, inventory, fees, settlements</td><td>Amazon Selling Partner API reports</td><td>Sales, inventory planning, platform fees, P&L</td></tr>
+<tr><td>Advertising</td><td>Amazon Ads API</td><td>On-platform ads, traffic</td></tr>
+<tr><td>Traffic & conversion</td><td>Business reports, Brand Analytics, GA4</td><td>Traffic, conversion rate, keywords</td></tr>
+<tr><td>Own website</td><td>Shopify and similar platform APIs</td><td>Own website, sales, repeat purchases</td></tr>
+<tr><td>Purchasing & inventory</td><td>ERP</td><td>Purchasing, landed cost, replenishment</td></tr>
+<tr><td>Freight & customs</td><td>Forwarder invoices, entry summaries</td><td>First-mile, tariffs, landed cost</td></tr>
+<tr><td>Finance</td><td>Accounting software, bank statements</td><td>P&L, cash flow, exchange rate</td></tr>
+<tr><td>Competitors & market</td><td>Third-party tools (e.g. Keepa)</td><td>Competitors, market research, price</td></tr>
+</tbody></table></div>
+<h3>Principles</h3>
+<ul>
+<li>Standardise SKU codes and metric definitions before any analysis.</li>
+<li>Every number can be traced back to a source report.</li>
+<li>If an identity can calculate it, don't estimate it with a model.</li>
+<li>Statistical results like forecasts and elasticities always come with backtested error; estimates are never treated as facts.</li>
+<li>Use aggregated data only; keep customers' personal information out of the analysis system.</li>
+</ul>` : `<h2>从知识体系到可用工具</h2>
+<p class="lead">这张图谱是第一层：搞清楚有哪些事、彼此怎么影响。要变成能用来做决策的工具，需要接入真实数据，并且按可信程度分层使用计算方法。</p>
+<h3>四层结构</h3>
+<div class="tbl"><table><thead><tr><th>层</th><th>回答的问题</th><th>现在的状态</th></tr></thead><tbody>
+<tr><td>知识层</td><td>有哪些事情，彼此什么关系</td><td>本页面已完成第一版</td></tr>
+<tr><td>指标层</td><td>每个节点用哪些指标衡量，口径是什么</td><td>每个节点已列出关键指标，口径需要按公司实际定义</td></tr>
+<tr><td>数据层</td><td>每个指标的真实数值从哪里来</td><td>待接入，见下方数据来源表</td></tr>
+<tr><td>分析层</td><td>发生了什么、为什么、接下来会怎样</td><td>按下方四个阶段逐步建设</td></tr>
+</tbody></table></div>
+<h3>分析能力的四个阶段</h3>
+<div class="stage">
+<div><span class="k">阶段 1 · 可以算准</span><h4>描述与核算</h4><p>销售看板、单件利润、落地成本、库存天数。都是确定性计算，数据对了结果就对。</p></div>
+<div><span class="k">阶段 2 · 可以算准</span><h4>驱动拆解</h4><p>利润变化拆到销量和单件利润，销量拆到流量和转化。用恒等式定位问题出在哪个环节。</p></div>
+<div><span class="k">阶段 3 · 有误差，需验证</span><h4>统计与预测</h4><p>需求预测、价格弹性、广告效果。必须用历史数据回测，报告误差范围，再用于决策。</p></div>
+<div><span class="k">阶段 4 · 有误差，需验证</span><h4>决策优化</h4><p>补货量优化、广告预算分配。建立在阶段 3 已验证的模型之上。</p></div>
+</div>
+<h3>数据来源</h3>
+<div class="tbl"><table><thead><tr><th>数据</th><th>来源</th><th>支撑的节点</th></tr></thead><tbody>
+<tr><td>订单、库存、费用、结算</td><td>Amazon Selling Partner API 报表</td><td>销量、库存计划、平台费用、利润表</td></tr>
+<tr><td>广告</td><td>Amazon Ads API</td><td>站内广告、流量</td></tr>
+<tr><td>流量与转化</td><td>业务报告、Brand Analytics、GA4</td><td>流量、转化率、关键词</td></tr>
+<tr><td>独立站</td><td>Shopify 等平台 API</td><td>独立站、销量、复购</td></tr>
+<tr><td>采购与库存</td><td>ERP</td><td>采购、落地成本、补货</td></tr>
+<tr><td>物流与清关</td><td>货代账单、报关单（Entry Summary）</td><td>头程、关税、落地成本</td></tr>
+<tr><td>财务</td><td>财务软件、银行流水</td><td>利润表、现金流、汇率</td></tr>
+<tr><td>竞品与市场</td><td>第三方工具（如 Keepa）</td><td>竞争对手、市场调研、售价</td></tr>
+</tbody></table></div>
+<h3>建设原则</h3>
+<ul>
+<li>先统一 SKU 编码和指标口径，再做任何分析。</li>
+<li>每个数字都能追溯到来源报表。</li>
+<li>能用恒等式算的，不用模型去估。</li>
+<li>预测和弹性这类统计结果，必须附带回测误差，不把估计值当成事实。</li>
+<li>只使用汇总数据，不把客户个人信息放进分析系统。</li>
+</ul>`;
+
+/* us view */
+const usNodes = NODES.filter(n=>n.us);
+document.getElementById("v-us").innerHTML = (EN?`<h2>US rules</h2>
+<p class="lead">The US is the default market. This page collects every point on the map with US-specific rules. Checked ${AS_OF}. Tariffs and platform fees change often, so verify with official sources before acting, and consult professionals on legal and tax structure.</p>`:`<h2>美国市场要点</h2>
+<p class="lead">以美国作为默认市场，汇总图谱中涉及美国具体规则的节点。核对日期 ${AS_OF}。关税和平台费用变化频繁，实际操作前请到官方渠道复核；涉及法律和税务结构的决定请咨询专业人士。</p>`)+`
+<div class="uslist">`+usNodes.map(n=>`<div class="item"><h3><button class="chip" style="--dc:var(${dom[n.d].c})" data-jump="${n.id}">${esc(n.n)}</button></h3><p style="margin:6px 0 0">${G(n.us)}${refs(n.src)}</p></div>`).join("")+`</div>
+<h3 style="margin-top:24px">${EN?"Official lookups":"官方查询入口"}</h3><ul class="srcs">${TOOLS.map(t=>`<li><a href="${t.u}" target="_blank" rel="noopener">${esc(t.t)}</a></li>`).join("")}</ul>`;
+
+/* sources */
+document.getElementById("v-sources").innerHTML = (EN?`<h2>Sources</h2>
+<p class="lead">The specific US rules and dates come from the sources below, checked ${AS_OF}. Everything else is general e-commerce practice.</p>`:`<h2>来源</h2>
+<p class="lead">美国市场要点中的具体规则和日期来自以下资料，核对日期 ${AS_OF}。其余内容为电商运营的通用方法。</p>`)+`
+<ol class="srcs">${SOURCES.map(s=>`<li id="src-${s.id}"><a href="${s.u}" target="_blank" rel="noopener">${esc(s.t)}</a><br><span style="color:var(--muted);font-size:13px">${esc(s.o)}</span></li>`).join("")}</ol>
+<p class="note">${EN?"This page is for learning and organising work. It is not legal, tax or financial advice.":"本页面用于学习和梳理工作，不构成法律、税务或财务建议。"}</p>`;
+}
+
+document.addEventListener("click",e=>{
+  const j=e.target.closest("[data-jump]"); if(j){ location.hash="map"; setTimeout(()=>select(j.dataset.jump,true),30); }
+});
+
+/* routing */
+const views=["tour","map","start","data","us","sources"];
+function route(){
+  const v = views.includes(location.hash.slice(1))?location.hash.slice(1):"tour";
+  if(v==="tour") renderTour();
+  views.forEach(x=>document.getElementById("v-"+x).hidden = x!==v);
+  document.querySelectorAll("nav.tabs a").forEach(a=>{ if(a.dataset.v===v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  if(v==="map") requestAnimationFrame(render);
+}
+window.addEventListener("hashchange",route);
+function applyStatic(){
+  document.documentElement.lang = lang==="en"?"en":"zh-CN";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{el.innerHTML=tx(el.dataset.i18n);});
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{el.placeholder=tx(el.dataset.i18nPh);});
+  const lb=document.getElementById("langbtn"); lb.textContent=tx("langbtn"); lb.setAttribute("aria-label",tx("langlabel"));
+}
+function setLang(l){
+  lang=l; try{localStorage.setItem("ecomLang",l)}catch(e){}
+  applyData(l); rebuildAdj(); buildGloss(); applyStatic(); buildMap(); renderStatic(); renderLegend(); m3.reset(); hideTip(); render(); route();
+}
+document.getElementById("langbtn").onclick=()=>setLang(lang==="en"?"zh":"en");
+applyStatic(); renderStatic();
+renderLegend(); setView(savedView); route();
+})();
+</script>

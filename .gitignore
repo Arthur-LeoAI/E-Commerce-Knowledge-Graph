@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Local handoff material (not part of the repository)
+ecommerce-atlas-handoff/
+ecommerce-atlas-handoff.zip
+START_HERE.zh.md
