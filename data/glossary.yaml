@@ -81,15 +81,15 @@
     en: HTSUS
     zh: HTSUS
   def:
-    en: The US tariff schedule; the 10-digit code sets the duty rate.
-    zh: 美国海关商品编码表，10 位编码决定关税税率。
+    en: The US tariff schedule; the duty rate is set at the 8-digit level, and the 10-digit code adds a statistical suffix.
+    zh: 美国海关商品编码表；关税税率在 8 位编码层级确定，10 位编码是在此基础上加的统计后缀。
 - id: hts
   term:
     en: HTS
     zh: HTS
   def:
-    en: Harmonized Tariff Schedule code; in the US the 10-digit code sets the duty rate.
-    zh: 美国海关商品编码（Harmonized Tariff Schedule），10 位编码决定关税税率。
+    en: Harmonized Tariff Schedule code; in the US the duty rate is set at the 8-digit level (10 digits are used for statistics).
+    zh: 美国海关商品编码（Harmonized Tariff Schedule）；关税税率在 8 位层级确定，10 位用于统计申报。
 - id: hs
   term:
     en: HS
