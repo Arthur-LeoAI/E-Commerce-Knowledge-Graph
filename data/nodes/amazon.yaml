@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: amazon
+domain: storefront
+order: 22
+name:
+  en: Amazon store
+  zh: Amazon 店铺
+what:
+  en: Selling on Amazon as a third-party seller. Built-in traffic, but high fees, strict rules and fierce competition.
+  zh: 作为第三方卖家在 Amazon 开店。平台自带流量，但费用高、规则严、竞争激烈。
+how:
+  en:
+    - Register a seller account and complete verification
+    - Choose the Professional selling plan
+    - Create a listing or join an existing one
+    - Choose a fulfilment method
+    - Keep the account healthy
+  zh:
+    - 注册卖家账户并完成验证
+    - 选择专业销售计划
+    - 创建或跟卖商品页面
+    - 选择履约方式
+    - 维护账户健康
+metrics:
+  en:
+    - Sales
+    - Buy Box share
+    - Account health score
+  zh:
+    - 销售额
+    - Buy Box 占有率
+    - 账户健康评分
+example:
+  en: Open a Professional seller account on Amazon US, create the cup's listing and choose FBA.
+  zh: 在 Amazon 美国站开专业卖家账户，创建折叠水杯的商品页面，选择 FBA 发货。
+data_later:
+  en: "Sources: Selling Partner API. Methods: automated reporting."
+  zh: 来源：Selling Partner API。方法：报表自动化。
+rules: []

@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: qc
+domain: product
+order: 8
+name:
+  en: Quality control
+  zh: 质量控制
+what:
+  en: Catch problems before shipping so defective units never reach customers. Quality issues end up as returns, bad reviews and account risk.
+  zh: 在出货前发现问题，避免把次品卖给用户。质量问题最终会变成退货、差评和账户风险。
+how:
+  en:
+    - Define inspection standards (e.g. AQL sampling)
+    - Inspect before, during and after production
+    - Record defect types and feed them back to the factory
+  zh:
+    - 定义验货标准（如 AQL 抽样）
+    - 做产前、产中和出货前检验
+    - 记录缺陷类型并反馈给工厂
+metrics:
+  en:
+    - Inspection failure rate
+    - Share of returns due to quality
+  zh:
+    - 验货不合格率
+    - 质量原因退货占比
+example:
+  en: An AQL inspection of 80 units before shipping finds 2 lids that don't close tightly. The factory fixes them before shipping, so they never turn into bad reviews.
+  zh: 出货前按 AQL 抽检 80 件，发现 2 件盖子拧不紧，要求工厂返工后再发货，避免变成差评。
+data_later:
+  en: "Sources: inspection reports, return reason codes. Methods: Pareto analysis to find the biggest defect types."
+  zh: 来源：验货报告、退货原因代码。方法：帕累托分析，找出最主要的几类缺陷。
+rules: []

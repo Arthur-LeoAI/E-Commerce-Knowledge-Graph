@@ -78,7 +78,11 @@ ecommerce-atlas/
 │   ├── glossary.yaml
 │   ├── tour.yaml
 │   ├── phases.yaml
+│   ├── sources.yaml          sources cited by the prototype (rules/ carry their own sources)
+│   ├── tools.yaml            official lookup links
+│   ├── ui.yaml               all interface strings
 │   └── example-case.yaml     the running example's inputs (all labelled example)
+├── scripts/                  validate.mjs (npm run validate); extract-legacy.mjs (one-time, done)
 ├── rules/
 │   ├── law/
 │   │   └── us/               federal rules; states in us/<state>/ when needed

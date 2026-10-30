@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/rule.schema.json",
+  "title": "Market rule (law or platform rule)",
+  "type": "object",
+  "required": ["id", "kind", "jurisdiction", "platform", "marketplace", "topic", "applies_to", "summary", "sources", "last_checked", "next_review", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^(law|platform)/[a-z0-9/-]+$", "description": "Equals the file path under rules/ without .yaml" },
+    "kind": { "enum": ["law", "platform"] },
+    "jurisdiction": { "type": "string", "pattern": "^[a-z]{2}(-[a-z]{2})?$", "description": "us, us-ca, eu, de ..." },
+    "platform": { "type": ["string", "null"] },
+    "marketplace": { "type": ["string", "null"] },
+    "topic": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+    "applies_to": {
+      "oneOf": [
+        { "const": "all" },
+        { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/nonEmpty" } }
+      ]
+    },
+    "summary": { "$ref": "common.schema.json#/$defs/text" },
+    "effective_date": { "$ref": "common.schema.json#/$defs/date" },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
+    "last_checked": { "$ref": "common.schema.json#/$defs/date" },
+    "next_review": { "$ref": "common.schema.json#/$defs/date" },
+    "status": { "enum": ["active", "superseded", "pending"] }
+  },
+  "if": { "properties": { "kind": { "const": "law" } } },
+  "then": { "properties": { "platform": { "const": null }, "marketplace": { "const": null } } },
+  "else": { "properties": { "platform": { "type": "string" }, "marketplace": { "type": "string" } } }
+}

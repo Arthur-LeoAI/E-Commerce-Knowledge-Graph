@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: inventory_plan
+domain: logistics
+order: 19
+name:
+  en: Inventory planning & replenishment
+  zh: 库存计划与补货
+what:
+  en: Decide when to reorder and how much. Too little and you stock out and lose rank; too much ties up cash and adds storage fees.
+  zh: 决定什么时候补货、补多少。补少了会断货掉排名，补多了占资金还产生仓储费。
+how:
+  en:
+    - Forecast average daily sales
+    - "Calculate the replenishment cycle: production lead time + transit + receiving"
+    - Set safety stock
+    - Work out the reorder point and quantity
+  zh:
+    - 预测未来日均销量
+    - 计算补货周期：生产交期 + 运输时效 + 入库时长
+    - 设置安全库存
+    - 算出补货点和补货量
+metrics:
+  en:
+    - Days of inventory
+    - Days of cover
+    - Stock-out rate
+    - Reorder point
+  zh:
+    - 库存周转天数
+    - 可售天数
+    - 断货率
+    - 补货点
+example:
+  en: Selling 10 a day, the cycle is production 25 + transit 35 + receiving 10 = 70 days; add 14 days of safety stock and the reorder point is 10 × 84 = 840 units. So after selling just 160 of the first 1,000, it's time to reorder.
+  zh: 日销 10 件，补货周期 = 生产 25 天 + 运输 35 天 + 入仓 10 天 = 70 天，加 14 天安全库存，补货点 = 10 × 84 = 840 件。也就是说，首批 1,000 件卖出 160 件就该下第二单了。
+data_later:
+  en: "Method: reorder point = average daily sales × replenishment cycle + safety stock; safety stock is based on the variability of sales and lead time."
+  zh: 方法：补货点 = 日均销量 × 补货周期 + 安全库存；安全库存根据销量和交期的波动计算。
+rules: []

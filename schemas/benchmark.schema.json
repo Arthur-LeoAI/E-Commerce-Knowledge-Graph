@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/benchmark.schema.json",
+  "title": "Commonly cited range for a metric (only with a source)",
+  "type": "object",
+  "required": ["metric", "unit", "category", "sources", "note", "last_checked"],
+  "anyOf": [{ "required": ["low"] }, { "required": ["high"] }],
+  "additionalProperties": false,
+  "properties": {
+    "metric": { "$ref": "common.schema.json#/$defs/id" },
+    "low": { "type": "number" },
+    "high": { "type": "number" },
+    "unit": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+    "category": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
+    "note": { "$ref": "common.schema.json#/$defs/text" },
+    "last_checked": { "$ref": "common.schema.json#/$defs/date" }
+  }
+}

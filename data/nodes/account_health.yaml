@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: account_health
+domain: storefront
+order: 26
+name:
+  en: Account health
+  zh: 账户健康
+what:
+  en: "The platform's scorecard for sellers: order defect rate, late shipment rate, policy violations and more. Breaching thresholds can lead to restrictions or suspension."
+  zh: 平台对卖家表现的考核：订单缺陷率、迟发率、政策违规等。指标超标会被限制甚至停用。
+how:
+  en:
+    - Check the account health page daily
+    - Respond to complaints and infringement notices quickly
+    - Keep compliance documents ready for appeals
+  zh:
+    - 每天查看账户健康页面
+    - 及时回应投诉和侵权通知
+    - 保留合规文件，以便申诉
+metrics:
+  en:
+    - Order defect rate (ODR)
+    - Late shipment rate
+    - Policy violations
+  zh:
+    - 订单缺陷率（ODR）
+    - 迟发率
+    - 政策违规数
+example:
+  en: Several late shipments or complaints in a row lower the account health score; in serious cases listings are suspended.
+  zh: 如果连续多单发货延迟或被投诉，账户健康分下降，严重时商品会被暂停销售。
+data_later:
+  en: "Sources: account health reports. Methods: threshold alerts."
+  zh: 来源：账户健康报告。方法：阈值预警。
+rules: []

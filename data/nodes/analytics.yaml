@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: analytics
+domain: data_team
+order: 46
+name:
+  en: Analytics & reporting
+  zh: 数据分析与报表
+what:
+  en: Pulling data from every system into reports that answer “what happened” and “why”.
+  zh: 把各系统的数据汇总成报表，回答“发生了什么”和“为什么”。
+how:
+  en:
+    - Define consistent metric definitions
+    - Build daily dashboards
+    - When something looks off, break the metric down layer by layer
+  zh:
+    - 定义统一的指标口径
+    - 搭建日常看板
+    - 出现异常时按指标逐层拆解找原因
+metrics:
+  en:
+    - Report coverage
+    - Consistent metric definitions
+  zh:
+    - 报表覆盖率
+    - 指标口径一致性
+example:
+  en: When profit drops, first ask whether units changed or unit profit changed, then dig down layer by layer.
+  zh: 利润下降时，先拆成“销量变了”还是“单件利润变了”，再一层层往下找原因。
+data_later:
+  en: "Methods: descriptive statistics, driver decomposition, anomaly detection."
+  zh: 方法：描述统计、驱动拆解、异常检测。
+rules: []

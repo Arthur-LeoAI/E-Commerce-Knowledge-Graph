@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: fx
+domain: finance
+order: 41
+name:
+  en: Exchange rate
+  zh: 汇率
+what:
+  en: You pay suppliers in one currency (e.g. CNY) and get paid in another (e.g. USD), so rate moves hit profit directly.
+  zh: 采购用人民币等货币支付，销售收的是美元等外币，汇率变化会直接影响利润。
+how:
+  en:
+    - Record the rate at purchase and at payout
+    - Estimate how rate moves affect profit
+    - Consider hedging once volumes are large
+  zh:
+    - 记录采购和回款时的汇率
+    - 估算汇率波动对利润的影响
+    - 规模较大时考虑锁汇
+metrics:
+  en:
+    - Exchange rate
+    - FX gains and losses
+  zh:
+    - 汇率
+    - 汇兑损益
+example:
+  en: At 7.1 yuan to the dollar, the ¥22 purchase price is $3.10; at 6.8 the same price is $3.24.
+  zh: 按 1 美元 = 7.1 元，¥22 的采购价是 $3.10；如果汇率变成 6.8，同样的采购价就是 $3.24。
+data_later:
+  en: "Sources: bank or central bank rates. Methods: sensitivity analysis."
+  zh: 来源：银行或央行公布的汇率。方法：敏感性分析。
+rules: []

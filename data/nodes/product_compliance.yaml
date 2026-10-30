@@ -1,0 +1,44 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: product_compliance
+domain: compliance
+order: 12
+name:
+  en: Product compliance & certification
+  zh: 产品合规认证
+what:
+  en: The product must meet the target market's safety, electrical and chemical rules. Otherwise it cannot be imported, or the platform will remove it.
+  zh: 产品必须符合目标市场的安全、电气、化学等法规，否则无法进口，或者会被平台下架。
+how:
+  en:
+    - Identify the rules that apply to the category
+    - Test at an accredited lab
+    - Prepare certificates and technical files
+    - Upload compliance documents to the platform
+    - Re-check when rules change
+  zh:
+    - 按品类确认适用法规
+    - 找认可实验室检测
+    - 准备合格证书和技术文件
+    - 在平台上传合规文件
+    - 法规更新时复核
+metrics:
+  en:
+    - Certificate validity
+    - Testing costs
+    - Document requests from the platform
+  zh:
+    - 证书有效期
+    - 检测费用
+    - 被要求补件次数
+example:
+  en: The cup touches food, so its materials need testing to US requirements. Testing costs $600, or $0.60 per unit across the first 1,000.
+  zh: 水杯属于食品接触产品，需要按美国要求做材料检测。检测费 $600，摊到首批 1,000 件上是每件 $0.60。
+data_later:
+  en: "Sources: certificate register. Methods: expiry reminders."
+  zh: 来源：证书台账。方法：到期提醒。
+rules: []
+legacy_rule_note:
+  en: General consumer products need a GCC (General Certificate of Conformity); children's products need a CPC based on testing by a CPSC-accepted third-party lab. Since 2026-07-08, certificate data for CPSC-regulated imports must be filed electronically in CBP's ACE system (eFiling). Electronics often fall under the FCC; food, cosmetics and medical devices under the FDA. California's Proposition 65 requires warnings for certain chemicals.
+  zh: 一般消费品需要 GCC（通用合格证书），儿童产品需要由 CPSC 认可的第三方实验室检测并出具 CPC。自 2026-07-08 起，CPSC 监管的产品进口时需在 CBP 的 ACE 系统里电子申报证书数据（eFiling）。电子产品常涉及 FCC；食品、化妆品、医疗器械归 FDA 监管；加州 Proposition 65 要求对特定化学物质做警示。
+  sources:
+    - 7

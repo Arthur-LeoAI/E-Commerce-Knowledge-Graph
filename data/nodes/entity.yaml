@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: entity
+domain: compliance
+order: 11
+name:
+  en: Legal entity & tax registration
+  zh: 公司主体与税务登记
+what:
+  en: Which legal entity you operate under and where you file taxes. The entity decides which accounts you can open and what tax obligations you carry.
+  zh: 以什么法律主体经营、在哪里报税。主体决定能开哪些账户、要承担哪些税务义务。
+how:
+  en:
+    - "Choose an entity: domestic or overseas company"
+    - Obtain tax identification numbers
+    - Open bank or payment accounts that can receive payouts
+    - Complete platform identity verification
+  zh:
+    - 选择经营主体：本地公司或海外公司
+    - 办理税号
+    - 开设可以收款的银行或支付账户
+    - 完成平台身份验证
+metrics:
+  en:
+    - Entity qualifications
+    - Annual filing deadlines
+  zh:
+    - 主体资质
+    - 年度申报节点
+example:
+  en: Register Amazon US with your existing company and complete the tax information. Ask an accountant which entity to use.
+  zh: 用国内公司主体注册 Amazon 美国站，按要求填写税务信息。具体怎么选主体，应该问会计师。
+data_later:
+  en: Not a data node; manage it with a register.
+  zh: 非数据节点，用台账管理即可。
+rules: []
+legacy_rule_note:
+  en: Foreign companies can sell directly on Amazon.com. Non-US entities usually submit Form W-8BEN-E for US tax purposes. Ask an accountant or lawyer about entity and tax structure.
+  zh: 外国公司可以直接在 Amazon.com 开店。非美国主体涉及美国税务表格时，通常提交 W-8BEN-E。主体和税务结构请咨询专业会计师或律师。
+  sources: []

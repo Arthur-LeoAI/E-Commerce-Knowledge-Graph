@@ -1,0 +1,17 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- name:
+    en: HTS tariff lookup (USITC)
+    zh: HTS 关税税率查询（USITC）
+  url: https://hts.usitc.gov/
+- name:
+    en: US Customs and Border Protection (CBP)
+    zh: 美国海关与边境保护局（CBP）
+  url: https://www.cbp.gov/
+- name:
+    en: US Consumer Product Safety Commission (CPSC)
+    zh: 美国消费品安全委员会（CPSC）
+  url: https://www.cpsc.gov/
+- name:
+    en: US Patent and Trademark Office (USPTO)
+    zh: 美国专利商标局（USPTO）
+  url: https://www.uspto.gov/

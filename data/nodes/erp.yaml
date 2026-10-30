@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: erp
+domain: data_team
+order: 45
+name:
+  en: ERP & systems
+  zh: ERP 与系统
+what:
+  en: The system that manages products, purchasing, inventory, orders and finance. The foundation for all data.
+  zh: 管理商品、采购、库存、订单和财务的系统，是所有数据的底座。
+how:
+  en:
+    - Standardise SKU codes
+    - Connect platforms and warehouses
+    - Run purchasing, inventory and orders in one system
+  zh:
+    - 统一 SKU 编码
+    - 对接平台和仓库
+    - 让采购、库存、订单在同一个系统里流转
+metrics:
+  en:
+    - Data completeness
+    - Reconciliation differences
+  zh:
+    - 数据完整度
+    - 对账差异
+example:
+  en: Use one sheet or an ERP to standardise SKU codes so purchasing, inventory and sales all use the same code and the books reconcile.
+  zh: 用一张表或 ERP 统一 SKU 编号，采购、库存、销售都用同一个编号，账才对得上。
+data_later:
+  en: The foundation for everything data-driven later.
+  zh: 这是后续做数据化的基础。
+rules: []

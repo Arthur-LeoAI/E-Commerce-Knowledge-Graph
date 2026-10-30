@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: offsite
+domain: marketing
+order: 29
+name:
+  en: Off-site traffic
+  zh: 站外流量
+what:
+  en: "Traffic from outside the platform: social media, influencers, content marketing, email and search ads."
+  zh: 来自平台以外的流量：社交媒体、网红合作、内容营销、邮件、搜索引擎广告。
+how:
+  en:
+    - Pick channels where target customers gather
+    - Measure with tracking links (e.g. Amazon Attribution)
+    - Build your own customer list
+  zh:
+    - 选择目标用户聚集的渠道
+    - 用追踪链接衡量效果（如 Amazon Attribution）
+    - 积累自己的用户名单
+metrics:
+  en:
+    - Off-site visits
+    - Off-site conversion rate
+    - Customer acquisition cost
+  zh:
+    - 站外引流量
+    - 站外转化率
+    - 获客成本
+example:
+  en: A fitness creator posts a review of the commuter cup; a tracking link counts the visits and orders it brings.
+  zh: 找健身博主发一条通勤水杯测评，用追踪链接统计带来了多少访问和订单。
+data_later:
+  en: "Sources: Amazon Attribution, GA4. Methods: channel attribution."
+  zh: 来源：Amazon Attribution、GA4。方法：渠道归因。
+rules: []

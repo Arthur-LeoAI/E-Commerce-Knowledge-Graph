@@ -1,0 +1,31 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: team
+domain: data_team
+order: 48
+name:
+  en: Team & roles
+  zh: 团队与分工
+what:
+  en: Who owns which nodes. Small teams wear many hats; larger ones split by function.
+  zh: 谁负责哪些节点。小团队一人多岗，规模扩大后按职能拆分。
+how:
+  en:
+    - Assign responsibilities by the map's areas
+    - Give every key metric a clear owner
+    - Hold a weekly review
+  zh:
+    - 按图谱的领域划分职责
+    - 每个关键指标都有明确负责人
+    - 建立每周复盘机制
+metrics:
+  en:
+    - Every key metric has an owner
+  zh:
+    - 关键指标是否都有负责人
+example:
+  en: "A two-person team: one handles product, purchasing and logistics; the other handles listings, ads and customer service. They review the P&L together weekly."
+  zh: 两个人的小团队：一人负责产品、采购和物流，一人负责页面、广告和客服，每周一起看一次利润表。
+data_later:
+  en: Not a data node.
+  zh: 非数据节点。
+rules: []

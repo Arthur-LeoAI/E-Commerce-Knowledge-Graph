@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: warehouse
+domain: logistics
+order: 18
+name:
+  en: Warehousing
+  zh: 仓储
+what:
+  en: "Where goods are stored in the destination country: a platform warehouse (e.g. FBA) or a third-party warehouse (3PL)."
+  zh: 货物在目的国存放的地方：平台仓（如 FBA）或第三方海外仓（3PL）。
+how:
+  en:
+    - Choose a warehousing model
+    - Prepare and send inventory as required
+    - Manage inventory age
+    - Clear slow-moving stock in time
+  zh:
+    - 选择仓储模式
+    - 按要求备货入库
+    - 管理库龄
+    - 及时清理滞销库存
+metrics:
+  en:
+    - Capacity use
+    - Inventory age
+    - Storage fees
+    - Receiving time
+  zh:
+    - 库容使用率
+    - 库龄
+    - 仓储费
+    - 入库时长
+example:
+  en: Stock sits in an FBA warehouse. Slow sellers that sit too long trigger extra storage fees, so don't overstock the first order.
+  zh: 货存在 FBA 仓。卖得慢的部分库龄过长会产生额外仓储费，所以首批不宜备太多。
+data_later:
+  en: "Sources: inventory reports. Methods: inventory-age distribution, storage fee attribution."
+  zh: 来源：库存报表。方法：库龄分布、仓储费归因。
+rules: []

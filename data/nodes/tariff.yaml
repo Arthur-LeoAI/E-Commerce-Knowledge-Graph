@@ -1,0 +1,42 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: tariff
+domain: compliance
+order: 14
+name:
+  en: Tariffs
+  zh: 关税
+what:
+  en: Duties charged on imports based on the product code and country of origin. They go straight into landed cost.
+  zh: 进口时按商品编码和原产地征收的税，直接计入落地成本。
+how:
+  en:
+    - Look up the base duty rate for the exact product code
+    - Add any additional tariffs that apply
+    - Include them in landed cost
+    - Track policy changes and consider diversifying origin
+  zh:
+    - 查准商品编码对应的基础税率
+    - 叠加适用的附加关税
+    - 计入落地成本
+    - 跟踪政策变化，评估原产地多元化
+metrics:
+  en:
+    - Effective tariff rate
+    - Duty per unit
+  zh:
+    - 有效关税率
+    - 单件关税成本
+example:
+  en: At a value of $3.10 per unit and an example rate of 20%, duty is $0.62 per unit. Look up the real rate by the product's HTS code.
+  zh: 按货值 $3.10/件、示例税率 20% 计算，关税是每件 $0.62。真实税率要按商品的 HTS 编码查询。
+data_later:
+  en: "Sources: entry summaries, HTS rate tables. Methods: scenario comparison (unit profit at different rates)."
+  zh: 来源：报关单、HTS 税率表。方法：情景对比（不同税率下的单件利润）。
+rules: []
+legacy_rule_note:
+  en: Base rates follow the 10-digit HTSUS code. On 2026-02-20 the US Supreme Court ruled the IEEPA tariffs invalid; the temporary Section 122 surcharge that followed expired on 2026-07-24 and was replaced by new Section 301 tariffs of 10% or 12.5% on about 60 economies; Section 232 tariffs on steel, aluminium, autos and others remain. Tariff policy changes often, so check the official HTS and CBP before ordering.
+  zh: 基础税率按 HTSUS 10 位编码确定。2026-02-20 美国最高法院裁定 IEEPA 关税无效；随后的 Section 122 临时附加税于 2026-07-24 到期，由对约 60 个经济体征收 10% 或 12.5% 的新 Section 301 关税接替；钢、铝、汽车等仍有 Section 232 关税。关税政策变化频繁，下单前应在官方 HTS 和 CBP 查询最新税率。
+  sources:
+    - 1
+    - 2
+    - 3

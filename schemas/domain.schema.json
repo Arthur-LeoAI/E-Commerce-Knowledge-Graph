@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/domain.schema.json",
+  "title": "Business domain",
+  "type": "object",
+  "required": ["id", "letter", "code", "colour", "role", "order", "name", "desc"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "letter": { "type": "string", "pattern": "^[A-Z$]$", "description": "Short code used by the prototype" },
+    "code": { "type": "string" },
+    "colour": { "type": "string", "pattern": "^--", "description": "CSS colour token" },
+    "role": { "enum": ["main", "support"], "description": "main = one of the 8 flow steps; support = runs alongside" },
+    "order": { "type": "integer", "minimum": 1 },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "desc": { "$ref": "common.schema.json#/$defs/text" }
+  }
+}

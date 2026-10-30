@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: other_platforms
+domain: storefront
+order: 24
+name:
+  en: Other marketplaces
+  zh: 其他平台
+what:
+  en: Walmart, eBay, TikTok Shop, Temu and others. They spread risk, but every platform has different rules and customers.
+  zh: Walmart、eBay、TikTok Shop、Temu 等。可以分散风险，但每个平台的规则和用户都不一样。
+how:
+  en:
+    - Check how well the platform's customers match your category
+    - List according to each platform's rules
+    - Manage inventory and orders in one place
+  zh:
+    - 评估平台用户与品类是否匹配
+    - 按平台规则上架
+    - 统一管理库存和订单
+metrics:
+  en:
+    - Sales share by platform
+    - Margin by platform
+  zh:
+    - 各平台销售占比
+    - 各平台利润率
+example:
+  en: Once Amazon is stable, list the same cup on Walmart and share US inventory.
+  zh: Amazon 稳定后在 Walmart 上架同款，和 Amazon 共用美国的库存。
+data_later:
+  en: "Methods: profit comparison by channel."
+  zh: 方法：分渠道利润对比。
+rules: []

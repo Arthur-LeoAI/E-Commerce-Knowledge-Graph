@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/tour.schema.json",
+  "title": "Beginner tour stop",
+  "type": "object",
+  "required": ["order", "domain", "one_line", "body_html"],
+  "additionalProperties": false,
+  "properties": {
+    "order": { "type": "integer", "minimum": 1 },
+    "domain": { "$ref": "common.schema.json#/$defs/id" },
+    "node": { "$ref": "common.schema.json#/$defs/id" },
+    "title": { "$ref": "common.schema.json#/$defs/text", "description": "Optional; the domain name is used when absent" },
+    "one_line": { "$ref": "common.schema.json#/$defs/text" },
+    "body_html": { "$ref": "common.schema.json#/$defs/text", "description": "HTML. The token __WATERFALL__ marks the unit-profit chart" }
+  }
+}

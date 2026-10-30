@@ -1,0 +1,46 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: customs
+domain: compliance
+order: 13
+name:
+  en: Import customs clearance
+  zh: 进口清关
+what:
+  en: When goods enter the destination country, you declare the tariff code, value and origin to customs and pay duties and fees.
+  zh: 货物进入目的国时向海关申报商品编码、价值和原产地，并缴纳关税和费用。
+how:
+  en:
+    - Decide who is the Importer of Record
+    - Hire a customs broker
+    - Classify the product code correctly (HS / HTS)
+    - File ahead of time for ocean freight
+    - Pay duties and get release
+  zh:
+    - 确定进口商（Importer of Record）
+    - 委托报关行
+    - 正确归类商品编码（HS / HTS）
+    - 海运货物提前申报
+    - 缴税放行
+metrics:
+  en:
+    - Clearance time
+    - Inspection rate
+    - Filing errors
+  zh:
+    - 清关时长
+    - 查验率
+    - 申报差错数
+example:
+  en: The goods arrive in Los Angeles by sea; a customs broker files with your company as importer. The product code decides the duty rate; clearance takes a few days.
+  zh: 货物海运到洛杉矶，由报关行以你的公司作为进口商申报。商品编码决定税率，清关大约需要几天。
+data_later:
+  en: "Sources: entry summaries. Methods: clearance time statistics."
+  zh: 来源：报关单（Entry Summary）。方法：清关时效统计。
+rules: []
+legacy_rule_note:
+  en: US imports need an IOR and a customs bond; ocean shipments need an ISF (10+2) filing before loading. The $800 de minimis duty-free treatment has been suspended since August 2025; CBP made the suspension indefinite for all modes from 2026-06-24, and the statutory exemption ends on 2027-07-01. The compliance date for the new informal entry process for postal parcels was pushed to 2027-01-20.
+  zh: 美国进口需要 IOR 和海关保证金（customs bond），海运货物需在装船前提交 ISF（10+2）申报。800 美元以下包裹免税的 de minimis 待遇自 2025 年 8 月起暂停；CBP 自 2026-06-24 起对所有运输方式无限期暂停，法律层面该豁免将于 2027-07-01 终止。邮政小包新的非正式报关流程，合规日期已推迟到 2027-01-20。
+  sources:
+    - 4
+    - 5
+    - 6

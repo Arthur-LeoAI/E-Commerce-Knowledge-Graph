@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: sales_tax
+domain: compliance
+order: 15
+name:
+  en: Sales tax & indirect tax
+  zh: 销售税与间接税
+what:
+  en: Tax collected from consumers at the point of sale. The US has state sales taxes; the EU and others have VAT.
+  zh: 卖给消费者时要代收的税。美国按州征收销售税，欧盟等地区征收增值税（VAT）。
+how:
+  en:
+    - Work out where you have tax obligations
+    - Separate what the platform collects from what you file yourself
+    - Set up tax calculation on your own website
+    - File on time
+  zh:
+    - 判断在哪些地区有纳税义务
+    - 区分平台代收和自己申报的部分
+    - 在独立站配置税费计算
+    - 按期申报
+metrics:
+  en:
+    - Jurisdictions with obligations
+    - Filing accuracy
+  zh:
+    - 有纳税义务的地区数
+    - 申报准确率
+example:
+  en: A customer in California orders; Amazon collects and remits sales tax as the marketplace, so you don't file it. On your own website you would.
+  zh: 顾客在加州下单，Amazon 作为平台代收代缴销售税，你不用自己申报；以后开独立站就要自己处理。
+data_later:
+  en: "Sources: ship-to state on orders, tax software. Methods: monitor state sales thresholds."
+  zh: 来源：订单的收货州、税务软件。方法：各州销售额阈值监控。
+rules: []
+legacy_rule_note:
+  en: The US has no federal VAT; states levy sales tax. After South Dakota v. Wayfair (2018), states can establish economic nexus for remote sellers based on sales or order counts. Every state with a sales tax has marketplace facilitator laws, so platforms like Amazon collect and remit; on your own website you must track and file yourself.
+  zh: 美国没有联邦增值税，由各州征收销售税。2018 年 South Dakota v. Wayfair 案后，各州可以按销售额或订单数认定远程卖家的纳税义务（economic nexus）。征收销售税的州都有 marketplace facilitator 法规，由 Amazon 等平台代收代缴；独立站需要卖家自己追踪和申报。
+  sources: []

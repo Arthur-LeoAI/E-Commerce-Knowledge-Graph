@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: positioning
+domain: strategy
+order: 4
+name:
+  en: Positioning & pricing strategy
+  zh: 定位与定价策略
+what:
+  en: Who you solve what problem for, and in which price band. Positioning drives brand tone, copy, ad keywords and target price.
+  zh: 你为谁解决什么问题，以什么价格段出现。定位决定品牌调性、文案、广告关键词和目标价格。
+how:
+  en:
+    - Define the target customer and use case
+    - Find a selling point that differs from competitors
+    - "Choose a price band: low-price volume, mid-range value, or premium brand"
+    - Write a one-sentence positioning that guides all content
+  zh:
+    - 明确目标用户和使用场景
+    - 找到和竞品不同的卖点
+    - 选择价格带：低价走量、中端性价比或高端品牌
+    - 写成一句话定位，用来指导所有内容
+metrics:
+  en:
+    - Target price band
+    - Target margin
+    - Differentiators
+  zh:
+    - 目标价格带
+    - 目标毛利率
+    - 差异化卖点
+example:
+  en: Position it as “the commuter cup that fits in your pocket”, aimed at office commuters, priced mid-range at $19.99 instead of competing with $9.99 budget cups.
+  zh: 定位为“能放进口袋的通勤水杯”，目标用户是通勤上班族，价格放在中段 $19.99，不和 $9.99 的低价款拼价格。
+data_later:
+  en: "Methods: price distribution analysis, review text analysis (to find pain points)."
+  zh: 方法：价格分布分析、评论文本分析（找用户痛点）。
+rules: []

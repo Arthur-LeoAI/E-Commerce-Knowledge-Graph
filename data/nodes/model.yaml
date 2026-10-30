@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: model
+domain: strategy
+order: 5
+name:
+  en: Business model & channel strategy
+  zh: 商业模式与渠道策略
+what:
+  en: "Decide where and how to sell: Amazon only, your own website only, or several marketplaces; platform fulfilment or self-fulfilment."
+  zh: 决定在哪里卖、怎么卖：只做 Amazon、只做独立站，还是多平台；用平台仓还是自发货。
+how:
+  en:
+    - Compare each channel's traffic, fees, rules and payout cycle
+    - Start by focusing on one main channel
+    - Expand only once the main channel is stable
+    - "Choose fulfilment: platform warehouse, third-party warehouse, or ship yourself"
+  zh:
+    - 评估各渠道的流量、费用、规则和回款周期
+    - 起步通常集中在一个主渠道
+    - 主渠道稳定后再扩展
+    - 选择履约模式：平台仓、第三方仓或自发货
+metrics:
+  en:
+    - Revenue share by channel
+    - Margin by channel
+    - Dependence on a single channel
+  zh:
+    - 渠道收入占比
+    - 渠道利润率
+    - 单一渠道依赖度
+example:
+  en: Start with Amazon US only and ship with FBA; consider your own website once sales hold above 300 units a month.
+  zh: 起步只做 Amazon 美国站，用 FBA 发货；等月销稳定在 300 件以上，再考虑开独立站。
+data_later:
+  en: "Methods: profit comparison by channel, concentration risk assessment."
+  zh: 方法：分渠道利润对比、集中度风险评估。
+rules: []

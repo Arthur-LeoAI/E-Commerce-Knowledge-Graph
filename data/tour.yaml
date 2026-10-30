@@ -1,0 +1,102 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- order: 1
+  domain: strategy
+  node: selection
+  title:
+    en: Choosing a product
+    zh: 选品：先决定卖什么
+  one_line:
+    en: "A good product meets four tests at once: people want it, competition isn't too fierce, it still makes money after every cost, and you can do it well."
+    zh: 好产品要同时满足四个条件：有人买、竞争不太激烈、扣完所有成本还能赚钱、你有能力做好。
+  body_html:
+    en: |-
+      <p class="head">Getting from a pile of ideas to one product takes four steps:</p>
+      <ol class="tsel">
+      <li><b>Collect ideas: list 30.</b> Sources include Amazon's Best Sellers and Movers & Shakers lists, search term data, complaints in competitors' bad reviews, and everyday situations you know well.</li>
+      <li><b>Rule out quickly: keep 3.</b> Cross off anything too big or heavy, battery-powered, fragile, strongly seasonal, needing special licences, or at risk of patent infringement. For beginners, simpler is better.</li>
+      <li><b>Score the remaining three</b> (1–5, higher is better; less competition and easier handling score higher):
+      <div class="tscore"><table><thead><tr><th>Candidate</th><th>Demand</th><th>Competition</th><th>Profit room</th><th>Difficulty</th><th>Room to stand out</th><th>Total</th></tr></thead><tbody>
+      <tr class="win"><td>Collapsible silicone cup</td><td>4</td><td>3</td><td>4</td><td>5</td><td>4</td><td><b>20</b></td></tr>
+      <tr><td>Automatic pet feeder</td><td>4</td><td>3</td><td>3</td><td>2</td><td>3</td><td>15</td></tr>
+      <tr><td>Yoga resistance band</td><td>4</td><td>1</td><td>2</td><td>5</td><td>2</td><td>14</td></tr></tbody></table></div>
+      <ul><li>The feeder has a battery and is bulky: certification and shipping cost more, and the first order ties up more cash.</li><li>The band is easy to make, but there are too many sellers and cheap versions, so it's hard to stand out.</li><li>The cup is light, small and battery-free with steady demand, and competitors' bad reviews keep mentioning leaks at the fold: a problem you can fix.</li></ul></li>
+      <li><b>Test small.</b> Make only 1,000 units first and reorder once they sell; don't sink cash into a big inventory at the start.</li></ol>
+    zh: |-
+      <p class="head">从一堆想法到一个产品，要经过四步：</p>
+      <ol class="tsel">
+      <li><b>找想法，先列 30 个。</b>来源可以是 Amazon 的 Best Sellers 和 Movers & Shakers 榜单、搜索词数据、竞品差评里的抱怨、你自己熟悉的生活场景。</li>
+      <li><b>快速排除，剩 3 个。</b>太大太重、带电池、易碎、季节性强、需要特殊资质、可能侵犯专利的，先划掉。新手越简单越好。</li>
+      <li><b>给剩下的打分对比</b>（1–5 分，越高越好；竞争越小、操作越简单，分越高）：
+      <div class="tscore"><table><thead><tr><th>候选品</th><th>需求</th><th>竞争</th><th>利润空间</th><th>操作难度</th><th>差异化机会</th><th>总分</th></tr></thead><tbody>
+      <tr class="win"><td>折叠硅胶水杯</td><td>4</td><td>3</td><td>4</td><td>5</td><td>4</td><td><b>20</b></td></tr>
+      <tr><td>宠物自动喂食器</td><td>4</td><td>3</td><td>3</td><td>2</td><td>3</td><td>15</td></tr>
+      <tr><td>瑜伽弹力带</td><td>4</td><td>1</td><td>2</td><td>5</td><td>2</td><td>14</td></tr></tbody></table></div>
+      <ul><li>喂食器带电、体积大，认证和运费都高，首批要压的钱也多。</li><li>弹力带简单好做，但卖的人太多、低价款扎堆，很难做出差别。</li><li>折叠水杯轻、小、不带电，需求稳定，而且竞品差评里反复出现“折叠处漏水”，这就是可以改进的机会。</li></ul></li>
+      <li><b>小批量验证。</b>第一批只做 1,000 件，卖得动再加单，不要一开始就压大量库存。</li></ol>
+- order: 2
+  domain: strategy
+  title:
+    en: Market & positioning
+    zh: 市场与定位
+  one_line:
+    en: With a product chosen, confirm the market is big enough and decide who it's for and what it costs.
+    zh: 选定产品后，确认市场够大，想清楚卖给谁、卖多少钱。
+  body_html:
+    en: "<p>The previous stop chose the fictional <b>collapsible silicone cup</b>. Next:</p><ul><li>Market: top products sell for $15–25 with steady sales and reviews, so there is demand.</li><li>Positioning: “the commuter cup that fits in your pocket”, priced at <b>$19.99</b>.</li><li>Quick check: after every cost, about $5 is left per unit. Worth doing.</li></ul>"
+    zh: <p>上一站选中了虚构的<b>折叠硅胶水杯</b>，接下来：</p><ul><li>市场：头部商品售价集中在 $15–25，前几名都有稳定的销量和评论，说明有需求。</li><li>定位：主打“能放进口袋的通勤水杯”，定价 <b>$19.99</b>。</li><li>粗算：扣掉所有成本后，每件大约能剩 $5，值得做。</li></ul>
+- order: 3
+  domain: product
+  one_line:
+    en: Turn the idea into a product that is reliable, compliant and affordable to make.
+    zh: 把想法变成稳定、合格、成本可控的产品。
+  body_html:
+    en: "<ul><li>The factory quotes ¥22 per unit; at 7.1 yuan to the dollar that's about <b>$3.10</b>.</li><li>MOQ 1,000: the first order costs $3,100, with a 30% deposit up front.</li><li>Production takes 25 days.</li><li>Making the box 2 cm shorter may drop it into a cheaper FBA fee tier.</li></ul>"
+    zh: <ul><li>工厂报价 ¥22/件，按 1 美元 = 7.1 元，约 <b>$3.10/件</b>。</li><li>起订量 1,000 件，首批采购 $3,100，先付 30% 定金。</li><li>生产交期 25 天。</li><li>包装盒压低 2 cm，可能让 FBA 配送费降一档。</li></ul>
+- order: 4
+  domain: compliance
+  one_line:
+    en: Make sure the product can be legally imported and sold, and work out the duty.
+    zh: 确认产品能合法进口和销售，并算清关税。
+  body_html:
+    en: "<ul><li>The cup touches food, so materials need testing: $600 ÷ 1,000 units = <b>$0.60 per unit</b>.</li><li>Duty: $3.10 × example rate 20% = <b>$0.62 per unit</b> (look up the real rate by HTS code).</li><li>A customs broker files with your company as importer (IOR); clearance fees are about $0.15 per unit.</li></ul>"
+    zh: <ul><li>水杯接触食品，要做材料检测：$600 ÷ 1,000 件 = <b>$0.60/件</b>。</li><li>关税：$3.10 × 示例税率 20% = <b>$0.62/件</b>（真实税率要查 HTS 编码）。</li><li>报关行以你的公司作为进口商（IOR）申报，清关杂费约 $0.15/件。</li></ul>
+- order: 5
+  domain: logistics
+  one_line:
+    en: Get the goods into a US warehouse, and never run out.
+    zh: 把货运进美国仓库，并且不能断货。
+  body_html:
+    en: "<ul><li>Ocean freight costs <b>$0.80 per unit</b> and takes about 35 days.</li><li>Adding it all up gives the landed cost: $3.10 + $0.80 + $0.62 + $0.15 + $0.60 = <b>$5.27 per unit</b>.</li><li>Reorder point: 10 a day × (production 25 + transit 35 + receiving 10 + safety stock 14 days) = <b>840 units</b>. After selling 160 of the first 1,000, it's time to reorder.</li></ul>"
+    zh: <ul><li>海运每件 <b>$0.80</b>，路上约 35 天。</li><li>把前面几项加起来就是落地成本：$3.10 + $0.80 + $0.62 + $0.15 + $0.60 = <b>$5.27/件</b>。</li><li>补货点：日销 10 件 × (生产 25 + 运输 35 + 入仓 10 + 安全库存 14 天) = <b>840 件</b>。首批 1,000 件卖掉 160 件就该下第二单。</li></ul>
+- order: 6
+  domain: storefront
+  one_line:
+    en: Choose where to sell, build the product page, and know what the platform takes.
+    zh: 选好在哪里卖，搭好商品页面，记清平台要收多少钱。
+  body_html:
+    en: "<p>Selling on Amazon US with FBA, for every $19.99 sale the platform takes:</p><ul><li>15% commission: <b>$3.00</b></li><li>FBA fulfilment fee: <b>$4.00</b></li><li>Storage share: <b>$0.20</b></li></ul><p>$7.20 in total, about 36% of the price.</p>"
+    zh: <p>在 Amazon 美国站用 FBA 发货，每卖一件 $19.99，平台收：</p><ul><li>佣金 15%：<b>$3.00</b></li><li>FBA 配送费：<b>$4.00</b></li><li>仓储分摊：<b>$0.20</b></li></ul><p>合计 $7.20，占售价约 36%。</p>
+- order: 7
+  domain: marketing
+  one_line:
+    en: Help customers find you, but every ad dollar comes out of profit.
+    zh: 让顾客找到你，但每一分广告费都从利润里出。
+  body_html:
+    en: <div class="tcmp"><div><span class="k">Launch phase</span><b>$8.00 ads per unit</b><span>Unit profit <em class="neg">−$0.78</em></span></div><div><span class="k">Steady phase</span><b>$2.40 ads per unit</b><span>Unit profit <em class="pos">$4.82</em></span></div></div><p>Before ads, $7.22 is left per unit, so once ad cost per unit passes $7.22 you lose money. Losing a little at launch to build rank is fine, but set an end date.</p>
+    zh: <div class="tcmp"><div><span class="k">新品期</span><b>每件广告 $8.00</b><span>单件利润 <em class="neg">−$0.78</em></span></div><div><span class="k">稳定期</span><b>每件广告 $2.40</b><span>单件利润 <em class="pos">$4.82</em></span></div></div><p>没算广告前每件剩 $7.22，所以每件广告费一旦超过 $7.22 就开始亏。新品期亏一点换排名可以接受，但要有截止时间。</p>
+- order: 8
+  domain: sales
+  one_line:
+    en: Units = traffic × conversion rate; reviews and service decide the conversion rate.
+    zh: 销量 = 流量 × 转化率；评价和服务决定转化率。
+  body_html:
+    en: <ul><li>3,000 visits a month × 10% conversion = <b>300 units</b>, about 10 a day.</li><li>A 3% return rate at about $10 lost each comes to <b>$0.30 per unit</b>.</li><li>If the rating drops from 4.5 to 4.0, conversion falls and sales follow.</li></ul>
+    zh: <ul><li>每月 3,000 次访问 × 10% 转化率 = <b>300 件</b>，约每天 10 件。</li><li>退货率 3%，每次损失约 $10，摊到每件是 <b>$0.30</b>。</li><li>如果评分从 4.5 掉到 4.0，转化率下降，销量会跟着掉。</li></ul>
+- order: 9
+  domain: finance
+  one_line:
+    en: "Put all the numbers together: what each unit earns, and when the cash comes back."
+    zh: 把所有数字放到一起：每件赚多少，钱什么时候回来。
+  body_html:
+    en: __WATERFALL__
+    zh: __WATERFALL__

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/phase.schema.json",
+  "title": "Start-from-zero phase",
+  "type": "object",
+  "required": ["order", "title", "output", "warning", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "order": { "type": "integer", "minimum": 1 },
+    "title": { "$ref": "common.schema.json#/$defs/text" },
+    "output": { "$ref": "common.schema.json#/$defs/text" },
+    "warning": { "$ref": "common.schema.json#/$defs/text" },
+    "nodes": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/id" } }
+  }
+}

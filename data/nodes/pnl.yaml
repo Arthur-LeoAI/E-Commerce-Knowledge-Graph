@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: pnl
+domain: finance
+order: 43
+name:
+  en: Profit & loss
+  zh: 利润表
+what:
+  en: Total revenue, costs and profit over a period. Shows whether the business as a whole is healthy.
+  zh: 一段时间内的总收入、总成本和总利润，用来判断生意整体是否健康。
+how:
+  en:
+    - Produce a monthly P&L
+    - Split by channel and SKU
+    - Compare with budget and the previous period
+  zh:
+    - 按月出利润表
+    - 按渠道和 SKU 拆分
+    - 与预算和上期对比
+metrics:
+  en:
+    - Revenue
+    - Gross profit
+    - Operating profit
+    - Cost ratios
+  zh:
+    - 收入
+    - 毛利
+    - 营业利润
+    - 各项费用率
+example:
+  en: 300 units a month × $4.82 ≈ $1,446 profit, before staff, software and other fixed costs.
+  zh: 每月 300 件 × $4.82 ≈ $1,446 利润。这还没扣人工、软件等固定开支。
+data_later:
+  en: "Sources: platform settlement reports, accounting software. Methods: variance analysis."
+  zh: 来源：平台结算报告、财务软件。方法：差异分析。
+rules: []

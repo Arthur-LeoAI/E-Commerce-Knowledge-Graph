@@ -1,0 +1,41 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: dtc
+domain: storefront
+order: 23
+name:
+  en: Own website (DTC)
+  zh: 独立站
+what:
+  en: Your own brand website (e.g. built on Shopify). You keep the margin and the customer data, but you must bring in all the traffic yourself.
+  zh: 自己的品牌网站（如基于 Shopify 搭建）。利润空间和用户数据都归自己，但流量要自己获取。
+how:
+  en:
+    - Build the site and set up payments, tax and shipping
+    - Design the path from browsing to checkout
+    - Drive traffic with ads, content and email
+    - Handle privacy compliance
+  zh:
+    - 搭建网站，配置支付、税费和物流
+    - 设计从浏览到下单的路径
+    - 通过广告、内容、邮件获取流量
+    - 处理隐私合规
+metrics:
+  en:
+    - Visits
+    - Conversion rate
+    - Average order value
+    - Repeat rate
+    - Customer acquisition cost
+  zh:
+    - 访问量
+    - 转化率
+    - 客单价
+    - 复购率
+    - 获客成本
+example:
+  en: On your own website the same $19.99 cup pays no 15% commission, but the ad cost to win each order may be higher.
+  zh: 开独立站后同样卖 $19.99，不用交 15% 佣金，但每个订单的广告获客成本可能更高。
+data_later:
+  en: "Sources: Shopify API, GA4. Methods: funnel analysis, retention analysis."
+  zh: 来源：Shopify API、GA4。方法：漏斗分析、留存分析。
+rules: []

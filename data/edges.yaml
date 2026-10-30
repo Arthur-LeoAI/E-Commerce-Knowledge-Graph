@@ -1,0 +1,531 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- from: market
+  to: selection
+  label:
+    en: Demand and competition decide what to sell
+    zh: 需求和竞争情况决定选什么
+- from: market
+  to: competitors
+  label:
+    en: Identifies the main competitors
+    zh: 确定主要竞争者
+- from: competitors
+  to: price
+  label:
+    en: Competitor prices limit your price room
+    zh: 竞品价格限定你的价格空间
+- from: competitors
+  to: ppc
+  label:
+    en: Competitor bids raise ad costs
+    zh: 竞品出价抬高广告单价
+- from: competitors
+  to: positioning
+  label:
+    en: Differentiation must avoid competitors' strengths
+    zh: 差异化要避开竞品优势
+- from: selection
+  to: dev
+  label:
+    en: Development starts once the product is chosen
+    zh: 选定产品后开始开发
+- from: selection
+  to: positioning
+  label:
+    en: The product defines the target customer
+    zh: 产品决定目标用户
+- from: selection
+  to: product_compliance
+  label:
+    en: The category decides which rules apply
+    zh: 品类决定适用哪些法规
+- from: selection
+  to: packaging
+  label:
+    en: Product size decides the packaging
+    zh: 产品尺寸决定包装
+- from: positioning
+  to: price
+  label:
+    en: Positioning sets the price band
+    zh: 定位决定价格带
+- from: positioning
+  to: listing
+  label:
+    en: Positioning shapes copy and selling points
+    zh: 定位决定文案和卖点
+- from: positioning
+  to: brand_ip
+  label:
+    en: Positioning sets the brand direction
+    zh: 定位决定品牌方向
+- from: model
+  to: amazon
+  label:
+    en: Choose a marketplace
+    zh: 选择平台渠道
+- from: model
+  to: dtc
+  label:
+    en: Choose your own website
+    zh: 选择独立站
+- from: model
+  to: other_platforms
+  label:
+    en: Choose several marketplaces
+    zh: 选择多平台
+- from: model
+  to: warehouse
+  label:
+    en: Choose a fulfilment model
+    zh: 选择履约模式
+- from: dev
+  to: sourcing
+  label:
+    en: Specs decide which factory to use
+    zh: 规格决定找哪家工厂
+- from: dev
+  to: qc
+  label:
+    en: Specs are the inspection standard
+    zh: 规格是验货标准
+- from: dev
+  to: product_compliance
+  label:
+    en: Design and materials affect certification
+    zh: 设计和材料影响认证
+- from: sourcing
+  to: landed_cost
+  label:
+    en: Purchase price is the bulk of landed cost
+    zh: 采购价是落地成本的主体
+- from: sourcing
+  to: inventory_plan
+  label:
+    en: Production lead time sets the replenishment cycle
+    zh: 生产交期决定补货周期
+- from: sourcing
+  to: qc
+  label:
+    en: Factory capability decides quality
+    zh: 工厂能力决定质量
+- from: sourcing
+  to: cashflow
+  label:
+    en: Deposits and balances tie up cash
+    zh: 定金和尾款占用资金
+- from: qc
+  to: returns
+  label:
+    en: Quality problems cause returns
+    zh: 质量问题导致退货
+- from: qc
+  to: reviews
+  label:
+    en: Quality problems cause bad reviews
+    zh: 质量问题导致差评
+- from: packaging
+  to: platform_fees
+  label:
+    en: Size and weight set the fulfilment fee tier
+    zh: 尺寸重量决定配送费档位
+- from: packaging
+  to: firstmile
+  label:
+    en: Dimensional weight sets freight cost
+    zh: 体积重决定运费
+- from: packaging
+  to: returns
+  label:
+    en: Poor packaging causes damage returns
+    zh: 包装不好导致破损退货
+- from: brand_ip
+  to: content
+  label:
+    en: A+ and Brand Stores need Brand Registry
+    zh: 品牌备案后才能用 A+ 和品牌店
+- from: brand_ip
+  to: account_health
+  label:
+    en: Infringement complaints hurt the account
+    zh: 侵权投诉影响账户
+- from: entity
+  to: customs
+  label:
+    en: The entity can act as importer
+    zh: 主体可以作为进口商
+- from: entity
+  to: sales_tax
+  label:
+    en: The entity decides tax obligations
+    zh: 主体决定税务义务
+- from: entity
+  to: amazon
+  label:
+    en: Used to open the store and verify identity
+    zh: 用于开店和身份验证
+- from: product_compliance
+  to: customs
+  label:
+    en: Missing certificates can get goods held at customs
+    zh: 缺少证书可能被扣关
+- from: product_compliance
+  to: account_health
+  label:
+    en: Missing certificates get listings removed
+    zh: 缺少证书会被下架
+- from: product_compliance
+  to: landed_cost
+  label:
+    en: Testing costs are spread per unit
+    zh: 检测认证费用分摊到每件
+- from: customs
+  to: tariff
+  label:
+    en: Declared code and origin decide the duty rate
+    zh: 申报的编码和原产地决定税率
+- from: customs
+  to: firstmile
+  label:
+    en: Clearance time adds to total transit time
+    zh: 清关时长影响整体时效
+- from: tariff
+  to: landed_cost
+  label:
+    en: Duties go into landed cost
+    zh: 关税计入落地成本
+- from: sales_tax
+  to: dtc
+  label:
+    en: Your own website must handle tax itself
+    zh: 独立站需要自己处理税费
+- from: sales_tax
+  to: price
+  label:
+    en: Tax-inclusive or not affects pricing
+    zh: 是否含税影响定价
+- from: platform_policy
+  to: platform_fees
+  label:
+    en: The platform changes fees
+    zh: 平台调整费用
+- from: platform_policy
+  to: account_health
+  label:
+    en: Policy breaches hurt the account
+    zh: 违反政策影响账户
+- from: platform_policy
+  to: listing
+  label:
+    en: Category and content rules
+    zh: 类目和内容规则
+- from: firstmile
+  to: landed_cost
+  label:
+    en: Freight goes into landed cost
+    zh: 运费计入落地成本
+- from: firstmile
+  to: inventory_plan
+  label:
+    en: Transit time sets the replenishment cycle
+    zh: 运输时效决定补货周期
+- from: fx
+  to: landed_cost
+  label:
+    en: The rate changes the purchase cost in USD
+    zh: 汇率改变以美元计算的采购成本
+- from: fx
+  to: pnl
+  label:
+    en: Creates FX gains and losses
+    zh: 产生汇兑损益
+- from: inventory_plan
+  to: warehouse
+  label:
+    en: Reorder quantity sets stock levels
+    zh: 补货量决定库存水位
+- from: inventory_plan
+  to: sales
+  label:
+    en: Stock-outs lose sales directly
+    zh: 断货直接丢失销量
+- from: inventory_plan
+  to: cashflow
+  label:
+    en: Inventory ties up cash
+    zh: 库存占用资金
+- from: inventory_plan
+  to: bsr
+  label:
+    en: Stock-outs drop rank
+    zh: 断货导致排名下跌
+- from: warehouse
+  to: platform_fees
+  label:
+    en: Creates storage and long-term storage fees
+    zh: 产生仓储费和长期仓储费
+- from: warehouse
+  to: lastmile
+  label:
+    en: Warehouse location affects delivery speed
+    zh: 仓库位置影响配送时效
+- from: lastmile
+  to: cvr
+  label:
+    en: Delivery speed affects conversion
+    zh: 配送速度影响转化
+- from: lastmile
+  to: reviews
+  label:
+    en: Delivery experience affects reviews
+    zh: 配送体验影响评价
+- from: lastmile
+  to: account_health
+  label:
+    en: Late shipments hurt account metrics
+    zh: 迟发影响账户指标
+- from: returns
+  to: unit_econ
+  label:
+    en: Return losses go into unit cost
+    zh: 退货损失计入单件成本
+- from: returns
+  to: account_health
+  label:
+    en: Returns and complaints hurt the account
+    zh: 退货和投诉影响账户
+- from: returns
+  to: inventory_plan
+  label:
+    en: Sellable returns go back into stock
+    zh: 可售退货回到库存
+- from: amazon
+  to: platform_fees
+  label:
+    en: Creates commission and fulfilment fees
+    zh: 产生佣金和配送费
+- from: amazon
+  to: listing
+  label:
+    en: Create the product page on the platform
+    zh: 在平台上创建商品页面
+- from: amazon
+  to: traffic
+  label:
+    en: The platform brings its own traffic
+    zh: 平台自带流量
+- from: dtc
+  to: offsite
+  label:
+    en: Your own site must bring in its own traffic
+    zh: 独立站流量需要自己获取
+- from: dtc
+  to: platform_fees
+  label:
+    en: Subscription and payment fees
+    zh: 订阅费和支付手续费
+- from: other_platforms
+  to: sales
+  label:
+    en: Adds sales channels
+    zh: 增加销售渠道
+- from: listing
+  to: seo
+  label:
+    en: Keywords in the copy decide search relevance
+    zh: 文案关键词决定搜索相关性
+- from: listing
+  to: cvr
+  label:
+    en: Page quality decides conversion
+    zh: 页面质量决定转化
+- from: account_health
+  to: sales
+  label:
+    en: A restricted account stops sales
+    zh: 账户受限会停售
+- from: account_health
+  to: listing
+  label:
+    en: Violations get listings removed
+    zh: 违规导致商品下架
+- from: seo
+  to: traffic
+  label:
+    en: Organic rank brings traffic
+    zh: 自然排名带来流量
+- from: ppc
+  to: traffic
+  label:
+    en: Ads bring traffic
+    zh: 广告带来流量
+- from: ppc
+  to: unit_econ
+  label:
+    en: Ad cost per unit goes into cost
+    zh: 单件广告费计入成本
+- from: ppc
+  to: seo
+  label:
+    en: Ad orders help organic rank
+    zh: 广告订单帮助提升自然排名
+- from: offsite
+  to: traffic
+  label:
+    en: Off-site traffic
+    zh: 站外引流
+- from: promo
+  to: cvr
+  label:
+    en: Discounts lift conversion
+    zh: 折扣提升转化
+- from: promo
+  to: unit_econ
+  label:
+    en: Discounts squeeze unit profit
+    zh: 折扣压缩单件利润
+- from: promo
+  to: sales
+  label:
+    en: Promotions bring a short-term lift
+    zh: 活动带来短期增量
+- from: reviews
+  to: cvr
+  label:
+    en: Rating and review count affect conversion
+    zh: 评分和评论数影响转化
+- from: content
+  to: cvr
+  label:
+    en: Brand content lifts conversion
+    zh: 品牌内容提升转化
+- from: traffic
+  to: sales
+  label:
+    en: Units = traffic × conversion rate
+    zh: 销量 = 流量 × 转化率
+- from: cvr
+  to: sales
+  label:
+    en: Units = traffic × conversion rate
+    zh: 销量 = 流量 × 转化率
+- from: cvr
+  to: ppc
+  label:
+    en: Higher conversion makes ads more efficient
+    zh: 转化率高，广告效率就高
+- from: price
+  to: cvr
+  label:
+    en: Price affects conversion
+    zh: 价格影响转化
+- from: price
+  to: unit_econ
+  label:
+    en: Price is where profit starts
+    zh: 售价是利润的起点
+- from: sales
+  to: bsr
+  label:
+    en: Sales decide rank
+    zh: 销量决定排名
+- from: sales
+  to: reviews
+  label:
+    en: More orders, more reviews
+    zh: 订单越多，评论越多
+- from: sales
+  to: pnl
+  label:
+    en: Units × unit profit = profit
+    zh: 销量 × 单件利润 = 利润
+- from: sales
+  to: forecast
+  label:
+    en: Past sales are the basis of forecasts
+    zh: 历史销量是预测的基础
+- from: bsr
+  to: traffic
+  label:
+    en: Rank brings organic traffic (a positive loop)
+    zh: 排名带来自然流量（正循环）
+- from: cs
+  to: reviews
+  label:
+    en: After-sales handling affects reviews
+    zh: 售后处理影响评价
+- from: cs
+  to: account_health
+  label:
+    en: Response time and complaint handling affect the account
+    zh: 回复时效和投诉处理影响账户
+- from: landed_cost
+  to: unit_econ
+  label:
+    en: Landed cost goes into unit cost
+    zh: 落地成本计入单件成本
+- from: landed_cost
+  to: cashflow
+  label:
+    en: Purchasing and freight are paid up front
+    zh: 采购和运输都要先付钱
+- from: platform_fees
+  to: unit_econ
+  label:
+    en: Platform fees go into unit cost
+    zh: 平台费用计入单件成本
+- from: unit_econ
+  to: pnl
+  label:
+    en: Unit profit × units
+    zh: 单件利润 × 销量
+- from: unit_econ
+  to: ppc
+  label:
+    en: Unit profit sets how much ad cost you can afford
+    zh: 单件利润决定能承受多高的广告成本
+- from: pnl
+  to: cashflow
+  label:
+    en: Profit eventually becomes cash
+    zh: 利润最终变成现金
+- from: cashflow
+  to: sourcing
+  label:
+    en: Cash decides whether you can reorder
+    zh: 现金决定能不能下单补货
+- from: cashflow
+  to: ppc
+  label:
+    en: Cash sets the ad budget
+    zh: 现金决定广告预算
+- from: erp
+  to: analytics
+  label:
+    en: Provides consistent data
+    zh: 提供统一数据
+- from: analytics
+  to: forecast
+  label:
+    en: Clean data feeds forecasts
+    zh: 整理好的数据用于预测
+- from: analytics
+  to: positioning
+  label:
+    en: Data feedback adjusts strategy
+    zh: 数据反馈用于调整策略
+- from: forecast
+  to: inventory_plan
+  label:
+    en: Forecasts set reorder quantity
+    zh: 预测决定补货量
+- from: forecast
+  to: cashflow
+  label:
+    en: Forecasts set cash needs
+    zh: 预测决定资金需求
+- from: team
+  to: analytics
+  label:
+    en: Metrics only get tracked when someone owns them
+    zh: 指标有人负责才会被跟踪

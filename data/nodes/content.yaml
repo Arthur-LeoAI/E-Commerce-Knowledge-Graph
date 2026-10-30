@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: content
+domain: marketing
+order: 32
+name:
+  en: Brand content
+  zh: 品牌内容
+what:
+  en: A+ content, Brand Stores and video. They build trust, lift conversion and make the brand memorable.
+  zh: A+ 内容、品牌旗舰店、视频。提升信任和转化，让用户记住品牌。
+how:
+  en:
+    - Complete Brand Registry
+    - Use A+ modules to explain the benefits
+    - Build a Brand Store
+    - Make a product video
+  zh:
+    - 完成品牌备案
+    - 用 A+ 模块讲清卖点
+    - 搭建品牌旗舰店
+    - 制作产品视频
+metrics:
+  en:
+    - Brand Store visits
+    - Conversion lift from A+
+  zh:
+    - 品牌店访问量
+    - A+ 带来的转化提升
+example:
+  en: The A+ page uses a comparison image showing it folds to just 2 cm, helping hesitant customers decide.
+  zh: A+ 页面用对比图说明“折叠后厚度只有 2 cm”，帮犹豫的顾客下决心。
+data_later:
+  en: "Methods: A/B tests."
+  zh: 方法：A/B 测试。
+rules: []

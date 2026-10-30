@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: unit_econ
+domain: finance
+order: 42
+name:
+  en: Unit profit
+  zh: 单件利润
+what:
+  en: How much you make on each unit sold. The most important number in the whole system; almost every node feeds into it.
+  zh: 卖一件赚多少钱。这是整个体系里最核心的指标，几乎所有节点最终都会汇到这里。
+how:
+  en:
+    - Unit profit = price − landed cost − commission − fulfilment fee − storage − ad cost per unit − return losses
+    - Calculate by SKU and by channel
+    - Review monthly
+  zh:
+    - 单件利润 = 售价 − 落地成本 − 平台佣金 − 配送费 − 仓储分摊 − 单件广告费 − 退货损失
+    - 按 SKU 和渠道分别计算
+    - 每月复核
+metrics:
+  en:
+    - Unit profit
+    - Gross margin
+    - Net margin
+    - Break-even ACoS
+  zh:
+    - 单件利润
+    - 毛利率
+    - 净利率
+    - 盈亏平衡 ACoS
+example:
+  en: $19.99 − landed cost $5.27 − commission $3.00 − fulfilment $4.00 − storage $0.20 − returns $0.30 − ads $2.40 = unit profit of $4.82, about 24%.
+  zh: $19.99 − 落地成本 $5.27 − 佣金 $3.00 − 配送费 $4.00 − 仓储 $0.20 − 退货 $0.30 − 广告 $2.40 = 单件利润 $4.82，约 24%。
+data_later:
+  en: "Methods: exact formula; correct inputs give a correct result."
+  zh: 方法：确定性公式计算，输入数据准确时结果就是准的。
+rules: []

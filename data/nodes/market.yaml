@@ -1,0 +1,43 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: market
+domain: strategy
+order: 1
+name:
+  en: Market research
+  zh: 市场调研
+what:
+  en: "Decide whether a market is worth entering: how big demand is, how it is growing, how fierce competition is, and whether there is enough margin."
+  zh: 判断一个市场值不值得进入：需求有多大、增长如何、竞争多激烈、利润空间够不够。
+how:
+  en:
+    - Estimate demand and seasonality from platform search volume and category rankings
+    - Study the top sellers' price bands, review counts and ratings
+    - "Look at trends: search trends and social media topics"
+    - "Estimate the cost of entry: certification, first inventory, advertising"
+    - "Conclude: go, no-go, or how to differentiate"
+  zh:
+    - 用平台搜索量和类目榜单估算需求规模与季节性
+    - 分析头部卖家的价格带、评论数和评分
+    - 看趋势：搜索趋势、社交媒体话题
+    - 估算进入成本：认证、首批库存、广告投入
+    - 给出结论：做、不做，或者怎样差异化
+metrics:
+  en:
+    - Search volume
+    - Category size
+    - Top-seller concentration
+    - Average selling price
+    - Review barrier
+  zh:
+    - 搜索量
+    - 类目规模
+    - 头部集中度
+    - 平均售价
+    - 评论门槛
+example:
+  en: Searching for “collapsible cup” shows the top products priced mostly between $15 and $25, and most of the top 10 have hundreds to thousands of reviews. There is demand, but a new seller needs a point of difference.
+  zh: 搜索“折叠水杯”，发现头部商品售价集中在 $15–25，前 10 名大多有几百到上千条评论。说明有需求，但新卖家要靠差异化进入。
+data_later:
+  en: "Sources: Amazon Brand Analytics (needs Brand Registry), third-party research tools, Google Trends. Methods: descriptive statistics, seasonal decomposition."
+  zh: 来源：Amazon Brand Analytics（需品牌备案）、第三方选品工具、Google Trends。方法：描述统计、季节性分解。
+rules: []

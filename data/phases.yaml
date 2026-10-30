@@ -1,0 +1,139 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- order: 1
+  title:
+    en: Learn the system, pick a direction
+    zh: 学习体系，确定方向
+  output:
+    en: "Output: a chosen target market and main channel."
+    zh: 产出：选定的目标市场和主渠道。
+  warning:
+    en: "Common mistake: looking for a factory before doing the maths."
+    zh: 常见问题：还没算过账就先找工厂。
+  nodes:
+    - market
+    - model
+    - unit_econ
+    - cashflow
+- order: 2
+  title:
+    en: Market research & product selection
+    zh: 市场调研与选品
+  output:
+    en: "Output: 3–5 candidates, each with a unit profit estimate and compliance checklist."
+    zh: 产出：3–5 个候选品，每个都有单件利润测算和合规清单。
+  warning:
+    en: "Common mistake: looking only at sales volume, not profit, or ignoring certification hurdles."
+    zh: 常见问题：只看销量不看利润，或者忽略认证门槛。
+  nodes:
+    - market
+    - competitors
+    - selection
+    - positioning
+    - price
+    - landed_cost
+    - platform_fees
+- order: 3
+  title:
+    en: Entity, tax & compliance
+    zh: 主体、税务与合规
+  output:
+    en: "Output: an entity that can sell and import, a trademark application, a compliance plan."
+    zh: 产出：可以开店和进口的主体、商标申请、产品合规方案。
+  warning:
+    en: "Common mistake: discovering missing certificates or trademark infringement after listing."
+    zh: 常见问题：上架后才发现缺证书，或商标侵权。
+  nodes:
+    - entity
+    - sales_tax
+    - product_compliance
+    - brand_ip
+    - platform_policy
+- order: 4
+  title:
+    en: Product development & purchasing
+    zh: 产品开发与采购
+  output:
+    en: "Output: final sample, purchase contract, inspection standard, packaging plan."
+    zh: 产出：定稿样品、采购合同、验货标准、包装方案。
+  warning:
+    en: "Common mistake: packaging one size tier too big, overpaying fulfilment fees forever."
+    zh: 常见问题：包装尺寸多出一档，配送费一直多付。
+  nodes:
+    - dev
+    - sourcing
+    - qc
+    - packaging
+- order: 5
+  title:
+    en: Freight, customs & receiving
+    zh: 头程、清关与入仓
+  output:
+    en: "Output: the first shipment safely received, with landed cost worked out per shipment."
+    zh: 产出：第一批货安全入仓，落地成本按批次核算清楚。
+  warning:
+    en: "Common mistake: wrong product classification leading to back duties or held goods."
+    zh: 常见问题：编码归类错误导致补税或扣关。
+  nodes:
+    - customs
+    - tariff
+    - firstmile
+    - warehouse
+    - fx
+- order: 6
+  title:
+    en: Listing & launch
+    zh: 上架与冷启动
+  output:
+    en: "Output: a complete listing, brand content, the first round of ads."
+    zh: 产出：完整的商品页面、品牌内容、第一轮广告。
+  warning:
+    en: "Common mistake: ads with no profit floor that burn cash without building organic rank."
+    zh: 常见问题：广告没有利润底线，烧钱换不来自然排名。
+  nodes:
+    - amazon
+    - dtc
+    - listing
+    - content
+    - seo
+    - ppc
+    - promo
+- order: 7
+  title:
+    en: Day-to-day operations
+    zh: 日常运营与优化
+  output:
+    en: "Output: a weekly metrics review and a replenishment plan."
+    zh: 产出：每周复盘的指标看板和补货计划。
+  warning:
+    en: "Common mistake: stocking out, then paying a lot to win the rank back."
+    zh: 常见问题：断货导致排名掉了再追回来，代价很高。
+  nodes:
+    - traffic
+    - cvr
+    - sales
+    - bsr
+    - reviews
+    - cs
+    - returns
+    - inventory_plan
+    - account_health
+    - lastmile
+- order: 8
+  title:
+    en: Finance & growth
+    zh: 财务管理与扩张
+  output:
+    en: "Output: a monthly P&L and cash forecast; then decide whether to add products, channels or markets."
+    zh: 产出：月度利润表、现金预测；再决定扩品类、扩渠道或扩市场。
+  warning:
+    en: "Common mistake: profitable on paper but out of cash."
+    zh: 常见问题：账面盈利但现金断裂。
+  nodes:
+    - pnl
+    - cashflow
+    - erp
+    - analytics
+    - forecast
+    - other_platforms
+    - offsite
+    - team

@@ -1,0 +1,109 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- id: strategy
+  letter: S
+  code: 01 STRATEGY
+  colour: "--dS"
+  role: main
+  order: 1
+  name:
+    en: Strategy & Market
+    zh: 战略与市场
+  desc:
+    en: What to sell, to whom, and where
+    zh: 做什么、卖给谁、在哪里卖
+- id: product
+  letter: P
+  code: 02 PRODUCT
+  colour: "--dP"
+  role: main
+  order: 2
+  name:
+    en: Product & Supply
+    zh: 产品与供应链
+  desc:
+    en: Turn an idea into a reliable, compliant product
+    zh: 把想法变成稳定供应的合格产品
+- id: compliance
+  letter: C
+  code: 03 COMPLIANCE
+  colour: "--dC"
+  role: main
+  order: 3
+  name:
+    en: Compliance & Customs
+    zh: 合规与关务
+  desc:
+    en: Can you legally import and sell it
+    zh: 能不能合法进口、合法销售
+- id: logistics
+  letter: L
+  code: 04 LOGISTICS
+  colour: "--dL"
+  role: main
+  order: 4
+  name:
+    en: Logistics & Warehousing
+    zh: 物流与仓储
+  desc:
+    en: Getting goods from the factory to the customer
+    zh: 货从工厂到用户手里的全过程
+- id: storefront
+  letter: F
+  code: 05 STOREFRONT
+  colour: "--dF"
+  role: main
+  order: 5
+  name:
+    en: Channels & Storefronts
+    zh: 渠道与店铺
+  desc:
+    en: Which platform, and the page customers see
+    zh: 在哪个平台、以什么页面面对用户
+- id: marketing
+  letter: M
+  code: 06 MARKETING
+  colour: "--dM"
+  role: main
+  order: 6
+  name:
+    en: Marketing & Traffic
+    zh: 营销与流量
+  desc:
+    en: Help customers find you and trust you
+    zh: 让用户找到你、相信你
+- id: sales
+  letter: X
+  code: 07 SALES
+  colour: "--dX"
+  role: main
+  order: 7
+  name:
+    en: Sales & Customers
+    zh: 销售与客户
+  desc:
+    en: Turn visits into orders, and orders into reputation
+    zh: 流量变成订单，订单变成口碑
+- id: finance
+  letter: $
+  code: 08 FINANCE
+  colour: "--dF2"
+  role: main
+  order: 8
+  name:
+    en: Finance & Profit
+    zh: 财务与利润
+  desc:
+    en: What each unit earns, and when the cash comes back
+    zh: 每一件赚多少，钱什么时候回来
+- id: data_team
+  letter: D
+  code: 09 DATA & TEAM
+  colour: "--dD"
+  role: support
+  order: 9
+  name:
+    en: Data & Team
+    zh: 数据与组织
+  desc:
+    en: Make the whole system measurable and manageable
+    zh: 让整个体系可以被衡量和管理

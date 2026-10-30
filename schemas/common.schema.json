@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/common.schema.json",
+  "title": "Shared definitions",
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+    "date": { "type": "string", "format": "date" },
+    "nonEmpty": { "type": "string", "minLength": 1 },
+    "text": {
+      "description": "A user-facing string in both languages. Both are required.",
+      "type": "object",
+      "required": ["en", "zh"],
+      "additionalProperties": false,
+      "properties": { "en": { "$ref": "#/$defs/nonEmpty" }, "zh": { "$ref": "#/$defs/nonEmpty" } }
+    },
+    "textList": {
+      "description": "A list of user-facing strings in both languages.",
+      "type": "object",
+      "required": ["en", "zh"],
+      "additionalProperties": false,
+      "properties": {
+        "en": { "type": "array", "items": { "$ref": "#/$defs/nonEmpty" } },
+        "zh": { "type": "array", "items": { "$ref": "#/$defs/nonEmpty" } }
+      }
+    },
+    "sourceRef": {
+      "description": "A cited source: where a fact comes from and when it was checked.",
+      "type": "object",
+      "required": ["title", "publisher", "url", "accessed"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "$ref": "#/$defs/nonEmpty" },
+        "publisher": { "$ref": "#/$defs/nonEmpty" },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "accessed": { "$ref": "#/$defs/date" }
+      }
+    }
+  }
+}

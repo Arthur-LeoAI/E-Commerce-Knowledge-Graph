@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: ppc
+domain: marketing
+order: 28
+name:
+  en: On-platform advertising
+  zh: 站内广告
+what:
+  en: Paying for visibility inside the platform, such as Amazon Sponsored Products. The main lever for launching new products and holding rank.
+  zh: 在平台内付费获取曝光，如 Amazon Sponsored Products。新品起量和稳住排名的主要手段。
+how:
+  en:
+    - Start with automatic campaigns to collect search terms
+    - Move converting terms into manual exact match
+    - Add negative keywords for wasted terms
+    - Adjust bids to ACoS / TACoS targets
+  zh:
+    - 先开自动广告收集搜索词
+    - 把转化好的词放进手动精准投放
+    - 否定无效词
+    - 按 ACoS / TACoS 目标调整出价
+metrics:
+  en:
+    - ACoS (ad spend ÷ ad sales)
+    - TACoS (ad spend ÷ total sales)
+    - CPC
+    - Ad conversion rate
+  zh:
+    - ACoS（广告花费 ÷ 广告销售额）
+    - TACoS（广告花费 ÷ 总销售额）
+    - CPC
+    - 广告转化率
+example:
+  en: To launch, you spend about $8 on ads per unit sold, so unit profit becomes −$0.78; in the steady phase that drops to $2.40 and unit profit is back to $4.82.
+  zh: 新品期为了起量，每卖一件平均花 $8 广告费，单件利润变成 −$0.78；进入稳定期降到 $2.40，单件利润回到 $4.82。
+data_later:
+  en: "Sources: Amazon Ads API. Methods: search term attribution, bid-vs-conversion analysis."
+  zh: 来源：Amazon Ads API。方法：搜索词归因、出价与转化的关系分析。
+rules: []

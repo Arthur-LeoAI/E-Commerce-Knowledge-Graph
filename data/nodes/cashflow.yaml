@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: cashflow
+domain: finance
+order: 44
+name:
+  en: Cash flow
+  zh: 现金流
+what:
+  en: "When money goes out and when it comes back. A common e-commerce trap is showing a profit with no cash: suppliers are paid up front and platform payouts take months."
+  zh: 钱什么时候出去、什么时候回来。电商常见的问题是账面有利润但手上没现金：采购要先付款，回款要等几个月。
+how:
+  en:
+    - "Map the cash cycle: deposit → balance → shipping → selling → platform payout"
+    - Forecast cash for the next 12 weeks
+    - Plan purchasing rhythm and financing from it
+  zh:
+    - 画出资金周期：定金 → 尾款 → 运输 → 销售 → 平台回款
+    - 做未来 12 周的现金预测
+    - 据此安排采购节奏和融资
+metrics:
+  en:
+    - Cash conversion cycle
+    - Available cash
+    - Cash tied up in inventory
+  zh:
+    - 现金转换周期
+    - 可用现金
+    - 库存占用资金
+example:
+  en: The first order needs about $5,270 up front (goods, freight, duty, testing). Sales start about 70 days later, payouts arrive periodically, and with launch ad spend it often takes several months to earn that back.
+  zh: 首批货要先付出约 $5,270（采购、运费、关税、检测等），大约 70 天后才开始卖，平台定期回款，加上新品期的广告投入，往往要几个月才能收回这笔钱。
+data_later:
+  en: "Methods: cash forecast based on committed purchases and expected payouts."
+  zh: 方法：基于已确定的采购和回款计划做现金预测。
+rules: []

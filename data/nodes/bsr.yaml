@@ -1,0 +1,33 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: bsr
+domain: sales
+order: 37
+name:
+  en: Rank
+  zh: 排名
+what:
+  en: The platform's ranking based on recent sales. Higher rank brings more organic traffic, a positive loop; stocking out drops rank fast.
+  zh: 平台根据近期销量给出的排名。排名越高自然流量越多，形成正循环；断货会让排名迅速下跌。
+how:
+  en:
+    - Track category rank and keyword rank
+    - Find the cause when rank drops
+    - Avoid stock-outs
+  zh:
+    - 跟踪类目排名和关键词排名
+    - 排名下跌时查明原因
+    - 避免断货
+metrics:
+  en:
+    - Best Sellers Rank
+    - Organic rank for core keywords
+  zh:
+    - Best Sellers Rank
+    - 核心词自然排名
+example:
+  en: A week of 10+ sales a day lifts category rank and organic traffic follows; a stock-out drops rank fast.
+  zh: 连续一周每天卖 10 件以上，类目排名上升，自然流量跟着增加；一旦断货，排名会很快掉下去。
+data_later:
+  en: "Methods: correlation between rank and sales."
+  zh: 方法：排名与销量的相关性统计。
+rules: []

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/edge.schema.json",
+  "title": "Directed edge: from influences to",
+  "type": "object",
+  "required": ["from", "to", "label"],
+  "additionalProperties": false,
+  "properties": {
+    "from": { "$ref": "common.schema.json#/$defs/id" },
+    "to": { "$ref": "common.schema.json#/$defs/id" },
+    "label": { "$ref": "common.schema.json#/$defs/text" },
+    "type": { "enum": ["formula", "influence"], "description": "formula = exact maths relation; influence = qualitative" }
+  }
+}

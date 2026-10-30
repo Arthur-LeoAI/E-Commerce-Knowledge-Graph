@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: reviews
+domain: marketing
+order: 31
+name:
+  en: Reviews & ratings
+  zh: 评论与评分
+what:
+  en: Customer reviews are one of the strongest drivers of conversion, and an early signal of product problems.
+  zh: 用户评价是影响转化最强的因素之一，也是发现产品问题的信号。
+how:
+  en:
+    - Request reviews only through compliant means (e.g. the platform's request button)
+    - Analyse negative reviews and improve the product
+    - Never manipulate reviews
+  zh:
+    - 只通过合规方式请求评论（如平台自带的请求功能）
+    - 分析差评并改进产品
+    - 不做任何操纵评论的行为
+metrics:
+  en:
+    - Star rating
+    - Review count
+    - Negative review rate
+  zh:
+    - 星级评分
+    - 评论数
+    - 差评率
+example:
+  en: If the rating slips from 4.5 to 4.0, conversion can fall noticeably at the same traffic. Read every bad review and look for product problems.
+  zh: 评分从 4.5 降到 4.0，同样的流量下转化率可能明显下降。所以每条差评都要看，找出产品问题。
+data_later:
+  en: "Methods: review text analysis, rating trends."
+  zh: 方法：评论文本分析、评分趋势。
+rules: []
+legacy_rule_note:
+  en: The US FTC has rules against fake reviews and testimonials, and Amazon prohibits buying or manipulating reviews.
+  zh: 美国 FTC 有专门针对虚假评论和评价的规则，Amazon 也禁止购买或操纵评论。
+  sources: []

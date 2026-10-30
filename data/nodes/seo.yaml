@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: seo
+domain: marketing
+order: 27
+name:
+  en: Keywords & on-platform search
+  zh: 关键词与站内搜索
+what:
+  en: Make sure customers find you when they search. Platform search ranking depends on relevance and sales performance.
+  zh: 让用户搜索时能找到你。平台搜索排名取决于相关性和销售表现。
+how:
+  en:
+    - Build and tier a keyword list
+    - Put core keywords in the title and bullets
+    - Add more in backend search terms
+    - Track keyword rankings
+  zh:
+    - 建立关键词库并分级
+    - 把核心词放进标题和要点
+    - 用后台搜索词补充
+    - 跟踪关键词排名
+metrics:
+  en:
+    - Organic keyword rank
+    - Search impressions
+  zh:
+    - 关键词自然排名
+    - 搜索曝光量
+example:
+  en: Put core terms like “collapsible cup” and “travel cup” in the title and bullets so customers find you when they search.
+  zh: 把 “collapsible cup”“travel cup” 这类核心词放进标题和要点，顾客搜索时才能找到你。
+data_later:
+  en: "Sources: Brand Analytics search term reports. Methods: keyword coverage analysis."
+  zh: 来源：Brand Analytics 搜索词报告。方法：关键词覆盖率分析。
+rules: []

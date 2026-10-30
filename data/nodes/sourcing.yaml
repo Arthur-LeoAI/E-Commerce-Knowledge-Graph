@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: sourcing
+domain: product
+order: 7
+name:
+  en: Suppliers & purchasing
+  zh: 供应商与采购
+what:
+  en: Find a factory that can supply reliably, and agree on price, minimum order quantity (MOQ), lead time and payment terms.
+  zh: 找到能稳定供货的工厂，谈价格、起订量（MOQ）、交期和付款条件。
+how:
+  en:
+    - Compare quotes from several factories and audit them
+    - Agree on MOQ, unit price, lead time and payment (often a deposit plus balance)
+    - Sign a purchase contract with clear quality standards
+    - Line up a backup supplier
+  zh:
+    - 多家比价并验厂
+    - 谈定 MOQ、单价、交期和付款方式（常见为定金加尾款）
+    - 签采购合同，写明质量标准
+    - 建立备选供应商
+metrics:
+  en:
+    - Unit cost
+    - MOQ
+    - Production lead time
+    - On-time delivery rate
+  zh:
+    - 采购单价
+    - MOQ
+    - 生产交期
+    - 准时交货率
+example:
+  en: The factory quotes ¥22 per unit, MOQ 1,000, 25 days to produce, 30% deposit and 70% before shipping.
+  zh: 工厂报价 ¥22/件，起订量 1,000 件，生产交期 25 天，付款方式为 30% 定金、70% 出货前付清。
+data_later:
+  en: "Sources: ERP purchase orders. Methods: lead-time distribution, supplier scoring."
+  zh: 来源：ERP 采购单。方法：交期分布统计、供应商评分。
+rules: []

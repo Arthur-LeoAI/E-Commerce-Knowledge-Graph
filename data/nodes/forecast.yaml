@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: forecast
+domain: data_team
+order: 47
+name:
+  en: Demand forecasting
+  zh: 需求预测
+what:
+  en: Predicting future sales for replenishment, purchasing and cash planning.
+  zh: 预测未来销量，用于补货、采购和资金规划。
+how:
+  en:
+    - Build a baseline forecast from past sales
+    - Add seasonality, promotions and price changes
+    - Backtest accuracy on historical data
+    - Revise regularly
+  zh:
+    - 用历史销量做基础预测
+    - 叠加季节性、促销和价格变化
+    - 用历史数据回测准确度
+    - 定期修正
+metrics:
+  en:
+    - Forecast error (e.g. MAPE)
+    - Forecast bias
+  zh:
+    - 预测误差（如 MAPE）
+    - 预测偏差
+example:
+  en: Use the last 3 months of daily sales to forecast 12 a day next month, then compare with actual sales to measure the error.
+  zh: 用过去 3 个月的日销预测下个月每天 12 件，再用之后的真实销量检查预测偏差有多大。
+data_later:
+  en: "Methods: time-series models. Accuracy must be proven by backtesting before using forecasts for decisions."
+  zh: 方法：时间序列模型。准确度要先通过回测验证，才能用于决策。
+rules: []

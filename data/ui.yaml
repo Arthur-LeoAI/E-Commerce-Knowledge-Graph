@@ -1,0 +1,392 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+h1:
+  en: E-commerce Operations Atlas
+  zh: 电商运营全景图谱
+sub:
+  en: Everything it takes to run an online store, split into 9 areas and 48 points, with how they affect each other. New here? Take the beginner tour first; once you're familiar, drill down level by level in the map.
+  zh: 把做电商需要的事情拆成 9 个领域、48 个节点，并标出它们之间的影响关系。第一次来，先走一遍“新手导览”；熟悉以后，到“全景图谱”里逐层展开。
+formula:
+  en: <b>Profit</b> = units × unit profit ｜ <b>Units</b> = traffic × conversion rate ｜ <b>Unit profit</b> = price − landed cost − platform fees − ad cost per unit − return losses
+  zh: <b>利润</b> = 销量 × 单件利润 ｜ <b>销量</b> = 流量 × 转化率 ｜ <b>单件利润</b> = 售价 − 落地成本 − 平台费用 − 单件广告费 − 退货损失
+tab_tour:
+  en: Beginner tour
+  zh: 新手导览
+tab_map:
+  en: Map
+  zh: 全景图谱
+tab_start:
+  en: Start from zero
+  zh: 从零开始
+tab_data:
+  en: Data roadmap
+  zh: 数据化路线
+tab_us:
+  en: US rules
+  zh: 美国市场要点
+tab_sources:
+  en: Sources
+  zh: 来源
+q_ph:
+  en: Search, e.g. tariffs, inventory
+  zh: 搜索节点，如：关税、库存
+tourbtn:
+  en: New here? Take the beginner tour
+  zh: 第一次来？从新手导览开始
+adv:
+  en: Advanced
+  zh: 高级
+lab_view:
+  en: View
+  zh: 视图
+lab_dir:
+  en: Direction
+  zh: 方向
+lab_depth:
+  en: Depth
+  zh: 层级
+vwh:
+  en: Layered
+  zh: 分层视图
+vw3:
+  en: 3D
+  zh: 3D 拓扑
+vw2:
+  en: Grouped
+  zh: 分组视图
+mdown:
+  en: Knock-on effects (downstream)
+  zh: 连锁影响（往下游）
+mup:
+  en: Troubleshoot (upstream)
+  zh: 问题排查（往上游）
+d1:
+  en: 1 step
+  zh: 1 级
+d2:
+  en: 2 steps
+  zh: 2 级
+d3:
+  en: 3 steps
+  zh: 3 级
+advnote:
+  en: Direction and depth control the knock-on list under “Show more” in the side panel, and what gets highlighted in the Grouped view.
+  zh: 方向和层级决定右侧面板“展开更多”里的连锁影响列表，以及分组视图里高亮的范围。
+m3rot:
+  en: Auto-rotate
+  zh: 自动旋转
+m3reset:
+  en: Reset view
+  zh: 重置视角
+m3hint:
+  en: Drag to rotate · scroll or pinch to zoom · click a sphere to go down a level · Esc to go back up
+  zh: 拖动旋转 · 滚轮或双指缩放 · 点击球体进入下一层 · Esc 返回上一层
+langbtn:
+  en: 中文
+  zh: EN
+langlabel:
+  en: 切换到中文
+  zh: Switch to English
+lvDown:
+  en:
+    - Direct effects
+    - 2nd-order effects
+    - 3rd-order effects
+  zh:
+    - 直接影响
+    - 二级影响
+    - 三级影响
+lvUp:
+  en:
+    - Direct causes
+    - 2nd-order causes
+    - 3rd-order causes
+  zh:
+    - 直接原因
+    - 二级原因
+    - 三级原因
+src:
+  en: start
+  zh: 起点
+e_h:
+  en: Where to start
+  zh: 从哪里开始
+e_p:
+  en: On the left is the main business flow. Click a step to open it, then click a point inside; this panel explains it in one sentence plus an example.
+  zh: 左边是电商的业务主流程。点一个环节进入，再点里面的节点，这里会用一句话加一个例子讲清它是什么。
+e_tour:
+  en: New here? Take the beginner tour first
+  zh: 第一次来？先走一遍新手导览
+e_or:
+  en: "Or jump to:"
+  zh: 或者直接看：
+noDown:
+  en: This point doesn't affect any other point.
+  zh: 这个节点不影响其他节点。
+noUp:
+  en: "This is a starting point: it's set by the outside world or a business decision, and nothing else in the map drives it."
+  zh: 这是起点节点：它由外部环境或经营决策决定，没有其他节点影响它。
+h_what:
+  en: What it is
+  zh: 是什么
+h_ex:
+  en: Example
+  zh: 举个例子
+badge:
+  en: Example
+  zh: 示例
+more:
+  en: "Show more: how to do it, metrics, US rules, knock-on effects"
+  zh: 展开更多：怎么做、指标、美国规则、连锁影响
+h_how:
+  en: How to do it
+  zh: 怎么做
+h_m:
+  en: Key metrics
+  zh: 关键指标
+h_us:
+  en: US rules
+  zh: 美国市场要点
+asof:
+  en: Checked
+  zh: 核对日期
+h_data:
+  en: Using data later
+  zh: 后续数据化
+h_chainDown:
+  en: Knock-on effects
+  zh: 连锁影响
+h_chainUp:
+  en: Possible causes
+  zh: 可能原因
+flipDown:
+  en: Switch to troubleshooting (upstream)
+  zh: 改看问题排查（上游）
+flipUp:
+  en: Switch to knock-on effects (downstream)
+  zh: 改看连锁影响（下游）
+back:
+  en: Back up a level
+  zh: 返回上一层
+nodesN:
+  en: "{n} points"
+  zh: "{n} 个节点"
+rels:
+  en: "{n} links"
+  zh: "{n} 条关系"
+dataDom:
+  en: Data & Team
+  zh: 数据与组织
+support:
+  en: Supports every step
+  zh: 支撑所有环节
+supportLong:
+  en: "Supports every step: ERP, reporting, forecasting, team roles"
+  zh: 支撑所有环节：ERP、报表分析、需求预测、团队分工
+loop:
+  en: Profit and cash decide the next round of investment
+  zh: 利润和现金决定下一轮投入
+loop2:
+  en:
+    - Profit and cash decide
+    - the next round
+  zh:
+    - 利润和现金
+    - 决定下一轮投入
+lg1:
+  en:
+    - Main flow order
+    - "Feedback: finance results go back to strategy"
+    - Click any sphere to open that step
+  zh:
+    - 主流程顺序
+    - 反馈：财务结果回到战略
+    - 点任意球体进入这个环节
+lg2:
+  en:
+    - "{d} points (top → bottom in order)"
+    - "Left: inputs from other steps"
+    - "Right: outputs to other steps"
+    - Internal feedback loop
+  zh:
+    - "{d}的节点（上 → 下为先后）"
+    - 左：输入来自其他环节
+    - 右：输出到其他环节
+    - 内部反馈回路
+lg3:
+  en:
+    - "Left: direct causes {a}"
+    - "Right: direct effects {b}"
+    - Click a surrounding sphere to switch to it
+  zh:
+    - 左：直接原因 {a}
+    - 右：直接影响 {b}
+    - 点周围的球体切换到那个节点
+lvTxt:
+  en:
+    - ""
+    - Level 1 · Main flow
+    - Level 2 · Inside a step
+    - Level 3 · One point
+  zh:
+    - ""
+    - 第 1 层 · 业务主流程
+    - 第 2 层 · 环节内部
+    - 第 3 层 · 单个节点
+all:
+  en: All steps
+  zh: 全部流程
+s3d1:
+  en: "3D level 1: the 8 business steps form a loop, with Data & Team below the middle supporting them all. Click a sphere to open that step."
+  zh: 三维视图第 1 层：8 个业务环节围成一个循环，数据与组织在中间下方支撑所有环节。点球体进入该环节。
+s3d2:
+  en: "3D level 2: {d} points run top to bottom in order; the group on the left feeds into this step and the group on the right is what it affects. Click a point to go down a level, or a side sphere to jump to that step."
+  zh: 三维视图第 2 层：{d}的节点按先后从上到下排列，左侧一组是输入来自的环节，右侧一组是输出到的环节。点节点进入下一层，点两侧的环节可以跳过去。
+s3d3:
+  en: "3D level 3: “{n}” is in the middle, direct causes on the left and direct effects on the right. Click a surrounding sphere to switch points."
+  zh: 三维视图第 3 层：「{n}」在中间，左侧是直接原因，右侧是直接影响。点周围的球体切换节点。
+sL1:
+  en: E-commerce runs through 8 steps in order, and the finance results feed back into the next round of investment; Data & Team supports every step. Click any step to go down a level.
+  zh: 电商的主流程分 8 个环节，按顺序推进，财务结果再反过来决定下一轮投入；数据与组织支撑所有环节。点任意环节进入下一层。
+sL2:
+  en: "{d}: {desc}. This step's points are in the middle, top to bottom in order; other steps that affect it are on the left, and steps it affects are on the right. Click a point to go down a level, or a side box to jump to that step."
+  zh: "{d}：{desc}。中间是本环节的节点，从上到下按先后关系排列；左侧是影响本环节的其他环节，右侧是本环节影响到的环节。点节点进入下一层，点两侧的环节可以跳过去。"
+sL3:
+  en: Points that directly affect “{n}” are on the left; points it directly affects are on the right. Each line says how. Deeper knock-on effects are in the side panel.
+  zh: 左边是直接影响「{n}」的节点，右边是它直接影响的节点，每条线都写明了影响方式。更深的连锁反应看右侧面板。
+boxFoot:
+  en: "{n} points · in {i} · out {o}"
+  zh: "{n} 个节点 · 输入 {i} · 输出 {o}"
+enter:
+  en: "Open "
+  zh: 进入
+jump:
+  en: "Go to "
+  zh: 跳到
+inFrom:
+  en: Inputs from
+  zh: 输入来自
+outTo:
+  en: Outputs to
+  zh: 输出到
+inner:
+  en: inside
+  zh: 内部
+directIn:
+  en: Direct causes
+  zh: 直接原因
+directOut:
+  en: Direct effects
+  zh: 直接影响
+origin2:
+  en:
+    - "Starting point: set by"
+    - the market or a decision
+  zh:
+    - 起点：由外部环境
+    - 或经营决策决定
+origin1:
+  en: "Starting point: set by the market or a business decision"
+  zh: 起点：由外部环境或经营决策决定
+relOf:
+  en: " direct links"
+  zh: 的直接关系
+flowAria:
+  en: Main e-commerce flow
+  zh: 电商主流程图
+innerAria:
+  en: " internal map"
+  zh: 内部节点图
+dp_has:
+  en: What this step covers
+  zh: 这个环节有哪些事
+dp_hint:
+  en: Click any point to see what it is, with an example.
+  zh: 点任意一个节点，看它是什么、举个例子。
+dp_more:
+  en: "Show more: links with other steps"
+  zh: 展开更多：和其他环节的关系
+dp_in:
+  en: Affected by
+  zh: 受哪些环节影响
+dp_out:
+  en: Affects
+  zh: 影响哪些环节
+none:
+  en: None
+  zh: 无
+wf:
+  en:
+    - Price
+    - Landed cost
+    - Commission
+    - FBA fee
+    - Storage
+    - Returns
+    - Ads
+    - Unit profit
+  zh:
+    - 售价
+    - 落地成本
+    - 佣金
+    - FBA 配送费
+    - 仓储分摊
+    - 退货损失
+    - 广告
+    - 单件利润
+wfAria:
+  en: "Unit profit breakdown: a $19.99 price leaves $4.82 after all costs"
+  zh: 单件利润拆解：售价 19.99 美元，扣除各项成本后剩 4.82 美元
+wfHead:
+  en: "Here's where the money from each $19.99 sale goes:"
+  zh: 每卖一件 $19.99，钱是这样被分掉的：
+wfList:
+  en: "<ul><li>300 units a month × $4.82 ≈ <b>$1,446</b> (before staff, software and other fixed costs).</li><li>But the first order needs about <b>$5,270</b> up front, sales start about 70 days later, and with launch ad spend it often takes several months to earn it back.</li><li>So watch two sets of books: the P&L tells you whether you make money; cash flow tells you whether you can keep going.</li></ul>"
+  zh: <ul><li>每月 300 件 × $4.82 ≈ <b>$1,446</b>（还没扣人工、软件等固定开支）。</li><li>但首批货要先付出约 <b>$5,270</b>，大约 70 天后才开始卖，再加上新品期广告投入，往往要几个月才能收回。</li><li>所以要同时看两本账：利润表看赚不赚钱，现金流看钱够不够周转。</li></ul>
+end:
+  en: Finish
+  zh: 终点
+tnote:
+  en: Follow a fictional product, a collapsible silicone cup, from deciding what to sell through all 8 steps of e-commerce. Every price, score, fee and tax rate is an <b>illustrative number</b> made up for teaching, not a real rate or market figure. Hover over a dotted-underlined term (tap on a phone) for a quick explanation.
+  zh: 跟着一个虚构的小产品“折叠硅胶水杯”，从“卖什么”开始，一站一站走完电商的 8 个环节。所有价格、分数、费用和税率都是为讲解编的<b>示例数字</b>，不代表真实费率或市场数据。把鼠标放在带虚线的词上（手机上点一下）可以看解释。
+stopOf:
+  en: Stop {i} of {n}
+  zh: 第 {i} 站 / 共 {n} 站
+prev:
+  en: ← Previous
+  zh: ← 上一站
+seeNode:
+  en: See this point on the map
+  zh: 在图谱里看这个节点
+seeDom:
+  en: See this step on the map
+  zh: 在图谱里看这个环节
+toEnd:
+  en: To the finish
+  zh: 到终点
+nextStop:
+  en: "Next: {s}"
+  zh: 下一站：{s}
+endHtml:
+  en: |-
+    <div class="tnum">Finish</div><h2>You've made it through once</h2>
+          <p class="tone">Remember these three things and you have the core of e-commerce:</p>
+          <ol><li><b>Profit = units × unit profit.</b> Unit profit must take out landed cost, platform fees, ads and returns.</li>
+          <li><b>Every step pulls on the others.</b> A slightly bigger box raises fulfilment fees; a few days out of stock drops rank and traffic.</li>
+          <li><b>Making a profit isn't the same as having cash.</b> You pay suppliers first and get paid later; when cash runs out, the business stops.</li></ol>
+          <p style="color:var(--muted);font-size:14px">One area wasn't covered: Data & Team. It supports every step; look at it once you're comfortable.</p>
+  zh: |-
+    <div class="tnum">终点</div><h2>你已经走完了一遍</h2>
+          <p class="tone">记住这三件事，就抓住了电商的主线：</p>
+          <ol><li><b>利润 = 销量 × 单件利润。</b>单件利润要把落地成本、平台费用、广告和退货都扣干净。</li>
+          <li><b>每个环节都会牵动别的环节。</b>包装大一点，配送费就高；断货几天，排名和流量都会掉。</li>
+          <li><b>赚钱不等于有钱。</b>货款要先付，回款要等，现金流断了生意就停了。</li></ol>
+          <p style="color:var(--muted);font-size:14px">还有一个环节没讲：“数据与组织”。它支撑所有环节，等你熟悉以后再看。</p>
+restart:
+  en: Start again
+  zh: 重新走一遍
+byStart:
+  en: Learn in “Start from zero” order
+  zh: 按“从零开始”的顺序学
+goMap:
+  en: Explore the map yourself →
+  zh: 去全景图谱自己探索 →

@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: returns
+domain: logistics
+order: 21
+name:
+  en: Returns & reverse logistics
+  zh: 退货与逆向物流
+what:
+  en: "Handling items customers send back: refund, inspect, restock or dispose."
+  zh: 处理用户退回的商品：退款、检查、重新上架或报废。
+how:
+  en:
+    - Analyse return reasons
+    - Restock sellable returns
+    - Remove or liquidate unsellable ones
+    - Fix the product or listing for the main reasons
+  zh:
+    - 分析退货原因
+    - 可售退货重新入库
+    - 不可售的移除或清货
+    - 针对主要原因改进产品或页面描述
+metrics:
+  en:
+    - Return rate
+    - Return reasons
+    - Return losses
+  zh:
+    - 退货率
+    - 退货原因分布
+    - 退货损失
+example:
+  en: A 3% return rate with about $10 lost per return (refund, return fees, unsellable stock) works out to $0.30 per unit sold.
+  zh: 退货率 3%，每次退货平均损失 $10（退款、退货费、无法再卖），摊到每件销量上是 $0.30。
+data_later:
+  en: "Sources: returns reports. Methods: reason categorisation."
+  zh: 来源：退货报告。方法：原因分类统计。
+rules: []

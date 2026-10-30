@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: promo
+domain: marketing
+order: 30
+name:
+  en: Promotions
+  zh: 促销活动
+what:
+  en: Coupons, deals, member days and holiday sales. They lift sales and rank in the short term but squeeze margin.
+  zh: 优惠券、秒杀、会员日、节日大促。可以短期拉高销量和排名，但会压缩利润。
+how:
+  en:
+    - Plan the year's promotion calendar early
+    - Work out unit profit after the discount
+    - Stock enough inventory
+    - Review the real incremental lift afterwards
+  zh:
+    - 提前规划全年大促日历
+    - 算清促销后的单件利润
+    - 备足库存
+    - 复盘活动带来的真实增量
+metrics:
+  en:
+    - Incremental units
+    - Profit during promotion
+    - Rank retained afterwards
+  zh:
+    - 促销增量销量
+    - 促销期利润
+    - 活动后排名保持
+example:
+  en: A 20% member-day discount takes the price from $19.99 to $15.99. Commission falls slightly, but unit profit drops from $4.82 to about $1.42.
+  zh: 会员日打 8 折，售价从 $19.99 降到 $15.99。佣金跟着降一点，但单件利润从 $4.82 降到约 $1.42。
+data_later:
+  en: "Methods: incrementality analysis (compare with baseline sales)."
+  zh: 方法：增量分析（和没有活动时的基线销量对比）。
+rules: []

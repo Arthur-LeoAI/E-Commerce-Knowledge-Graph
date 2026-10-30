@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: lastmile
+domain: logistics
+order: 20
+name:
+  en: Last-mile delivery
+  zh: 尾程配送
+what:
+  en: Delivery from the warehouse to the customer. Speed and experience affect conversion rate and reviews.
+  zh: 从仓库送到消费者手里。配送速度和体验会影响转化率和评价。
+how:
+  en:
+    - Platform-warehouse orders are delivered by the platform
+    - Choose carriers for self-fulfilled orders
+    - Monitor delivery times and lost parcels
+  zh:
+    - 平台仓订单由平台配送
+    - 自发货订单选择承运商
+    - 监控时效和丢件
+metrics:
+  en:
+    - Delivery time
+    - On-time rate
+    - Lost or damaged rate
+  zh:
+    - 送达时效
+    - 准时率
+    - 丢件破损率
+example:
+  en: FBA orders carry the Prime badge and most customers get them in 1–2 days, which itself lifts conversion.
+  zh: FBA 订单带 Prime 标志，多数顾客 1–2 天就能收到，这本身就能提高转化率。
+data_later:
+  en: "Sources: order shipping data. Methods: carrier performance comparison."
+  zh: 来源：订单物流数据。方法：承运商时效对比。
+rules: []

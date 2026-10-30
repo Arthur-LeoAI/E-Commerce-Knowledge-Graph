@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: traffic
+domain: sales
+order: 33
+name:
+  en: Traffic
+  zh: 流量
+what:
+  en: Visits to the product page, from organic search, ads, off-site sources and recommendations.
+  zh: 进入商品页面的访问量，来自自然搜索、广告、站外和推荐位。
+how:
+  en:
+    - Split traffic by source
+    - Find the main sources and the gaps
+    - Work on the gaps
+  zh:
+    - 按来源拆分流量
+    - 找出主要来源和缺口
+    - 针对缺口提升
+metrics:
+  en:
+    - Sessions
+    - Page views
+    - Share by source
+  zh:
+    - 会话数（Sessions）
+    - 页面浏览量
+    - 来源占比
+example:
+  en: "3,000 visits a month: 1,800 from organic search and 1,200 from ads."
+  zh: 每月 3,000 次访问，其中 1,800 次来自自然搜索，1,200 次来自广告。
+data_later:
+  en: "Sources: business reports. Methods: source breakdown, trend analysis."
+  zh: 来源：业务报告。方法：来源分解、趋势分析。
+rules: []

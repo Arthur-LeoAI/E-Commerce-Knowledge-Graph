@@ -1,0 +1,40 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: platform_policy
+domain: compliance
+order: 16
+name:
+  en: Platform policy
+  zh: 平台政策
+what:
+  en: "The platform's own rules: category approval, product policies, fee changes, seller verification and more. Breaking them can mean delisting or account suspension."
+  zh: 平台自己的规则：类目审核、商品政策、费用调整、卖家身份验证等。违反会导致下架或封号。
+how:
+  en:
+    - Read platform announcements regularly
+    - Check whether a category is restricted before listing
+    - Log fee changes and update your cost model
+  zh:
+    - 定期阅读平台公告
+    - 上架前检查类目是否受限
+    - 记录费用调整，并更新成本模型
+metrics:
+  en:
+    - Policy changes
+    - SKUs affected
+  zh:
+    - 政策变化次数
+    - 受影响 SKU 数
+example:
+  en: Amazon adjusts fees once a year. After each change, update the new fulfilment fee in your profit sheet or your profit numbers will be wrong.
+  zh: Amazon 每年调整一次费用。调整后要把新的配送费更新到利润表里，否则利润会算错。
+data_later:
+  en: "Sources: platform announcements. Methods: change log."
+  zh: 来源：平台公告。方法：变更日志。
+rules: []
+legacy_rule_note:
+  en: Under the INFORM Consumers Act (effective 2023-06-27), marketplaces must verify high-volume sellers' identity and bank details. Amazon US stopped FBA prep and labelling services from 2026-01-01, and its 2026 fee changes took effect on 2026-01-15.
+  zh: 根据 INFORM Consumers Act（2023-06-27 生效），平台必须核验高销量卖家的身份和银行信息。Amazon 美国站自 2026-01-01 起停止 FBA 预处理和贴标服务，2026 年费用调整自 2026-01-15 生效。
+  sources:
+    - 8
+    - 9
+    - 10

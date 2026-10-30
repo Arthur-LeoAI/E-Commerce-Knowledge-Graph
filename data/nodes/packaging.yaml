@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: packaging
+domain: product
+order: 9
+name:
+  en: Packaging & labelling
+  zh: 包装与标签
+what:
+  en: Packaging sets the product's size and weight, which directly drives shipping costs and the platform's fulfilment fee tier. It also carries compliance labels and the brand experience.
+  zh: 包装决定产品的尺寸和重量，直接影响运费和平台配送费档位，也承载合规标签和品牌体验。
+how:
+  en:
+    - Make it as small and light as possible
+    - Pass drop tests
+    - "Print compliance marks: country of origin, warnings, barcodes"
+    - Apply the labels the platform requires (e.g. Amazon's FNSKU)
+  zh:
+    - 尽量缩小体积和重量
+    - 通过跌落测试
+    - 印上合规标识：原产地、警示语、条码
+    - 贴平台要求的标签（如 Amazon 的 FNSKU）
+metrics:
+  en:
+    - Package dimensions
+    - Billable weight
+    - Damage rate
+  zh:
+    - 包装尺寸
+    - 计费重量
+    - 破损率
+example:
+  en: Cutting the box height from 10 cm to 8 cm may drop the product into a lower FBA size tier, so every unit pays a lower fulfilment fee. Check Amazon's official fee schedule for exact tiers.
+  zh: 把包装盒高度从 10 cm 减到 8 cm，商品可能落进更低的 FBA 尺寸档，每件配送费就少交一些。具体档位以 Amazon 官方费率表为准。
+data_later:
+  en: "Methods: compare size tiers and work out the saving from dropping one tier."
+  zh: 方法：按尺寸分段对比，算出每缩小一档能省多少费用。
+rules: []

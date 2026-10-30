@@ -1,0 +1,39 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: dev
+domain: product
+order: 6
+name:
+  en: Product development
+  zh: 产品开发
+what:
+  en: "Turn the product idea into something that can be mass-produced: specs, materials, design, features and cost."
+  zh: 把选品想法变成可以量产的产品：规格、材料、外观、功能和成本。
+how:
+  en:
+    - Write a product requirements document
+    - Make samples and test them
+    - Fix problems found in competitors' negative reviews
+    - Confirm compliance requirements and packaging size at the same time
+    - Freeze the specs once final
+  zh:
+    - 写产品需求文档
+    - 打样并测试
+    - 根据竞品差评做改进
+    - 同步确认合规要求和包装尺寸
+    - 定稿后冻结规格
+metrics:
+  en:
+    - Sampling time
+    - Target unit cost
+    - Target defect rate
+  zh:
+    - 打样周期
+    - 单件目标成本
+    - 缺陷率目标
+example:
+  en: Competitors' bad reviews often mention leaks at the fold, so you add a thicker seal and test samples with 100 fold cycles.
+  zh: 竞品差评里常见“折叠处漏水”，所以开发时加厚密封圈，打样后做 100 次折叠测试。
+data_later:
+  en: "Sources: review text, return reasons. Methods: text clustering to find pain points."
+  zh: 来源：评论文本、退货原因。方法：文本聚类找痛点。
+rules: []

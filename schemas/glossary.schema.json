@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/glossary.schema.json",
+  "title": "Glossary entry",
+  "type": "object",
+  "required": ["id", "term", "def"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "term": { "$ref": "common.schema.json#/$defs/text", "description": "The word as it appears in text of each language" },
+    "def": { "$ref": "common.schema.json#/$defs/text" },
+    "aliases": {
+      "description": "Other spellings that should also show the tooltip. Per language; the two lists need not match.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/nonEmpty" } },
+        "zh": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/nonEmpty" } }
+      }
+    },
+    "review": { "type": "boolean", "description": "true = one language was translated during extraction; owner should check" }
+  }
+}

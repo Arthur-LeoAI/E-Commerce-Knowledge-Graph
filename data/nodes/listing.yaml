@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: listing
+domain: storefront
+order: 25
+name:
+  en: Product listing
+  zh: 商品页面
+what:
+  en: "The product page customers see: title, images, bullet points, description and price. It decides whether search finds you and whether visitors buy."
+  zh: 用户看到的商品页面：标题、图片、要点描述、详情和价格。它既决定搜索能不能找到你，也决定找到后会不会买。
+how:
+  en:
+    - Cover core keywords in the title and bullets
+    - Make the main image compliant and eye-catching
+    - Use secondary images to explain benefits and use cases
+    - Keep optimising based on data
+  zh:
+    - 标题和要点覆盖核心关键词
+    - 主图符合规范并有点击吸引力
+    - 副图讲清卖点和使用场景
+    - 根据数据持续优化
+metrics:
+  en:
+    - Click-through rate
+    - Conversion rate
+    - Listing quality issues
+  zh:
+    - 点击率
+    - 转化率
+    - 页面质量问题数
+example:
+  en: The title says “collapsible silicone cup, fits in a pocket, capacity”, and the main image shows the cup folded and unfolded so the benefit is obvious at a glance.
+  zh: 标题写清“折叠硅胶水杯、可放口袋、容量”，主图展示折叠前后对比，让人一眼看懂卖点。
+data_later:
+  en: "Methods: A/B tests (e.g. Amazon's Manage Your Experiments)."
+  zh: 方法：A/B 测试（如 Amazon 的 Manage Your Experiments）。
+rules: []

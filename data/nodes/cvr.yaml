@@ -1,0 +1,31 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: cvr
+domain: sales
+order: 34
+name:
+  en: Conversion rate
+  zh: 转化率
+what:
+  en: The share of visits that turn into orders. Driven by price, reviews, the listing, delivery speed and stock status together.
+  zh: 访问中下单的比例。由价格、评论、页面、配送时效和库存状态共同决定。
+how:
+  en:
+    - Compare with category benchmarks
+    - Check each driver one by one
+    - Change one variable at a time and watch the result
+  zh:
+    - 和同类目水平对比
+    - 逐项检查影响因素
+    - 一次只改一个变量，观察结果
+metrics:
+  en:
+    - Unit Session Percentage
+  zh:
+    - 订单转化率（Unit Session Percentage）
+example:
+  en: 300 orders from 3,000 visits is a 10% conversion rate.
+  zh: 3,000 次访问中有 300 次下单，转化率 10%。
+data_later:
+  en: "Methods: group comparison; regression to find the main drivers once there is enough data."
+  zh: 方法：分组对比；数据量足够时用回归分析找主要影响因素。
+rules: []

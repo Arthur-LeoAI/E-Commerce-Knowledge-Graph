@@ -1,0 +1,41 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: brand_ip
+domain: product
+order: 10
+name:
+  en: Brand & intellectual property
+  zh: 品牌与知识产权
+what:
+  en: Register trademarks, protect designs and patents, and avoid infringing on others' rights. A brand is a long-term asset and unlocks many platform features.
+  zh: 注册商标、保护外观和专利，同时避免侵犯别人的权利。品牌是长期资产，也是很多平台功能的入口。
+how:
+  en:
+    - Register a trademark in the target country
+    - Apply for the platform's brand registry
+    - "Check for infringement before listing: trademarks, design patents, utility patents"
+    - Monitor hijackers and counterfeits
+  zh:
+    - 在目标国家注册商标
+    - 申请平台品牌备案
+    - 上架前做侵权排查：商标、外观设计、专利
+    - 监控跟卖和仿冒
+metrics:
+  en:
+    - Trademark status
+    - Infringement complaints
+    - Hijacking incidents
+  zh:
+    - 商标状态
+    - 侵权投诉数
+    - 跟卖次数
+example:
+  en: File a US trademark before launch; with the application number you can enrol in Brand Registry and unlock A+ content. Also check for similar design patents.
+  zh: 上架前申请美国商标，拿到申请号后就能做品牌备案，解锁 A+ 页面；同时查一遍有没有相似的外观专利。
+data_later:
+  en: "Sources: complaint and hijacking records. Methods: frequency counts."
+  zh: 来源：投诉和跟卖记录。方法：频次统计。
+rules: []
+legacy_rule_note:
+  en: US trademarks are filed with the USPTO. Amazon Brand Registry requires a registered or pending trademark; it unlocks A+ content, Brand Stores and Brand Analytics.
+  zh: 美国商标在 USPTO 申请。Amazon 品牌备案（Brand Registry）需要已注册或已申请的商标，备案后才能使用 A+ 内容、品牌旗舰店和 Brand Analytics 等功能。
+  sources: []

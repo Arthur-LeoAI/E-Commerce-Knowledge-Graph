@@ -1,0 +1,41 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: selection
+domain: strategy
+order: 3
+name:
+  en: Product selection
+  zh: 选品
+what:
+  en: Decide exactly which product to sell. Most of the difficulty in compliance, logistics, competition and profit is locked in at this step.
+  zh: 决定卖什么具体产品。合规、物流、竞争和利润的难度，大多在这一步就被定下来了。
+how:
+  en:
+    - Shortlist candidates from market research
+    - Run a quick unit-profit estimate for each (landed cost, platform fees, ads)
+    - "Check compliance hurdles: certifications, restricted categories"
+    - "Check logistics traits: size, weight, fragility, batteries"
+    - Test with a small batch before ordering more
+  zh:
+    - 用市场调研筛出候选品
+    - 每个候选品先做单件利润测算（落地成本、平台费、广告）
+    - 检查合规门槛：认证要求、受限类目
+    - 检查物流属性：尺寸、重量、易碎、带电
+    - 小批量测款，验证后再加单
+metrics:
+  en:
+    - Estimated margin
+    - Estimated payback period
+    - Compliance difficulty
+    - Size tier
+  zh:
+    - 预估毛利率
+    - 预估回本周期
+    - 合规难度
+    - 尺寸分段
+example:
+  en: "From 30 ideas, rule out anything too big, battery-powered, fragile or seasonal, leaving 3: the collapsible cup, a pet feeder and a yoga band. Score them on demand, competition, profit, difficulty and room to stand out; the cup scores highest with 20. A quick check shows about $5 left per unit at $19.99, so you go ahead."
+  zh: 从 30 个想法里排除掉太大、带电、易碎、季节性强的，剩下折叠水杯、宠物喂食器、瑜伽弹力带 3 个。按需求、竞争、利润、操作难度、差异化机会打分，折叠水杯 20 分最高。再粗算一遍：售价 $19.99 时每件还能剩约 $5，才决定做。
+data_later:
+  en: "Methods: weighted scorecard, break-even analysis."
+  zh: 方法：加权打分卡、盈亏平衡分析。
+rules: []

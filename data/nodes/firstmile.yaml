@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: firstmile
+domain: logistics
+order: 17
+name:
+  en: First-mile freight
+  zh: 头程物流
+what:
+  en: "Moving goods from the factory to a warehouse in the destination country: ocean, air or express, plus booking, trucking and hand-off to customs."
+  zh: 把货从工厂运到目的国仓库：海运、空运、快递，以及中间的订舱、拖车和清关衔接。
+how:
+  en:
+    - Pick a mode based on speed and cost
+    - Book space and arrange loading
+    - Coordinate export and import clearance
+    - Deliver to the platform or third-party warehouse
+  zh:
+    - 按时效和成本选择运输方式
+    - 订舱并安排装柜
+    - 衔接报关和清关
+    - 送到平台仓或第三方仓
+metrics:
+  en:
+    - First-mile cost per unit
+    - Transit time
+    - Transit-time variability
+  zh:
+    - 单件头程成本
+    - 运输时效
+    - 时效波动
+example:
+  en: 1,000 units go by shared-container ocean freight at $0.80 per unit, about 35 days from factory to FBA warehouse.
+  zh: 1,000 件拼箱海运，运费每件 $0.80，从工厂到 FBA 仓大约 35 天。
+data_later:
+  en: "Sources: freight forwarder invoices, tracking data. Methods: transit-time distribution (look at variability, not just the average)."
+  zh: 来源：货代账单、物流轨迹。方法：时效分布统计（看波动，不只看平均值）。
+rules: []

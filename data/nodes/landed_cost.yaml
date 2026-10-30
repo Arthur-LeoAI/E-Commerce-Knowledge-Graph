@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: landed_cost
+domain: finance
+order: 39
+name:
+  en: Landed cost
+  zh: 落地成本
+what:
+  en: "The full cost of one unit once it reaches a warehouse ready for sale: purchase price, first-mile freight, duties, clearance fees, testing and certification spread per unit, and so on."
+  zh: 一件商品到达可售仓库时的全部成本：采购价、头程运费、关税、清关费用、检测认证分摊等。
+how:
+  en:
+    - List every cost item
+    - Spread costs per unit by volume or value
+    - Calculate each shipment separately
+    - Update when exchange rates move
+  zh:
+    - 列出所有成本项
+    - 按体积或货值分摊到每一件
+    - 每批货单独核算
+    - 汇率变动时更新
+metrics:
+  en:
+    - Landed cost per unit
+    - Share of each cost item
+  zh:
+    - 单件落地成本
+    - 各成本项占比
+example:
+  en: Purchase $3.10 + first-mile $0.80 + duty $0.62 + clearance fees $0.15 + testing $0.60 = landed cost of $5.27 per unit.
+  zh: 采购 $3.10 + 头程 $0.80 + 关税 $0.62 + 清关杂费 $0.15 + 检测分摊 $0.60 = 落地成本 $5.27/件。
+data_later:
+  en: "Sources: purchase orders, forwarder invoices, entry summaries. Methods: cost per shipment. This is an exact calculation: correct inputs give a correct result."
+  zh: 来源：采购单、货代账单、报关单。方法：按批次核算。这是确定性计算，数据准确就能算准。
+rules: []

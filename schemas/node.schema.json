@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/node.schema.json",
+  "title": "Knowledge-graph node",
+  "type": "object",
+  "required": ["id", "domain", "order", "name", "what", "how", "metrics", "example", "data_later", "rules"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "domain": { "$ref": "common.schema.json#/$defs/id" },
+    "order": { "type": "integer", "minimum": 1 },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "what": { "$ref": "common.schema.json#/$defs/text" },
+    "how": { "$ref": "common.schema.json#/$defs/textList" },
+    "metrics": { "$ref": "common.schema.json#/$defs/textList" },
+    "example": { "$ref": "common.schema.json#/$defs/text", "description": "Uses the fictional running example; numbers are illustrative" },
+    "data_later": { "$ref": "common.schema.json#/$defs/text" },
+    "rules": {
+      "type": "array",
+      "description": "Rule ids, e.g. law/us/de-minimis-suspension",
+      "items": { "type": "string", "pattern": "^(law|platform)/[a-z0-9/-]+$" },
+      "uniqueItems": true
+    },
+    "legacy_rule_note": {
+      "description": "Rule text carried over from the prototype. To be replaced by entries in rules/ (work plan step 2).",
+      "type": "object",
+      "required": ["en", "zh", "sources"],
+      "additionalProperties": false,
+      "properties": {
+        "en": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+        "zh": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+        "sources": { "type": "array", "items": { "type": "integer" } }
+      }
+    }
+  }
+}

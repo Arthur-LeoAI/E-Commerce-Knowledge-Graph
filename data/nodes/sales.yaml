@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: sales
+domain: sales
+order: 36
+name:
+  en: Sales
+  zh: 销量与销售额
+what:
+  en: Units sold and revenue. Units = traffic × conversion rate.
+  zh: 卖出的件数和金额。销量 = 流量 × 转化率。
+how:
+  en:
+    - Track daily
+    - Split into traffic and conversion to find causes
+    - Separate organic and ad-driven orders
+  zh:
+    - 每天跟踪
+    - 拆成流量和转化两部分找原因
+    - 区分自然订单和广告订单
+metrics:
+  en:
+    - Units
+    - Revenue
+    - Share of organic orders
+  zh:
+    - 销量
+    - 销售额
+    - 自然订单占比
+example:
+  en: 3,000 visits × 10% conversion = 300 units a month, about 10 a day.
+  zh: 3,000 次访问 × 10% 转化率 = 每月 300 件，约每天 10 件。
+data_later:
+  en: "Methods: driver decomposition (units = traffic × conversion), an exact identity."
+  zh: 方法：驱动拆解（销量 = 流量 × 转化率），这是精确的恒等式。
+rules: []

@@ -1,0 +1,43 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: platform_fees
+domain: finance
+order: 40
+name:
+  en: Platform fees
+  zh: 平台费用
+what:
+  en: Commission, fulfilment fees and storage fees charged by the platform, or subscription and payment fees on your own website.
+  zh: 平台收取的佣金、配送费、仓储费等，或者独立站的订阅费和支付手续费。
+how:
+  en:
+    - Look up the commission rate for your category
+    - Look up fulfilment fees by size and weight
+    - Add storage and other surcharges
+    - Update the model whenever the platform changes fees
+  zh:
+    - 按类目查佣金比例
+    - 按尺寸和重量查配送费
+    - 计入仓储费等附加费用
+    - 平台每年调费后更新模型
+metrics:
+  en:
+    - Commission rate
+    - Fulfilment fee per unit
+    - Fees as % of price
+  zh:
+    - 佣金率
+    - 单件配送费
+    - 费用占售价比例
+example:
+  en: "Commission 15% × $19.99 = $3.00, FBA fulfilment fee $4.00, storage $0.20: $7.20 in total, about 36% of the price."
+  zh: 佣金 15% × $19.99 = $3.00，FBA 配送费 $4.00，仓储分摊 $0.20，合计 $7.20，占售价约 36%。
+data_later:
+  en: "Sources: fee preview reports, settlement reports. Methods: line-by-line reconciliation."
+  zh: 来源：费用预览报告、结算报告。方法：逐笔对账。
+rules: []
+legacy_rule_note:
+  en: Amazon US charges referral fees by category, about 15% for most categories; check the official fee schedule. FBA fulfilment fees depend on size tier and weight. The 2026 changes took effect on 2026-01-15; Amazon says FBA fees rose by about $0.08 per unit on average.
+  zh: Amazon 美国站按类目收取佣金，多数类目约为 15%，以官方费率表为准；FBA 配送费按尺寸分段和重量计算。2026 年费用调整自 2026-01-15 生效，官方称 FBA 配送费平均每件增加约 0.08 美元。
+  sources:
+    - 8
+    - 9

@@ -1,0 +1,335 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+- id: tacos
+  term:
+    en: TACoS
+    zh: TACoS
+  def:
+    en: Ad spend ÷ total sales (including organic orders). Shows how big advertising is relative to the whole business.
+    zh: 广告花费 ÷ 全部销售额（含自然订单），看广告在整体生意里占多大比例。
+- id: acos
+  term:
+    en: ACoS
+    zh: ACoS
+  def:
+    en: Ad spend ÷ sales from ads. Lower means the ads pay off better.
+    zh: 广告花费 ÷ 广告带来的销售额。越低，说明广告越划算。
+- id: fba
+  term:
+    en: FBA
+    zh: FBA
+  def:
+    en: "Fulfillment by Amazon: Amazon stores, ships and handles returns; you just send stock to its warehouses."
+    zh: Fulfillment by Amazon：由 Amazon 仓库负责存货、配送和售后，你只要把货送进它的仓库。
+- id: fnsku
+  term:
+    en: FNSKU
+    zh: FNSKU
+  def:
+    en: The warehouse barcode Amazon assigns to FBA items, used to tell different sellers' identical products apart.
+    zh: Amazon 给 FBA 商品贴的仓库条码，用来区分不同卖家的同款商品。
+- id: ior
+  term:
+    en: IOR
+    zh: IOR
+  def:
+    en: "Importer of Record: the party legally responsible for the customs declaration and duties."
+    zh: Importer of Record，进口商，对报关和缴税负法律责任的一方。
+- id: moq
+  term:
+    en: MOQ
+    zh: MOQ
+  def:
+    en: "Minimum order quantity: the smallest order a factory will accept."
+    zh: 最小起订量：工厂愿意接单的最低数量。
+- id: aql
+  term:
+    en: AQL
+    zh: AQL
+  def:
+    en: "A sampling inspection standard: inspect a set number of units per batch and fail the batch if defects exceed the limit."
+    zh: 抽样验货标准：按批量大小抽检一部分，缺陷数超过上限就判不合格。
+- id: bsr
+  term:
+    en: BSR
+    zh: BSR
+  def:
+    en: "Best Sellers Rank: Amazon's category ranking based on recent sales."
+    zh: Best Sellers Rank：Amazon 按近期销量给出的类目排名。
+- id: cpc
+  term:
+    en: CPC
+    zh: CPC
+  def:
+    en: "Two meanings: in ads, cost per click; in compliance, a Children's Product Certificate."
+    zh: 有两种含义：广告里是单次点击费用（Cost Per Click）；合规里是儿童产品证书（Children's Product Certificate）。
+- id: gcc
+  term:
+    en: GCC
+    zh: GCC
+  def:
+    en: "General Certificate of Conformity: shows a general consumer product meets US safety rules."
+    zh: 通用合格证书：证明一般消费品符合美国安全要求的文件。
+- id: odr
+  term:
+    en: ODR
+    zh: ODR
+  def:
+    en: "Order defect rate: negative feedback, claims and chargebacks as a share of orders; a core account health metric."
+    zh: 订单缺陷率：差评、纠纷、拒付占订单的比例，是账户健康的核心指标。
+- id: htsus
+  term:
+    en: HTSUS
+    zh: HTSUS
+  def:
+    en: The US tariff schedule; the 10-digit code sets the duty rate.
+    zh: 美国海关商品编码表，10 位编码决定关税税率。
+- id: hts
+  term:
+    en: HTS
+    zh: HTS
+  def:
+    en: Harmonized Tariff Schedule code; in the US the 10-digit code sets the duty rate.
+    zh: 美国海关商品编码（Harmonized Tariff Schedule），10 位编码决定关税税率。
+- id: hs
+  term:
+    en: HS
+    zh: HS
+  def:
+    en: The international product code system; the first 6 digits are shared worldwide and each country adds detail.
+    zh: 国际通用的商品编码（前 6 位各国一致），各国在此基础上细分。
+- id: isf
+  term:
+    en: ISF
+    zh: ISF
+  def:
+    en: Importer Security Filing, required before ocean cargo is loaded for the US (often called 10+2).
+    zh: 海运进口美国前必须提交的安全申报，俗称 10+2。
+- id: de_minimis
+  term:
+    en: de minimis
+    zh: de minimis
+  def:
+    en: Low-value duty exemption. The US used to waive duty on parcels under $800; it is now suspended.
+    zh: 小额免税待遇。美国原来对 800 美元以下的包裹免关税，现已暂停。
+- id: buy_box
+  term:
+    en: Buy Box
+    zh: Buy Box
+  def:
+    en: The “Add to Cart” spot on a product page. When several sellers offer the same item, only one wins it.
+    zh: 商品页面上“加入购物车”的位置。多个卖家卖同款时，只有一个能拿到。
+- id: a
+  term:
+    en: A+
+    zh: A+
+  def:
+    en: Rich image-and-text modules available after Brand Registry, shown lower on the product page.
+    zh: 品牌备案后可用的图文详情模块，显示在商品页面下方。
+- id: 3pl
+  term:
+    en: 3PL
+    zh: 3PL
+  def:
+    en: "Third-party logistics: a provider that stores and ships goods for you."
+    zh: 第三方物流仓：替你存货和发货的服务商。
+- id: sku
+  term:
+    en: SKU
+    zh: SKU
+  def:
+    en: "Stock keeping unit: one code per specific variant (colour, size and so on)."
+    zh: 库存单位：每个具体规格（颜色、容量等）对应一个编码。
+- id: asin
+  term:
+    en: ASIN
+    zh: ASIN
+  def:
+    en: The unique product ID Amazon assigns to each product.
+    zh: Amazon 给每个商品分配的唯一编号。
+- id: ppc
+  term:
+    en: PPC
+    zh: PPC
+  def:
+    en: Pay-per-click advertising; Amazon's on-site ads work this way.
+    zh: 按点击付费的广告，Amazon 站内广告就属于这一类。
+- id: erp
+  term:
+    en: ERP
+    zh: ERP
+  def:
+    en: "Enterprise resource planning: one system for products, purchasing, inventory, orders and finance."
+    zh: 企业资源管理系统：统一管理商品、采购、库存、订单和财务。
+- id: mape
+  term:
+    en: MAPE
+    zh: MAPE
+  def:
+    en: "Mean absolute percentage error: measures forecast accuracy. Lower is better."
+    zh: 平均绝对百分比误差，用来衡量预测准不准，越低越好。
+- id: cpsc
+  term:
+    en: CPSC
+    zh: CPSC
+  def:
+    en: US Consumer Product Safety Commission, the regulator for consumer product safety.
+    zh: 美国消费品安全委员会，负责消费品的安全监管。
+- id: fcc
+  term:
+    en: FCC
+    zh: FCC
+  def:
+    en: US Federal Communications Commission; covers wireless and electromagnetic compatibility for electronics.
+    zh: 美国联邦通信委员会，电子产品的无线和电磁兼容认证归它管。
+- id: fda
+  term:
+    en: FDA
+    zh: FDA
+  def:
+    en: US Food and Drug Administration; covers food, cosmetics, medical devices and more.
+    zh: 美国食品药品监督管理局，管食品、化妆品、医疗器械等。
+- id: cbp
+  term:
+    en: CBP
+    zh: CBP
+  def:
+    en: US Customs and Border Protection, which clears imports and collects duties.
+    zh: 美国海关与边境保护局，负责清关和征收关税。
+- id: ace
+  term:
+    en: ACE
+    zh: ACE
+  def:
+    en: US customs' electronic filing system.
+    zh: 美国海关的电子申报系统。
+- id: uspto
+  term:
+    en: USPTO
+    zh: USPTO
+  def:
+    en: US Patent and Trademark Office, where US trademarks are filed.
+    zh: 美国专利商标局，在这里申请美国商标。
+- id: vat
+  term:
+    en: VAT
+    zh: VAT
+  def:
+    en: Value-added tax, charged in the EU and elsewhere; the US has none.
+    zh: 增值税，欧盟等地区征收，美国没有。
+- id: w_8ben_e
+  term:
+    en: W-8BEN-E
+    zh: W-8BEN-E
+  def:
+    en: A form non-US companies give US payers to state their tax status.
+    zh: 非美国公司向美国付款方说明自己税务身份的表格。
+- id: proposition_65
+  term:
+    en: Proposition 65
+    zh: Proposition 65
+  def:
+    en: A California law requiring warnings on products containing certain chemicals.
+    zh: 加州法规，要求对含有特定化学物质的商品做警示。
+- id: sessions
+  term:
+    en: Sessions
+    zh: Sessions
+  def:
+    en: Visits; the traffic metric in Amazon's business reports.
+    zh: 访问次数，Amazon 业务报告里衡量流量的指标。
+- id: brand_registry
+  term:
+    en: Brand Registry
+    zh: Brand Registry
+  def:
+    en: Amazon's programme that uses a trademark to prove brand ownership and unlocks A+, Brand Stores and more.
+    zh: Amazon 品牌备案：用商标证明品牌归属，解锁 A+、品牌店等工具。
+  aliases:
+    zh:
+      - 品牌备案
+- id: ga4
+  term:
+    en: GA4
+    zh: GA4
+  def:
+    en: Google Analytics 4, a website traffic analytics tool.
+    zh: Google Analytics 4，网站流量分析工具。
+- id: prime
+  term:
+    en: Prime
+    zh: Prime
+  def:
+    en: Amazon's membership service. FBA items usually carry the Prime badge and ship faster.
+    zh: Amazon 会员服务。FBA 商品通常带 Prime 标志，配送更快。
+- id: best_sellers
+  term:
+    en: Best Sellers
+    zh: Best Sellers
+  def:
+    en: Amazon's bestseller lists by category, updated hourly.
+    zh: Amazon 按销量排出的各类目热销榜，每小时更新。
+- id: movers_shakers
+  term:
+    en: Movers & Shakers
+    zh: Movers & Shakers
+  def:
+    en: Amazon's list of products whose sales rank has risen fastest recently.
+    zh: Amazon 的飙升榜，列出近期销量排名上升最快的商品。
+- id: landed_cost
+  term:
+    en: landed cost
+    zh: 落地成本
+  def:
+    en: The total cost of one unit by the time it reaches a warehouse ready for sale.
+    zh: 一件货到达可以销售的仓库时，累计花掉的全部成本。
+- id: first_mile
+  term:
+    en: first-mile
+    zh: 头程
+  def:
+    en: The leg from the factory to a warehouse in the destination country.
+    zh: 从工厂到目的国仓库这一段运输。
+- id: reorder_point
+  term:
+    en: reorder point
+    zh: 补货点
+  def:
+    en: When stock falls to this level you must place a new order, or you'll run out.
+    zh: 库存降到这个数量时就必须下新订单，否则会断货。
+- id: safety_stock
+  term:
+    en: safety stock
+    zh: 安全库存
+  def:
+    en: Extra stock kept to absorb swings in sales and lead time.
+    zh: 为了应对销量和交期波动，额外多备的一部分库存。
+- id: conversion_rate
+  term:
+    en: conversion rate
+    zh: 转化率
+  def:
+    en: The share of visits that turn into orders.
+    zh: 访问中下单的比例。
+- id: hijackers
+  term:
+    en: hijackers
+    zh: 跟卖
+  def:
+    en: Other sellers who join your existing listing to sell the same product.
+    zh: 在别人已经创建好的商品页面上卖同一款商品。
+- id: unit_session_percentage
+  term:
+    en: Unit Session Percentage
+    zh: Unit Session Percentage
+  def:
+    en: "Amazon's name for conversion rate: units ordered ÷ sessions."
+    zh: Amazon 对转化率的叫法：订购件数 ÷ 访问次数。
+  review: true
+- id: last_mile
+  term:
+    en: last-mile
+    zh: 尾程
+  def:
+    en: The leg from a warehouse in the destination country to the customer.
+    zh: 从目的国仓库送到顾客手里这一段运输。
+  review: true

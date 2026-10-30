@@ -1,0 +1,37 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: price
+domain: sales
+order: 35
+name:
+  en: Price
+  zh: 售价
+what:
+  en: The selling price. It directly affects profit and conversion, and whether you win the Buy Box.
+  zh: 商品的销售价格，直接影响利润和转化率，也影响能否拿到 Buy Box。
+how:
+  en:
+    - Set a floor price from cost plus target profit
+    - Check competitors' price bands
+    - Set a minimum price to avoid selling at a loss
+    - Record the result of every price change
+  zh:
+    - 按成本加目标利润定出底价
+    - 参考竞品价格带
+    - 设置价格下限，防止亏本
+    - 记录每次调价的结果
+metrics:
+  en:
+    - Price
+    - Price elasticity
+    - Buy Box share
+  zh:
+    - 售价
+    - 价格弹性
+    - Buy Box 占有率
+example:
+  en: At $19.99 now. Raising it to $21.99 adds about $1.70 per unit, but how much conversion drops can only be learned by testing with real data.
+  zh: 售价 $19.99。涨到 $21.99 每件多赚约 $1.70，但转化率会降多少，只能用真实数据测试。
+data_later:
+  en: "Methods: estimate price elasticity from past price changes. Needs enough data, and must show the error range."
+  zh: 方法：用历史调价数据估算价格弹性。需要足够样本，并标出误差范围。
+rules: []

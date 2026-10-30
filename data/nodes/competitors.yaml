@@ -1,0 +1,41 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: competitors
+domain: strategy
+order: 2
+name:
+  en: Competitors
+  zh: 竞争对手
+what:
+  en: Sellers and brands fighting for the same customers and keywords. Their prices, ads and product updates affect you directly.
+  zh: 和你争同一批用户和关键词的卖家与品牌。它们的价格、广告和产品迭代会直接影响你。
+how:
+  en:
+    - List the core competing products and brands
+    - Track their price, rank, review count and promotions regularly
+    - Read their negative reviews to find improvements
+    - See which keywords they advertise on
+  zh:
+    - 列出核心竞品的商品和品牌
+    - 定期记录价格、排名、评论数、促销
+    - 拆解竞品差评，找到改进点
+    - 查看它们在投放哪些关键词
+metrics:
+  en:
+    - Competitor price
+    - Competitor rank
+    - Rating
+    - Review growth
+    - Ad placement share
+  zh:
+    - 竞品价格
+    - 竞品排名
+    - 评分
+    - 评论增速
+    - 广告位占有
+example:
+  en: Track the price and rank of 3 main competitors weekly. One of them cuts its price by $2 every weekend, so your ads get more expensive on weekends too.
+  zh: 记录 3 个主要竞品每周的价格和排名，发现其中一家每到周末降价 $2，你的广告在周末也会跟着变贵。
+data_later:
+  en: "Sources: price and rank history tools such as Keepa. Methods: time-series comparison, market share estimates."
+  zh: 来源：Keepa 等价格和排名历史数据。方法：时间序列对比、市场份额估算。
+rules: []

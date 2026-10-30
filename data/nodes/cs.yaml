@@ -1,0 +1,35 @@
+# Extracted from legacy/index.html. Licensed under Apache-2.0 (see LICENSE).
+id: cs
+domain: sales
+order: 38
+name:
+  en: Customer service
+  zh: 客服与售后
+what:
+  en: Answering pre-sale questions and handling complaints, returns and exchanges. Affects reviews, account health and repeat purchases.
+  zh: 回答售前问题，处理售后投诉和退换。影响评价、账户健康和复购。
+how:
+  en:
+    - Reply within the platform's required time
+    - Prepare templates for common questions
+    - Log issue types and feed them to the product team
+  zh:
+    - 在平台规定时间内回复买家消息
+    - 准备常见问题模板
+    - 记录问题类型，反馈给产品团队
+metrics:
+  en:
+    - Response time
+    - Resolution rate
+    - Complaint types
+  zh:
+    - 回复时长
+    - 问题解决率
+    - 投诉类型
+example:
+  en: A customer asks whether it holds hot water. You reply within 24 hours and add the answer to the listing, cutting similar questions and returns.
+  zh: 顾客问“能装热水吗”，24 小时内回复，并把答案补充到商品页面，减少类似咨询和退货。
+data_later:
+  en: "Methods: issue categorisation."
+  zh: 方法：问题分类统计。
+rules: []
