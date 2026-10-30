@@ -1,0 +1,43 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/de-minimis-suspension
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: customs
+applies_to: all
+summary:
+  en: >-
+    The US used to let shipments worth $800 or less enter duty-free ("de minimis"). Executive Order 14324 suspended
+    this for all countries from 2025-08-29 (for China from 2025-05-02), and Executive Order 14388 of 2026-02-20 kept
+    the suspension after the IEEPA ruling. From 2026-06-24 CBP made the suspension indefinite in its own regulations
+    for all transport modes (one rule for mail, one for all other modes), so low-value goods need a normal formal or
+    informal entry and pay duty. The One Big Beautiful Bill Act ends the exemption by law from 2027-07-01. For certain
+    postal shipments, the date by which formal entry becomes mandatory was moved to 2027-01-20.
+  zh: >-
+    美国过去允许价值不超过 800 美元的货物免税入境（"小额豁免"，de minimis）。第 14324 号行政令自 2025-08-29 起
+    对所有国家暂停该豁免（对中国自 2025-05-02 起），2026-02-20 的第 14388 号行政令在 IEEPA 裁决后继续维持暂停。
+    自 2026-06-24 起，CBP 在其法规中将暂停改为无限期，覆盖所有运输方式（邮件一项规则、其他方式一项规则），
+    低价值商品须按正式或非正式报关并缴纳关税。《大而美法案》（One Big Beautiful Bill Act）规定自 2027-07-01 起依法终止该豁免。
+    部分邮政包裹必须办理正式报关的合规日期已推迟至 2027-01-20。
+effective_date: 2026-06-24
+sources:
+  - title: Indefinite Suspension of the De Minimis Exemption for Merchandise Arriving Through All Modes Other Than the International Postal Network (FR Doc. 2026-12670)
+    publisher: U.S. Customs and Border Protection (Federal Register)
+    url: https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other
+    accessed: 2026-10-30
+  - title: Indefinite Suspension of the De Minimis Exemption for Mail Shipments and New Postal Informal Entry Process (FR Doc. 2026-12669)
+    publisher: U.S. Customs and Border Protection (Federal Register)
+    url: https://www.federalregister.gov/documents/2026/06/24/2026-12669/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry
+    accessed: 2026-10-30
+  - title: Indefinite Suspension of the De Minimis Exemption for Mail Shipments and New Postal Informal Entry Process; Delayed Compliance Extension (FR Doc. 2026-21600)
+    publisher: U.S. Customs and Border Protection (Federal Register)
+    url: https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry
+    accessed: 2026-10-30
+  - title: Continuing the Suspension of Duty-Free De Minimis Treatment for All Countries (Executive Order 14388, 2026-02-20)
+    publisher: The White House
+    url: https://www.whitehouse.gov/presidential-actions/2026/02/continuing-the-suspension-of-duty-free-de-minimis-treatment-for-all-countries/
+    accessed: 2026-10-30
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

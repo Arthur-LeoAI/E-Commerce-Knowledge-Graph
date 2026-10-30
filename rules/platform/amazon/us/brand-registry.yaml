@@ -1,0 +1,31 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/brand-registry
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: brand
+applies_to: all
+summary:
+  en: >-
+    Amazon Brand Registry is a free programme for brand owners. To enrol, the trademark owner
+    needs an active registered trademark or a pending application, as a word mark or as a
+    design mark containing words, letters or numbers, from a government trademark office that
+    Amazon accepts; a brand without a trademark can enrol with a pending application filed
+    through Amazon IP Accelerator. The brand name must also be permanently shown on the product
+    or its packaging. Enrolled brands get tools such as A+ Content, Brand Stores, Brand Analytics,
+    Sponsored Brands, Amazon Vine, Transparency and Report a Violation. Amazon's public pages do
+    not list the accepted trademark offices; that list is behind the Brand Registry login.
+  zh: >-
+    亚马逊品牌注册（Brand Registry）是面向品牌所有者的免费项目。申请须由商标所有者提交，需要拥有已注册或
+    申请中的商标，可以是文字商标，也可以是含文字、字母或数字的图形商标，且须由亚马逊认可的政府商标局
+    签发；尚无商标的品牌可以凭借通过亚马逊知识产权加速器（IP Accelerator）提交的商标申请加入。品牌名称
+    还必须永久地印在商品或包装上。加入后可使用 A+ 内容、品牌旗舰店、品牌分析、品牌推广广告、Amazon Vine、
+    Transparency 透明计划和“举报违规”等工具。亚马逊公开页面没有列出认可的商标局名单，该名单需登录品牌
+    注册后才能查看。
+sources:
+  - { title: Amazon Brand Registry, publisher: Amazon (sell.amazon.com), url: https://sell.amazon.com/brand-registry, accessed: 2026-10-30 }
+  - { title: Requirements and tips for enrolling a brand in Amazon Brand Registry, publisher: Amazon (sell.amazon.com blog), url: https://sell.amazon.com/blog/brand-registry-requirements, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

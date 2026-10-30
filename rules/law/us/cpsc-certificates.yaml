@@ -1,0 +1,28 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/cpsc-certificates
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: product-safety
+applies_to: all
+summary:
+  en: >-
+    US importers and domestic manufacturers must issue a written certificate for consumer products that are subject to a
+    safety rule, ban, standard or regulation enforced by the Consumer Product Safety Commission (CPSC). For general-use
+    products this is a General Certificate of Conformity (GCC), based on testing or a reasonable testing programme.
+    For children's products (designed or intended mainly for children aged 12 or younger) it is a Children's Product
+    Certificate (CPC), based on tests by a CPSC-accepted third-party laboratory. Both certificates are in English, have
+    no fixed template, and must contain seven required elements, such as the product, the rules cited, the maker or
+    importer, and the dates and places of manufacture and testing.
+  zh: >-
+    对于受美国消费品安全委员会（CPSC）所执行的安全规则、禁令、标准或法规约束的消费品，美国进口商和本土制造商必须出具书面证书。
+    普通用途产品使用一般合格证书（GCC），依据检测或合理的检测计划出具。儿童产品（主要为 12 岁及以下儿童设计或使用的产品）
+    使用儿童产品证书（CPC），必须依据 CPSC 认可的第三方实验室的检测结果。两种证书都须使用英文，没有固定模板，
+    但必须包含七项要素，例如产品识别信息、所引用的规则、制造商或进口商信息，以及生产和检测的日期与地点。
+sources:
+  - { title: General Certificate of Conformity (GCC), publisher: U.S. Consumer Product Safety Commission, url: https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Certificate-of-Conformity, accessed: 2026-10-30 }
+  - { title: Children's Product Certificate (CPC), publisher: U.S. Consumer Product Safety Commission, url: https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Product-Certificate, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

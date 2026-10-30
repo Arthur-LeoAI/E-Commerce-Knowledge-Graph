@@ -34,8 +34,6 @@ example:
 data_later:
   en: "Sources: complaint and hijacking records. Methods: frequency counts."
   zh: 来源：投诉和跟卖记录。方法：频次统计。
-rules: []
-legacy_rule_note:
-  en: US trademarks are filed with the USPTO. Amazon Brand Registry requires a registered or pending trademark; it unlocks A+ content, Brand Stores and Brand Analytics.
-  zh: 美国商标在 USPTO 申请。Amazon 品牌备案（Brand Registry）需要已注册或已申请的商标，备案后才能使用 A+ 内容、品牌旗舰店和 Brand Analytics 等功能。
-  sources: []
+rules:
+  - law/us/uspto-trademark
+  - platform/amazon/us/brand-registry

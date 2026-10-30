@@ -1,0 +1,27 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/cpsc-efiling
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: product-safety
+applies_to: all
+summary:
+  en: >-
+    A CPSC final rule (16 CFR part 1110, published 2025-01-08) requires importers to file certificate data electronically
+    with US Customs and Border Protection (CBP) in its ACE system when they file entry for imported finished consumer
+    products that must be certified (products subject to a CPSC rule, ban, standard or regulation). It took effect on
+    2026-07-08; for products entered from a foreign trade zone the date is 2027-01-08. Importers can send all certificate
+    data in ACE, or store it in CPSC's Product Registry and send a reference ID.
+  zh: >-
+    CPSC 的最终规则（16 CFR 第 1110 部分，2025-01-08 公布）要求进口商在为需要认证的进口成品消费品（受 CPSC 规则、禁令、
+    标准或法规约束的产品）办理入境申报时，通过美国海关与边境保护局（CBP）的 ACE 系统以电子方式提交证书数据。
+    该规则自 2026-07-08 起生效；从对外贸易区（FTZ）入境的产品自 2027-01-08 起适用。进口商可以在 ACE 中提交全部证书数据，
+    也可以先把数据存入 CPSC 的 Product Registry，再提交一个参考编号。
+effective_date: 2026-07-08
+sources:
+  - { title: "Certificates of Compliance, final rule (90 FR 1800, 2025-01-08)", publisher: Federal Register via govinfo.gov (U.S. Government Publishing Office), url: https://www.govinfo.gov/content/pkg/FR-2025-01-08/html/2024-30826.htm, accessed: 2026-10-30 }
+  - { title: General Certificate of Conformity (GCC), publisher: U.S. Consumer Product Safety Commission, url: https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Certificate-of-Conformity, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

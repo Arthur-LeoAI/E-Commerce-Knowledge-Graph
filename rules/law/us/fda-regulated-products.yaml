@@ -1,0 +1,30 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/fda-regulated-products
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: product-safety
+applies_to: [food, cosmetics, medical devices, food-contact materials, radiation-emitting electronic products]
+summary:
+  en: >-
+    The US Food and Drug Administration (FDA) regulates, among other things, foods and dietary supplements, cosmetics,
+    medical devices and radiation-emitting electronic products. It also regulates food-contact substances, i.e. materials
+    in packaging, cookware or other items that touch food. Such a substance needs a legal basis for its use, for example
+    a listing in the food additive regulations (21 CFR 174–179), GRAS status, a prior sanction, a threshold-of-regulation
+    exemption or an effective food contact notification. For rubber articles meant for repeated use with food,
+    including silicone elastomers, 21 CFR 177.2600 lists permitted ingredients and extraction limits.
+  zh: >-
+    美国食品药品监督管理局（FDA）的监管范围包括食品和膳食补充剂、化妆品、医疗器械以及产生辐射的电子产品等。
+    FDA 还监管食品接触物质，即包装、炊具或其他会接触食品的物品中所用的材料。此类物质的用途需要有法规依据，
+    例如列入食品添加剂法规（21 CFR 第 174–179 部分）、具有 GRAS（公认安全）地位、事先批准、适用监管阈值豁免，
+    或拥有已生效的食品接触物质通报（FCN）。对于反复接触食品的橡胶制品（包括硅橡胶），21 CFR 177.2600
+    规定了允许使用的成分和萃取物限值。
+sources:
+  - { title: What Does FDA Regulate?, publisher: U.S. Food and Drug Administration, url: https://www.fda.gov/about-fda/what-we-do/what-does-fda-regulate, accessed: 2026-10-30 }
+  - { title: "Food Packaging & Other Substances that Come in Contact with Food: Information for Consumers", publisher: U.S. Food and Drug Administration, url: https://www.fda.gov/food/food-ingredients-packaging/food-packaging-other-substances-come-contact-food-information-consumers, accessed: 2026-10-30 }
+  - { title: Determining the Regulatory Status of Components of a Food Contact Material, publisher: U.S. Food and Drug Administration, url: https://www.fda.gov/food/packaging-food-contact-substances-fcs/determining-regulatory-status-components-food-contact-material, accessed: 2026-10-30 }
+  - { title: "21 CFR 177.2600 Rubber articles intended for repeated use (CFR 2025 edition)", publisher: govinfo.gov (U.S. Government Publishing Office), url: https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol3/xml/CFR-2025-title21-vol3-sec177-2600.xml, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

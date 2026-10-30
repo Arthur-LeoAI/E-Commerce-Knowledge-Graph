@@ -32,8 +32,6 @@ example:
 data_later:
   en: Not a data node; manage it with a register.
   zh: 非数据节点，用台账管理即可。
-rules: []
-legacy_rule_note:
-  en: Foreign companies can sell directly on Amazon.com. Non-US entities usually submit Form W-8BEN-E for US tax purposes. Ask an accountant or lawyer about entity and tax structure.
-  zh: 外国公司可以直接在 Amazon.com 开店。非美国主体涉及美国税务表格时，通常提交 W-8BEN-E。主体和税务结构请咨询专业会计师或律师。
-  sources: []
+rules:
+  - law/us/w-8ben-e
+  - platform/amazon/us/seller-registration

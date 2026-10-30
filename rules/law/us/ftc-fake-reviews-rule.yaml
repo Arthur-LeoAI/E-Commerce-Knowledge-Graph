@@ -1,0 +1,29 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/ftc-fake-reviews-rule
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: reviews
+applies_to: all
+summary:
+  en: >-
+    The FTC's Trade Regulation Rule on the Use of Consumer Reviews and Testimonials (16 CFR Part 465) took effect on
+    2024-10-21. It bans writing, buying or selling fake reviews and testimonials (including AI-generated ones), giving
+    rewards on the condition that a review is positive or negative, undisclosed reviews by company insiders,
+    company-run review sites presented as independent, suppressing reviews through threats, intimidation or false
+    accusations, and buying or selling fake social media influence. Asking customers for reviews is not banned by the
+    rule itself, as long as no particular sentiment is required. The FTC can seek civil penalties from knowing violators.
+  zh: >-
+    美国联邦贸易委员会（FTC）的《消费者评论与推荐使用贸易监管规则》（16 CFR Part 465）于 2024-10-21 生效。它禁止：
+    撰写、购买或出售虚假评论和推荐（包括 AI 生成的）；以评论必须是好评或差评为条件给予奖励；公司内部人员未披露关系的评论；
+    由公司控制却自称独立的评论网站；以威胁、恐吓或虚假指控压制评论；以及买卖虚假的社交媒体影响力指标。
+    该规则本身并不禁止邀请顾客留评，只要不要求特定倾向。对明知故犯者，FTC 可以寻求民事罚款。
+effective_date: 2024-10-21
+sources:
+  - { title: "Trade Regulation Rule on the Use of Consumer Reviews and Testimonials (89 FR 68034)", publisher: Federal Register / Federal Trade Commission, url: "https://www.govinfo.gov/content/pkg/FR-2024-08-22/html/2024-18519.htm", accessed: 2026-10-30 }
+  - { title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", publisher: Federal Trade Commission, url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", accessed: 2026-10-30 }
+  - { title: "The Consumer Reviews and Testimonials Rule: Questions and Answers", publisher: Federal Trade Commission, url: "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

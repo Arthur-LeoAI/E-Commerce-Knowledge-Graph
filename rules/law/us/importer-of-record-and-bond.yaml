@@ -1,0 +1,41 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/importer-of-record-and-bond
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: customs
+applies_to: all
+summary:
+  en: >-
+    Every US import has an importer of record (IOR), the party legally responsible for entering the goods, classifying
+    and valuing them with reasonable care, and paying duties. Shipments valued at $2,500 or less may generally use
+    informal entry; formal entries need a customs bond on CBP Form 301 before the goods are released (19 CFR 142.4).
+    A bond is either single-transaction (generally at least the entered value plus duties, taxes and fees) or continuous
+    (at least $50,000, or 10% of the duties, taxes and fees of the previous 12 months if higher). CBP proposed on
+    2026-10-08 to also require bonds for certain informal entries; that proposal is not final.
+  zh: >-
+    每一票美国进口都有一个进口记录人（importer of record，IOR），即在法律上负责报关、以合理谨慎进行归类和估价并缴纳关税的一方。
+    价值不超过 2,500 美元的货物一般可走非正式报关；正式报关则须在放行前提交 CBP 301 表格的海关保证金（bond）
+    （19 CFR 142.4）。保证金分为单次保证金（一般不低于申报价值加关税、税费）和年度连续保证金（至少 50,000 美元，
+    或上一 12 个月关税、税费总额的 10%，取较高者）。CBP 于 2026-10-08 提议对部分非正式报关也要求保证金，该提案尚未生效。
+sources:
+  - title: "A Guide for the Public: How CBP Sets Bond Amounts (February 2024)"
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/sites/default/files/assets/documents/2024-Feb/FINAL_A%20Guide%20for%20the%20Public_How%20CBP%20Sets%20Bond%20Amounts%20(February%202024)_0.pdf
+    accessed: 2026-10-30
+  - title: 19 CFR 142.4 - Bond requirements
+    publisher: Electronic Code of Federal Regulations (eCFR)
+    url: https://www.ecfr.gov/current/title-19/chapter-I/part-142/subpart-A/section-142.4
+    accessed: 2026-10-30
+  - title: 19 CFR 143.21 - Merchandise eligible for informal entry
+    publisher: Electronic Code of Federal Regulations (eCFR)
+    url: https://www.ecfr.gov/current/title-19/chapter-I/part-143/subpart-C/section-143.21
+    accessed: 2026-10-30
+  - title: Low-Value Shipments (proposed rule, FR Doc. 2026-20650, comments close 2026-12-07)
+    publisher: U.S. Customs and Border Protection (Federal Register)
+    url: https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments
+    accessed: 2026-10-30
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

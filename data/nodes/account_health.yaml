@@ -32,4 +32,5 @@ example:
 data_later:
   en: "Sources: account health reports. Methods: threshold alerts."
   zh: 来源：账户健康报告。方法：阈值预警。
-rules: []
+rules:
+  - platform/amazon/us/account-health

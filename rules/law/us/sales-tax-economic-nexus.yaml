@@ -1,0 +1,32 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/sales-tax-economic-nexus
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: sales-tax
+applies_to: all
+summary:
+  en: >-
+    The US federal government does not control sales tax. Each state decides whether to levy it and at what rate, and
+    cities and counties often add their own; Alaska, Delaware, Montana, New Hampshire and Oregon have no statewide
+    sales tax. On 2018-06-21 the Supreme Court decided South Dakota v. Wayfair and dropped the old rule that a seller
+    needed a physical presence in a state before that state could make it collect sales tax. States may now use
+    "economic nexus": a duty to collect once a remote seller's sales into the state pass a threshold set by that state
+    (South Dakota's law used more than $100,000 of sales or 200 or more transactions a year; other states set their
+    own thresholds).
+  zh: >-
+    美国的销售税不由联邦政府管理。是否征收销售税、税率多少，由各州自行决定，市和县往往还会另加地方税；阿拉斯加、特拉华、蒙大拿、
+    新罕布什尔和俄勒冈五个州没有州级销售税。2018-06-21，美国最高法院在 South Dakota v. Wayfair 案中废除了旧规则：
+    过去卖家必须在某州有实体存在，该州才能要求其代收销售税。如今各州可以采用“经济关联”（economic nexus）标准：
+    远程卖家向该州的销售额超过该州设定的门槛后，就需要代收销售税（南达科他州法律的门槛是每年销售额超过 100,000 美元，
+    或交易笔数达到 200 笔及以上；其他州各自设定门槛）。
+effective_date: 2018-06-21
+sources:
+  - { title: "South Dakota v. Wayfair, Inc., 585 U.S. 162 (2018), preliminary print", publisher: Supreme Court of the United States, url: "https://www.supremecourt.gov/opinions/17pdf/585us1r58_pok0.pdf", accessed: 2026-10-30 }
+  - { title: "Docket No. 17-494, South Dakota v. Wayfair, Inc.", publisher: Supreme Court of the United States, url: "https://www.supremecourt.gov/docket/docketfiles/html/public/17-494.html", accessed: 2026-10-30 }
+  - { title: "South Dakota v. Wayfair, Inc. (opinion text and syllabus)", publisher: "Legal Information Institute, Cornell Law School", url: "https://www.law.cornell.edu/supremecourt/text/17-494", accessed: 2026-10-30 }
+  - { title: "What is sales tax?", publisher: Sales Tax Institute, url: "https://www.salestaxinstitute.com/faqs/what-is-sales-tax", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

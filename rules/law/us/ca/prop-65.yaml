@@ -1,0 +1,27 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/ca/prop-65
+kind: law
+jurisdiction: us-ca
+platform: null
+marketplace: null
+topic: product-safety
+applies_to: all
+summary:
+  en: >-
+    California's Proposition 65 requires businesses with 10 or more employees to give a clear and reasonable warning
+    before knowingly exposing people in California to a listed chemical that causes cancer, birth defects or other
+    reproductive harm, unless the exposure is below the relevant safe-harbor level. Products sold online need a warning
+    on or with the product and a warning shown before the purchase is completed. Amended warning regulations took effect
+    on 2025-01-01: products manufactured and labeled from 2028-01-01 that use the short-form warning must name at least
+    one listed chemical; products labeled before then may keep the earlier short form.
+  zh: >-
+    加州第 65 号提案（Prop 65）要求雇员人数在 10 人及以上的企业，在明知会让加州人接触到列入清单、可致癌、致出生缺陷或
+    其他生殖危害的化学物质之前，提供清晰合理的警示，除非接触量低于相应的安全港水平。网上销售的产品既需要在产品上或随产品
+    提供警示，也需要在完成购买前向买家展示警示。修订后的警示法规自 2025-01-01 起生效：自 2028-01-01 起生产并贴标、
+    且使用简短格式警示的产品，必须写明至少一种清单中的化学物质；在此之前贴标的产品可以继续使用原来的简短格式。
+effective_date: 2025-01-01
+sources:
+  - { title: Frequently Asked Questions for Businesses, publisher: "California Office of Environmental Health Hazard Assessment (OEHHA), Proposition 65 Warnings Website", url: https://www.p65warnings.ca.gov/business-resources/frequently-asked-questions-businesses, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

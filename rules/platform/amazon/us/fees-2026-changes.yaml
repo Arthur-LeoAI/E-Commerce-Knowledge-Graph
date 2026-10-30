@@ -1,0 +1,32 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/fees-2026-changes
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: fees
+applies_to: all
+summary:
+  en: >-
+    Amazon's 2026 update to US selling fees took effect on 15 January 2026. Amazon says FBA fees
+    rose by about $0.08 per unit sold on average; the published summary lists changes to FBA
+    fulfilment, inbound placement, aged-inventory and some other fees, but no change to referral
+    fee rates. Since 17 April 2026 Amazon has added a 3.5% fuel and logistics surcharge on top of
+    US FBA fulfilment fees, which it calls temporary, with no end date given. Higher holiday-peak
+    fulfilment fees apply from 15 October 2026 to 14 January 2027.
+  zh: >-
+    亚马逊 2026 年美国站费用调整自 2026 年 1 月 15 日起生效。亚马逊表示，FBA 费用平均每售出一件上涨约
+    0.08 美元；官方摘要列出了 FBA 配送费、入库配置费、超龄库存费等调整，但没有调整销售佣金费率。自
+    2026 年 4 月 17 日起，亚马逊在美国 FBA 配送费之外另加收 3.5% 的燃油和物流附加费，称其为临时措施，
+    但未给出结束日期。2026 年 10 月 15 日至 2027 年 1 月 14 日适用更高的假日旺季配送费。
+effective_date: 2026-01-15
+sources:
+  - { title: 2026 US Referral and FBA fee changes summary, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G201411300, accessed: 2026-10-30 }
+  - { title: 2026 US FBA fulfillment fee changes, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GABBX6GZPA8MSZGW, accessed: 2026-10-30 }
+  - { title: Update to U.S. Referral and Fulfillment by Amazon fees for 2026, publisher: Amazon (sellingpartners.aboutamazon.com), url: https://sellingpartners.aboutamazon.com/update-to-u-s-referral-and-fulfillment-by-amazon-fees-for-2026, accessed: 2026-10-30 }
+  - { title: 2026 Updates to US Referral and Fulfillment by Amazon Fees (forum announcement), publisher: Amazon Seller Forums, url: https://sellercentral.amazon.com/seller-forums/discussions/t/f3fa3211-820b-4e2e-a023-158a9cf55f99, accessed: 2026-10-30 }
+  - { title: Fuel and logistics-related surcharge announcement, publisher: Amazon Seller Forums (News_Amazon), url: https://sellercentral.amazon.com/seller-forums/discussions/t/7cbc0233-ee5b-4359-978a-dee7cad5c6f4, accessed: 2026-10-30 }
+  - { title: Amazon 2026 fee updates, publisher: Feedvisor, url: https://www.feedvisor.com/resources/amazon-trends/amazon-2026-fee-updates/, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

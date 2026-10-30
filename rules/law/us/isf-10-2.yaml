@@ -1,0 +1,38 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/isf-10-2
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: customs
+applies_to: all
+summary:
+  en: >-
+    For goods shipped to the US by ocean vessel, the importer (or its agent, often a customs broker) must file an
+    Importer Security Filing ("ISF" or "10+2") with CBP electronically. Most of the 10 importer data elements (seller,
+    buyer, IOR number, consignee, manufacturer, ship-to party, country of origin, 6-digit HTS code) are due at least
+    24 hours before the cargo is loaded onto the vessel at the foreign port; the carrier adds 2 more elements. The ISF
+    must be covered by a bond, and CBP may claim liquidated damages of $5,000 for a late or inaccurate filing. The rule
+    has applied since 2009-01-26.
+  zh: >-
+    通过海运运往美国的货物，进口方（或其代理人，通常是报关行）必须以电子方式向 CBP 提交进口安全申报（ISF，又称"10+2"）。
+    10 项进口方数据中的大部分（卖方、买方、进口记录人编号、收货人、制造商、送达方、原产国、6 位 HTS 编码）
+    须在货物于境外港口装船前至少 24 小时提交；承运人另外提交 2 项数据。ISF 必须有保证金担保，
+    逾期或不准确的申报，CBP 可主张 5,000 美元的违约赔偿金（liquidated damages）。该规则自 2009-01-26 起实施。
+effective_date: 2009-01-26
+sources:
+  - title: Importer Security Filing "10+2"
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/border-security/ports-entry/cargo-security/importer-security-filing-102
+    accessed: 2026-10-30
+  - title: 19 CFR 149.2 - Importer security filing (requirement, time of transmission)
+    publisher: Electronic Code of Federal Regulations (eCFR)
+    url: https://www.ecfr.gov/current/title-19/chapter-I/part-149/section-149.2
+    accessed: 2026-10-30
+  - title: Importer Security Filing (ISF) FAQ 2.0 (May 2023)
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/sites/default/files/assets/documents/2023-May/ISF%20FAQ%202.0%20(508).pdf
+    accessed: 2026-10-30
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

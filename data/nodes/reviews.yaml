@@ -32,8 +32,6 @@ example:
 data_later:
   en: "Methods: review text analysis, rating trends."
   zh: 方法：评论文本分析、评分趋势。
-rules: []
-legacy_rule_note:
-  en: The US FTC has rules against fake reviews and testimonials, and Amazon prohibits buying or manipulating reviews.
-  zh: 美国 FTC 有专门针对虚假评论和评价的规则，Amazon 也禁止购买或操纵评论。
-  sources: []
+rules:
+  - law/us/ftc-fake-reviews-rule
+  - platform/amazon/us/customer-reviews-policy

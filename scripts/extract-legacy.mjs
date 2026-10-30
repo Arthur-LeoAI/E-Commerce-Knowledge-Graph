@@ -1,6 +1,8 @@
 // One-time extraction of all content from legacy/index.html into data/*.yaml.
 // The data files are the source of truth once they exist: this script refuses to
 // overwrite them unless run with --force, so later edits are never lost by accident.
+// Kept for the record only: after extraction, sources.yaml and each node's legacy_rule_note
+// were replaced by the sourced rule files in rules/ (work plan step 2).
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';

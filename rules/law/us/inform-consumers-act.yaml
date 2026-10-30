@@ -1,0 +1,28 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/inform-consumers-act
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: account
+applies_to: all
+summary:
+  en: >-
+    The INFORM Consumers Act took effect on 2023-06-27. Online marketplaces must collect and verify bank account,
+    tax ID and contact information from "high-volume" third-party sellers: those with 200 or more sales of new or
+    unused consumer products and $5,000 or more in gross revenue on the platform in any continuous 12-month period
+    within the last 24 months. Sellers must re-certify their information every year, and a marketplace must suspend a
+    seller who does not provide it in time. For sellers with $20,000 or more in annual gross revenue on the platform,
+    the name, physical address and contact details must be disclosed to buyers.
+  zh: >-
+    《INFORM 消费者法》于 2023-06-27 生效。在线市场必须向“高销量”第三方卖家收集并核实银行账户、税号和联系方式；
+    高销量卖家指在过去 24 个月内任意连续 12 个月中，在该平台售出新的或未使用的消费品 200 笔及以上、且总收入达到
+    5,000 美元及以上的卖家。卖家每年须重新确认信息；未按时提供信息的，平台必须暂停其销售。
+    在平台上年总收入达到 20,000 美元及以上的卖家，其姓名、实际地址和联系方式须向买家披露。
+effective_date: 2023-06-27
+sources:
+  - { title: "Informing Businesses about the INFORM Consumers Act", publisher: Federal Trade Commission, url: "https://www.ftc.gov/business-guidance/resources/informing-businesses-about-inform-consumers-act", accessed: 2026-10-30 }
+  - { title: "The INFORM Consumers Act takes effect on June 27", publisher: Amazon (About Amazon), url: "https://www.aboutamazon.com/news/policy-news-views/inform-consumers-act-takes-effect-on-june-27", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

@@ -36,9 +36,9 @@ example:
 data_later:
   en: "Sources: certificate register. Methods: expiry reminders."
   zh: 来源：证书台账。方法：到期提醒。
-rules: []
-legacy_rule_note:
-  en: General consumer products need a GCC (General Certificate of Conformity); children's products need a CPC based on testing by a CPSC-accepted third-party lab. Since 2026-07-08, certificate data for CPSC-regulated imports must be filed electronically in CBP's ACE system (eFiling). Electronics often fall under the FCC; food, cosmetics and medical devices under the FDA. California's Proposition 65 requires warnings for certain chemicals.
-  zh: 一般消费品需要 GCC（通用合格证书），儿童产品需要由 CPSC 认可的第三方实验室检测并出具 CPC。自 2026-07-08 起，CPSC 监管的产品进口时需在 CBP 的 ACE 系统里电子申报证书数据（eFiling）。电子产品常涉及 FCC；食品、化妆品、医疗器械归 FDA 监管；加州 Proposition 65 要求对特定化学物质做警示。
-  sources:
-    - 7
+rules:
+  - law/us/cpsc-certificates
+  - law/us/cpsc-efiling
+  - law/us/fcc-equipment-authorization
+  - law/us/fda-regulated-products
+  - law/us/ca/prop-65

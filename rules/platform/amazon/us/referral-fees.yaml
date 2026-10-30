@@ -1,0 +1,30 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/referral-fees
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: fees
+applies_to: all
+summary:
+  en: >-
+    For every item sold, Amazon charges a referral fee: a percentage of the total sales price
+    (item price plus any delivery and gift-wrap charges, excluding tax), or a per-item minimum,
+    whichever is higher. The percentage depends on the product category; many categories,
+    such as Home and Kitchen, Toys and Games and Sports and Outdoors, are 15%, while Computers
+    is 8%. Some categories use price-dependent or tiered rates (for example Clothing and
+    Accessories: 5%, 10% or 17% depending on price). The minimum is $0.30 per item in most
+    categories; a few, such as Media and Gift Cards, have none. This is separate from the
+    selling plan fee (Professional $39.99 per month, or $0.99 per item on the Individual plan).
+  zh: >-
+    每售出一件商品，亚马逊都会收取销售佣金：按总销售价格（商品价格加上配送费和礼品包装费，不含税）
+    的一定百分比计算，或按单件最低佣金收取，以较高者为准。百分比取决于商品分类：家居厨房、玩具游戏、
+    运动户外等许多分类为 15%，电脑类为 8%。部分分类按价格分段或分级收费（例如服装配饰按价格分别为
+    5%、10% 或 17%）。大多数分类的单件最低佣金为 0.30 美元，媒介类、礼品卡等少数分类没有最低佣金。
+    销售佣金与销售计划月费分开计算（专业计划每月 39.99 美元，个人计划每售出一件 0.99 美元）。
+sources:
+  - { title: Referral fees, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GTG4BAWSY39Z98Z3, accessed: 2026-10-30 }
+  - { title: Amazon seller fees and pricing, publisher: Amazon (sell.amazon.com), url: https://sell.amazon.com/pricing, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

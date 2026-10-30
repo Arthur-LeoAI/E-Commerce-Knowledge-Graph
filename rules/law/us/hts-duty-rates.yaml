@@ -1,0 +1,37 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/hts-duty-rates
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: tariff
+applies_to: all
+summary:
+  en: >-
+    The base US import duty for a product comes from its code in the Harmonized Tariff Schedule of the United States
+    (HTSUS), which you can search on hts.usitc.gov. The legal duty rate is set at the 8-digit level; two more digits
+    form the 10-digit statistical reporting number used for trade statistics, and every 10-digit number under an
+    8-digit line has the same rate. Under 19 U.S.C. 1484 the importer of record must use "reasonable care" to classify
+    and value the goods; CBP makes the final decision, and an importer can ask CBP for a binding ruling. Extra tariffs
+    (for example Section 301 or 232) can apply on top of the base rate.
+  zh: >-
+    美国进口商品的基础关税取决于其在《美国协调关税表》（HTSUS）中的编码，可在 hts.usitc.gov 查询。
+    法定税率设在 8 位编码层级；再加两位构成 10 位统计编码，用于贸易统计，同一 8 位税目下的所有 10 位编码税率相同。
+    根据 19 U.S.C. 1484，进口商（importer of record）必须以"合理谨慎"（reasonable care）对商品进行归类和估价；
+    最终由 CBP 认定，进口商也可向 CBP 申请具有约束力的预裁定。基础税率之外还可能叠加其他关税（如第 301 条或第 232 条）。
+sources:
+  - title: Harmonized Tariff Schedule (search)
+    publisher: U.S. International Trade Commission
+    url: https://hts.usitc.gov/
+    accessed: 2026-10-30
+  - title: "What Every Member of the Trade Community Should Know About: Tariff Classification (Informed Compliance Publication, May 2004)"
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/sites/default/files/documents/icp017r2_3.pdf
+    accessed: 2026-10-30
+  - title: "A Guide for the Public: How CBP Sets Bond Amounts (February 2024), section 2.2 on reasonable care"
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/sites/default/files/assets/documents/2024-Feb/FINAL_A%20Guide%20for%20the%20Public_How%20CBP%20Sets%20Bond%20Amounts%20(February%202024)_0.pdf
+    accessed: 2026-10-30
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

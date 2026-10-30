@@ -57,7 +57,6 @@ const edges = loadList('edges.yaml', 'edge');
 const phases = loadList('phases.yaml', 'phase');
 const tour = loadList('tour.yaml', 'tour');
 const glossary = loadList('glossary.yaml', 'glossary');
-const sources = loadList('sources.yaml', 'source');
 loadList('tools.yaml', 'tool');
 const ui = load(data('ui.yaml'));
 check('ui', ui, data('ui.yaml'));
@@ -92,7 +91,6 @@ const unique = (items, key, file, what) => {
 };
 const domainIds = unique(domains, (d) => d.id, data('domains.yaml'), 'domain id');
 const nodeIds = unique(nodes, (x) => x.node.id, data('nodes'), 'node id');
-const sourceIds = unique(sources, (s) => s.id, data('sources.yaml'), 'source id');
 const ruleIds = new Set(rules.map((x) => x.rule.id));
 unique(edges, (e) => `${e.from} -> ${e.to}`, data('edges.yaml'), 'edge');
 unique(glossary, (g) => g.id, data('glossary.yaml'), 'glossary id');
@@ -103,7 +101,10 @@ unique(glossary.flatMap((g) => [g.term.zh, ...(g.aliases?.zh ?? [])]), (t) => t,
 for (const { file, node } of nodes) {
   if (!domainIds.has(node.domain)) err(file, `unknown domain "${node.domain}"`);
   for (const r of node.rules ?? []) if (!ruleIds.has(r)) err(file, `unknown rule "${r}"`);
-  for (const s of node.legacy_rule_note?.sources ?? []) if (!sourceIds.has(s)) err(file, `unknown source id ${s}`);
+}
+const linked = new Set(nodes.flatMap((x) => x.node.rules ?? []));
+for (const { file, rule } of rules) {
+  if (!linked.has(rule.id)) warnings.push(`${rel(file)}: not linked from any node`);
 }
 edges.forEach((e, i) => {
   for (const end of [e.from, e.to]) if (!nodeIds.has(end)) err(data('edges.yaml'), `[${i}] unknown node "${end}"`);
@@ -135,7 +136,7 @@ const bilingual = (value, file, where) => {
     if (k !== 'aliases') bilingual(v, file, `${where}/${k}`); // aliases are per language by design
   }
 };
-for (const name of ['domains.yaml', 'edges.yaml', 'phases.yaml', 'tour.yaml', 'glossary.yaml', 'sources.yaml', 'tools.yaml', 'ui.yaml']) {
+for (const name of ['domains.yaml', 'edges.yaml', 'phases.yaml', 'tour.yaml', 'glossary.yaml', 'tools.yaml', 'ui.yaml']) {
   bilingual(load(data(name)), data(name), '');
 }
 nodes.forEach(({ file, node }) => bilingual(node, file, ''));
@@ -149,11 +150,11 @@ for (const { file, rule } of rules) {
 
 // --- report ---------------------------------------------------------------------------
 const review = glossary.filter((g) => g.review).length;
-const pendingNotes = nodes.filter((x) => x.node.legacy_rule_note).length;
+const pending = rules.filter((x) => x.rule.status === 'pending').length;
 console.log(`Checked: ${domains.length} domains, ${nodes.length} nodes, ${edges.length} edges, ${phases.length} phases, ` +
-  `${tour.length} tour stops, ${glossary.length} glossary entries, ${sources.length} sources, ${Object.keys(ui ?? {}).length} UI strings, ${rules.length} rules.`);
+  `${tour.length} tour stops, ${glossary.length} glossary entries, ${Object.keys(ui ?? {}).length} UI strings, ${rules.length} rules.`);
 if (review) console.log(`Note: ${review} glossary entries are marked review: true (one language translated during extraction).`);
-if (pendingNotes) console.log(`Note: ${pendingNotes} nodes still carry legacy_rule_note (to move into rules/ in step 2).`);
+if (pending) console.log(`Note: ${pending} rules have status: pending (not yet confirmed from a reputable source).`);
 warnings.forEach((w) => console.log(`WARNING ${w}`));
 if (errors.length) {
   errors.forEach((e) => console.error(`ERROR ${e}`));

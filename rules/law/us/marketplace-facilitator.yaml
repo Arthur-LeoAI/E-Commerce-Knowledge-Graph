@@ -1,0 +1,29 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/marketplace-facilitator
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: sales-tax
+applies_to: all
+summary:
+  en: >-
+    After Wayfair, states passed "marketplace facilitator" laws that make a marketplace such as Amazon collect and pay
+    sales tax on the sales it facilitates for third-party sellers. Missouri was the last state with a sales tax to adopt
+    such a law, effective 2023-01-01; since then marketplace collection applies in every state that has a statewide
+    sales tax (as reported by tax-industry sources; no single official list was found). Details still differ by state:
+    some states also expect marketplace-only sellers to register, and sales made outside the marketplace, for example
+    on your own website, can count toward a state's threshold and remain the seller's own responsibility.
+  zh: >-
+    Wayfair 判决之后，各州陆续通过“市场促成者”（marketplace facilitator）法律，要求亚马逊这类平台对其为第三方卖家促成的
+    销售代收代缴销售税。密苏里是最后一个通过此类法律的征收销售税的州，自 2023-01-01 起生效；此后，所有征收州级销售税的州
+    都已实行平台代收（此说法来自税务行业来源，未找到单一官方清单）。各州细节仍有差别：部分州要求只在平台上销售的卖家也要登记；
+    在平台以外的销售（例如自建网站）可能计入该州门槛，相应销售税仍由卖家自行负责。
+effective_date: 2023-01-01
+sources:
+  - { title: "FAQs - Remote Seller and Marketplace Facilitator", publisher: Missouri Department of Revenue, url: "https://dor.mo.gov/faq/taxation/business/remote-seller-and-marketplace-facilitator.html", accessed: 2026-10-30 }
+  - { title: "Missouri's marketplace facilitator sales tax law, explained", publisher: TaxJar, url: "https://www.taxjar.com/blog/07-21-missouri-final-state-to-enact-wayfair-sales-tax-laws", accessed: 2026-10-30 }
+  - { title: "Missouri: Final State to Enact Sales Tax Economic Nexus and Marketplace Legislation", publisher: BDO USA, url: "https://www.bdo.com/insights/tax/missouri-final-state-to-enact-sales-tax-economic-nexus-and-marketplace-legislation", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

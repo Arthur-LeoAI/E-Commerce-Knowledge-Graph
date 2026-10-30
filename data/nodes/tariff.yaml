@@ -32,11 +32,6 @@ example:
 data_later:
   en: "Sources: entry summaries, HTS rate tables. Methods: scenario comparison (unit profit at different rates)."
   zh: 来源：报关单、HTS 税率表。方法：情景对比（不同税率下的单件利润）。
-rules: []
-legacy_rule_note:
-  en: Base rates follow the 10-digit HTSUS code. On 2026-02-20 the US Supreme Court ruled the IEEPA tariffs invalid; the temporary Section 122 surcharge that followed expired on 2026-07-24 and was replaced by new Section 301 tariffs of 10% or 12.5% on about 60 economies; Section 232 tariffs on steel, aluminium, autos and others remain. Tariff policy changes often, so check the official HTS and CBP before ordering.
-  zh: 基础税率按 HTSUS 10 位编码确定。2026-02-20 美国最高法院裁定 IEEPA 关税无效；随后的 Section 122 临时附加税于 2026-07-24 到期，由对约 60 个经济体征收 10% 或 12.5% 的新 Section 301 关税接替；钢、铝、汽车等仍有 Section 232 关税。关税政策变化频繁，下单前应在官方 HTS 和 CBP 查询最新税率。
-  sources:
-    - 1
-    - 2
-    - 3
+rules:
+  - law/us/tariffs-2026
+  - law/us/hts-duty-rates

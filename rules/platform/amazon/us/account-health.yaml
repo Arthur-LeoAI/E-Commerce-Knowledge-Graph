@@ -1,0 +1,33 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/account-health
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: account
+applies_to: all
+summary:
+  en: >-
+    Amazon rates each selling account with an Account Health Rating (AHR) from 0 to 1,000, based
+    on policy violations over the last 180 days: 200–1,000 is Healthy, 100–199 is At Risk, and 99
+    or lower means the account can be or has been deactivated. New sellers start at 200. For
+    orders the seller ships itself (not FBA), Amazon also sets performance targets: Order Defect
+    Rate below 1% (60 days), Cancellation Rate below 2.5% (7 days), Late Shipment Rate below 4%
+    (10 and 30 days) and Valid Tracking Rate of at least 95% per category. Missing them can lead to
+    suspension of seller-fulfilled selling or offers. Amazon may also deactivate an account at
+    once for suspected fraud or other harmful activity, whatever the score.
+  zh: >-
+    亚马逊用账户健康评级（AHR）为每个销售账户打分，范围为 0 至 1000，依据过去 180 天的政策违规情况：
+    200–1000 为“健康”，100–199 为“有风险”，99 及以下表示账户可能被停用或已被停用。新卖家起始分为 200。
+    对于卖家自配送（非 FBA）的订单，亚马逊另设绩效目标：订单缺陷率低于 1%（60 天）、取消率低于 2.5%
+    （7 天）、迟发率低于 4%（10 天和 30 天）、每个品类的有效追踪率不低于 95%。未达标可能导致自配送销售
+    权限或相关商品被暂停。无论分数如何，如果亚马逊怀疑存在欺诈或其他有害行为，可以立即停用账户。
+sources:
+  - { title: Account Health Rating program policy, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G200205250, accessed: 2026-10-30 }
+  - { title: Order Defect Rate, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G200285170, accessed: 2026-10-30 }
+  - { title: Cancellation rate, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G200285210, accessed: 2026-10-30 }
+  - { title: Late Shipment Rate, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G200285190, accessed: 2026-10-30 }
+  - { title: Valid tracking rate (VTR), publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G201817070, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

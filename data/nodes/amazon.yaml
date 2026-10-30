@@ -36,4 +36,5 @@ example:
 data_later:
   en: "Sources: Selling Partner API. Methods: automated reporting."
   zh: 来源：Selling Partner API。方法：报表自动化。
-rules: []
+rules:
+  - platform/amazon/us/seller-registration

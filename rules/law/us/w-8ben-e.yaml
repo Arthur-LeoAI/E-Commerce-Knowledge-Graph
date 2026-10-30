@@ -1,0 +1,26 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/w-8ben-e
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: tax
+applies_to: all
+summary:
+  en: >-
+    IRS Form W-8BEN-E is used by a foreign (non-US) entity, such as a company registered outside the US, to document
+    its foreign status for US withholding purposes (chapters 3 and 4 of the Internal Revenue Code). It is given to the
+    person or institution that requests it, for example a payer or a marketplace, and is not sent to the IRS. US
+    persons use Form W-9 instead, and foreign individuals use Form W-8BEN. The current revision is dated October 2021;
+    a signed form is generally valid until the end of the third calendar year after signing, unless circumstances change.
+  zh: >-
+    美国国税局（IRS）表格 W-8BEN-E 供外国（非美国）实体使用，例如在美国境外注册的公司，用来证明其外国身份，
+    以便处理美国预扣税事宜（《国内税收法典》第 3 章和第 4 章）。该表格交给索取它的一方，例如付款方或平台，不寄给 IRS。
+    美国人使用 W-9 表格，外国个人使用 W-8BEN 表格。当前版本为 2021 年 10 月版；签署后一般有效至签署年份之后第三个日历年年底，
+    情况发生变化时除外。
+sources:
+  - { title: "About Form W-8 BEN-E", publisher: Internal Revenue Service, url: "https://www.irs.gov/forms-pubs/about-form-w-8-ben-e", accessed: 2026-10-30 }
+  - { title: "Instructions for Form W-8BEN-E (Rev. October 2021)", publisher: Internal Revenue Service, url: "https://www.irs.gov/instructions/iw8bene", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

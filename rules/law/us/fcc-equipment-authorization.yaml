@@ -1,0 +1,26 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/fcc-equipment-authorization
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: product-safety
+applies_to: [electronics, radio-frequency devices]
+summary:
+  en: >-
+    Under FCC rules (47 CFR part 2), a radio-frequency device may not be marketed in the US until it has the required
+    equipment authorization or otherwise meets the applicable technical, labelling and identification requirements.
+    "Marketing" includes selling, offering, advertising and importing for sale. There are two authorization procedures:
+    Certification, granted by a Telecommunication Certification Body, and the Supplier's Declaration of Conformity
+    (SDoC); the FCC rule part for each type of device says which one applies.
+  zh: >-
+    根据美国联邦通信委员会（FCC）规则（47 CFR 第 2 部分），射频设备在取得所需的设备授权、或以其他方式满足适用的技术、
+    标签和标识要求之前，不得在美国上市销售。这里的“上市销售”包括销售、报价、广告以及为销售目的而进口。
+    设备授权有两种程序：由电信认证机构（TCB）颁发的认证（Certification），以及供应商符合性声明（SDoC）；
+    具体适用哪一种，由该类设备所属的 FCC 规则部分决定。
+sources:
+  - { title: "47 CFR 2.803 Marketing of radio frequency devices (CFR 2025 edition)", publisher: govinfo.gov (U.S. Government Publishing Office), url: https://www.govinfo.gov/content/pkg/CFR-2025-title47-vol1/xml/CFR-2025-title47-vol1-sec2-803.xml, accessed: 2026-10-30 }
+  - { title: "47 CFR 2.901 Basis and purpose (equipment authorization procedures, CFR 2025 edition)", publisher: govinfo.gov (U.S. Government Publishing Office), url: https://www.govinfo.gov/content/pkg/CFR-2025-title47-vol1/xml/CFR-2025-title47-vol1-sec2-901.xml, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

@@ -32,4 +32,6 @@ example:
 data_later:
   en: "Sources: purchase orders, forwarder invoices, entry summaries. Methods: cost per shipment. This is an exact calculation: correct inputs give a correct result."
   zh: 来源：采购单、货代账单、报关单。方法：按批次核算。这是确定性计算，数据准确就能算准。
-rules: []
+rules:
+  - law/us/tariffs-2026
+  - law/us/hts-duty-rates

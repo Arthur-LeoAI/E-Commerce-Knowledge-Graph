@@ -36,11 +36,7 @@ example:
 data_later:
   en: "Sources: entry summaries. Methods: clearance time statistics."
   zh: 来源：报关单（Entry Summary）。方法：清关时效统计。
-rules: []
-legacy_rule_note:
-  en: US imports need an IOR and a customs bond; ocean shipments need an ISF (10+2) filing before loading. The $800 de minimis duty-free treatment has been suspended since August 2025; CBP made the suspension indefinite for all modes from 2026-06-24, and the statutory exemption ends on 2027-07-01. The compliance date for the new informal entry process for postal parcels was pushed to 2027-01-20.
-  zh: 美国进口需要 IOR 和海关保证金（customs bond），海运货物需在装船前提交 ISF（10+2）申报。800 美元以下包裹免税的 de minimis 待遇自 2025 年 8 月起暂停；CBP 自 2026-06-24 起对所有运输方式无限期暂停，法律层面该豁免将于 2027-07-01 终止。邮政小包新的非正式报关流程，合规日期已推迟到 2027-01-20。
-  sources:
-    - 4
-    - 5
-    - 6
+rules:
+  - law/us/importer-of-record-and-bond
+  - law/us/isf-10-2
+  - law/us/de-minimis-suspension

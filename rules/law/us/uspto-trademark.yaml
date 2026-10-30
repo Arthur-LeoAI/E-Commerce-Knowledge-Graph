@@ -1,0 +1,29 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: law/us/uspto-trademark
+kind: law
+jurisdiction: us
+platform: null
+marketplace: null
+topic: ip
+applies_to: all
+summary:
+  en: >-
+    US trademarks are registered with the United States Patent and Trademark Office (USPTO). Since 2019-08-03,
+    applicants and registrants whose domicile is outside the US must be represented by a US-licensed attorney. Since
+    2025-01-18 the electronic base application fee is $350 per class of goods or services, with possible surcharges
+    per class: $100 for insufficient information, $200 for describing goods in free-form text instead of using the ID
+    Manual, and $200 for each additional 1,000 characters of free-form text. Keeping a registration in force later
+    requires further filings and fees.
+  zh: >-
+    美国商标在美国专利商标局（USPTO）注册。自 2019-08-03 起，住所地在美国境外的申请人和注册人必须由持有美国执照的律师代理。
+    自 2025-01-18 起，电子提交的基础申请费为每个商品或服务类别 350 美元，并可能按类别加收附加费：信息不足 100 美元；
+    不使用 ID Manual 而以自由文本描述商品 200 美元；自由文本每超出 1,000 个字符再加 200 美元。注册后维持商标有效还需要后续文件和费用。
+effective_date: 2025-01-18
+sources:
+  - { title: "Trademark rule requires domicile address for all filers and also requires foreign-domiciled applicants and registrants to have a U.S.-licensed attorney", publisher: USPTO, url: "https://www.uspto.gov/trademarks/laws/trademark-rule-requires-foreign-applicants-and-registrants-have-us", accessed: 2026-10-30 }
+  - { title: "Summary of 2025 trademark fee changes", publisher: USPTO, url: "https://www.uspto.gov/trademarks/fees-payment-information/summary-2025-trademark-fee-changes", accessed: 2026-10-30 }
+  - { title: "USPTO fee schedule", publisher: USPTO, url: "https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule", accessed: 2026-10-30 }
+  - { title: "How much does it cost?", publisher: USPTO, url: "https://www.uspto.gov/trademarks/basics/how-much-does-it-cost", accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-04-30
+status: active

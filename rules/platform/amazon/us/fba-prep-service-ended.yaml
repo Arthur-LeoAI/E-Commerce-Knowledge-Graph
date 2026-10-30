@@ -1,0 +1,28 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/fba-prep-service-ended
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: logistics
+applies_to: all
+summary:
+  en: >-
+    Since 1 January 2026 Amazon no longer offers prep and item-labelling services for FBA
+    shipments in the US store. This covers inventory sent straight to FBA and inventory reaching
+    FBA through AWD, Amazon Global Logistics, Amazon SEND or Supply Chain Portal. Products must
+    now arrive already prepped and labelled, either by the seller or by a third-party provider.
+    For shipments created after that date, items that arrive without proper prep and labelling
+    are not eligible for reimbursement if they are damaged or cannot be traced.
+  zh: >-
+    自 2026 年 1 月 1 日起，亚马逊不再为美国站 FBA 货件提供预处理和商品贴标服务。这适用于直接发往 FBA
+    的库存，以及经由 AWD、亚马逊全球物流（AGL）、Amazon SEND 或 Supply Chain Portal 进入 FBA 的库存。
+    商品必须在到仓前完成预处理和贴标，可由卖家自行完成或交给第三方服务商。该日期之后创建的货件，
+    如果商品未按要求预处理和贴标，发生损坏或无法追踪时将不予赔偿。
+effective_date: 2026-01-01
+sources:
+  - { title: FBA Prep Service, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G201023020, accessed: 2026-10-30 }
+  - { title: Amazon 2026 fee updates, publisher: Feedvisor, url: https://www.feedvisor.com/resources/amazon-trends/amazon-2026-fee-updates/, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

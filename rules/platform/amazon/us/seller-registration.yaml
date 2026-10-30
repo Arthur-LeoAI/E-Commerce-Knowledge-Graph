@@ -1,0 +1,32 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/seller-registration
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: account
+applies_to: all
+summary:
+  en: >-
+    Sellers resident in any country on Amazon's accepted list (which includes mainland China,
+    Hong Kong and most other countries; registrations from Russia and Belarus are not currently
+    accepted) can register to sell on Amazon.com. One account created on sell.amazon.com covers
+    the US, Canada, Mexico and Brazil. Amazon asks for a government-issued ID, an email address
+    and phone number, an internationally chargeable credit card, a bank account, business
+    registration details where applicable, proof of residential address from the last 180 days
+    and tax information. Identity is then verified with a photo of the seller holding the ID or a
+    video call with an Amazon associate, which Amazon says usually takes three business days or
+    less. A US bank account is not required.
+  zh: >-
+    居住在亚马逊认可国家/地区名单内的卖家（名单包括中国大陆、中国香港及大多数其他国家；目前不接受来自俄罗斯
+    和白俄罗斯的注册）可以注册在 Amazon.com 销售。在 sell.amazon.com 创建的一个账户可覆盖美国、加拿大、
+    墨西哥和巴西。亚马逊要求提供：政府签发的身份证件、电子邮箱和电话号码、可国际支付的信用卡、银行账户、
+    适用时的企业注册信息、近 180 天内的居住地址证明，以及税务信息。随后进行身份验证：拍摄本人手持证件的
+    照片，或与亚马逊工作人员视频通话；亚马逊称通常在三个工作日内完成。不需要美国银行账户。
+sources:
+  - { title: Countries accepted for seller registration, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/G200405020, accessed: 2026-10-30 }
+  - { title: Amazon seller registration in 5 steps, publisher: Amazon (sell.amazon.com), url: https://sell.amazon.com/sell/registration-guide, accessed: 2026-10-30 }
+  - { title: How to sell on Amazon USA from China, publisher: Amazon (sell.amazon.com), url: https://sell.amazon.com/global-selling/china, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

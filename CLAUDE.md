@@ -78,7 +78,6 @@ ecommerce-atlas/
 │   ├── glossary.yaml
 │   ├── tour.yaml
 │   ├── phases.yaml
-│   ├── sources.yaml          sources cited by the prototype (rules/ carry their own sources)
 │   ├── tools.yaml            official lookup links
 │   ├── ui.yaml               all interface strings
 │   └── example-case.yaml     the running example's inputs (all labelled example)
@@ -151,23 +150,18 @@ Pure functions, unit-tested, used by both the site and the skill. Inputs default
 
 **Regression test with the running example** (collapsible silicone cup, all numbers illustrative): price $19.99; purchase ¥22 at 7.1 CNY/USD = $3.10; freight $0.80; duty 20% example rate = $0.62; clearance $0.15; testing $600 / 1,000 units = $0.60 → **landed cost $5.27**. Referral 15% = $3.00, FBA fee $4.00, storage $0.20 → **platform fees $7.20 (≈36%)**. Returns 3% × $10 = $0.30; ads $2.40 → **unit profit $4.82 (≈24%)**. Before ads **$7.22**; ads $8.00 → **−$0.78**. 300 units/month → **$1,446**. Daily sales 10, 25+35+10 days + 14 safety → **reorder point 840**. First order **$5,270**. Promo at $15.99 → unit profit **$1.42**. Tests must reproduce these.
 
-## 7. Facts already verified (checked 2026-10-30) — re-verify before publishing
+## 7. Market rules: `rules/` is the source of truth
 
-Split into the new structure:
+All rule facts now live in `rules/` (24 files, researched 2026-10-30 from official pages first: 16 in `law/us/` incl. `law/us/ca/prop-65`, 8 in `platform/amazon/us/`). Each carries its sources, `last_checked` and `next_review`. Nodes link to them via `rules:`. Do not restate rule facts elsewhere; update the rule file and its dates instead.
 
-**law/us**
-- 2026-02-20: Supreme Court ruled IEEPA tariffs invalid. Section 122 surcharge ran from 2026-02-24 and expired 2026-07-24; replaced by new Section 301 tariffs of 10% or 12.5% on about 60 economies. Section 232 tariffs (steel, aluminium, autos, others) remain. Sources: Holland & Knight (Feb 2026), Penn Wharton Budget Model (2026-10-14), Global Trade Alert.
-- De minimis ($800): suspended for all countries since Aug 2025 (EO 14324); CBP made it indefinite for all modes from 2026-06-24; statutory termination 2027-07-01 (One Big Beautiful Bill Act); postal informal-entry compliance date moved to 2027-01-20. Sources: KPMG (Jun 2026), Federal Register 2026-06-24, Thompson Hine (Oct 2026).
-- CPSC eFiling of certificate data in ACE mandatory from 2026-07-08. Source: Arnold & Porter.
-- INFORM Consumers Act effective 2023-06-27 (law; marketplaces must verify high-volume sellers). Source: About Amazon.
-- **Need a source before publishing** (stated in the prototype from general knowledge): GCC / CPC requirements; FCC / FDA scope; California Proposition 65; South Dakota v. Wayfair (2018) economic nexus; marketplace facilitator laws in all sales-tax states; FTC rule on fake reviews; IOR, customs bond, ISF 10+2; USPTO trademark filing.
+Corrections found while sourcing (versus the prototype text):
+- Duty rates are set at the **8-digit** HTSUS level; the 10-digit code adds a statistical suffix.
+- The 2026 Amazon US fee update changed FBA and other fees but **not referral fee rates**. A 3.5% fuel and logistics surcharge on FBA fulfilment fees applies since 2026-04-17; holiday peak fees 2026-10-15 to 2027-01-14.
+- Amazon's ODR, cancellation and late-shipment targets apply to seller-fulfilled orders, not FBA.
+- CPSC eFiling: foreign-trade-zone entries from 2027-01-08 (others 2026-07-08).
+- "Marketplace facilitator laws in every sales-tax state" is confirmed only by tax-industry sources; the rule says so.
 
-**platform/amazon/us**
-- 2026 referral and FBA fee changes effective 2026-01-15; Amazon states FBA fees rose about $0.08 per unit on average. Sources: Amazon Seller Central forum announcement, Feedvisor.
-- Amazon stopped FBA prep and labelling services in the US from 2026-01-01. Source: Feedvisor.
-- **Need an official source**: referral fee ≈15% for most categories (use the official fee schedule per category); FBA fee size tiers; Brand Registry trademark requirement; review solicitation policy; account health thresholds.
-
-Full URLs are in the `SOURCES` constant of `legacy/index.html`.
+Open items: which trademark offices Amazon Brand Registry accepts is only visible after login (`brand-registry.yaml` says this). The running example's $4.00 FBA fee is illustrative; the 2026 official table gives other amounts depending on size tier, weight and price.
 
 ## 8. AI skill (v1)
 

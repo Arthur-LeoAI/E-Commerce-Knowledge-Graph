@@ -1,0 +1,32 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/customer-reviews-policy
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: reviews
+applies_to: all
+summary:
+  en: >-
+    Amazon forbids any attempt to manipulate customer reviews. Sellers may not offer money, gift
+    cards, discounts, free products, refunds or other benefits for a review, ask only for positive
+    reviews, ask a customer to change or remove a review, review their own or a competitor's
+    product (this includes family, employees and agencies), or steer unhappy customers away from
+    Amazon reviews. Allowed: the "Request a Review" button in Seller Central, Amazon Vine, a
+    neutral request through Buyer-Seller Messaging (only if Request a Review was not used for
+    that order), and a neutral review request card in the package. Amazon describes its policy as
+    zero tolerance; violations can lead to loss of selling privileges, withheld funds, delisting
+    and legal action.
+  zh: >-
+    亚马逊禁止任何操纵买家评论的行为。卖家不得以现金、礼品卡、折扣、免费商品、退款或其他好处换取评论，
+    不得只索要好评，不得要求买家修改或删除评论，不得评论自己或竞争对手的商品（家人、员工和代理机构同样
+    适用），也不得把不满意的买家引导到亚马逊评论以外的渠道。允许的做法包括：卖家平台的“请求评论”按钮、
+    Amazon Vine 计划、通过买家与卖家消息服务发出中立请求（仅限该订单未使用“请求评论”时），以及在包裹内
+    放置措辞中立的评论邀请卡。亚马逊称对此“零容忍”，违规可能导致销售权限被取消、资金被扣留、商品下架
+    以及法律诉讼。
+sources:
+  - { title: Customer product reviews policies, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GYRKB5RU3FS5TURN, accessed: 2026-10-30 }
+  - { title: Answers to questions about reviews and related topics, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/201972160, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active

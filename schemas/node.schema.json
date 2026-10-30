@@ -20,17 +20,6 @@
       "description": "Rule ids, e.g. law/us/de-minimis-suspension",
       "items": { "type": "string", "pattern": "^(law|platform)/[a-z0-9/-]+$" },
       "uniqueItems": true
-    },
-    "legacy_rule_note": {
-      "description": "Rule text carried over from the prototype. To be replaced by entries in rules/ (work plan step 2).",
-      "type": "object",
-      "required": ["en", "zh", "sources"],
-      "additionalProperties": false,
-      "properties": {
-        "en": { "$ref": "common.schema.json#/$defs/nonEmpty" },
-        "zh": { "$ref": "common.schema.json#/$defs/nonEmpty" },
-        "sources": { "type": "array", "items": { "type": "integer" } }
-      }
     }
   }
 }

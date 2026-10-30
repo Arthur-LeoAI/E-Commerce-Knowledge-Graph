@@ -34,10 +34,7 @@ example:
 data_later:
   en: "Sources: fee preview reports, settlement reports. Methods: line-by-line reconciliation."
   zh: 来源：费用预览报告、结算报告。方法：逐笔对账。
-rules: []
-legacy_rule_note:
-  en: Amazon US charges referral fees by category, about 15% for most categories; check the official fee schedule. FBA fulfilment fees depend on size tier and weight. The 2026 changes took effect on 2026-01-15; Amazon says FBA fees rose by about $0.08 per unit on average.
-  zh: Amazon 美国站按类目收取佣金，多数类目约为 15%，以官方费率表为准；FBA 配送费按尺寸分段和重量计算。2026 年费用调整自 2026-01-15 生效，官方称 FBA 配送费平均每件增加约 0.08 美元。
-  sources:
-    - 8
-    - 9
+rules:
+  - platform/amazon/us/referral-fees
+  - platform/amazon/us/fba-fulfillment-fees
+  - platform/amazon/us/fees-2026-changes

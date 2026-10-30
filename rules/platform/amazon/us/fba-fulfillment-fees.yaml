@@ -1,0 +1,34 @@
+# Licensed under Apache-2.0 (see LICENSE). Not legal advice.
+id: platform/amazon/us/fba-fulfillment-fees
+kind: platform
+jurisdiction: us
+platform: amazon
+marketplace: us
+topic: fees
+applies_to: all
+summary:
+  en: >-
+    The FBA fulfilment fee is charged per unit when Amazon ships an order. It depends on the
+    product's size tier, its shipping weight and, for standard-size items, its price band (under
+    $10, $10 to $50, over $50); apparel and dangerous goods have their own rate cards. Since 15
+    January 2026 the US size tiers are Small standard, Large standard, Small Bulky, Large Bulky
+    and Extra-Large (0–50 lb, 50+–70 lb, 70+–150 lb, 150+ lb); very long Extra-Large items count
+    as Overmax. Shipping weight is the greater of unit weight and dimensional weight, except for
+    Small standard and Extra-Large 150+ lb, which use unit weight only. Example from the official
+    non-peak table: a Small standard item of 2 oz or less priced $10–$50 costs $3.32, before the
+    3.5% fuel and logistics surcharge applied since 17 April 2026.
+  zh: >-
+    FBA 配送费在亚马逊发出订单时按件收取，取决于商品的尺寸分段、发货重量，以及标准尺寸商品的价格区间
+    （低于 10 美元、10–50 美元、高于 50 美元）；服装和危险品另有费率表。自 2026 年 1 月 15 日起，美国站
+    尺寸分段为：小号标准尺寸、大号标准尺寸、小号大件、大号大件和超大件（0–50 磅、50–70 磅、70–150 磅、
+    150 磅以上）；超长的超大件归为 Overmax。发货重量取商品重量与体积重量中的较大者，但小号标准尺寸和
+    150 磅以上超大件只按商品重量计算。官方非旺季费率表示例：2 盎司及以下、售价 10–50 美元的小号标准尺寸
+    商品为 3.32 美元，此价格未含自 2026 年 4 月 17 日起加收的 3.5% 燃油和物流附加费。
+effective_date: 2026-01-15
+sources:
+  - { title: Product size tiers, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GG5KW835AHDJCH8W, accessed: 2026-10-30 }
+  - { title: FBA fulfillment fees, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GPDC3KPYAGDTVDJP, accessed: 2026-10-30 }
+  - { title: 2026 US FBA fulfillment fee changes, publisher: Amazon Seller Central, url: https://sellercentral.amazon.com/help/hub/reference/external/GABBX6GZPA8MSZGW, accessed: 2026-10-30 }
+last_checked: 2026-10-30
+next_review: 2027-01-30
+status: active
