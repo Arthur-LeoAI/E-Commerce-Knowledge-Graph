@@ -1,4 +1,4 @@
-name: Validate data and test calculators
+name: Validate, test and build
 
 on:
   push:
@@ -22,3 +22,5 @@ jobs:
         run: npm run validate
       - name: Run calculator tests
         run: npm test
+      - name: Build the site
+        run: npm run build

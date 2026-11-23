@@ -80,6 +80,7 @@ ecommerce-atlas/
 │   ├── phases.yaml
 │   ├── tools.yaml            official lookup links
 │   ├── ui.yaml               all interface strings
+│   ├── pages.yaml            longer page texts (HTML): start intro, data roadmap, rules/sources/calculator intros, not-advice note
 │   └── example-case.yaml     the running example's inputs (all labelled example)
 ├── scripts/                  validate.mjs (npm run validate); extract-legacy.mjs (one-time, done)
 ├── rules/
@@ -91,7 +92,10 @@ ecommerce-atlas/
 ├── benchmarks/               one file per metric; empty is acceptable
 ├── models/                   calculators as pure functions (TypeScript or plain JS) + tests
 ├── schemas/                  JSON Schema for every data type; CI validates all data
-├── site/                     static site source; builds from data/, rules/, models/
+├── site/                     static site source: index.html (layout + CSS) and app.js (logic ported from the prototype).
+│                             `npm run build` writes dist/ (gitignored): atlas-data.js is generated from data/ + rules/,
+│                             calculators.js is copied from models/. `npm run serve` previews at localhost:8080.
+│                             No external fonts or scripts (system font stack), so no visitor data goes to third parties.
 ├── skill/                    SKILL.md + any helper scripts
 └── .github/workflows/        validate data, run tests, check for stale rules, deploy Pages
 ```

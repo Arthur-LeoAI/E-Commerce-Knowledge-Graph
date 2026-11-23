@@ -11,7 +11,9 @@
   "scripts": {
     "validate": "node scripts/validate.mjs",
     "extract-legacy": "node scripts/extract-legacy.mjs",
-    "test": "node --test \"models/**/*.test.js\""
+    "test": "node --test \"models/**/*.test.js\"",
+    "build": "node scripts/build-site.mjs",
+    "serve": "node scripts/build-site.mjs && node scripts/serve.mjs"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

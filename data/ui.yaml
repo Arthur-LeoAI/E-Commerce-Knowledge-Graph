@@ -20,9 +20,6 @@ tab_start:
 tab_data:
   en: Data roadmap
   zh: 数据化路线
-tab_us:
-  en: US rules
-  zh: 美国市场要点
 tab_sources:
   en: Sources
   zh: 来源
@@ -135,20 +132,14 @@ badge:
   en: Example
   zh: 示例
 more:
-  en: "Show more: how to do it, metrics, US rules, knock-on effects"
-  zh: 展开更多：怎么做、指标、美国规则、连锁影响
+  en: "Show more: how to do it, metrics, rules, knock-on effects"
+  zh: 展开更多：怎么做、关键指标、适用规则、连锁影响
 h_how:
   en: How to do it
   zh: 怎么做
 h_m:
   en: Key metrics
   zh: 关键指标
-h_us:
-  en: US rules
-  zh: 美国市场要点
-asof:
-  en: Checked
-  zh: 核对日期
 h_data:
   en: Using data later
   zh: 后续数据化
@@ -390,3 +381,225 @@ byStart:
 goMap:
   en: Explore the map yourself →
   zh: 去全景图谱自己探索 →
+tab_rules:
+  en: Market rules
+  zh: 市场规则
+tab_calc:
+  en: Calculator
+  zh: 计算器
+sel_label:
+  en: Where you sell
+  zh: 销售平台与站点
+sel_amazon_us:
+  en: Amazon · United States
+  zh: Amazon · 美国站
+k_law_us:
+  en: US law
+  zh: 美国法律
+k_law_us_ca:
+  en: California law
+  zh: 加州法律
+k_plat_amazon_us:
+  en: Amazon US
+  zh: Amazon 美国站
+r_law_h:
+  en: "Laws: apply wherever you sell into this country"
+  zh: 法律：只要卖进这个国家就要遵守，与平台无关
+r_plat_h:
+  en: "Platform rules: apply only on this marketplace"
+  zh: 平台规则：只适用于这个平台的这个站点
+r_effective:
+  en: Effective
+  zh: 生效日期
+r_checked:
+  en: Checked
+  zh: 核对日期
+r_next:
+  en: Next review
+  zh: 下次复查
+r_stale:
+  en: Past its review date, so it may be out of date. Check the sources.
+  zh: 已过复查日期，内容可能过时，请查看来源核实。
+r_pending:
+  en: Not yet confirmed from a reliable source
+  zh: 尚未从可靠来源确认
+r_sources:
+  en: Sources
+  zh: 来源
+r_nodes:
+  en: Related points
+  zh: 相关节点
+r_applies:
+  en: Applies to
+  zh: 适用范围
+r_all:
+  en: all products
+  zh: 所有产品
+r_cited:
+  en: Cited by
+  zh: 引用该来源的规则
+h_rules:
+  en: Rules that apply ({m})
+  zh: 适用规则（{m}）
+no_rules:
+  en: No specific rules linked to this point yet.
+  zh: 这个节点暂时没有关联具体规则。
+tools_h:
+  en: Official lookups
+  zh: 官方查询入口
+foot_licence:
+  en: Open source under the Apache License 2.0. Corrections welcome via GitHub Issues.
+  zh: 以 Apache License 2.0 开源。欢迎通过 GitHub Issues 提出更正。
+calc_reset:
+  en: Reset to the example
+  zh: 恢复为示例数字
+calc_inputs:
+  en: Your numbers
+  zh: 你的数字
+calc_results:
+  en: Results
+  zh: 计算结果
+calc_bad:
+  en: "Check the highlighted inputs: they must be numbers, not negative, and some must be above 0."
+  zh: 请检查标红的输入：必须是数字、不能为负数，部分输入必须大于 0。
+calc_example:
+  en: Example value
+  zh: 示例数字
+calc_yours:
+  en: Your value
+  zh: 你的数字
+g_product:
+  en: Product and purchasing
+  zh: 产品与采购
+g_fees:
+  en: Amazon fees
+  zh: 亚马逊费用
+g_sales:
+  en: Sales, ads and returns
+  zh: 销售、广告与退货
+g_stock:
+  en: Stock and lead times
+  zh: 库存与交期
+res_landed:
+  en: Landed cost per unit
+  zh: 单件落地成本
+res_fees:
+  en: Platform fees per unit
+  zh: 单件平台费用
+res_unit:
+  en: Unit profit
+  zh: 单件利润
+res_be:
+  en: Break-even ad cost per unit
+  zh: 盈亏平衡广告费（每件）
+res_be_note:
+  en: "The most you can spend on ads per unit sold before you lose money. As a share of price, this is your break-even ACoS: {p}."
+  zh: 每卖出一件，广告最多能花这么多，再多就亏钱。按售价的比例算，就是盈亏平衡 ACoS：{p}。
+res_month:
+  en: Monthly profit
+  zh: 月利润
+res_month_note:
+  en: "{u} units × {p}. Before fixed costs such as salaries, software and rent."
+  zh: "{u} 件 × {p}。未扣除工资、软件、房租等固定成本。"
+res_rop:
+  en: Reorder point
+  zh: 补货点
+res_rop_note:
+  en: "{d}/day × {l} days of lead time = {a}, plus {s} units of safety stock. Reorder when stock falls to this level."
+  zh: 日销 {d} 件 × 补货周期 {l} 天 = {a} 件，再加安全库存 {s} 件。库存降到这个数量时就要下单补货。
+res_cash:
+  en: Cash for the first order
+  zh: 首批备货资金
+res_cash_note:
+  en: "Paid before the first sale. Amazon fees are not included: they are taken out of sales later."
+  zh: 在第一笔销售之前就要付出。不含亚马逊费用，这部分会在之后从货款里扣除。
+res_margin:
+  en: "{p} of the price"
+  zh: 占售价 {p}
+res_loss:
+  en: You lose money on each unit at these numbers.
+  zh: 按这些数字，每卖一件都在亏钱。
+ln_purchase:
+  en: Purchase price
+  zh: 采购价
+ln_freight:
+  en: First-mile freight
+  zh: 头程运费
+ln_duty:
+  en: Duty
+  zh: 关税
+ln_clearance:
+  en: Clearance fees
+  zh: 清关杂费
+ln_testing:
+  en: Testing and certification
+  zh: 检测认证
+ln_referral:
+  en: Referral fee
+  zh: 销售佣金
+ln_fulfilment:
+  en: FBA fulfilment fee
+  zh: FBA 配送费
+ln_storage:
+  en: Storage
+  zh: 仓储费
+ln_price:
+  en: Price
+  zh: 售价
+ln_landed_cost:
+  en: Landed cost
+  zh: 落地成本
+ln_platform_fees:
+  en: Platform fees
+  zh: 平台费用
+ln_ads:
+  en: Ads
+  zh: 广告
+ln_returns:
+  en: Returns
+  zh: 退货损失
+ln_launch_ads:
+  en: Launch ad budget
+  zh: 新品推广预算
+ln_total:
+  en: Total
+  zh: 合计
+tl_h:
+  en: Timeline
+  zh: 时间线
+tl_note:
+  en: Time is always a range. Enter the shortest, typical and longest days for each phase; the total is shown as a range. Leave blank to skip.
+  zh: 时间永远是一个区间。请为每个阶段填写最短、一般、最长天数，总时间会以区间显示。不填则不计算。
+tl_low:
+  en: Shortest
+  zh: 最短
+tl_typ:
+  en: Typical
+  zh: 一般
+tl_high:
+  en: Longest
+  zh: 最长
+tl_production:
+  en: Production
+  zh: 生产
+tl_transit:
+  en: Transit
+  zh: 运输
+tl_receiving:
+  en: Receiving at the warehouse
+  zh: 入仓
+tl_total:
+  en: "Total: {a} to {c} days, typically {b}"
+  zh: 合计：{a} 到 {c} 天，一般 {b} 天
+tl_mc:
+  en: "Simulation of {n} runs: half finish within {p50} days, 9 in 10 within {p90} days."
+  zh: 模拟 {n} 次：一半在 {p50} 天内完成，十次中有九次在 {p90} 天内完成。
+tl_empty:
+  en: Fill in all three numbers for at least one phase to see the range.
+  zh: 至少为一个阶段填满三个数字，才会显示区间。
+tl_bad:
+  en: "For each phase: shortest ≤ typical ≤ longest."
+  zh: 每个阶段都需要：最短 ≤ 一般 ≤ 最长。
+calc_rules_h:
+  en: Look up the real numbers
+  zh: 查询真实数字
