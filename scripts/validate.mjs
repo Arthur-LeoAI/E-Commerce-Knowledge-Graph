@@ -58,6 +58,8 @@ const phases = loadList('phases.yaml', 'phase');
 const tour = loadList('tour.yaml', 'tour');
 const glossary = loadList('glossary.yaml', 'glossary');
 loadList('tools.yaml', 'tool');
+const exampleCase = load(data('example-case.yaml'));
+check('example-case', exampleCase, data('example-case.yaml'));
 const ui = load(data('ui.yaml'));
 check('ui', ui, data('ui.yaml'));
 
@@ -136,7 +138,7 @@ const bilingual = (value, file, where) => {
     if (k !== 'aliases') bilingual(v, file, `${where}/${k}`); // aliases are per language by design
   }
 };
-for (const name of ['domains.yaml', 'edges.yaml', 'phases.yaml', 'tour.yaml', 'glossary.yaml', 'tools.yaml', 'ui.yaml']) {
+for (const name of ['domains.yaml', 'edges.yaml', 'phases.yaml', 'tour.yaml', 'glossary.yaml', 'tools.yaml', 'ui.yaml', 'example-case.yaml']) {
   bilingual(load(data(name)), data(name), '');
 }
 nodes.forEach(({ file, node }) => bilingual(node, file, ''));

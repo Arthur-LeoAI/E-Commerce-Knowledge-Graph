@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Arthur-LeoAI/E-Commerce-Knowledge-Graph/schemas/example-case.schema.json",
+  "title": "Running example: illustrative calculator inputs",
+  "type": "object",
+  "required": ["id", "example", "name", "note", "inputs"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "example": { "const": true, "description": "Always true: every number is illustrative" },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "note": { "$ref": "common.schema.json#/$defs/text" },
+    "inputs": {
+      "type": "object",
+      "propertyNames": { "$ref": "common.schema.json#/$defs/id" },
+      "additionalProperties": {
+        "type": "object",
+        "required": ["value", "unit", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "$ref": "common.schema.json#/$defs/nonEmpty" },
+          "label": { "$ref": "common.schema.json#/$defs/text" }
+        }
+      }
+    }
+  }
+}

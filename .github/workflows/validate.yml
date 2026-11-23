@@ -1,4 +1,4 @@
-name: Validate data
+name: Validate data and test calculators
 
 on:
   push:
@@ -20,3 +20,5 @@ jobs:
       - run: npm ci
       - name: Validate schemas, references and bilingual completeness
         run: npm run validate
+      - name: Run calculator tests
+        run: npm test

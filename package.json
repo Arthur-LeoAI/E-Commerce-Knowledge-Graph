@@ -10,7 +10,8 @@
   },
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "extract-legacy": "node scripts/extract-legacy.mjs"
+    "extract-legacy": "node scripts/extract-legacy.mjs",
+    "test": "node --test \"models/**/*.test.js\""
   },
   "devDependencies": {
     "ajv": "^8.20.0",

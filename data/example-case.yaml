@@ -1,0 +1,34 @@
+# The running example: a fictional collapsible silicone cup sold on Amazon US.
+# Every number here is ILLUSTRATIVE, made up for teaching. None is a real rate,
+# fee or market figure. Real duty rates and Amazon fees are in rules/.
+# Licensed under Apache-2.0 (see LICENSE).
+id: collapsible_cup
+example: true
+name:
+  en: Collapsible silicone cup
+  zh: 折叠硅胶水杯
+note:
+  en: All numbers are illustrative examples for teaching, not real rates or market figures. Replace them with your own.
+  zh: 所有数字都是为了教学编的示例，不是真实税率、费用或市场数据。请换成你自己的数字。
+inputs:
+  price:              { value: 19.99, unit: USD, label: { en: Selling price, zh: 售价 } }
+  purchase_price_cny: { value: 22,    unit: CNY, label: { en: Factory price per unit, zh: 工厂单价 } }
+  fx_cny_per_usd:     { value: 7.1,   unit: CNY/USD, label: { en: Exchange rate, zh: 汇率 } }
+  freight_per_unit:   { value: 0.80,  unit: USD, label: { en: First-mile freight per unit, zh: 单件头程运费 } }
+  duty_rate:          { value: 0.20,  unit: ratio, label: { en: Duty rate (example only), zh: 关税税率（仅为示例） } }
+  clearance_per_unit: { value: 0.15,  unit: USD, label: { en: Clearance fees per unit, zh: 单件清关杂费 } }
+  testing_cost:       { value: 600,   unit: USD, label: { en: Testing and certification per batch, zh: 每批检测认证费 } }
+  batch_size:         { value: 1000,  unit: units, label: { en: Units in the batch, zh: 每批件数 } }
+  referral_rate:      { value: 0.15,  unit: ratio, label: { en: Referral fee rate, zh: 销售佣金比例 } }
+  fulfilment_fee:     { value: 4.00,  unit: USD, label: { en: FBA fulfilment fee per unit, zh: 单件 FBA 配送费 } }
+  storage_per_unit:   { value: 0.20,  unit: USD, label: { en: Storage cost per unit, zh: 单件仓储费分摊 } }
+  ad_cost_per_unit:   { value: 2.40,  unit: USD, label: { en: Ad cost per unit sold, zh: 单件广告费 } }
+  return_rate:        { value: 0.03,  unit: ratio, label: { en: Return rate, zh: 退货率 } }
+  loss_per_return:    { value: 10,    unit: USD, label: { en: Loss per returned unit, zh: 每次退货损失 } }
+  units_per_month:    { value: 300,   unit: units, label: { en: Units sold per month, zh: 月销量 } }
+  daily_sales:        { value: 10,    unit: units/day, label: { en: Average daily sales, zh: 日均销量 } }
+  production_days:    { value: 25,    unit: days, label: { en: Production lead time, zh: 生产交期 } }
+  transit_days:       { value: 35,    unit: days, label: { en: Transit time, zh: 运输时间 } }
+  receiving_days:     { value: 10,    unit: days, label: { en: Warehouse receiving time, zh: 入仓时间 } }
+  safety_days:        { value: 14,    unit: days, label: { en: Safety stock (days of sales), zh: 安全库存（按天数） } }
+  launch_ad_budget:   { value: 0,     unit: USD, label: { en: Launch ad budget (optional), zh: 新品推广预算（可选） } }
