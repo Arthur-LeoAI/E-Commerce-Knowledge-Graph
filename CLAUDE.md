@@ -178,6 +178,8 @@ Open items: which trademark offices Amazon Brand Registry accepts is only visibl
 - compare results with benchmarks only where a sourced benchmark exists;
 - always include the not-advice disclaimer.
 
+Implemented: `skill/SKILL.md` (instructions) + `skill/atlas.mjs` (JSON helper: `search`, `node`, `rules`, `calc`, `benchmarks`, `markets`), tested by `skill/atlas.test.mjs` (in `npm test`). The helper imports `models/calculators.js`, so the skill and the site always compute the same numbers.
+
 ## 9. Order of work
 
 1. Scaffold the repo, schemas and CI validation. Extract all content from `legacy/index.html` into data files (both languages). Add a check that every node, edge and glossary entry has `en` and `zh`.
