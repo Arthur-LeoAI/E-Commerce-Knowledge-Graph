@@ -13,7 +13,8 @@
     "extract-legacy": "node scripts/extract-legacy.mjs",
     "test": "node --test \"models/**/*.test.js\" \"skill/**/*.test.mjs\"",
     "build": "node scripts/build-site.mjs",
-    "serve": "node scripts/build-site.mjs && node scripts/serve.mjs"
+    "serve": "node scripts/build-site.mjs && node scripts/serve.mjs",
+    "stale": "node scripts/check-stale.mjs"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

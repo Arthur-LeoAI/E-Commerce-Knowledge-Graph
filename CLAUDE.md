@@ -188,3 +188,10 @@ Implemented: `skill/SKILL.md` (instructions) + `skill/atlas.mjs` (JSON helper: `
 4. Build the static site from the data (port the prototype's features), add the calculator page, and the platform + marketplace selector.
 5. Write `skill/SKILL.md`.
 6. README (en + zh), CONTRIBUTING, DISCLAIMER, NOTICE (licence is Apache 2.0, already present); GitHub Pages deploy workflow; a scheduled workflow that opens an Issue when a rule passes `next_review`.
+Status: steps 1–6 are done (v1). Workflows: `validate.yml` (validate, test, build on push/PR), `pages.yml` (deploy `dist/` to GitHub Pages on push to main; needs Pages source set to "GitHub Actions" in the repo settings), `stale-rules.yml` (daily; opens or updates one Issue labelled `rule-review` listing rules past `next_review`; `npm run stale` locally).
+
+Open decisions for the owner:
+- Example timeline ranges (low / typical / high) for production, transit and receiving; the calculator leaves them blank until then.
+- DCO only, or a CLA, before the first outside pull request is merged (section 2.9).
+- Whether to enable GitHub Discussions (docs currently point to Issues).
+- Review the two glossary entries marked `review: true` (last-mile, Unit Session Percentage).
