@@ -188,7 +188,7 @@ Implemented: `skill/SKILL.md` (instructions) + `skill/atlas.mjs` (JSON helper: `
 4. Build the static site from the data (port the prototype's features), add the calculator page, and the platform + marketplace selector.
 5. Write `skill/SKILL.md`.
 6. README (en + zh), CONTRIBUTING, DISCLAIMER, NOTICE (licence is Apache 2.0, already present); GitHub Pages deploy workflow; a scheduled workflow that opens an Issue when a rule passes `next_review`.
-Status: steps 1–6 are done (v1). Workflows: `validate.yml` (validate, test, build on push/PR), `pages.yml` (deploy `dist/` to GitHub Pages on push to main; runs only while the repository variable `PAGES_ENABLED` is `true`; launched 2026-11-27 at https://arthur-leoai.github.io/E-Commerce-Knowledge-Graph/ ; set the variable to anything else to pause deploys), `stale-rules.yml` (daily; opens or updates one Issue labelled `rule-review` listing rules past `next_review`; `npm run stale` locally).
+Status: steps 1–6 are done (v1). Workflows: `validate.yml` (validate, test, build on push/PR), `pages.yml` (deploy `dist/` to GitHub Pages on push to main; launched 2026-11-27 at https://arthur-leoai.github.io/E-Commerce-Knowledge-Graph/ ; controlled only by the repo's Settings → Pages, no extra switch), `stale-rules.yml` (daily; opens or updates one Issue labelled `rule-review` listing rules past `next_review`; `npm run stale` locally).
 
 Open decisions for the owner:
 - Example timeline ranges (low / typical / high) for production, transit and receiving; the calculator leaves them blank until then.
